@@ -1,9 +1,39 @@
+@font-face {
+  font-family: "DMSansRegular";
+  src: url("/fonts/DMSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSansMedium";
+  src: url("/fonts/DMSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSansBold";
+  src: url("/fonts/DMSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSansItalic";
+  src: url("/fonts/DMSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSansMediumItalic";
+  src: url("/fonts/DMSans-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DMSansBoldItalic";
+  src: url("/fonts/DMSans-BoldItalic.ttf") format("truetype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: DMSans, sans-serif;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  font-size: 5rem;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
