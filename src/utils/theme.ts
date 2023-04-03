@@ -1,7 +1,8 @@
 export const theme = {
   colors: {
     black: "rgba(0, 0, 0)",
-    white: "rgba(255, 255, 255)"
+    white: "rgba(255, 255, 255)",
+    green: " 5F7C5F"
   },
   font: {
     regular: "DMSansRegular",
@@ -16,7 +17,7 @@ export const theme = {
     large: "3em"
   },
   breakpoints: {
-    mobile: "480px",
+    mobile: "500px",
     tablet: "768px",
     desktop: "1024px"
   }
