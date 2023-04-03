@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -45,4 +45,42 @@ export const Link = styled(RouterLink)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
+`;
+
+type HamburgerProps = {
+  isOpen: boolean;
+};
+
+export const Hamburger = styled.div<HamburgerProps>`
+  display: none;
+  cursor: pointer;
+
+  ${({ isOpen }) =>
+    isOpen &&
+    `
+    & > div:nth-child(1) {
+      transform: rotate(45deg) translate(4.5px, 4.5px);
+    }
+
+    & > div:nth-child(2) {
+      opacity: 0;
+    }
+
+    & > div:nth-child(3) {
+      transform: rotate(-45deg) translate(4.5px, -4.5px);
+    }
+  `}
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: block;
+  }
+`;
+
+export const HamburgerLine = styled.div`
+  width: 24px;
+  height: 2px;
+  margin: 4px 0;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
 `;
