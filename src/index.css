@@ -32,7 +32,7 @@
   font-family: DMSansRegular;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #000000;
   font-size: 16px;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -47,4 +47,11 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
 }
