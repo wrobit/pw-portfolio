@@ -1,7 +1,23 @@
+import { hexToRgba } from "@utils/helpers/colors.helper";
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+type WrapperProps = {
+  isOpen: boolean;
+};
+
+const Wrapper = styled.div<WrapperProps>`
+  position: fixed;
+  width: 100%;
+  height: ${({ isOpen }) => (isOpen ? "40vh" : "88px")};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  background-color: ${({ theme }) => hexToRgba(theme.colors.black, 0.8)};
+`;
+
+const NavbarWrapper = styled.div`
   width: 100%;
   height: 88px;
   padding: 0 300px;
@@ -35,7 +51,11 @@ const Link = styled(RouterLink)`
   margin: 0 16px;
 
   &:active {
-    color: ${({ theme }) => theme.colors.green};
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
+  }
+
+  &:hover {
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.8)};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -85,4 +105,42 @@ const HamburgerLine = styled.div`
   transition: all 200ms ease-in-out;
 `;
 
-export { Wrapper, NavLinks, Link, Hamburger, HamburgerLine };
+type HamburgerMenuProps = {
+  isOpen: boolean;
+};
+
+const HamburgerMenu = styled.div<HamburgerMenuProps>`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  ${({ isOpen }) =>
+    isOpen && {
+      opacity: 1,
+      visibility: "visible"
+    }}
+`;
+
+const HamburgerMenuLink = styled(RouterLink)`
+  margin: 16px 0;
+  font-family: ${({ theme }) => theme.font.regular};
+  font-size: 21px;
+  color: ${({ theme }) => theme.colors.white};
+  text-align: center;
+  transition: all 200ms ease-in-out;
+
+  &:active {
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
+  }
+
+  &:hover {
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.8)};
+  }
+`;
+
+export { Wrapper, NavbarWrapper, NavLinks, Link, Hamburger, HamburgerLine, HamburgerMenu, HamburgerMenuLink };
