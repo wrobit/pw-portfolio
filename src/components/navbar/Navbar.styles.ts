@@ -1,7 +1,7 @@
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   height: 88px;
   padding: 0 300px;
@@ -22,13 +22,13 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const NavLinks = styled.nav`
+const NavLinks = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 `;
 
-export const Link = styled(RouterLink)`
+const Link = styled(RouterLink)`
   width: 50px;
   font-family: ${({ theme }) => theme.font.regular};
   font-size: 16px;
@@ -51,7 +51,7 @@ type HamburgerProps = {
   isOpen: boolean;
 };
 
-export const Hamburger = styled.div<HamburgerProps>`
+const Hamburger = styled.div<HamburgerProps>`
   display: none;
   cursor: pointer;
 
@@ -76,7 +76,7 @@ export const Hamburger = styled.div<HamburgerProps>`
   }
 `;
 
-export const HamburgerLine = styled.div`
+const HamburgerLine = styled.div`
   width: 24px;
   height: 2px;
   margin: 4px 0;
@@ -84,3 +84,5 @@ export const HamburgerLine = styled.div`
   border-radius: 10px;
   transition: all 200ms ease-in-out;
 `;
+
+export { Wrapper, NavLinks, Link, Hamburger, HamburgerLine };
