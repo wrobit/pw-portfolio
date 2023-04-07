@@ -1,5 +1,5 @@
-import { Logo } from "@components/common/Logo/Logo";
-import { routes } from "constants/routes";
+import { Logo } from "@components/common";
+import { routes } from "@utils/constants/routes.constants";
 import { useState } from "react";
 import * as Styled from "./Navbar.styles";
 

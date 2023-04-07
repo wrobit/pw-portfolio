@@ -1,4 +1,4 @@
-import { routes } from "constants/routes";
+import { routes } from "@utils/constants/routes.constants";
 import { Link } from "react-router-dom";
 import * as Styled from "./Logo.styles";
 
