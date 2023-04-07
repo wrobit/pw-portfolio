@@ -1,8 +1,8 @@
 export const theme = {
   colors: {
-    black: "rgba(0, 0, 0)",
-    white: "rgba(255, 255, 255)",
-    green: " 5F7C5F"
+    black: "#000000",
+    white: "#FFFFFF",
+    green: "#5F7C5F"
   },
   font: {
     regular: "DMSansRegular",
