@@ -20,14 +20,10 @@ const Wrapper = styled.div<WrapperProps>`
 const NavbarWrapper = styled.div`
   width: 100%;
   height: 88px;
-  padding: 0 300px;
+  padding: 0 152px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    padding: 0 152px;
-  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0 112px;
