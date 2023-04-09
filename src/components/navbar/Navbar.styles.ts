@@ -71,7 +71,7 @@ type HamburgerProps = {
   isOpen: boolean;
 };
 
-const Hamburger = styled.div<HamburgerProps>`
+const Hamburger = styled.button<HamburgerProps>`
   display: none;
   cursor: pointer;
 
