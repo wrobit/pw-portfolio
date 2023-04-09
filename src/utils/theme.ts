@@ -2,7 +2,8 @@ export const theme = {
   colors: {
     black: "#000000",
     white: "#FFFFFF",
-    green: "#5F7C5F"
+    green: "#5F7C5F",
+    gray: "#808080"
   },
   font: {
     regular: "DMSansRegular",
