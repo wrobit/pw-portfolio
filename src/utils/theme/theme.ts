@@ -1,4 +1,6 @@
-export const theme = {
+import { DefaultTheme } from "styled-components";
+
+const defaultTheme: DefaultTheme = {
   colors: {
     black: "#000000",
     white: "#FFFFFF",
@@ -23,3 +25,5 @@ export const theme = {
     desktop: "1024px"
   }
 };
+
+export { defaultTheme };

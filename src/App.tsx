@@ -1,7 +1,7 @@
-import { theme } from "@utils/theme";
+import { defaultTheme } from "@utils/theme";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Home, Work, Contact, Error, Root } from "./pages";
+import { Contact, Error, Home, Root, Work } from "./pages";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -16,7 +16,7 @@ const App = () => {
   );
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={defaultTheme}>
       <RouterProvider router={router}></RouterProvider>
     </ThemeProvider>
   );
