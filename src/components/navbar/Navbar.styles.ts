@@ -1,3 +1,4 @@
+import { NAVBAR_HEIGHT } from "@utils/constants/sizes.constants";
 import { hexToRgba } from "@utils/helpers/colors.helper";
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
@@ -9,7 +10,7 @@ type WrapperProps = {
 const Wrapper = styled.div<WrapperProps>`
   position: fixed;
   width: 100%;
-  height: ${({ isOpen }) => (isOpen ? "40vh" : "88px")};
+  height: ${({ isOpen }) => (isOpen ? "40vh" : NAVBAR_HEIGHT)};
   display: flex;
   flex-direction: column;
   align-items: center;

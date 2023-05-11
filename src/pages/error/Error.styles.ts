@@ -1,7 +1,8 @@
+import { FOOTER_HEIGHT, NAVBAR_HEIGHT } from "@utils/constants/sizes.constants";
 import styled from "styled-components";
 
 const ErrorContainer = styled.div`
-  height: calc(100vh - 88px);
+  height: calc(100vh - ${NAVBAR_HEIGHT} - ${FOOTER_HEIGHT});
   width: 100%;
   padding: 0 110px;
   display: flex;
