@@ -1,3 +1,4 @@
+import { Typography } from "@components/common";
 import { FOOTER_HEIGHT } from "@utils/constants/sizes.constants";
 import styled from "styled-components";
 
@@ -18,17 +19,10 @@ const Footer = styled.footer`
   }
 `;
 
-const CopyrightText = styled.span`
-  font-size: 14px;
-  color: ${({ theme }) => theme.colors.gray};
-
+const CopyrightText = styled(Typography)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: 10px;
   }
 `;
 
-const AuthorText = styled.span`
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-export { Footer, AuthorText, CopyrightText };
+export { Footer, CopyrightText };
