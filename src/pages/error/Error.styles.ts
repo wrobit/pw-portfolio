@@ -1,3 +1,4 @@
+import { Typography } from "@components/common";
 import { FOOTER_HEIGHT, NAVBAR_HEIGHT } from "@utils/constants/sizes.constants";
 import styled from "styled-components";
 
@@ -29,10 +30,9 @@ const ErrorContentWrapper = styled.div`
   gap: 2rem;
 `;
 
-const ErrorTitle = styled.h1`
+const ErrorTitle = styled(Typography)`
   width: 80%;
   font-size: 52px;
-  font-family: DMSansMedium;
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -45,8 +45,4 @@ const ErrorTitle = styled.h1`
   }
 `;
 
-const ErrorDisclaimer = styled.span`
-  color: ${({ theme }) => theme.colors.gray};
-`;
-
-export { ErrorContainer, ErrorContentWrapper, ErrorTitle, ErrorDisclaimer };
+export { ErrorContainer, ErrorContentWrapper, ErrorTitle };
