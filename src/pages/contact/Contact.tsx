@@ -27,7 +27,7 @@ export const Contact = () => {
           ))}
         </Styled.ContactLinksWrapper>
       </Styled.ContactContentWrapper>
-      <Styled.ContactContentWrapper width="25%">
+      <Styled.ContactContentWrapper width="100%">
         <Typography element="span" fontSize="24px">
           From Poland with love,
         </Typography>

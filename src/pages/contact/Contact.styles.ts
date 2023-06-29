@@ -29,6 +29,10 @@ const ContactContentWrapper = styled.div<ContactContentWrapperProps>`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 100%;
+  }
 `;
 
 const ContactLinksWrapper = styled.div`
