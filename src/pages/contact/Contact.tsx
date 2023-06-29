@@ -1,5 +1,6 @@
-import { Typography } from "@components/common";
+import { Link as StyledLink, Typography } from "@components/common";
 import * as Styled from "./Contact.styles";
+import { contactLinks } from "./ContactLinks";
 
 export const Contact = () => {
   return (
@@ -17,15 +18,13 @@ export const Contact = () => {
           piotrwrobel.ajiiz@gmail.com
         </Typography>
         <Styled.ContactLinksWrapper>
-          <Typography element="span" fontSize="20px">
-            github
-          </Typography>
-          <Typography element="span" fontSize="20px">
-            linkedin
-          </Typography>
-          <Typography element="span" fontSize="20px">
-            instagram
-          </Typography>
+          {contactLinks?.map(({ id, name, url }) => (
+            <Typography element="span" fontSize="20px" key={id}>
+              <StyledLink href={url} target="_blank">
+                {name}
+              </StyledLink>
+            </Typography>
+          ))}
         </Styled.ContactLinksWrapper>
       </Styled.ContactContentWrapper>
       <Styled.ContactContentWrapper width="25%">
