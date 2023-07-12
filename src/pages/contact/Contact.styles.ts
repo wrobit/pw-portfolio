@@ -13,6 +13,7 @@ const ContactContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0 102px;
+    gap: 50px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -35,9 +36,17 @@ const ContactContentWrapper = styled.div<ContactContentWrapperProps>`
   }
 `;
 
+const ContactEmailWrapper = styled.div`
+  display: flex;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex-direction: column;
+  }
+`;
+
 const ContactLinksWrapper = styled.div`
   display: flex;
   gap: 35px;
 `;
 
-export { ContactContainer, ContactContentWrapper, ContactLinksWrapper };
+export { ContactContainer, ContactContentWrapper, ContactEmailWrapper, ContactLinksWrapper };

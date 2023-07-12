@@ -14,9 +14,18 @@ export const Contact = () => {
         </Typography>
       </Styled.ContactContentWrapper>
       <Styled.ContactContentWrapper>
-        <Typography element="span" fontSize="56px">
-          piotrwrobel.ajiiz@gmail.com
-        </Typography>
+        <Styled.ContactEmailWrapper>
+          <Typography element="span" fontSize="56px">
+            <StyledLink href="mailto: piotrwrobel.ajiiz@gmail.com" target="_blank">
+              piotrwrobel.ajiiz
+            </StyledLink>
+          </Typography>
+          <Typography element="span" fontSize="56px">
+            <StyledLink href="mailto: piotrwrobel.ajiiz@gmail.com" target="_blank">
+              @gmail.com
+            </StyledLink>
+          </Typography>
+        </Styled.ContactEmailWrapper>
         <Styled.ContactLinksWrapper>
           {contactLinks?.map(({ id, name, url }) => (
             <Typography element="span" fontSize="20px" key={id}>
