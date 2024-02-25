@@ -4,11 +4,6 @@ const Default = styled.span`
   color: ${({ theme, color }) => color || theme.colors.white};
   font-family: inherit;
   font-size: inherit;
-
-  &:hover,
-  &:active {
-    color: inherit;
-  }
 `;
 
 export { Default };
