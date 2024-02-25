@@ -98,7 +98,7 @@ const HamburgerLine = styled.div`
   margin: 4px 0;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
-  transition: all 200ms ease-in-out;
+  transition: all 100ms linear;
 `;
 
 type HamburgerMenuProps = {
@@ -111,7 +111,7 @@ const HamburgerMenu = styled.div<HamburgerMenuProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 200ms ease-in-out;
+  transition: all 100ms linear;
   opacity: 0;
   visibility: hidden;
 
@@ -128,7 +128,7 @@ const HamburgerMenuLink = styled(RouterLink)`
   font-size: 21px;
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
-  transition: all 200ms ease-in-out;
+  transition: all 100ms linear;
 
   &:active {
     color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
