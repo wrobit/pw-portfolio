@@ -14,15 +14,18 @@ const defaultTheme: DefaultTheme = {
     italic: "DMSansItalic",
     boldItalic: "DMSansBoldItalic"
   },
-  fontSizes: {
-    small: "1em",
-    medium: "2em",
-    large: "3em"
-  },
   breakpoints: {
     mobile: "500px",
     tablet: "768px",
     desktop: "1024px"
+  },
+  sizes: {
+    footer: {
+      height: "60px"
+    },
+    navbar: {
+      height: "88px"
+    }
   }
 };
 

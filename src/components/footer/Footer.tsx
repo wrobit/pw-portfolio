@@ -8,10 +8,10 @@ export const Footer = () => {
 
   return (
     <Styled.Footer>
-      <Styled.CopyrightText fontSize="14px" color={theme.colors.gray}>
+      <Typography.Headers.H6 color={theme.colors.gray}>
         Copyright &copy; {`${dateYear}`}
-        <Typography color={theme.colors.white}> Wrobel Piotr</Typography>. All rights reserved.
-      </Styled.CopyrightText>
+        <Typography.Default color={theme.colors.white}> Wrobel Piotr</Typography.Default>. All rights reserved.
+      </Typography.Headers.H6>
     </Styled.Footer>
   );
 };
