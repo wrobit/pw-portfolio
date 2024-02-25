@@ -1,12 +1,18 @@
-import * as Styled from "./Button.styles";
+import * as Styled from "@components/common/Button/Button.styles";
+import { ButtonProps } from "@components/common/Button/Button.types";
+import { Typography } from "@components/common/Typography/Typography";
+import { useTheme } from "styled-components";
 
-type ButtonProps = {
-  children: React.ReactNode;
-  onClick?: () => void;
-  disabled?: boolean;
-  type?: "button" | "submit" | "reset";
-};
+export const Button = ({ size = "small", children, ...props }: ButtonProps) => {
+  const theme = useTheme();
 
-export const Button = (props: ButtonProps) => {
-  return <Styled.Button {...props}>{props.children}</Styled.Button>;
+  return (
+    <Styled.Button {...props}>
+      {size === "small" ? (
+        <Typography.Buttons.Small color="inherit">{children}</Typography.Buttons.Small>
+      ) : (
+        <Typography.Buttons.Large color="inherit">{children}</Typography.Buttons.Large>
+      )}
+    </Styled.Button>
+  );
 };

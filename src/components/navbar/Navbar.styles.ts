@@ -1,4 +1,3 @@
-import { NAVBAR_HEIGHT } from "@utils/constants/sizes.constants";
 import { hexToRgba } from "@utils/helpers/colors.helper";
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
@@ -10,7 +9,7 @@ type WrapperProps = {
 const Wrapper = styled.div<WrapperProps>`
   position: fixed;
   width: 100%;
-  height: ${({ isOpen }) => (isOpen ? "40vh" : NAVBAR_HEIGHT)};
+  height: ${({ isOpen, theme }) => (isOpen ? "40vh" : theme.sizes.navbar.height)};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,4 +139,4 @@ const HamburgerMenuLink = styled(RouterLink)`
   }
 `;
 
-export { Wrapper, NavbarWrapper, NavLinks, Link, Hamburger, HamburgerLine, HamburgerMenu, HamburgerMenuLink };
+export { Hamburger, HamburgerLine, HamburgerMenu, HamburgerMenuLink, Link, NavLinks, NavbarWrapper, Wrapper };

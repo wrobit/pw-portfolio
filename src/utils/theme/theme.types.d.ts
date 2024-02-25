@@ -15,15 +15,18 @@ declare module "styled-components" {
       italic: string;
       boldItalic: string;
     };
-    fontSizes: {
-      small: string;
-      medium: string;
-      large: string;
-    };
     breakpoints: {
       mobile: string;
       tablet: string;
       desktop: string;
+    };
+    sizes: {
+      footer: {
+        height: string;
+      };
+      navbar: {
+        height: string;
+      };
     };
   }
 }
