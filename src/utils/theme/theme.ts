@@ -19,6 +19,13 @@ const defaultTheme: DefaultTheme = {
     tablet: "768px",
     desktop: "1024px"
   },
+  spacing: {
+    sm: "4px",
+    md: "8px",
+    lg: "16px",
+    xl: "32px",
+    xxl: "48px"
+  },
   sizes: {
     footer: {
       height: "60px"

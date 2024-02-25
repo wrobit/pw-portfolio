@@ -20,6 +20,13 @@ declare module "styled-components" {
       tablet: string;
       desktop: string;
     };
+    spacing: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+    };
     sizes: {
       footer: {
         height: string;
