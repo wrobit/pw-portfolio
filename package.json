@@ -10,7 +10,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "next lint",
-    "prettier": "prettier -write ."
+    "prettier": "prettier -write .",
+    "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
     "react": "^18.2.0",
