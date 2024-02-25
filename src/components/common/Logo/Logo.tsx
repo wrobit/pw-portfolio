@@ -1,12 +1,13 @@
+import * as Styled from "@components/common/Logo/Logo.styles";
+import { Typography } from "@components/common/Typography/Typography";
 import { routes } from "@utils/constants/routes.constants";
 import { Link } from "react-router-dom";
-import * as Styled from "./Logo.styles";
 
 export const Logo = () => {
   return (
     <Styled.Wrapper>
       <Link to={routes.home}>
-        <Styled.Content>pw.</Styled.Content>
+        <Typography.Logo>pw.</Typography.Logo>
       </Link>
     </Styled.Wrapper>
   );
