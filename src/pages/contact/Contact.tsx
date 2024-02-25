@@ -1,3 +1,4 @@
+import BackgroundImage from "@assets/contact-background.png";
 import { Link as StyledLink, Typography } from "@components/common";
 import * as Styled from "@pages/contact/Contact.styles";
 import { contactLinks } from "@pages/contact/ContactLinks";
@@ -31,6 +32,9 @@ export const Contact = () => {
           <Typography.Headers.H5>From Poland with love,</Typography.Headers.H5>
           <Typography.Headers.H5>coding at home</Typography.Headers.H5>
         </Styled.ContactContentWrapper>
+        <Styled.ContactBackgroundImageWrapper>
+          <Styled.ContactBackgroundImage src={BackgroundImage} />
+        </Styled.ContactBackgroundImageWrapper>
       </Styled.ContactContainer>
     </PageTemplateWrapper>
   );

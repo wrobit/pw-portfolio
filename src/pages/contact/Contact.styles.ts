@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const ContactContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,4 +35,40 @@ const ContactLinksWrapper = styled.div`
   gap: 35px;
 `;
 
-export { ContactContainer, ContactContentWrapper, ContactLinksWrapper };
+const ContactBackgroundImageWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 296px;
+  height: 650px;
+  z-index: -1;
+  animation: blink 1000ms infinite linear;
+
+  @keyframes blink {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
+
+  @media (max-height: 700px) {
+    display: none;
+  }
+`;
+
+const ContactBackgroundImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`;
+
+export { ContactBackgroundImage, ContactBackgroundImageWrapper, ContactContainer, ContactContentWrapper, ContactLinksWrapper };
