@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const PageTemplateWrapper = styled.div`
-  height: ${({ theme }) => `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
   width: 100%;
   padding: 0 152px;
   display: flex;
