@@ -37,7 +37,6 @@ const ContactLinksWrapper = styled.div`
 
 const ContactBackgroundImageWrapper = styled.div`
   position: absolute;
-  top: 0;
   right: 0;
   width: 296px;
   height: 650px;
