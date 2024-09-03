@@ -9,16 +9,12 @@
     "dev": "vite --port 8080",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "next lint",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier -write .",
     "type-check": "tsc --pretty --noEmit",
     "prepare": "husky"
   },
   "dependencies": {
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
-    "commitlint": "^19.4.1",
-    "lint-staged": "^15.2.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
@@ -33,7 +29,16 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "husky": "^9.1.5",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "lint-staged": "^15.2.7",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "prettier": "^3.1.1"
   },
   "husky": {
     "hooks": {

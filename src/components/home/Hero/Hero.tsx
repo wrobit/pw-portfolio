@@ -10,7 +10,6 @@ export const Hero = () => {
 
   const scrollToExplore = () => {
     if (heroSectionRef.current) {
-      console.log(heroSectionRef.current.offsetHeight);
       window.scrollTo({ top: heroSectionRef.current.offsetHeight + Number(theme.sizes.navbar.height.slice(0, 2)), behavior: "smooth" });
     }
   };
@@ -18,7 +17,7 @@ export const Hero = () => {
   return (
     <Styled.HeroSection ref={heroSectionRef}>
       <Styled.HeroTypographyWrapper>
-        <Typography.Headers.H1>React Developer & UX / UI Designer</Typography.Headers.H1>
+        <Typography.Headers.H1>Software Engineer & UX / UI Designer</Typography.Headers.H1>
         <Typography.Headers.H4>
           Software developer based in Poland. Mostly interested in web development and UI/UX design. Person that always seek to create everything from
           his own ideas. Looking for new opportunities and ideas.
