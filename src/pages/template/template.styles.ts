@@ -5,6 +5,7 @@ export const PageTemplateWrapper = styled.div`
   padding: 0 152px;
   display: flex;
   flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.xxxl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0 112px;
