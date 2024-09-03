@@ -26,6 +26,15 @@ declare module "styled-components" {
       lg: string;
       xl: string;
       xxl: string;
+      xxxl: string;
+      xxxxl: string;
+    };
+    radius: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
     };
     sizes: {
       footer: {

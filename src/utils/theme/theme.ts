@@ -24,7 +24,16 @@ const defaultTheme: DefaultTheme = {
     md: "8px",
     lg: "16px",
     xl: "32px",
-    xxl: "48px"
+    xxl: "48px",
+    xxxl: "64px",
+    xxxxl: "80px"
+  },
+  radius: {
+    sm: "4px",
+    md: "8px",
+    lg: "16px",
+    xl: "24px",
+    xxl: "32px"
   },
   sizes: {
     footer: {
