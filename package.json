@@ -11,9 +11,14 @@
     "preview": "vite preview",
     "lint": "next lint",
     "prettier": "prettier -write .",
-    "type-check": "tsc --pretty --noEmit"
+    "type-check": "tsc --pretty --noEmit",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "commitlint": "^19.4.1",
+    "lint-staged": "^15.2.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
@@ -26,7 +31,25 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "husky": "^9.1.5",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
