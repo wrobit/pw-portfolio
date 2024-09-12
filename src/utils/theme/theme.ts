@@ -17,7 +17,8 @@ const defaultTheme: DefaultTheme = {
   breakpoints: {
     mobile: "500px",
     tablet: "768px",
-    desktop: "1024px"
+    desktop: "1024px",
+    largeDesktop: "1440px"
   },
   spacing: {
     sm: "4px",
@@ -26,7 +27,8 @@ const defaultTheme: DefaultTheme = {
     xl: "32px",
     xxl: "48px",
     xxxl: "64px",
-    xxxxl: "80px"
+    xxxxl: "80px",
+    xxxxxl: "136px"
   },
   radius: {
     sm: "4px",

@@ -19,6 +19,7 @@ declare module "styled-components" {
       mobile: string;
       tablet: string;
       desktop: string;
+      largeDesktop: string;
     };
     spacing: {
       sm: string;
@@ -28,6 +29,7 @@ declare module "styled-components" {
       xxl: string;
       xxxl: string;
       xxxxl: string;
+      xxxxxl: string;
     };
     radius: {
       sm: string;
