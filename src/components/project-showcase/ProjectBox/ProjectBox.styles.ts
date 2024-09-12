@@ -12,6 +12,20 @@ const ProjectBoxImageWrapper = styled.div`
   width: 100%;
   height: 454px;
   border-radius: ${({ theme }) => theme.radius.xl};
+  cursor: pointer;
+`;
+
+const ProjectBoxLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  gap: ${({ theme }) => theme.spacing.sm};
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ProjectBoxImage = styled.img`
@@ -21,4 +35,6 @@ const ProjectBoxImage = styled.img`
   border-radius: ${({ theme }) => theme.radius.xl};
 `;
 
-export { ProjectBoxContainer, ProjectBoxImage, ProjectBoxImageWrapper };
+const ProjectBoxIcon = styled.img``;
+
+export { ProjectBoxContainer, ProjectBoxIcon, ProjectBoxImage, ProjectBoxImageWrapper, ProjectBoxLink };
