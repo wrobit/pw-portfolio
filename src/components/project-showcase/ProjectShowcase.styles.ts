@@ -3,11 +3,15 @@ import styled from "styled-components";
 const ProjectShowcaseContainer = styled.div`
   width: 100%;
   height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: ${({ theme }) => theme.spacing.xxl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
 `;
 
 export { ProjectShowcaseContainer };

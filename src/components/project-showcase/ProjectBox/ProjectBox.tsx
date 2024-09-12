@@ -1,5 +1,4 @@
 import UpperRightArrow from "@assets/icons/arrow-upper-right.svg";
-import { Typography } from "@components/common";
 import * as Styled from "./ProjectBox.styles";
 import { ProjectBoxProps } from "./ProjectBox.types";
 
@@ -10,7 +9,7 @@ export const ProjectBox = ({ title, image, id }: ProjectBoxProps) => {
         <Styled.ProjectBoxImage src={image} alt={title} />
       </Styled.ProjectBoxImageWrapper>
       <Styled.ProjectBoxLink href={`/project/${id}`}>
-        <Typography.Headers.H6>{title}</Typography.Headers.H6>
+        <Styled.ProjectBoxTitle>{title}</Styled.ProjectBoxTitle>
         <Styled.ProjectBoxIcon src={UpperRightArrow} alt="arrow" />
       </Styled.ProjectBoxLink>
     </Styled.ProjectBoxContainer>

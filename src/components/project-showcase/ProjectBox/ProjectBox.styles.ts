@@ -1,11 +1,19 @@
+import { Typography } from "@components/common";
 import styled from "styled-components";
 
 const ProjectBoxContainer = styled.div`
-  width: 47%;
   height: 500px;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.lg};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
+    width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 350px;
+  }
 `;
 
 const ProjectBoxImageWrapper = styled.div`
@@ -28,6 +36,12 @@ const ProjectBoxLink = styled.a`
   }
 `;
 
+const ProjectBoxTitle = styled(Typography.Headers.H6)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 14px;
+  }
+`;
+
 const ProjectBoxImage = styled.img`
   width: 100%;
   height: 100%;
@@ -37,4 +51,4 @@ const ProjectBoxImage = styled.img`
 
 const ProjectBoxIcon = styled.img``;
 
-export { ProjectBoxContainer, ProjectBoxIcon, ProjectBoxImage, ProjectBoxImageWrapper, ProjectBoxLink };
+export { ProjectBoxContainer, ProjectBoxIcon, ProjectBoxImage, ProjectBoxImageWrapper, ProjectBoxLink, ProjectBoxTitle };

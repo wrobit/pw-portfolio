@@ -6,7 +6,7 @@ const H6 = styled.h6`
   font-size: 14px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 10px;
+    font-size: 12px;
   }
 `;
 
