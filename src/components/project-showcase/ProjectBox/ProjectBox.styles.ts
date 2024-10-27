@@ -16,11 +16,10 @@ const ProjectBoxContainer = styled.div`
   }
 `;
 
-const ProjectBoxImageWrapper = styled.div`
+const ProjectBoxImageWrapper = styled.a`
   width: 100%;
   height: 454px;
   border-radius: ${({ theme }) => theme.radius.xl};
-  cursor: pointer;
 `;
 
 const ProjectBoxLink = styled.a`
@@ -29,7 +28,6 @@ const ProjectBoxLink = styled.a`
   display: flex;
   gap: ${({ theme }) => theme.spacing.sm};
   align-items: center;
-  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
