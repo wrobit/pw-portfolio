@@ -12,6 +12,16 @@ const ProjectShowcaseContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
 `;
 
 export { ProjectShowcaseContainer };

@@ -1,11 +1,12 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const HeroSection = styled.div`
+const HeroSection = styled(motion.div)`
   width: 100%;
   margin-top: ${({ theme }) => theme.spacing.xxl};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xxl};
+  gap: ${({ theme }) => theme.spacing.xxxl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;

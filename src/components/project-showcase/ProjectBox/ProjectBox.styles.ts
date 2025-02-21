@@ -1,7 +1,8 @@
 import { Typography } from "@components/common";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const ProjectBoxContainer = styled.div`
+const ProjectBoxContainer = styled(motion.div)`
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -13,7 +14,8 @@ const ProjectBoxContainer = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 350px;
+    height: 300px;
+    gap: ${({ theme }) => theme.spacing.md};
   }
 `;
 
@@ -26,12 +28,18 @@ const ProjectBoxImageWrapper = styled.a`
   display: block;
   cursor: none;
   background: ${({ theme }) => theme.colors.black};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 260px;
+  }
 `;
 
 const ProjectBoxLink = styled.a`
   text-decoration: none;
   color: inherit;
   cursor: none;
+  display: block;
+  margin-top: auto;
 `;
 
 const ProjectBoxTitle = styled(Typography.Headers.H6)`
@@ -45,10 +53,8 @@ const ProjectBoxImage = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: ${({ theme }) => theme.radius.xl};
-  transform: scale(1.01); /* Prevents border radius flickering */
+  transform: scale(1.01);
   transition: transform 0.3s ease-out;
 `;
 
-const ProjectBoxIcon = styled.img``;
-
-export { ProjectBoxContainer, ProjectBoxIcon, ProjectBoxImage, ProjectBoxImageWrapper, ProjectBoxLink, ProjectBoxTitle };
+export { ProjectBoxContainer, ProjectBoxImage, ProjectBoxImageWrapper, ProjectBoxLink, ProjectBoxTitle };
