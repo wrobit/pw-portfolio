@@ -24,4 +24,13 @@ const ProjectShowcaseContainer = styled.div`
   }
 `;
 
-export { ProjectShowcaseContainer };
+const ProjectShowcaseWrapper = styled.div`
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.xl};
+  margin-bottom: ${({ theme }) => theme.spacing.xxl};
+`;
+
+export { ProjectShowcaseContainer, ProjectShowcaseWrapper };

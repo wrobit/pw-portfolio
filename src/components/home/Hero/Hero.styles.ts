@@ -75,6 +75,11 @@ const HeroButtonIcon = styled.img`
       transform: translateY(0);
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 26px;
+    height: 26px;
+  }
 `;
 
 export { HeroButton, HeroButtonIcon, HeroButtonWrapper, HeroSection, HeroTypographyWrapper };
