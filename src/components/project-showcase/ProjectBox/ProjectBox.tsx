@@ -1,37 +1,19 @@
 import UpperRightArrow from "@assets/icons/arrow-upper-right.svg";
-import { hexToRgba } from "@utils/helpers/colors.helper";
+import { useHoverAnimation } from "@utils/animations/hooks";
+import { arrowHover, fadeInUp, hoverScale, linkHover } from "@utils/animations/variants";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { useTheme } from "styled-components";
 import * as Styled from "./ProjectBox.styles";
 import { ProjectBoxProps } from "./ProjectBox.types";
 
 export const ProjectBox = ({ title, image, id, index }: ProjectBoxProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const theme = useTheme();
-
-  const handleHover = (hovered: boolean) => {
-    setIsHovered(hovered);
-  };
+  const { isHovered, hoverProps } = useHoverAnimation();
 
   return (
-    <Styled.ProjectBoxContainer
-      onMouseEnter={() => handleHover(true)}
-      onMouseLeave={() => handleHover(false)}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.5,
-        delay: 0.8 + index * 0.2,
-        ease: "easeOut"
-      }}
-    >
+    <Styled.ProjectBoxContainer {...hoverProps} variants={fadeInUp} initial="hidden" animate="visible" custom={0.8 + index * 0.2}>
       <motion.div
-        animate={{
-          scale: isHovered ? 1.02 : 1,
-          filter: isHovered ? "brightness(1.1)" : "brightness(1)"
-        }}
-        transition={{ duration: 0.2, ease: "easeOut" }}
+        variants={hoverScale}
+        initial="initial"
+        animate={isHovered ? "hover" : "initial"}
         style={{ width: "100%", height: "100%", position: "relative" }}
       >
         <Styled.ProjectBoxImageWrapper href={`/project/${id}`}>
@@ -40,7 +22,7 @@ export const ProjectBox = ({ title, image, id, index }: ProjectBoxProps) => {
             animate={{
               opacity: isHovered ? 1 : 0,
               backdropFilter: "blur(10px)",
-              backgroundColor: hexToRgba(theme.colors.black, 0.1)
+              backgroundColor: "rgba(0, 0, 0, 0.1)"
             }}
             transition={{ duration: 0.3 }}
             style={{
@@ -58,29 +40,14 @@ export const ProjectBox = ({ title, image, id, index }: ProjectBoxProps) => {
       </motion.div>
       <Styled.ProjectBoxLink href={`/project/${id}`}>
         <motion.div
-          animate={{
-            x: isHovered ? 0 : -5,
-            opacity: isHovered ? 1 : 0.8
-          }}
-          transition={{ duration: 0.2 }}
+          variants={linkHover}
+          initial="initial"
+          animate={isHovered ? "hover" : "initial"}
           style={{ display: "flex", alignItems: "center", gap: "8px" }}
         >
           <Styled.ProjectBoxTitle>{title}</Styled.ProjectBoxTitle>
-          <motion.div
-            animate={{
-              x: isHovered ? 5 : 0
-            }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <motion.img
-              src={UpperRightArrow}
-              alt="arrow"
-              animate={{
-                scale: isHovered ? 1 : 0.8
-              }}
-              transition={{ duration: 0.2 }}
-              style={{ display: "block" }}
-            />
+          <motion.div variants={arrowHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
+            <motion.img src={UpperRightArrow} alt="arrow" style={{ display: "block" }} />
           </motion.div>
         </motion.div>
       </Styled.ProjectBoxLink>

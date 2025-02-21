@@ -1,7 +1,8 @@
 import RightArrow from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/common";
+import { useHoverAnimation } from "@utils/animations/hooks";
+import { arrowHover, fadeInUp, linkHover } from "@utils/animations/variants";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import * as Styled from "./MoreWork.styles";
 
 type MoreWorkProps = {
@@ -9,35 +10,17 @@ type MoreWorkProps = {
 };
 
 export const MoreWork = ({ delay }: MoreWorkProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const { isHovered, hoverProps } = useHoverAnimation();
 
   return (
-    <Styled.MoreWorkLink
-      href="/work"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.5,
-        delay,
-        ease: "easeOut"
-      }}
-    >
-      <motion.div
-        animate={{
-          x: isHovered ? 5 : 0,
-          opacity: isHovered ? 1 : 0.8
-        }}
-        transition={{ duration: 0.2 }}
-      >
+    <Styled.MoreWorkLink href="/work" {...hoverProps} variants={fadeInUp} initial="hidden" animate="visible" custom={delay}>
+      <motion.div variants={linkHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
         <Styled.MoreWorkContent>
           <Typography.Headers.H6>More work</Typography.Headers.H6>
           <Styled.ArrowWrapper
-            animate={{
-              scale: isHovered ? 1 : 0.9
-            }}
-            transition={{ duration: 0.2 }}
+            variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
+            initial="initial"
+            animate={isHovered ? "hover" : "initial"}
           >
             <Styled.ArrowIcon src={RightArrow} alt="arrow" />
           </Styled.ArrowWrapper>

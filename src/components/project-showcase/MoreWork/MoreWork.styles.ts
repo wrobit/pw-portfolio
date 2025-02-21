@@ -5,7 +5,7 @@ import styled from "styled-components";
 const MoreWorkLink = styled(motion.a)`
   width: fit-content;
   margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing.md} 0 ${({ theme }) => theme.spacing.md};
+  padding: ${({ theme }) => theme.spacing.md};
   ${({ theme }) => theme.spacing.lg};
   border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.3)};
   background: transparent;
