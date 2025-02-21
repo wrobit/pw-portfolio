@@ -5,8 +5,8 @@ import * as Styled from "./ProjectShowcase.styles";
 export const ProjectShowcase = () => {
   return (
     <Styled.ProjectShowcaseContainer>
-      {projects.map(project => (
-        <ProjectBox key={project.id} {...project} />
+      {projects.map((project, index) => (
+        <ProjectBox key={project.id} {...project} index={index} />
       ))}
     </Styled.ProjectShowcaseContainer>
   );
