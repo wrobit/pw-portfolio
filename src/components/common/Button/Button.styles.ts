@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  padding: 11px 24px;
+  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
   background-color: ${({ theme }) => theme.colors.white};
   color: ${({ theme }) => theme.colors.black};
   border: 2px solid ${({ theme }) => theme.colors.white};
