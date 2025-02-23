@@ -20,7 +20,7 @@ const ErrorContentWrapper = styled.div`
   gap: 2rem;
 `;
 
-const ErrorTitle = styled(Typography.Headers.H2)`
+const ErrorTitle = styled(Typography.Headers.H3)`
   width: 80%;
   text-align: center;
 
