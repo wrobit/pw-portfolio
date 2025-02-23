@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ContactContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: ${({ theme }) => `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -37,7 +37,6 @@ const ContactLinksWrapper = styled.div`
 
 const ContactBackgroundImageWrapper = styled.div`
   position: absolute;
-  top: 0;
   right: 0;
   width: 296px;
   height: 650px;

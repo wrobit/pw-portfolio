@@ -15,13 +15,15 @@ export const Error = () => {
 
   return (
     <PageTemplateWrapper>
-      <Styled.ErrorContentWrapper>
-        <Styled.ErrorTitle>
-          Oops. It looks like the page you're trying to reach <Typography.Default color={theme.colors.gray}>doesn't exist&nbsp;</Typography.Default>
-          or has been moved.
-        </Styled.ErrorTitle>
-        <Button onClick={handleRouteChange}>Go to Home</Button>
-      </Styled.ErrorContentWrapper>
+      <Styled.ErrorContainer>
+        <Styled.ErrorContentWrapper>
+          <Styled.ErrorTitle>
+            Oops. It looks like the page you're trying to reach <Typography.Default color={theme.colors.gray}>doesn't exist&nbsp;</Typography.Default>
+            or has been moved.
+          </Styled.ErrorTitle>
+          <Button onClick={handleRouteChange}>Go to Home</Button>
+        </Styled.ErrorContentWrapper>
+      </Styled.ErrorContainer>
     </PageTemplateWrapper>
   );
 };

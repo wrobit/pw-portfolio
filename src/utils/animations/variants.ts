@@ -1,0 +1,95 @@
+import { Variants } from "framer-motion";
+
+// Fade in animation with optional y-axis movement
+export const fadeInUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20
+  },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay,
+      ease: "easeOut"
+    }
+  })
+};
+
+// Hover scale animation
+export const hoverScale: Variants = {
+  initial: {
+    scale: 1
+  },
+  hover: {
+    scale: 1.02,
+    transition: {
+      duration: 0.2,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Link hover animation with arrow
+export const linkHover: Variants = {
+  initial: {
+    x: -5,
+    opacity: 0.8
+  },
+  hover: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.2
+    }
+  }
+};
+
+// Arrow animation for links
+export const arrowHover: Variants = {
+  initial: {
+    x: 0,
+    scale: 0.8
+  },
+  hover: {
+    x: 5,
+    scale: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Page transition
+export const pageTransition: Variants = {
+  initial: {
+    opacity: 0
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  },
+  exit: {
+    opacity: 0
+  }
+};
+
+// SVG path animation
+export const svgPath: Variants = {
+  hidden: {
+    pathLength: 0,
+    opacity: 0
+  },
+  visible: {
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: "easeInOut"
+    }
+  }
+};

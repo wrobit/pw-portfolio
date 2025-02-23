@@ -1,0 +1,4 @@
+yarn
+npx lint-staged
+echo -e '\033[0;32mLint and Prettier was successful! ✅\033[0m';
+echo -e '\033[0;34mCommit was sent! 🚀\033[0m'

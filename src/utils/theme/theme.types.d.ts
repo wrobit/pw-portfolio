@@ -19,6 +19,24 @@ declare module "styled-components" {
       mobile: string;
       tablet: string;
       desktop: string;
+      largeDesktop: string;
+    };
+    spacing: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+      xxxl: string;
+      xxxxl: string;
+      xxxxxl: string;
+    };
+    radius: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
     };
     sizes: {
       footer: {

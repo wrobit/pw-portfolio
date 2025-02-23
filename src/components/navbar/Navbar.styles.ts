@@ -20,17 +20,17 @@ const Wrapper = styled.div<WrapperProps>`
 const NavbarWrapper = styled.div`
   width: 100%;
   height: 88px;
-  padding: 0 152px;
+  padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 112px;
+    padding: 0 ${({ theme }) => theme.spacing.xxxxl};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 0 32px;
+    padding: 0 ${({ theme }) => theme.spacing.xl};
   }
 `;
 
@@ -139,4 +139,4 @@ const HamburgerMenuLink = styled(RouterLink)`
   }
 `;
 
-export { Hamburger, HamburgerLine, HamburgerMenu, HamburgerMenuLink, Link, NavLinks, NavbarWrapper, Wrapper };
+export { Hamburger, HamburgerLine, HamburgerMenu, HamburgerMenuLink, Link, NavbarWrapper, NavLinks, Wrapper };
