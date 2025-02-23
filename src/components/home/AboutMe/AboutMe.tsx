@@ -1,3 +1,4 @@
+import leavesImage from "@assets/leaves.png";
 import { Typography } from "@components/common";
 import * as Styled from "@components/home/AboutMe/AboutMe.styles";
 import { useScrollAnimation } from "@utils/animations/hooks";
@@ -23,16 +24,28 @@ export const AboutMe = () => {
 
   return (
     <Styled.AboutMeSection ref={ref} variants={pageTransition} initial="initial" animate={isInView ? "animate" : "initial"}>
-      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
-        <Typography.Headers.H4>
-          I'm a developer that is dedicated to every project I undertake. I closely work with every team and client to understand needs and deliver
-          the best solutions. Creating a product that exceeds my client's expectations is what I seek to.
-        </Typography.Headers.H4>
-      </motion.div>
-      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
-        <Styled.AboutMeButton onClick={handleRouteChange} variants={hoverScale} initial="initial" whileHover="hover">
-          About me
-        </Styled.AboutMeButton>
+      <Styled.AboutMeHeader>
+        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
+          <Typography.Headers.H4>
+            I'm a developer that is dedicated to every project I undertake. I closely work with every team and client to understand needs and deliver
+            the best solutions. Creating a product that exceeds my client's expectations is what I seek to.
+          </Typography.Headers.H4>
+        </motion.div>
+        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
+          <Styled.AboutMeButton onClick={handleRouteChange} variants={hoverScale} initial="initial" whileHover="hover">
+            About me
+          </Styled.AboutMeButton>
+        </motion.div>
+      </Styled.AboutMeHeader>
+      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.6}>
+        <Styled.AboutMeImage
+          src={leavesImage}
+          alt="About me"
+          loading="lazy"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        />
       </motion.div>
     </Styled.AboutMeSection>
   );
