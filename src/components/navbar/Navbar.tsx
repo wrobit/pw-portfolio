@@ -1,5 +1,6 @@
 import { Logo } from "@components/common";
 import { routes } from "@utils/constants/routes.constants";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as Styled from "./Navbar.styles";
@@ -9,6 +10,46 @@ export const MENU_ITEMS = [
   { path: routes.about, label: "About", index: 2 },
   { path: routes.contact, label: "Contact", index: 3 }
 ];
+
+const menuVariants = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      when: "afterChildren",
+      staggerChildren: 0.05,
+      staggerDirection: -1
+    }
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const menuItemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn"
+    }
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
 
 export const Navbar = () => {
   const location = useLocation();
@@ -38,19 +79,26 @@ export const Navbar = () => {
     </Styled.NavbarWrapper>
   );
 
-  const renderHamburgerMenu = () =>
-    isHamburgerOpen && (
-      <Styled.HamburgerMenu isOpen={isHamburgerOpen}>
-        <Styled.HamburgerMenuWrapper>
-          {MENU_ITEMS.map((item, index) => (
-            <Styled.HamburgerMenuLink key={item.path} to={item.path}>
-              <Styled.HamburgerMenuLinkIndex>{`${index + 1} `}</Styled.HamburgerMenuLinkIndex>
-              {item.label}
-            </Styled.HamburgerMenuLink>
-          ))}
-        </Styled.HamburgerMenuWrapper>
-      </Styled.HamburgerMenu>
-    );
+  const renderHamburgerMenu = () => (
+    <AnimatePresence mode="wait">
+      {isHamburgerOpen && (
+        <Styled.HamburgerMenu isOpen={isHamburgerOpen}>
+          <motion.div variants={menuVariants} initial="hidden" animate="visible" exit="hidden" style={{ width: "100%", height: "100%" }}>
+            <Styled.HamburgerMenuWrapper>
+              {MENU_ITEMS.map(item => (
+                <motion.div key={item.path} variants={menuItemVariants}>
+                  <Styled.HamburgerMenuLink to={item.path}>
+                    <Styled.HamburgerMenuLinkIndex>{`${item.index} `}</Styled.HamburgerMenuLinkIndex>
+                    {item.label}
+                  </Styled.HamburgerMenuLink>
+                </motion.div>
+              ))}
+            </Styled.HamburgerMenuWrapper>
+          </motion.div>
+        </Styled.HamburgerMenu>
+      )}
+    </AnimatePresence>
+  );
 
   return (
     <Styled.Wrapper isOpen={isHamburgerOpen}>

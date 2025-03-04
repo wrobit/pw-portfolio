@@ -1,6 +1,7 @@
 import { hexToRgba } from "@utils/helpers/colors.helper";
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 type WrapperProps = {
   isOpen: boolean;
@@ -17,7 +18,7 @@ const Wrapper = styled.div<WrapperProps>`
   background-color: ${({ theme }) => hexToRgba(theme.colors.black, 0.65)};
   backdrop-filter: ${({ isOpen }) => (isOpen ? "blur(12px)" : "blur(4px)")};
   -webkit-backdrop-filter: ${({ isOpen }) => (isOpen ? "blur(12px)" : "blur(4px)")};
-  transition: backdrop-filter 100ms linear;
+  transition: all 300ms ease-in-out;
 `;
 
 const NavbarWrapper = styled.div`
@@ -108,30 +109,24 @@ type HamburgerMenuProps = {
   isOpen: boolean;
 };
 
-const HamburgerMenu = styled.div<HamburgerMenuProps>`
+const HamburgerMenu = styled(motion.div)<HamburgerMenuProps>`
+  position: absolute;
+  top: calc(${({ theme }) => theme.sizes.navbar.height} + 156px);
   width: 100%;
   height: calc(100vh - 156px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 100ms linear;
-  opacity: 0;
-  visibility: hidden;
-
-  ${({ isOpen }) =>
-    isOpen && {
-      opacity: 1,
-      visibility: "visible"
-    }}
 `;
 
 const HamburgerMenuWrapper = styled.div`
   height: fit-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: ${({ theme }) => theme.spacing.md};
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.lg};
 `;
 
 const HamburgerMenuLinkIndex = styled.span`
@@ -143,7 +138,7 @@ const HamburgerMenuLinkIndex = styled.span`
 const HamburgerMenuLink = styled(RouterLink)`
   margin: 16px 0;
   font-family: ${({ theme }) => theme.font.regular};
-  font-size: 56px;
+  font-size: ${({ theme }) => theme.fontSize.h2};
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
   transition: all 100ms linear;

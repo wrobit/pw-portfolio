@@ -15,6 +15,15 @@ declare module "styled-components" {
       italic: string;
       boldItalic: string;
     };
+    fontSize: {
+      h1: string;
+      h2: string;
+      h3: string;
+      h4: string;
+      h5: string;
+      h6: string;
+      body: string;
+    };
     breakpoints: {
       mobile: string;
       tablet: string;
