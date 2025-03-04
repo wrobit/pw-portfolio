@@ -51,31 +51,14 @@ const Link = styled(RouterLink)<{ $isActive?: boolean }>`
   margin: 0 16px;
   position: relative;
   text-decoration: none;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.white};
-    transform: ${({ $isActive }) => ($isActive ? "scaleX(1)" : "scaleX(0)")};
-    transform-origin: center;
-    transition: transform 200ms ease-out;
-    opacity: ${({ $isActive }) => ($isActive ? 1 : 0.8)};
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-  }
+  transition: color 100ms linear;
 
   &:active {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.4)};
   }
 
   &:hover {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.8)};
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
