@@ -63,6 +63,11 @@ const Link = styled(RouterLink)<{ $isActive?: boolean }>`
     transform: ${({ $isActive }) => ($isActive ? "scaleX(1)" : "scaleX(0)")};
     transform-origin: center;
     transition: transform 200ms ease-out;
+    opacity: ${({ $isActive }) => ($isActive ? 1 : 0.8)};
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
   }
 
   &:active {
@@ -171,6 +176,11 @@ const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
     transform: ${({ $isActive }) => ($isActive ? "scaleX(1)" : "scaleX(0)")};
     transform-origin: center;
     transition: transform 200ms ease-out;
+    opacity: ${({ $isActive }) => ($isActive ? 1 : 0.8)};
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
   }
 
   &:active {
