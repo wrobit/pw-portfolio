@@ -7,7 +7,7 @@ export const Logo = () => {
   return (
     <Styled.Wrapper>
       <Link to={routes.home}>
-        <Typography.Logo>pw.</Typography.Logo>
+        <Typography.Logo>wrobit.</Typography.Logo>
       </Link>
     </Styled.Wrapper>
   );
