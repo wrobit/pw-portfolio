@@ -3,6 +3,7 @@ import { routes } from "@utils/constants/routes.constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { menuItemVariants, menuVariants } from "./Navbar.animations";
 import * as Styled from "./Navbar.styles";
 
 export const MENU_ITEMS = [
@@ -10,46 +11,6 @@ export const MENU_ITEMS = [
   { path: routes.about, label: "About", index: 2 },
   { path: routes.contact, label: "Contact", index: 3 }
 ];
-
-const menuVariants = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      duration: 0.2,
-      when: "afterChildren",
-      staggerChildren: 0.05,
-      staggerDirection: -1
-    }
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.3,
-      when: "beforeChildren",
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const menuItemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-    transition: {
-      duration: 0.2,
-      ease: "easeIn"
-    }
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
-  }
-};
 
 export const Navbar = () => {
   const location = useLocation();
