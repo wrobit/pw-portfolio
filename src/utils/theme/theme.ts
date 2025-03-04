@@ -42,7 +42,7 @@ const defaultTheme: DefaultTheme = {
       height: "60px"
     },
     navbar: {
-      height: "88px"
+      height: "72px"
     }
   }
 };

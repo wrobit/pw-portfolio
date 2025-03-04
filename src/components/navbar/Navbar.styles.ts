@@ -14,12 +14,14 @@ const Wrapper = styled.div<WrapperProps>`
   flex-direction: column;
   align-items: center;
   z-index: 100;
-  background-color: ${({ theme }) => hexToRgba(theme.colors.black, 0.8)};
+  background-color: ${({ theme }) => hexToRgba(theme.colors.black, 0.65)};
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 `;
 
 const NavbarWrapper = styled.div`
   width: 100%;
-  height: 88px;
+  height: ${({ theme }) => theme.sizes.navbar.height};
   padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
   display: flex;
   align-items: center;
