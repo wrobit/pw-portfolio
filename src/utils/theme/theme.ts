@@ -14,6 +14,15 @@ const defaultTheme: DefaultTheme = {
     italic: "DMSansItalic",
     boldItalic: "DMSansBoldItalic"
   },
+  fontSize: {
+    h1: "56px",
+    h2: "48px",
+    h3: "32px",
+    h4: "24px",
+    h5: "20px",
+    h6: "16px",
+    body: "14px"
+  },
   breakpoints: {
     mobile: "500px",
     tablet: "768px",
@@ -42,7 +51,7 @@ const defaultTheme: DefaultTheme = {
       height: "60px"
     },
     navbar: {
-      height: "88px"
+      height: "72px"
     }
   }
 };

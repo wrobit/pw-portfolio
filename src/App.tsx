@@ -23,7 +23,8 @@ const App = () => {
     innerScale: 0.7,
     outerSize: 8,
     outerAlpha: 0.15,
-    outerScale: 5
+    outerScale: 5,
+    disableOnMobile: true
   };
 
   const reactLenisOptions = {

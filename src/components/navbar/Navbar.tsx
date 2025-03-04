@@ -1,8 +1,16 @@
 import { Logo } from "@components/common";
 import { routes } from "@utils/constants/routes.constants";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { menuItemVariants, menuVariants } from "./Navbar.animations";
 import * as Styled from "./Navbar.styles";
+
+export const MENU_ITEMS = [
+  { path: routes.work, label: "Work", index: 1 },
+  { path: routes.about, label: "About", index: 2 },
+  { path: routes.contact, label: "Contact", index: 3 }
+];
 
 export const Navbar = () => {
   const location = useLocation();
@@ -16,28 +24,49 @@ export const Navbar = () => {
     onRouteChange();
   }, [location]);
 
-  return (
-    <Styled.Wrapper isOpen={isHamburgerOpen}>
-      <Styled.NavbarWrapper>
-        <Logo />
-        <Styled.NavLinks>
-          <Styled.Link to={routes.work}>Work</Styled.Link>
-          <Styled.Link to={routes.about}>About</Styled.Link>
-          <Styled.Link to={routes.contact}>Contact</Styled.Link>
-        </Styled.NavLinks>
-        <Styled.Hamburger isOpen={isHamburgerOpen} onClick={() => setIsHamburgerOpen(prev => !prev)}>
-          <Styled.HamburgerLine />
-          <Styled.HamburgerLine />
-          <Styled.HamburgerLine />
-        </Styled.Hamburger>
-      </Styled.NavbarWrapper>
+  const renderNavbar = () => (
+    <Styled.NavbarWrapper>
+      <Logo />
+      <Styled.NavLinks>
+        {MENU_ITEMS.map(item => (
+          <Styled.Link key={item.path} to={item.path} $isActive={location.pathname === item.path}>
+            {item.label}
+          </Styled.Link>
+        ))}
+      </Styled.NavLinks>
+      <Styled.Hamburger isOpen={isHamburgerOpen} onClick={() => setIsHamburgerOpen(prev => !prev)}>
+        <Styled.HamburgerLine />
+        <Styled.HamburgerLine />
+        <Styled.HamburgerLine />
+      </Styled.Hamburger>
+    </Styled.NavbarWrapper>
+  );
+
+  const renderHamburgerMenu = () => (
+    <AnimatePresence mode="wait">
       {isHamburgerOpen && (
         <Styled.HamburgerMenu isOpen={isHamburgerOpen}>
-          <Styled.HamburgerMenuLink to={routes.work}>Work</Styled.HamburgerMenuLink>
-          <Styled.HamburgerMenuLink to={routes.about}>About</Styled.HamburgerMenuLink>
-          <Styled.HamburgerMenuLink to={routes.contact}>Contact</Styled.HamburgerMenuLink>
+          <motion.div variants={menuVariants} initial="hidden" animate="visible" exit="hidden" style={{ width: "100%", height: "100%" }}>
+            <Styled.HamburgerMenuWrapper>
+              {MENU_ITEMS.map(item => (
+                <motion.div key={item.path} variants={menuItemVariants}>
+                  <Styled.HamburgerMenuLink to={item.path} $isActive={location.pathname === item.path}>
+                    <Styled.HamburgerMenuLinkIndex>{`${item.index} `}</Styled.HamburgerMenuLinkIndex>
+                    {item.label}
+                  </Styled.HamburgerMenuLink>
+                </motion.div>
+              ))}
+            </Styled.HamburgerMenuWrapper>
+          </motion.div>
         </Styled.HamburgerMenu>
       )}
+    </AnimatePresence>
+  );
+
+  return (
+    <Styled.Wrapper isOpen={isHamburgerOpen}>
+      {renderNavbar()}
+      {renderHamburgerMenu()}
     </Styled.Wrapper>
   );
 };
