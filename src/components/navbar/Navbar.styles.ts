@@ -9,14 +9,15 @@ type WrapperProps = {
 const Wrapper = styled.div<WrapperProps>`
   position: fixed;
   width: 100%;
-  height: ${({ isOpen, theme }) => (isOpen ? "40vh" : theme.sizes.navbar.height)};
+  height: ${({ isOpen, theme }) => (isOpen ? "100vh" : theme.sizes.navbar.height)};
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 100;
   background-color: ${({ theme }) => hexToRgba(theme.colors.black, 0.65)};
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: ${({ isOpen }) => (isOpen ? "blur(12px)" : "blur(4px)")};
+  -webkit-backdrop-filter: ${({ isOpen }) => (isOpen ? "blur(12px)" : "blur(4px)")};
+  transition: backdrop-filter 100ms linear;
 `;
 
 const NavbarWrapper = styled.div`
@@ -109,6 +110,7 @@ type HamburgerMenuProps = {
 
 const HamburgerMenu = styled.div<HamburgerMenuProps>`
   width: 100%;
+  height: calc(100vh - 156px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,10 +126,24 @@ const HamburgerMenu = styled.div<HamburgerMenuProps>`
     }}
 `;
 
+const HamburgerMenuWrapper = styled.div`
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+
+const HamburgerMenuLinkIndex = styled.span`
+  font-family: ${({ theme }) => theme.font.regular};
+  font-size: 16px;
+  color: ${({ theme }) => theme.colors.white};
+`;
+
 const HamburgerMenuLink = styled(RouterLink)`
   margin: 16px 0;
   font-family: ${({ theme }) => theme.font.regular};
-  font-size: 21px;
+  font-size: 56px;
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
   transition: all 100ms linear;
@@ -141,4 +157,15 @@ const HamburgerMenuLink = styled(RouterLink)`
   }
 `;
 
-export { Hamburger, HamburgerLine, HamburgerMenu, HamburgerMenuLink, Link, NavbarWrapper, NavLinks, Wrapper };
+export {
+  Hamburger,
+  HamburgerLine,
+  HamburgerMenu,
+  HamburgerMenuLink,
+  HamburgerMenuLinkIndex,
+  HamburgerMenuWrapper,
+  Link,
+  NavbarWrapper,
+  NavLinks,
+  Wrapper
+};

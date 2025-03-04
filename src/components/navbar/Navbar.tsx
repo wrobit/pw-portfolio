@@ -33,9 +33,17 @@ export const Navbar = () => {
       </Styled.NavbarWrapper>
       {isHamburgerOpen && (
         <Styled.HamburgerMenu isOpen={isHamburgerOpen}>
-          <Styled.HamburgerMenuLink to={routes.work}>Work</Styled.HamburgerMenuLink>
-          <Styled.HamburgerMenuLink to={routes.about}>About</Styled.HamburgerMenuLink>
-          <Styled.HamburgerMenuLink to={routes.contact}>Contact</Styled.HamburgerMenuLink>
+          <Styled.HamburgerMenuWrapper>
+            <Styled.HamburgerMenuLink to={routes.work}>
+              <Styled.HamburgerMenuLinkIndex>{`1 `}</Styled.HamburgerMenuLinkIndex>Work
+            </Styled.HamburgerMenuLink>
+            <Styled.HamburgerMenuLink to={routes.about}>
+              <Styled.HamburgerMenuLinkIndex>{`2 `}</Styled.HamburgerMenuLinkIndex>About
+            </Styled.HamburgerMenuLink>
+            <Styled.HamburgerMenuLink to={routes.contact}>
+              <Styled.HamburgerMenuLinkIndex>{`3 `}</Styled.HamburgerMenuLinkIndex>Contact
+            </Styled.HamburgerMenuLink>
+          </Styled.HamburgerMenuWrapper>
         </Styled.HamburgerMenu>
       )}
     </Styled.Wrapper>
