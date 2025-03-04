@@ -67,9 +67,11 @@ export const Navbar = () => {
     <Styled.NavbarWrapper>
       <Logo />
       <Styled.NavLinks>
-        <Styled.Link to={routes.work}>Work</Styled.Link>
-        <Styled.Link to={routes.about}>About</Styled.Link>
-        <Styled.Link to={routes.contact}>Contact</Styled.Link>
+        {MENU_ITEMS.map(item => (
+          <Styled.Link key={item.path} to={item.path} $isActive={location.pathname === item.path}>
+            {item.label}
+          </Styled.Link>
+        ))}
       </Styled.NavLinks>
       <Styled.Hamburger isOpen={isHamburgerOpen} onClick={() => setIsHamburgerOpen(prev => !prev)}>
         <Styled.HamburgerLine />
@@ -87,7 +89,7 @@ export const Navbar = () => {
             <Styled.HamburgerMenuWrapper>
               {MENU_ITEMS.map(item => (
                 <motion.div key={item.path} variants={menuItemVariants}>
-                  <Styled.HamburgerMenuLink to={item.path}>
+                  <Styled.HamburgerMenuLink to={item.path} $isActive={location.pathname === item.path}>
                     <Styled.HamburgerMenuLinkIndex>{`${item.index} `}</Styled.HamburgerMenuLinkIndex>
                     {item.label}
                   </Styled.HamburgerMenuLink>
