@@ -47,6 +47,9 @@ const defaultTheme: DefaultTheme = {
     xxl: "32px"
   },
   sizes: {
+    footer: {
+      height: "60px"
+    },
     navbar: {
       height: "72px"
     }
