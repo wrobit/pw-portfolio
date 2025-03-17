@@ -48,9 +48,6 @@ declare module "styled-components" {
       xxl: string;
     };
     sizes: {
-      footer: {
-        height: string;
-      };
       navbar: {
         height: string;
       };
