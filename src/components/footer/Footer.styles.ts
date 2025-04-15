@@ -1,3 +1,4 @@
+import { Typography } from "@components/common/Typography/Typography";
 import styled from "styled-components";
 
 const Footer = styled.footer`
@@ -20,12 +21,37 @@ const Footer = styled.footer`
 
 const FooterNavigation = styled.div`
   display: flex;
+  flex-direction: row;
+  gap: ${({ theme }) => theme.spacing.xxxxl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex-direction: column;
+  }
+`;
+
+const FooterNavigationLinksContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: ${({ theme }) => theme.spacing.xxxxxl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
+    gap: ${({ theme }) => theme.spacing.xxl};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    justify-content: space-between;
+  }
+`;
+
+const FooterNavigationLinks = styled.div`
+  display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.lg}px;
+  gap: ${({ theme }) => theme.spacing.md};
 `;
 
-const FooterNavigationHeader = styled.div`
-  width: 55%;
+const FooterNavigationHeaderText = styled(Typography.Default)`
+  font-family: ${({ theme }) => theme.font.bold};
 `;
 
-export { Footer, FooterNavigation, FooterNavigationHeader };
+export { Footer, FooterNavigation, FooterNavigationLinksContainer, FooterNavigationLinks, FooterNavigationHeaderText };
