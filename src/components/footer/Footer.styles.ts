@@ -1,7 +1,8 @@
 import { Typography } from "@components/common/Typography/Typography";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Footer = styled.footer`
+const Footer = styled(motion.footer)`
   width: 100%;
   min-height: 100px;
   padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
@@ -48,7 +49,7 @@ const FooterNavigationLinksContainer = styled.div`
   }
 `;
 
-const FooterNavigationLinks = styled.div`
+const FooterNavigationLinks = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
