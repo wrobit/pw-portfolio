@@ -1,20 +1,62 @@
+import { Typography } from "@components/common/Typography/Typography";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Footer = styled.footer`
+const Footer = styled(motion.footer)`
   width: 100%;
-  height: ${({ theme }) => theme.sizes.footer.height};
-  padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
+  min-height: 100px;
+  padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing.xxl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 ${({ theme }) => theme.spacing.xxxxl};
+    padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxl}`};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 0 ${({ theme }) => theme.spacing.xl};
+    padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl}`};
   }
 `;
 
-export { Footer };
+const FooterNavigation = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: ${({ theme }) => theme.spacing.xxxxl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex-direction: column;
+  }
+`;
+
+const FooterNavigationLinksContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: ${({ theme }) => theme.spacing.xxxxxl};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
+    gap: ${({ theme }) => theme.spacing.xxl};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    justify-content: space-between;
+  }
+`;
+
+const FooterNavigationLinks = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+
+const FooterNavigationHeaderText = styled(Typography.Default)`
+  font-family: ${({ theme }) => theme.font.bold};
+`;
+
+export { Footer, FooterNavigation, FooterNavigationLinksContainer, FooterNavigationLinks, FooterNavigationHeaderText };
