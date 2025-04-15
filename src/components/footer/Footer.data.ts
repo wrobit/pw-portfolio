@@ -1,3 +1,4 @@
+import { PROFILE_DATA } from "@utils/constants/data.constants";
 import { routes } from "@utils/constants/routes.constants";
 
 export const data = [
@@ -26,20 +27,20 @@ export const data = [
     header: "socials",
     links: [
       {
-        label: "github",
-        href: "https://github.com/wrobit"
+        label: PROFILE_DATA.GITHUB.label,
+        href: PROFILE_DATA.GITHUB.href
       },
       {
-        label: "linkedin",
-        href: "https://www.linkedin.com/in/wrobit/"
+        label: PROFILE_DATA.LINKEDIN.label,
+        href: PROFILE_DATA.LINKEDIN.href
       },
       {
-        label: "twitter",
-        href: "https://twitter.com/wrobit"
+        label: PROFILE_DATA.TWITTER.label,
+        href: PROFILE_DATA.TWITTER.href
       },
       {
-        label: "bento.me",
-        href: "https://bento.me/wrobit"
+        label: PROFILE_DATA.BENTO_ME.label,
+        href: PROFILE_DATA.BENTO_ME.href
       }
     ]
   },
@@ -47,8 +48,8 @@ export const data = [
     header: "contact",
     links: [
       {
-        label: "email",
-        href: "mailto:piotrwrobel.ajiiz@gmail.com"
+        label: PROFILE_DATA.EMAIL.label,
+        href: PROFILE_DATA.EMAIL.href
       }
     ]
   }
