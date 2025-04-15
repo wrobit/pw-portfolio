@@ -4,18 +4,22 @@ import styled from "styled-components";
 const Footer = styled.footer`
   width: 100%;
   min-height: 100px;
-  padding: ${({ theme }) => theme.spacing.xxxl} ${({ theme }) => theme.spacing.xxxxxl};
+  padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: ${({ theme }) => theme.spacing.xxl};
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 ${({ theme }) => theme.spacing.xxxxl};
+    padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxl}`};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 0 ${({ theme }) => theme.spacing.xl};
+    padding: ${({ theme }) => `${theme.spacing.xxxl} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl}`};
   }
 `;
 
