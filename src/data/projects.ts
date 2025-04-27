@@ -1,22 +1,33 @@
 export const projects = [
   {
     id: 1,
-    title: "The Labz",
-    image: "/images/gradients/purple.jpg"
+    title: "DreamStorm Website",
+    image: "/images/mockups/dreamstorm.png"
   },
+
   {
     id: 2,
-    title: "DreamStorm Website",
-    image: "/images/gradients/orange.jpg"
+    title: "Aloki",
+    image: "/images/mockups/aloki.png"
   },
   {
     id: 3,
-    title: "Aloki",
-    image: "/images/gradients/green.jpg"
+    title: "The Labz",
+    image: "/images/mockups/the-labz.png"
   },
   {
     id: 4,
-    title: "Session Organizer",
-    image: "/images/gradients/red.jpg"
+    title: "Ludus AI",
+    image: "/images/mockups/ludus-ai.png"
+  },
+  {
+    id: 5,
+    title: "Limur",
+    image: "/images/mockups/limur.png"
+  },
+  {
+    id: 6,
+    title: "Ex-portfolio",
+    image: "/images/mockups/ex-portfolio.png"
   }
 ];
