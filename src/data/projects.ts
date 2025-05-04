@@ -7,7 +7,8 @@ export const projects: Project[] = [
     image: "/images/mockups/dreamstorm.png",
     backgroundImage: "/images/gradients/blue.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://dreamstorm.ai"
+    liveLink: "https://dreamstormstudios.com/",
+    repositoryLink: "https://github.com/wrobit/commercial-projects"
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const projects: Project[] = [
     image: "/images/mockups/aloki.png",
     backgroundImage: "/images/gradients/green.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://aloki.ai"
+    liveLink: "https://aloki.io/",
+    repositoryLink: "https://github.com/wrobit/commercial-projects"
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ export const projects: Project[] = [
     backgroundImage: "/images/gradients/orange.png",
     image: "/images/mockups/ludus-ai.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://ludus.ai",
+    liveLink: "https://ludusengine.com/",
+    repositoryLink: "https://github.com/wrobit/commercial-projects",
     isExpanded: true
   },
   {
@@ -32,7 +35,8 @@ export const projects: Project[] = [
     backgroundImage: "/images/gradients/purple.png",
     image: "/images/mockups/the-labz.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://thelabz.ai"
+    liveLink: "https://www.thelabz.com/",
+    repositoryLink: "https://github.com/wrobit/commercial-projects"
   },
   {
     id: 5,
@@ -40,7 +44,7 @@ export const projects: Project[] = [
     backgroundImage: "/images/gradients/green-light.png",
     image: "/images/mockups/limur.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://limur.ai"
+    liveLink: "https://limur.pl/"
   },
   {
     id: 6,
@@ -48,7 +52,7 @@ export const projects: Project[] = [
     backgroundImage: "/images/gradients/gray.png",
     image: "/images/mockups/ex-portfolio.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://ex-portfolio.vercel.app/",
+    liveLink: "https://www.piotrwrobel.eu/",
     repositoryLink: "https://github.com/wrobit/pw-ajiiz-portfolio",
     isExpanded: true
   },
@@ -58,7 +62,8 @@ export const projects: Project[] = [
     backgroundImage: "/images/gradients/grayish.png",
     image: "/images/mockups/listic.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://github.com/wrobit/session-organizer"
+    liveLink: "https://github.com/wrobit/session-organizer",
+    repositoryLink: "https://github.com/wrobit/session-organizer"
   },
   {
     id: 8,
