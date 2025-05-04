@@ -1,6 +1,6 @@
+import { Project } from "../ProjectShowcase.types";
+
 export type ProjectBoxProps = {
-  id: number;
-  title: string;
   image: string;
   index: number;
-};
+} & Project;
