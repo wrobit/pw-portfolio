@@ -4,6 +4,7 @@ export type Project = {
   image: string;
   backgroundImage: string;
   description: string;
-  link: string;
+  liveLink?: string;
+  repositoryLink?: string;
   isExpanded?: boolean;
 };
