@@ -4,9 +4,12 @@ import { arrowHover, fadeInUp, hoverScale, linkHover } from "@utils/animations/v
 import { motion } from "framer-motion";
 import * as Styled from "./ProjectBox.styles";
 import { ProjectBoxProps } from "./ProjectBox.types";
+import { routes } from "@utils/constants/routes.constants";
 
 export const ProjectBox = ({ title, image, id, index, isExpanded = false }: ProjectBoxProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
+
+  const getProjectLink = (id: number) => `${routes.projects}/${id}`;
 
   return (
     <Styled.ProjectBoxContainer
@@ -17,36 +20,21 @@ export const ProjectBox = ({ title, image, id, index, isExpanded = false }: Proj
       custom={0.8 + index * 0.2}
       $isExpanded={isExpanded}
     >
-      <motion.div
-        variants={hoverScale}
-        initial="initial"
-        animate={isHovered ? "hover" : "initial"}
-        style={{ width: "100%", height: "100%", position: "relative" }}
-      >
-        <Styled.ProjectBoxImageWrapper href={`/project/${id}`}>
-          <motion.div
-            className="glass-overlay"
+      <Styled.ProjectBoxContainerContent variants={hoverScale} initial="initial" animate={isHovered ? "hover" : "initial"}>
+        <Styled.ProjectBoxImageWrapper href={getProjectLink(id)}>
+          <Styled.ProjectBoxImageWrapperGlassOverlay
             animate={{
               opacity: isHovered ? 1 : 0,
               backdropFilter: "blur(10px)",
               backgroundColor: "rgba(0, 0, 0, 0.1)"
             }}
             transition={{ duration: 0.3 }}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              zIndex: 1,
-              borderRadius: "inherit"
-            }}
           />
           <Styled.ProjectBoxImage src={image} alt={title} loading="lazy" decoding="async" fetchPriority="high" />
         </Styled.ProjectBoxImageWrapper>
-      </motion.div>
+      </Styled.ProjectBoxContainerContent>
       <Styled.ProjectBoxLink href={`/project/${id}`}>
-        <motion.div
+        <Styled.ProjectBoxLinkContainer
           variants={linkHover}
           initial="initial"
           animate={isHovered ? "hover" : "initial"}
@@ -54,9 +42,9 @@ export const ProjectBox = ({ title, image, id, index, isExpanded = false }: Proj
         >
           <Styled.ProjectBoxTitle>{title}</Styled.ProjectBoxTitle>
           <motion.div variants={arrowHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
-            <motion.img src={UpperRightArrow} alt="arrow" style={{ display: "block" }} />
+            <Styled.ProjectBoxIcon src={UpperRightArrow} alt="arrow" />
           </motion.div>
-        </motion.div>
+        </Styled.ProjectBoxLinkContainer>
       </Styled.ProjectBoxLink>
     </Styled.ProjectBoxContainer>
   );

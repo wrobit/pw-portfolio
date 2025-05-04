@@ -20,6 +20,12 @@ const ProjectBoxContainer = styled(motion.div)<{ $isExpanded: boolean }>`
   }
 `;
 
+const ProjectBoxContainerContent = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+
 const ProjectBoxImageWrapper = styled.a`
   width: 100%;
   height: 454px;
@@ -33,6 +39,16 @@ const ProjectBoxImageWrapper = styled.a`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     height: 260px;
   }
+`;
+
+const ProjectBoxImageWrapperGlassOverlay = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: inherit;
 `;
 
 const ProjectBoxLink = styled.a`
@@ -58,4 +74,24 @@ const ProjectBoxImage = styled.img`
   transition: transform 0.3s ease-out;
 `;
 
-export { ProjectBoxContainer, ProjectBoxImage, ProjectBoxImageWrapper, ProjectBoxLink, ProjectBoxTitle };
+const ProjectBoxLinkContainer = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+
+const ProjectBoxIcon = styled.img`
+  display: block;
+`;
+
+export {
+  ProjectBoxContainer,
+  ProjectBoxImage,
+  ProjectBoxImageWrapper,
+  ProjectBoxLink,
+  ProjectBoxTitle,
+  ProjectBoxIcon,
+  ProjectBoxLinkContainer,
+  ProjectBoxImageWrapperGlassOverlay,
+  ProjectBoxContainerContent
+};
