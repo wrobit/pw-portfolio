@@ -6,7 +6,7 @@ import * as Styled from "./ProjectBox.styles";
 import { ProjectBoxProps } from "./ProjectBox.types";
 import { routes } from "@utils/constants/routes.constants";
 
-export const ProjectBox = ({ title, image, id, index, isExpanded = false }: ProjectBoxProps) => {
+export const ProjectBox = ({ title, image, id, index, isExpanded = false, backgroundImage }: ProjectBoxProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
 
   const getProjectLink = (id: number) => `${routes.projects}/${id}`;
@@ -30,16 +30,13 @@ export const ProjectBox = ({ title, image, id, index, isExpanded = false }: Proj
             }}
             transition={{ duration: 0.3 }}
           />
-          <Styled.ProjectBoxImage src={image} alt={title} loading="lazy" decoding="async" fetchPriority="high" />
+          <Styled.ProjectBoxImageContainer $backgroundImage={backgroundImage}>
+            <Styled.ProjectBoxImage src={image} alt={title} loading="lazy" decoding="async" fetchPriority="high" />
+          </Styled.ProjectBoxImageContainer>
         </Styled.ProjectBoxImageWrapper>
       </Styled.ProjectBoxContainerContent>
       <Styled.ProjectBoxLink href={`/project/${id}`}>
-        <Styled.ProjectBoxLinkContainer
-          variants={linkHover}
-          initial="initial"
-          animate={isHovered ? "hover" : "initial"}
-          style={{ display: "flex", alignItems: "center", gap: "8px" }}
-        >
+        <Styled.ProjectBoxLinkContainer variants={linkHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
           <Styled.ProjectBoxTitle>{title}</Styled.ProjectBoxTitle>
           <motion.div variants={arrowHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
             <Styled.ProjectBoxIcon src={UpperRightArrow} alt="arrow" />

@@ -65,13 +65,26 @@ const ProjectBoxTitle = styled(Typography.Headers.H6)`
   }
 `;
 
-const ProjectBoxImage = styled.img`
+const ProjectBoxImageContainer = styled.div<{ $backgroundImage: string }>`
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: ${({ theme }) => theme.radius.xl};
   transform: scale(1.01);
   transition: transform 0.3s ease-out;
+  background-image: url(${({ $backgroundImage }) => $backgroundImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProjectBoxImage = styled.img`
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
 `;
 
 const ProjectBoxLinkContainer = styled(motion.div)`
@@ -93,5 +106,6 @@ export {
   ProjectBoxIcon,
   ProjectBoxLinkContainer,
   ProjectBoxImageWrapperGlassOverlay,
-  ProjectBoxContainerContent
+  ProjectBoxContainerContent,
+  ProjectBoxImageContainer
 };
