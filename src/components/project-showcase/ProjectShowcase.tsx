@@ -16,7 +16,7 @@ export const ProjectShowcase = () => {
     <Styled.ProjectShowcaseWrapper>
       <Styled.ProjectShowcaseContainer>
         {projectsToShow.map((project, index) => (
-          <ProjectBox key={project.id} {...project} index={index} />
+          <ProjectBox key={project.id} {...project} index={index} isExpanded={isWorkPage ? project.isExpanded : false} />
         ))}
       </Styled.ProjectShowcaseContainer>
       {!isWorkPage && <MoreWork delay={0.8 + projects.length * 0.2} />}

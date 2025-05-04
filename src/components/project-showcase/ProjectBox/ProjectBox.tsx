@@ -5,11 +5,18 @@ import { motion } from "framer-motion";
 import * as Styled from "./ProjectBox.styles";
 import { ProjectBoxProps } from "./ProjectBox.types";
 
-export const ProjectBox = ({ title, image, id, index }: ProjectBoxProps) => {
+export const ProjectBox = ({ title, image, id, index, isExpanded = false }: ProjectBoxProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
 
   return (
-    <Styled.ProjectBoxContainer {...hoverProps} variants={fadeInUp} initial="hidden" animate="visible" custom={0.8 + index * 0.2}>
+    <Styled.ProjectBoxContainer
+      {...hoverProps}
+      variants={fadeInUp}
+      initial="hidden"
+      animate="visible"
+      custom={0.8 + index * 0.2}
+      $isExpanded={isExpanded}
+    >
       <motion.div
         variants={hoverScale}
         initial="initial"

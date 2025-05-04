@@ -2,8 +2,9 @@ import { Typography } from "@components/common";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const ProjectBoxContainer = styled(motion.div)`
+const ProjectBoxContainer = styled(motion.div)<{ $isExpanded: boolean }>`
   height: 500px;
+  grid-column: ${({ $isExpanded }) => ($isExpanded ? "span 2" : "span 1")};
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.lg};

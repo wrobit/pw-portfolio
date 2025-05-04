@@ -18,18 +18,18 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "The Labz",
-    image: "/images/mockups/the-labz.png",
-    description: "A website for a company that provides AI-powered solutions for businesses.",
-    link: "https://thelabz.ai"
-  },
-  {
-    id: 4,
     title: "Ludus AI",
     image: "/images/mockups/ludus-ai.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     link: "https://ludus.ai",
     isExpanded: true
+  },
+  {
+    id: 4,
+    title: "The Labz",
+    image: "/images/mockups/the-labz.png",
+    description: "A website for a company that provides AI-powered solutions for businesses.",
+    link: "https://thelabz.ai"
   },
   {
     id: 5,
