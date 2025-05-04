@@ -4,11 +4,12 @@ import AnimatedCursor from "react-animated-cursor";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Contact, Error, Home, Root, Work } from "./pages";
+import { animatedCursorOptions, reactLenisOptions } from "@utils/animations";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Root />}>
+      <Route path="/" element={<Root />} errorElement={<Error />}>
         <Route index element={<Home />} />
         <Route path="work" element={<Work />} />
         <Route path="contact" element={<Contact />} />
@@ -16,22 +17,6 @@ const App = () => {
       </Route>
     )
   );
-
-  const animatedCursorOptions = {
-    color: "255, 255, 255",
-    innerSize: 8,
-    innerScale: 0.7,
-    outerSize: 8,
-    outerAlpha: 0.15,
-    outerScale: 5,
-    disableOnMobile: true
-  };
-
-  const reactLenisOptions = {
-    smoothWheel: true,
-    wheelMultiplier: 1.5,
-    easing: (t: number) => t * (2 - t)
-  };
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -41,7 +26,7 @@ const App = () => {
         }}
         root
       >
-        <RouterProvider router={router}></RouterProvider>
+        <RouterProvider router={router} />
         <AnimatedCursor {...animatedCursorOptions} />
       </ReactLenis>
     </ThemeProvider>

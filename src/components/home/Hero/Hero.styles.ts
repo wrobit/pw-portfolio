@@ -54,10 +54,6 @@ const HeroButton = styled.button`
     & span {
       color: ${({ theme }) => theme.colors.white};
     }
-
-    & img {
-      animation-play-state: paused;
-    }
   }
 `;
 

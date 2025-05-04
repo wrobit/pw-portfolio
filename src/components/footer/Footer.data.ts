@@ -37,10 +37,6 @@ export const data = [
       {
         label: PROFILE_DATA.TWITTER.label,
         href: PROFILE_DATA.TWITTER.href
-      },
-      {
-        label: PROFILE_DATA.BENTO_ME.label,
-        href: PROFILE_DATA.BENTO_ME.href
       }
     ]
   },
