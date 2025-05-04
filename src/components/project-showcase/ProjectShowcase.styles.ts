@@ -7,21 +7,6 @@ const ProjectShowcaseContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: ${({ theme }) => theme.spacing.xxl};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-  }
 `;
 
 const ProjectShowcaseWrapper = styled.div`

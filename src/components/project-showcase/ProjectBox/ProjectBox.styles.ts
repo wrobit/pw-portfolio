@@ -11,7 +11,7 @@ const ProjectBoxContainer = styled(motion.div)<{ $isExpanded: boolean }>`
   will-change: transform;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
-    width: 100%;
+    grid-column: span 2;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
