@@ -1,10 +1,17 @@
 import ReactLenis from "@studio-freight/react-lenis";
-import { defaultTheme } from "@utils/theme";
 import AnimatedCursor from "react-animated-cursor";
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { Contact, Error, Home, Root, Work } from "./pages";
+
 import { animatedCursorOptions, reactLenisOptions } from "@utils/animations";
+import { defaultTheme } from "@utils/theme";
+
+import { Contact, Error, Home, Root, Work } from "./pages";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -22,7 +29,7 @@ const App = () => {
     <ThemeProvider theme={defaultTheme}>
       <ReactLenis
         options={{
-          ...reactLenisOptions
+          ...reactLenisOptions,
         }}
         root
       >
