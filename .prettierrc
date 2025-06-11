@@ -1,9 +1,13 @@
 {
-  "arrowParens": "avoid",
-  "trailingComma": "none",
-  "tabWidth": 2,
+  "printWidth": 100,
   "semi": true,
   "singleQuote": false,
-  "printWidth": 150,
-  "proseWrap": "preserve"
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^(app|assets|components|config|services|style|utils|pages)/?",
+    "^[./]"
+  ],
+  "importOrderSeparation": true
 }
