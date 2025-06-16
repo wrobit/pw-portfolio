@@ -8,10 +8,11 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
+import { Contact, Error, Home, Work } from "@features/index";
+import { Root } from "@pages/root/Root";
 import { animatedCursorOptions, reactLenisOptions } from "@utils/animations";
 import { defaultTheme } from "@utils/theme";
 
-import { Contact, Error, Home, Root, Work } from "./pages";
 
 const App = () => {
   const router = createBrowserRouter(

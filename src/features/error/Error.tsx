@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "styled-components";
 
 import { Button, Typography } from "@components/shared";
-import * as Styled from "@pages/error/Error.styles";
-import { PageTemplateWrapper } from "@pages/template/template.styles";
+import * as Styled from "@features/error/Error.styles";
 import { routes } from "@utils/constants/routes.constants";
+import { PageTemplateWrapper } from "@utils/template/template.styles";
 
 export const Error = () => {
   const theme = useTheme();

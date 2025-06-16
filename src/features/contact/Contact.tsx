@@ -1,9 +1,9 @@
 import { Link as StyledLink, Typography } from "@components/shared";
-import * as Styled from "@pages/contact/Contact.styles";
-import { contactLinks } from "@pages/contact/ContactLinks";
-import { PageTemplateWrapper } from "@pages/template/template.styles";
+import * as Styled from "@features/contact/Contact.styles";
+import { contactLinks } from "@features/contact/utils/linksData";
+import { PageTemplateWrapper } from "@utils/template/template.styles";
 
-import ContactBackground from "./ContactBackground";
+import ContactBackground from "./components/ContactBackground";
 
 export const Contact = () => {
   return (

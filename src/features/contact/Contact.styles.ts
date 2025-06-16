@@ -3,7 +3,8 @@ import styled from "styled-components";
 const ContactContainer = styled.div`
   position: relative;
   width: 100%;
-  height: ${({ theme }) => `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
+  height: ${({ theme }) =>
+    `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -70,4 +71,10 @@ const ContactBackgroundImage = styled.img`
   object-fit: contain;
 `;
 
-export { ContactBackgroundImage, ContactBackgroundImageWrapper, ContactContainer, ContactContentWrapper, ContactLinksWrapper };
+export {
+  ContactBackgroundImage,
+  ContactBackgroundImageWrapper,
+  ContactContainer,
+  ContactContentWrapper,
+  ContactLinksWrapper,
+};
