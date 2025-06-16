@@ -1,4 +1,3 @@
-import * as Styled from "@components/home/Hero/Hero.styles";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useTheme } from "styled-components";
@@ -6,6 +5,8 @@ import { useTheme } from "styled-components";
 import ScrollDownIcon from "@assets/icons/expand-down-double.svg";
 import { Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+
+import * as Styled from "./Hero.styles";
 
 export const Hero = () => {
   const theme = useTheme();

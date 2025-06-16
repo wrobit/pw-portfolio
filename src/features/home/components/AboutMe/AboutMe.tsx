@@ -1,4 +1,3 @@
-import * as Styled from "@components/home/AboutMe/AboutMe.styles";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +7,8 @@ import { Typography } from "@components/shared";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, hoverScale, pageTransition } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
+
+import * as Styled from "./AboutMe.styles";
 
 export const AboutMe = () => {
   const navigate = useNavigate();
