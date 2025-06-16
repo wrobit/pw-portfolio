@@ -1,15 +1,17 @@
-import { Logo } from "@components/common";
-import { routes } from "@utils/constants/routes.constants";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+
+import { Logo } from "@components/shared";
+import { routes } from "@utils/constants/routes.constants";
+
 import { menuItemVariants, menuVariants } from "./Navbar.animations";
 import * as Styled from "./Navbar.styles";
 
 export const MENU_ITEMS = [
   { path: routes.work, label: "Work", index: 1 },
   { path: routes.about, label: "About", index: 2 },
-  { path: routes.contact, label: "Contact", index: 3 }
+  { path: routes.contact, label: "Contact", index: 3 },
 ];
 
 export const Navbar = () => {
@@ -28,13 +30,16 @@ export const Navbar = () => {
     <Styled.NavbarWrapper>
       <Logo />
       <Styled.NavLinks>
-        {MENU_ITEMS.map(item => (
+        {MENU_ITEMS.map((item) => (
           <Styled.Link key={item.path} to={item.path} $isActive={location.pathname === item.path}>
             {item.label}
           </Styled.Link>
         ))}
       </Styled.NavLinks>
-      <Styled.Hamburger isOpen={isHamburgerOpen} onClick={() => setIsHamburgerOpen(prev => !prev)}>
+      <Styled.Hamburger
+        isOpen={isHamburgerOpen}
+        onClick={() => setIsHamburgerOpen((prev) => !prev)}
+      >
         <Styled.HamburgerLine />
         <Styled.HamburgerLine />
         <Styled.HamburgerLine />
@@ -46,11 +51,20 @@ export const Navbar = () => {
     <AnimatePresence mode="wait">
       {isHamburgerOpen && (
         <Styled.HamburgerMenu isOpen={isHamburgerOpen}>
-          <motion.div variants={menuVariants} initial="hidden" animate="visible" exit="hidden" style={{ width: "100%", height: "100%" }}>
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            style={{ width: "100%", height: "100%" }}
+          >
             <Styled.HamburgerMenuWrapper>
-              {MENU_ITEMS.map(item => (
+              {MENU_ITEMS.map((item) => (
                 <motion.div key={item.path} variants={menuItemVariants}>
-                  <Styled.HamburgerMenuLink to={item.path} $isActive={location.pathname === item.path}>
+                  <Styled.HamburgerMenuLink
+                    to={item.path}
+                    $isActive={location.pathname === item.path}
+                  >
                     <Styled.HamburgerMenuLinkIndex>{`${item.index} `}</Styled.HamburgerMenuLinkIndex>
                     {item.label}
                   </Styled.HamburgerMenuLink>

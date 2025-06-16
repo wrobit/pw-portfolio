@@ -1,6 +1,7 @@
-import { Button } from "@components/common";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+
+import { Button } from "@components/shared";
 
 const AboutMeSection = styled(motion.section)`
   display: flex;

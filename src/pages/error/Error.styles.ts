@@ -1,9 +1,11 @@
-import { Typography } from "@components/common";
 import styled from "styled-components";
+
+import { Typography } from "@components/shared";
 
 const ErrorContainer = styled.div`
   width: 100%;
-  height: ${({ theme }) => `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
+  height: ${({ theme }) =>
+    `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
   display: flex;
   flex-direction: column;
   align-items: center;

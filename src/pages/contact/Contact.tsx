@@ -1,7 +1,8 @@
-import { Link as StyledLink, Typography } from "@components/common";
+import { Link as StyledLink, Typography } from "@components/shared";
 import * as Styled from "@pages/contact/Contact.styles";
 import { contactLinks } from "@pages/contact/ContactLinks";
 import { PageTemplateWrapper } from "@pages/template/template.styles";
+
 import ContactBackground from "./ContactBackground";
 
 export const Contact = () => {
@@ -11,7 +12,9 @@ export const Contact = () => {
         <ContactBackground />
         <Styled.ContactContentWrapper width="75%">
           <Typography.Headers.H1>Contact me</Typography.Headers.H1>
-          <Typography.Headers.H5>Connect with me and let's deploy our ideas together. Communicating is the key.</Typography.Headers.H5>
+          <Typography.Headers.H5>
+            Connect with me and let's deploy our ideas together. Communicating is the key.
+          </Typography.Headers.H5>
         </Styled.ContactContentWrapper>
         <Styled.ContactContentWrapper>
           <Typography.Headers.H3>

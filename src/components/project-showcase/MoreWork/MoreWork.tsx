@@ -1,11 +1,15 @@
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+
 import RightArrow from "@assets/icons/arrow-right.svg";
-import { Typography } from "@components/common";
+import { Typography } from "@components/shared";
 import { useHoverAnimation } from "@utils/animations/hooks";
 import { arrowHover, fadeInUp, linkHover } from "@utils/animations/variants";
-import { motion } from "framer-motion";
-import * as Styled from "./MoreWork.styles";
-import { useNavigate } from "react-router-dom";
 import { routes } from "@utils/constants/routes.constants";
+
+import * as Styled from "./MoreWork.styles";
+
+
 
 type MoreWorkProps = {
   delay: number;
@@ -16,7 +20,14 @@ export const MoreWork = ({ delay }: MoreWorkProps) => {
   const navigate = useNavigate();
 
   return (
-    <Styled.MoreWorkLink onClick={() => navigate(routes.work)} {...hoverProps} variants={fadeInUp} initial="hidden" animate="visible" custom={delay}>
+    <Styled.MoreWorkLink
+      onClick={() => navigate(routes.work)}
+      {...hoverProps}
+      variants={fadeInUp}
+      initial="hidden"
+      animate="visible"
+      custom={delay}
+    >
       <motion.div variants={linkHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
         <Styled.MoreWorkContent>
           <Typography.Headers.H6>More work</Typography.Headers.H6>
