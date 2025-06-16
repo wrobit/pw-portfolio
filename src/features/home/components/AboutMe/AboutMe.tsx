@@ -1,9 +1,9 @@
+import * as Styled from "@components/home/AboutMe/AboutMe.styles";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import leavesImage from "@assets/leaves.png";
-import * as Styled from "@components/home/AboutMe/AboutMe.styles";
 import { Typography } from "@components/shared";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, hoverScale, pageTransition } from "@utils/animations/variants";

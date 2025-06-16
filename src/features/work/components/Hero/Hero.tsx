@@ -1,7 +1,7 @@
+import * as Styled from "@components/work/Hero/Hero.styles";
 import { motion } from "framer-motion";
 
 import { Typography } from "@components/shared";
-import * as Styled from "@components/work/Hero/Hero.styles";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 export const Hero = () => {
