@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 import { Typography } from "@components/shared/Typography/Typography";
+import { hexToRgba } from "@utils/helpers/colors.helper";
 
 const Footer = styled(motion.footer)`
   width: 100%;
@@ -30,12 +31,21 @@ const Footer = styled(motion.footer)`
 `;
 
 const FooterNavigation = styled.div`
+  padding-top: ${({ theme }) => theme.spacing.xxl};
   display: flex;
   flex-direction: row;
   gap: ${({ theme }) => theme.spacing.xxxxl};
+  border-top: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.1)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    padding-top: ${({ theme }) => theme.spacing.xl};
     flex-direction: column;
+    gap: ${({ theme }) => theme.spacing.xxl};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-top: ${({ theme }) => theme.spacing.lg};
+    gap: ${({ theme }) => theme.spacing.xl};
   }
 `;
 
