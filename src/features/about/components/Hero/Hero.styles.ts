@@ -19,7 +19,7 @@ const HeroSection = styled(motion.div)`
 `;
 
 const HeroTypographyWrapper = styled.div`
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.xxl};
