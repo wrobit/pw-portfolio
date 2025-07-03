@@ -9,8 +9,6 @@ import { routes } from "@utils/constants/routes.constants";
 
 import * as Styled from "./MoreWork.styles";
 
-
-
 type MoreWorkProps = {
   delay: number;
 };
