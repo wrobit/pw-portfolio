@@ -1,6 +1,7 @@
 import { Button } from "./Button/Button";
 import { Link } from "./Link/Link";
 import { Logo } from "./Logo/Logo";
+import { ScrollToTop } from "./ScrollToTop/ScrollToTop";
 import { Typography } from "./Typography/Typography";
 
-export { Button, Link, Logo, Typography };
+export { Button, Link, Logo, ScrollToTop, Typography };
