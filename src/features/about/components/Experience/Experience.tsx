@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
+import { timelineVariants, timelineItemVariants } from "./Experience.animations";
 import { data } from "./Experience.data";
 import * as Styled from "./Experience.styles";
 
@@ -32,9 +33,9 @@ export const Experience = () => {
           </Typography.Headers.H5>
         </motion.div>
       </Styled.ExperienceTypographyWrapper>
-      <Styled.ExperienceTimeline>
+      <Styled.ExperienceTimeline variants={timelineVariants} initial="hidden" animate="visible">
         {data.map((item) => (
-          <Styled.ExperienceTimelineRow key={item.title}>
+          <Styled.ExperienceTimelineRow key={item.title} variants={timelineItemVariants}>
             <Styled.ExperienceTimelineHeaderItem>
               {item.company}
             </Styled.ExperienceTimelineHeaderItem>

@@ -32,7 +32,7 @@ const ExperienceTypographyWrapper = styled.div`
   }
 `;
 
-const ExperienceTimeline = styled.div`
+const ExperienceTimeline = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ const ExperienceTimeline = styled.div`
   margin-top: ${({ theme }) => theme.spacing.lg};
 `;
 
-const ExperienceTimelineRow = styled.div`
+const ExperienceTimelineRow = styled(motion.div)`
   width: 100%;
   display: grid;
   grid-template-columns: 1.25fr 1fr 0.75fr;
