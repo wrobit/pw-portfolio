@@ -34,8 +34,12 @@ export const Experience = () => {
         </motion.div>
       </Styled.ExperienceTypographyWrapper>
       <Styled.ExperienceTimeline variants={timelineVariants} initial="hidden" animate="visible">
-        {data.map((item) => (
-          <Styled.ExperienceTimelineRow key={item.title} variants={timelineItemVariants}>
+        {data.map((item, index) => (
+          <Styled.ExperienceTimelineRow
+            key={`${item.title}-${index}`}
+            variants={timelineItemVariants}
+            custom={index * 0.1}
+          >
             <Styled.ExperienceTimelineHeaderItem>
               {item.company}
             </Styled.ExperienceTimelineHeaderItem>
