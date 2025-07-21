@@ -44,8 +44,11 @@ const ExperienceTimelineRow = styled(motion.div)`
   width: 100%;
   display: grid;
   grid-template-columns: 1.25fr 1fr 0.75fr;
-  border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.2)};
   padding-bottom: ${({ theme }) => theme.spacing.xxl};
+
+  &:not(:last-child) {
+    border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.2)};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
