@@ -5,6 +5,7 @@ import { Education } from "./components/Education/Education";
 import { Experience } from "./components/Experience/Experience";
 import { Hero } from "./components/Hero/Hero";
 import { HeroImage } from "./components/HeroImage/HeroImage";
+import { Technologies } from "./components/Technologies/Technologies";
 
 export const About = () => {
   return (
@@ -14,6 +15,7 @@ export const About = () => {
       <SectionsWrapper>
         <Experience />
         <Education />
+        <Technologies />
       </SectionsWrapper>
     </PageTemplateWrapper>
   );
