@@ -20,7 +20,7 @@ export const Education = () => {
     >
       <Styled.ExperienceTypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
-          <Typography.Headers.H1>Experience</Typography.Headers.H1>
+          <Typography.Headers.H1>Education</Typography.Headers.H1>
         </motion.div>
       </Styled.ExperienceTypographyWrapper>
       <Styled.ExperienceTimeline variants={timelineVariants} initial="hidden" animate="visible">

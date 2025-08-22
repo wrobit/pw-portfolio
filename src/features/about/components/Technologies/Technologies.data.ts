@@ -1,35 +1,36 @@
 export const data = [
   {
-    title: "Frontend",
+    title: "Frameworks",
+    technologies: ["Next.js", "Remix", "React Native", "Expo"],
+  },
+  {
+    title: "Languages & Libraries",
     technologies: [
       "TypeScript",
+      "JavaScript",
       "React",
-      "Vite",
-      "Next.js",
-      "Remix",
-      "Redux / RTK",
-      "Zustand",
-      "React Router",
+      "Redux / RTK / Zustand / Jotai",
+      "React Router / React Navigation",
     ],
   },
   {
-    title: "Mobile",
-    technologies: ["React Native", "Expo", "React Navigation", "React Native Testing Library"],
-  },
-  {
-    title: "Styling & Design",
+    title: "Styling & UI Libraries",
     technologies: [
       "Styled Components",
       "Tailwind CSS",
       "CSS Modules",
       "Storybook",
-      "Shadcn UI / Radix UI",
+      "Shadcn UI / Radix UI / Ant Design",
       "Framer Motion",
     ],
   },
   {
-    title: "Backend",
-    technologies: ["Node.js", "NestJS"],
+    title: "Design & NoCode",
+    technologies: ["Framer", "Figma"],
+  },
+  {
+    title: "Backend Runtimes",
+    technologies: ["Node.js", "NestJS", "Express"],
   },
   {
     title: "Database",
@@ -41,7 +42,7 @@ export const data = [
   },
   {
     title: "CI/CD",
-    technologies: ["GitHub Actions", "GitLab CI/CD", "Docker"],
+    technologies: ["GitHub Actions", "GitLab CI/CD", "Docker", "Vercel"],
   },
   {
     title: "Cloud",
@@ -49,16 +50,10 @@ export const data = [
   },
   {
     title: "AI",
-    technologies: ["Cursor", " Cursor Rules", "MCP", "OpenAI", "Anthropic"],
+    technologies: ["Cursor", "MCP", "CodeRabbit", "OpenAI", "Anthropic"],
   },
   {
     title: "Other",
-    technologies: [
-      "Git",
-      "GitHub / GitLab / BitBucket",
-      "ClickUp / GoodDay / Jira",
-      "Clockify",
-      "Slack / Teams",
-    ],
+    technologies: ["Git", "GitHub", "ClickUp / Jira", "Clockify", "Slack / Teams"],
   },
 ];
