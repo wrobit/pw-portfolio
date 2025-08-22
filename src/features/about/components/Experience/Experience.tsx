@@ -6,19 +6,19 @@ import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 import { timelineVariants, timelineItemVariants } from "./Experience.animations";
 import { data } from "./Experience.data";
-import * as Styled from "./Experience.styles";
+import * as Styled from "../../shared/styles";
 
 export const Experience = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <Styled.ExperienceSection
+    <Styled.Section
       ref={heroSectionRef}
       variants={pageTransition}
       initial="initial"
       animate="animate"
     >
-      <Styled.ExperienceTypographyWrapper>
+      <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
           <Typography.Headers.H1>Experience</Typography.Headers.H1>
         </motion.div>
@@ -32,22 +32,20 @@ export const Experience = () => {
             a team.
           </Typography.Headers.H5>
         </motion.div>
-      </Styled.ExperienceTypographyWrapper>
-      <Styled.ExperienceTimeline variants={timelineVariants} initial="hidden" animate="visible">
+      </Styled.TypographyWrapper>
+      <Styled.List variants={timelineVariants} initial="hidden" animate="visible">
         {data.map((item, index) => (
-          <Styled.ExperienceTimelineRow
+          <Styled.ListRow
             key={`${item.title}-${index}`}
             variants={timelineItemVariants}
             custom={index * 0.1}
           >
-            <Styled.ExperienceTimelineHeaderItem>
-              {item.company}
-            </Styled.ExperienceTimelineHeaderItem>
-            <Styled.ExperienceTimelineItem>{item.title}</Styled.ExperienceTimelineItem>
-            <Styled.ExperienceTimelineItem>{item.date}</Styled.ExperienceTimelineItem>
-          </Styled.ExperienceTimelineRow>
+            <Styled.ListItemHeader>{item.company}</Styled.ListItemHeader>
+            <Styled.ListItem>{item.title}</Styled.ListItem>
+            <Styled.ListItem>{item.date}</Styled.ListItem>
+          </Styled.ListRow>
         ))}
-      </Styled.ExperienceTimeline>
-    </Styled.ExperienceSection>
+      </Styled.List>
+    </Styled.Section>
   );
 };

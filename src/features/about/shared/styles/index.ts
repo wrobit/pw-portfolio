@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Typography } from "@components/shared";
 import { hexToRgba } from "@utils/helpers/colors.helper";
 
-const ExperienceSection = styled(motion.div)`
+const Section = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@ const ExperienceSection = styled(motion.div)`
   }
 `;
 
-const ExperienceTypographyWrapper = styled.div`
+const TypographyWrapper = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ const ExperienceTypographyWrapper = styled.div`
   }
 `;
 
-const ExperienceTimeline = styled(motion.div)`
+const List = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ const ExperienceTimeline = styled(motion.div)`
   margin-top: ${({ theme }) => theme.spacing.lg};
 `;
 
-const ExperienceTimelineRow = styled(motion.div)`
+const ListRow = styled(motion.div)`
   width: 100%;
   display: grid;
   grid-template-columns: 1.25fr 1fr 0.75fr;
@@ -60,20 +60,13 @@ const ExperienceTimelineRow = styled(motion.div)`
   }
 `;
 
-const ExperienceTimelineItem = styled(Typography.Headers.H2)`
+const ListItem = styled(Typography.Headers.H2)`
   width: 100%;
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const ExperienceTimelineHeaderItem = styled(Typography.Headers.H2)`
+const ListItemHeader = styled(Typography.Headers.H2)`
   width: 100%;
 `;
 
-export {
-  ExperienceSection,
-  ExperienceTypographyWrapper,
-  ExperienceTimeline,
-  ExperienceTimelineRow,
-  ExperienceTimelineItem,
-  ExperienceTimelineHeaderItem,
-};
+export { Section, TypographyWrapper, List, ListRow, ListItem, ListItemHeader };
