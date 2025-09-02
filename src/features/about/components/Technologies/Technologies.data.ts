@@ -1,59 +1,46 @@
 export const data = [
   {
-    title: "Frameworks",
-    technologies: ["Next.js", "Remix", "React Native", "Expo"],
+    title: "General",
+    technologies: ["TypeScript", "JavaScript"],
   },
   {
-    title: "Languages & Libraries",
-    technologies: [
-      "TypeScript",
-      "JavaScript",
-      "React",
-      "Redux / RTK / Zustand / Jotai",
-      "React Router / React Navigation",
-    ],
+    title: "Front-end",
+    technologies: ["React", "Redux", "React Native", "Next.js", "Remix", "Expo"],
   },
   {
     title: "Styling & UI Libraries",
-    technologies: [
-      "Styled Components",
-      "Tailwind CSS",
-      "CSS Modules",
-      "Storybook",
-      "Shadcn UI / Radix UI / Ant Design",
-      "Framer Motion",
-    ],
+    technologies: ["Styled Components", "Tailwind CSS", "Storybook", "Shadcn UI", "Framer Motion"],
   },
   {
-    title: "Design & NoCode",
+    title: "Design",
     technologies: ["Framer", "Figma"],
   },
   {
-    title: "Backend Runtimes",
-    technologies: ["Node.js", "NestJS", "Express"],
-  },
-  {
-    title: "Database",
-    technologies: ["PostgreSQL", "MySQL", "Prisma ORM", "Redis", "Upstash", "Neondb", "WebSockets"],
+    title: "Back-end",
+    technologies: ["Node.js", "NestJS", "Express", "Prisma", "Neondb", "Upstash"],
   },
   {
     title: "Testing",
-    technologies: ["Jest", "Vitest", "React Testing Library", "Cypress"],
+    technologies: ["Jest", "Vitest", "Testing Library", "Cypress"],
   },
   {
     title: "CI/CD",
-    technologies: ["GitHub Actions", "GitLab CI/CD", "Docker", "Vercel"],
+    technologies: ["GitHub Actions", "GitLab CI/CD", "Docker", "Sentry"],
   },
   {
     title: "Cloud",
     technologies: ["AWS", "Cloudflare", "Vercel"],
   },
   {
-    title: "AI",
-    technologies: ["Cursor", "MCP", "CodeRabbit", "OpenAI", "Anthropic"],
+    title: "Repository & Configuration",
+    technologies: ["Git", "GitHub", "Eslint", "Prettier", "Bun"],
   },
   {
-    title: "Other",
-    technologies: ["Git", "GitHub", "ClickUp / Jira", "Clockify", "Slack / Teams"],
+    title: "Workflow",
+    technologies: ["Slack", "Clickup", "Notion", "Excalidraw"],
+  },
+  {
+    title: "AI",
+    technologies: ["Cursor", "MCP", "CodeRabbit", "v0"],
   },
 ];
