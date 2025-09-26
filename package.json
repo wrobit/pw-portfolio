@@ -1,7 +1,7 @@
 {
   "name": "pw-portfolio",
-  "author": "Piotr Wrobel <www.github.com/ajiiz>",
-  "license": "MIT",
+  "author": "Piotr Wrobel <www.github.com/wrobit>",
+  "license": "UNLICENSED",
   "private": true,
   "version": "0.0.0",
   "engines": {
@@ -24,6 +24,7 @@
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
     "react-router-dom": "^6.9.0",
     "styled-components": "^5.3.8",
     "vite-tsconfig-paths": "^4.0.5"

@@ -60,13 +60,13 @@ const ListRow = styled(motion.div)`
   }
 `;
 
-const ListItem = styled(Typography.Headers.H2)`
+const ListItem = styled(Typography.Headers.H3)`
   width: 100%;
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const ListItemHeader = styled(Typography.Headers.H2)`
+const ListItemHeader = styled(Typography.Headers.H3)`
   width: 100%;
 `;
 
-export { Section, TypographyWrapper, List, ListRow, ListItem, ListItemHeader };
+export { List, ListItem, ListItemHeader, ListRow, Section, TypographyWrapper };

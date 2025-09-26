@@ -5,6 +5,7 @@ import { Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 import { data } from "./Technologies.data";
+import * as TechnologiesStyled from "./Technologies.styles";
 import * as Styled from "../../shared/styles";
 
 export const Technologies = () => {
@@ -28,9 +29,22 @@ export const Technologies = () => {
       </Styled.TypographyWrapper>
       <Styled.List>
         {data.map((item, index) => (
-          <Styled.ListRow key={`${item.title}-${index}`}>
-            <Styled.ListItemHeader>{item.title}</Styled.ListItemHeader>
-          </Styled.ListRow>
+          <TechnologiesStyled.ListRow key={`${item.title}-${index}`}>
+            <TechnologiesStyled.ListItemHeaderWrapper>
+              <Styled.ListItemHeader>{item.title}</Styled.ListItemHeader>
+              <TechnologiesStyled.ListItemDescription>
+                {item.description}
+              </TechnologiesStyled.ListItemDescription>
+            </TechnologiesStyled.ListItemHeaderWrapper>
+            <TechnologiesStyled.TechnologiesList>
+              {item.technologies.map((technology) => (
+                <TechnologiesStyled.ListItemContent key={technology.name}>
+                  {technology.icon}
+                  <Typography.Headers.H6>{technology.name}</Typography.Headers.H6>
+                </TechnologiesStyled.ListItemContent>
+              ))}
+            </TechnologiesStyled.TechnologiesList>
+          </TechnologiesStyled.ListRow>
         ))}
       </Styled.List>
     </Styled.Section>
