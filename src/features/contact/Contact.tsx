@@ -17,24 +17,24 @@ export const Contact = () => {
           </Typography.Headers.H5>
         </Styled.ContactContentWrapper>
         <Styled.ContactContentWrapper>
-          <Typography.Headers.H3>
+          <Typography.Headers.H4>
             <StyledLink href="mailto: piotrwrobel.ajiiz@gmail.com" target="_blank">
               piotrwrobel.ajiiz@gmail.com
             </StyledLink>
-          </Typography.Headers.H3>
+          </Typography.Headers.H4>
           <Styled.ContactLinksWrapper>
             {contactLinks?.map(({ id, name, url }) => (
-              <Typography.Headers.H5 key={id}>
+              <Typography.Headers.H6 key={id}>
                 <StyledLink href={url} target="_blank">
                   {name}
                 </StyledLink>
-              </Typography.Headers.H5>
+              </Typography.Headers.H6>
             ))}
           </Styled.ContactLinksWrapper>
         </Styled.ContactContentWrapper>
         <Styled.ContactContentWrapper width="100%">
-          <Typography.Headers.H5>From Poland with love,</Typography.Headers.H5>
-          <Typography.Headers.H5>coding at home</Typography.Headers.H5>
+          <Typography.Headers.H6>From Poland with love, coding at home</Typography.Headers.H6>
+          <Typography.Headers.H6></Typography.Headers.H6>
         </Styled.ContactContentWrapper>
       </Styled.ContactContainer>
     </PageTemplateWrapper>
