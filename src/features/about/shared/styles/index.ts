@@ -44,7 +44,7 @@ const ListRow = styled(motion.div)`
   width: 100%;
   display: grid;
   grid-template-columns: 1.25fr 1fr 0.75fr;
-  padding-bottom: ${({ theme }) => theme.spacing.xxl};
+  padding-bottom: ${({ theme }) => theme.spacing.xl};
 
   &:not(:last-child) {
     border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.2)};
@@ -60,12 +60,12 @@ const ListRow = styled(motion.div)`
   }
 `;
 
-const ListItem = styled(Typography.Headers.H3)`
+const ListItem = styled(Typography.Headers.H4)`
   width: 100%;
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const ListItemHeader = styled(Typography.Headers.H3)`
+const ListItemHeader = styled(Typography.Headers.H4)`
   width: 100%;
 `;
 

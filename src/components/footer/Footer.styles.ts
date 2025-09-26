@@ -72,6 +72,7 @@ const FooterNavigationLinks = styled(motion.div)`
 
 const FooterNavigationHeaderText = styled(Typography.Default)`
   font-family: ${({ theme }) => theme.font.bold};
+  font-size: ${({ theme }) => theme.fontSize.h6};
 `;
 
 export {
