@@ -15,7 +15,7 @@ const AboutMeHeader = styled.div`
   gap: ${({ theme }) => theme.spacing.lg};
 `;
 
-const AboutMeButton = styled(motion(Button))`
+const AboutMeButton = styled(motion.create(Button))`
   width: fit-content;
 `;
 
