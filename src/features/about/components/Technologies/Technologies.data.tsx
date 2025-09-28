@@ -38,9 +38,15 @@ import {
   TbBrandFramerMotion,
 } from "react-icons/tb";
 
+interface TechnologiesData {
+  title: string;
+  description: string;
+  technologies: { name: string; icon: () => React.ReactNode }[];
+}
+
 const ICON_SIZE = 16;
 
-export const data = [
+export const data: TechnologiesData[] = [
   {
     title: "General",
     description:
@@ -48,11 +54,11 @@ export const data = [
     technologies: [
       {
         name: "TypeScript",
-        icon: <SiTypescript size={ICON_SIZE} />,
+        icon: () => <SiTypescript size={ICON_SIZE} />,
       },
       {
         name: "JavaScript",
-        icon: <SiJavascript size={ICON_SIZE} />,
+        icon: () => <SiJavascript size={ICON_SIZE} />,
       },
     ],
   },
@@ -63,31 +69,31 @@ export const data = [
     technologies: [
       {
         name: "React",
-        icon: <SiReact size={ICON_SIZE} />,
+        icon: () => <SiReact size={ICON_SIZE} />,
       },
       {
         name: "Native",
-        icon: <TbBrandReactNative size={ICON_SIZE} />,
+        icon: () => <TbBrandReactNative size={ICON_SIZE} />,
       },
       {
         name: "Expo",
-        icon: <SiExpo size={ICON_SIZE} />,
+        icon: () => <SiExpo size={ICON_SIZE} />,
       },
       {
         name: "Next.js",
-        icon: <RiNextjsLine size={ICON_SIZE} />,
+        icon: () => <RiNextjsLine size={ICON_SIZE} />,
       },
       {
         name: "Vite",
-        icon: <SiVite size={ICON_SIZE} />,
+        icon: () => <SiVite size={ICON_SIZE} />,
       },
       {
         name: "Remix",
-        icon: <SiRemix size={ICON_SIZE} />,
+        icon: () => <SiRemix size={ICON_SIZE} />,
       },
       {
         name: "Redux",
-        icon: <SiRedux size={ICON_SIZE} />,
+        icon: () => <SiRedux size={ICON_SIZE} />,
       },
     ],
   },
@@ -98,23 +104,23 @@ export const data = [
     technologies: [
       {
         name: "Styled Components",
-        icon: <SiStyledcomponents size={ICON_SIZE} />,
+        icon: () => <SiStyledcomponents size={ICON_SIZE} />,
       },
       {
         name: "Tailwind CSS",
-        icon: <SiTailwindcss size={ICON_SIZE} />,
+        icon: () => <SiTailwindcss size={ICON_SIZE} />,
       },
       {
         name: "Storybook",
-        icon: <SiStorybook size={ICON_SIZE} />,
+        icon: () => <SiStorybook size={ICON_SIZE} />,
       },
       {
         name: "Shadcn UI",
-        icon: <SiShadcnui size={ICON_SIZE} />,
+        icon: () => <SiShadcnui size={ICON_SIZE} />,
       },
       {
         name: "Framer Motion",
-        icon: <TbBrandFramerMotion size={ICON_SIZE} />,
+        icon: () => <TbBrandFramerMotion size={ICON_SIZE} />,
       },
     ],
   },
@@ -124,11 +130,11 @@ export const data = [
     technologies: [
       {
         name: "Framer",
-        icon: <TbBrandFramer size={ICON_SIZE} />,
+        icon: () => <TbBrandFramer size={ICON_SIZE} />,
       },
       {
         name: "Figma",
-        icon: <TbBrandFigma size={ICON_SIZE} />,
+        icon: () => <TbBrandFigma size={ICON_SIZE} />,
       },
     ],
   },
@@ -139,27 +145,27 @@ export const data = [
     technologies: [
       {
         name: "Node.js",
-        icon: <FaNode size={ICON_SIZE} />,
+        icon: () => <FaNode size={ICON_SIZE} />,
       },
       {
         name: "NestJS",
-        icon: <SiNestjs size={ICON_SIZE} />,
+        icon: () => <SiNestjs size={ICON_SIZE} />,
       },
       {
         name: "Express",
-        icon: <SiExpress size={ICON_SIZE} />,
+        icon: () => <SiExpress size={ICON_SIZE} />,
       },
       {
         name: "Prisma",
-        icon: <SiPrisma size={ICON_SIZE} />,
+        icon: () => <SiPrisma size={ICON_SIZE} />,
       },
       {
         name: "Neondb",
-        icon: <BiLogoPostgresql size={ICON_SIZE} />,
+        icon: () => <BiLogoPostgresql size={ICON_SIZE} />,
       },
       {
         name: "Upstash",
-        icon: <SiUpstash size={ICON_SIZE} />,
+        icon: () => <SiUpstash size={ICON_SIZE} />,
       },
     ],
   },
@@ -169,15 +175,15 @@ export const data = [
     technologies: [
       {
         name: "Jest",
-        icon: <SiJest size={ICON_SIZE} />,
+        icon: () => <SiJest size={ICON_SIZE} />,
       },
       {
         name: "Vitest",
-        icon: <SiVitest size={ICON_SIZE} />,
+        icon: () => <SiVitest size={ICON_SIZE} />,
       },
       {
         name: "Cypress",
-        icon: <SiCypress size={ICON_SIZE} />,
+        icon: () => <SiCypress size={ICON_SIZE} />,
       },
     ],
   },
@@ -187,15 +193,15 @@ export const data = [
     technologies: [
       {
         name: "GitHub Actions",
-        icon: <SiGithubactions size={ICON_SIZE} />,
+        icon: () => <SiGithubactions size={ICON_SIZE} />,
       },
       {
         name: "Docker",
-        icon: <SiDocker size={ICON_SIZE} />,
+        icon: () => <SiDocker size={ICON_SIZE} />,
       },
       {
         name: "Sentry",
-        icon: <SiSentry size={ICON_SIZE} />,
+        icon: () => <SiSentry size={ICON_SIZE} />,
       },
     ],
   },
@@ -205,15 +211,15 @@ export const data = [
     technologies: [
       {
         name: "AWS",
-        icon: <FaAws size={ICON_SIZE} />,
+        icon: () => <FaAws size={ICON_SIZE} />,
       },
       {
         name: "Cloudflare",
-        icon: <SiCloudflare size={ICON_SIZE} />,
+        icon: () => <SiCloudflare size={ICON_SIZE} />,
       },
       {
         name: "Vercel",
-        icon: <SiVercel size={ICON_SIZE} />,
+        icon: () => <SiVercel size={ICON_SIZE} />,
       },
     ],
   },
@@ -223,27 +229,27 @@ export const data = [
     technologies: [
       {
         name: "git",
-        icon: <SiGit size={ICON_SIZE} />,
+        icon: () => <SiGit size={ICON_SIZE} />,
       },
       {
         name: "bun",
-        icon: <SiBun size={ICON_SIZE} />,
+        icon: () => <SiBun size={ICON_SIZE} />,
       },
       {
         name: "pnpm",
-        icon: <SiPnpm size={ICON_SIZE} />,
+        icon: () => <SiPnpm size={ICON_SIZE} />,
       },
       {
         name: "Cursor",
-        icon: <FaCube size={ICON_SIZE} />,
+        icon: () => <FaCube size={ICON_SIZE} />,
       },
       {
         name: "Slack",
-        icon: <SiSlack size={ICON_SIZE} />,
+        icon: () => <SiSlack size={ICON_SIZE} />,
       },
       {
         name: "ClickUp",
-        icon: <SiClickup size={ICON_SIZE} />,
+        icon: () => <SiClickup size={ICON_SIZE} />,
       },
     ],
   },

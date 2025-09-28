@@ -40,5 +40,3 @@ export const Contact = () => {
     </PageTemplateWrapper>
   );
 };
-
-export default Contact;

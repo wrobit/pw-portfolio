@@ -39,7 +39,7 @@ export const Technologies = () => {
             <TechnologiesStyled.TechnologiesList>
               {item.technologies.map((technology) => (
                 <TechnologiesStyled.ListItemContent key={technology.name}>
-                  {technology.icon}
+                  {technology.icon()}
                   <Typography.Headers.H6>{technology.name}</Typography.Headers.H6>
                 </TechnologiesStyled.ListItemContent>
               ))}
