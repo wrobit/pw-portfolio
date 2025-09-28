@@ -25,12 +25,12 @@ import {
   SiStorybook,
   SiStyledcomponents,
   SiTailwindcss,
+  SiTypescript,
   SiUpstash,
   SiVercel,
   SiVite,
   SiVitest,
 } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
 import {
   TbBrandReactNative,
   TbBrandFigma,
@@ -41,10 +41,15 @@ import {
 interface TechnologiesData {
   title: string;
   description: string;
-  technologies: { name: string; icon: () => React.ReactNode }[];
+  technologies: { name: string; icon: () => JSX.Element }[];
 }
 
-const ICON_SIZE = 16;
+const DEFAULT_ICON_SIZE = 16;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const createIcon = (IconComponent: any, size: number = DEFAULT_ICON_SIZE): JSX.Element => {
+  return (<IconComponent size={size} />) as JSX.Element;
+};
 
 export const data: TechnologiesData[] = [
   {
@@ -54,11 +59,11 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "TypeScript",
-        icon: () => <SiTypescript size={ICON_SIZE} />,
+        icon: () => createIcon(SiTypescript, DEFAULT_ICON_SIZE),
       },
       {
         name: "JavaScript",
-        icon: () => <SiJavascript size={ICON_SIZE} />,
+        icon: () => createIcon(SiJavascript, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -69,31 +74,31 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "React",
-        icon: () => <SiReact size={ICON_SIZE} />,
+        icon: () => createIcon(SiReact, DEFAULT_ICON_SIZE),
       },
       {
         name: "Native",
-        icon: () => <TbBrandReactNative size={ICON_SIZE} />,
+        icon: () => createIcon(TbBrandReactNative, DEFAULT_ICON_SIZE),
       },
       {
         name: "Expo",
-        icon: () => <SiExpo size={ICON_SIZE} />,
+        icon: () => createIcon(SiExpo, DEFAULT_ICON_SIZE),
       },
       {
         name: "Next.js",
-        icon: () => <RiNextjsLine size={ICON_SIZE} />,
+        icon: () => createIcon(RiNextjsLine, DEFAULT_ICON_SIZE),
       },
       {
         name: "Vite",
-        icon: () => <SiVite size={ICON_SIZE} />,
+        icon: () => createIcon(SiVite, DEFAULT_ICON_SIZE),
       },
       {
         name: "Remix",
-        icon: () => <SiRemix size={ICON_SIZE} />,
+        icon: () => createIcon(SiRemix, DEFAULT_ICON_SIZE),
       },
       {
         name: "Redux",
-        icon: () => <SiRedux size={ICON_SIZE} />,
+        icon: () => createIcon(SiRedux, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -104,23 +109,23 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "Styled Components",
-        icon: () => <SiStyledcomponents size={ICON_SIZE} />,
+        icon: () => createIcon(SiStyledcomponents, DEFAULT_ICON_SIZE),
       },
       {
         name: "Tailwind CSS",
-        icon: () => <SiTailwindcss size={ICON_SIZE} />,
+        icon: () => createIcon(SiTailwindcss, DEFAULT_ICON_SIZE),
       },
       {
         name: "Storybook",
-        icon: () => <SiStorybook size={ICON_SIZE} />,
+        icon: () => createIcon(SiStorybook, DEFAULT_ICON_SIZE),
       },
       {
         name: "Shadcn UI",
-        icon: () => <SiShadcnui size={ICON_SIZE} />,
+        icon: () => createIcon(SiShadcnui, DEFAULT_ICON_SIZE),
       },
       {
         name: "Framer Motion",
-        icon: () => <TbBrandFramerMotion size={ICON_SIZE} />,
+        icon: () => createIcon(TbBrandFramerMotion, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -130,11 +135,11 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "Framer",
-        icon: () => <TbBrandFramer size={ICON_SIZE} />,
+        icon: () => createIcon(TbBrandFramer, DEFAULT_ICON_SIZE),
       },
       {
         name: "Figma",
-        icon: () => <TbBrandFigma size={ICON_SIZE} />,
+        icon: () => createIcon(TbBrandFigma, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -145,27 +150,27 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "Node.js",
-        icon: () => <FaNode size={ICON_SIZE} />,
+        icon: () => createIcon(FaNode, DEFAULT_ICON_SIZE),
       },
       {
         name: "NestJS",
-        icon: () => <SiNestjs size={ICON_SIZE} />,
+        icon: () => createIcon(SiNestjs, DEFAULT_ICON_SIZE),
       },
       {
         name: "Express",
-        icon: () => <SiExpress size={ICON_SIZE} />,
+        icon: () => createIcon(SiExpress, DEFAULT_ICON_SIZE),
       },
       {
         name: "Prisma",
-        icon: () => <SiPrisma size={ICON_SIZE} />,
+        icon: () => createIcon(SiPrisma, DEFAULT_ICON_SIZE),
       },
       {
         name: "Neondb",
-        icon: () => <BiLogoPostgresql size={ICON_SIZE} />,
+        icon: () => createIcon(BiLogoPostgresql, DEFAULT_ICON_SIZE),
       },
       {
         name: "Upstash",
-        icon: () => <SiUpstash size={ICON_SIZE} />,
+        icon: () => createIcon(SiUpstash, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -175,15 +180,15 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "Jest",
-        icon: () => <SiJest size={ICON_SIZE} />,
+        icon: () => createIcon(SiJest, DEFAULT_ICON_SIZE),
       },
       {
         name: "Vitest",
-        icon: () => <SiVitest size={ICON_SIZE} />,
+        icon: () => createIcon(SiVitest, DEFAULT_ICON_SIZE),
       },
       {
         name: "Cypress",
-        icon: () => <SiCypress size={ICON_SIZE} />,
+        icon: () => createIcon(SiCypress, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -193,15 +198,15 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "GitHub Actions",
-        icon: () => <SiGithubactions size={ICON_SIZE} />,
+        icon: () => createIcon(SiGithubactions, DEFAULT_ICON_SIZE),
       },
       {
         name: "Docker",
-        icon: () => <SiDocker size={ICON_SIZE} />,
+        icon: () => createIcon(SiDocker, DEFAULT_ICON_SIZE),
       },
       {
         name: "Sentry",
-        icon: () => <SiSentry size={ICON_SIZE} />,
+        icon: () => createIcon(SiSentry, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -211,15 +216,15 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "AWS",
-        icon: () => <FaAws size={ICON_SIZE} />,
+        icon: () => createIcon(FaAws, DEFAULT_ICON_SIZE),
       },
       {
         name: "Cloudflare",
-        icon: () => <SiCloudflare size={ICON_SIZE} />,
+        icon: () => createIcon(SiCloudflare, DEFAULT_ICON_SIZE),
       },
       {
         name: "Vercel",
-        icon: () => <SiVercel size={ICON_SIZE} />,
+        icon: () => createIcon(SiVercel, DEFAULT_ICON_SIZE),
       },
     ],
   },
@@ -229,27 +234,27 @@ export const data: TechnologiesData[] = [
     technologies: [
       {
         name: "git",
-        icon: () => <SiGit size={ICON_SIZE} />,
+        icon: () => createIcon(SiGit, DEFAULT_ICON_SIZE),
       },
       {
         name: "bun",
-        icon: () => <SiBun size={ICON_SIZE} />,
+        icon: () => createIcon(SiBun, DEFAULT_ICON_SIZE),
       },
       {
         name: "pnpm",
-        icon: () => <SiPnpm size={ICON_SIZE} />,
+        icon: () => createIcon(SiPnpm, DEFAULT_ICON_SIZE),
       },
       {
         name: "Cursor",
-        icon: () => <FaCube size={ICON_SIZE} />,
+        icon: () => createIcon(FaCube, DEFAULT_ICON_SIZE),
       },
       {
         name: "Slack",
-        icon: () => <SiSlack size={ICON_SIZE} />,
+        icon: () => createIcon(SiSlack, DEFAULT_ICON_SIZE),
       },
       {
         name: "ClickUp",
-        icon: () => <SiClickup size={ICON_SIZE} />,
+        icon: () => createIcon(SiClickup, DEFAULT_ICON_SIZE),
       },
     ],
   },
