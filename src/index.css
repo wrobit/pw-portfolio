@@ -39,6 +39,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.87);
+    color: #080808;
+  }
 }
 
 *,
