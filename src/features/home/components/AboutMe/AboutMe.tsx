@@ -53,7 +53,7 @@ export const AboutMe = () => {
       <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.6}>
         <Styled.AboutMeImage
           src={leavesImage}
-          alt="About me"
+          alt="Decorative leaves"
           loading="lazy"
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}

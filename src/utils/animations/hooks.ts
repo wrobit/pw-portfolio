@@ -1,7 +1,6 @@
 import { useAnimation, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 
-// Hook for handling hover states
 export const useHoverAnimation = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -14,12 +13,11 @@ export const useHoverAnimation = () => {
     handleHover,
     hoverProps: {
       onMouseEnter: () => handleHover(true),
-      onMouseLeave: () => handleHover(false)
-    }
+      onMouseLeave: () => handleHover(false),
+    },
   };
 };
 
-// Hook for scroll-triggered animations
 export const useScrollAnimation = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -28,11 +26,10 @@ export const useScrollAnimation = () => {
   return {
     ref,
     isInView,
-    controls
+    controls,
   };
 };
 
-// Hook for staggered children animations
 export const useStaggerAnimation = (staggerDelay = 0.2) => {
   return {
     container: {
@@ -40,9 +37,9 @@ export const useStaggerAnimation = (staggerDelay = 0.2) => {
       visible: {
         opacity: 1,
         transition: {
-          staggerChildren: staggerDelay
-        }
-      }
+          staggerChildren: staggerDelay,
+        },
+      },
     },
     item: {
       hidden: { opacity: 0, y: 20 },
@@ -50,9 +47,9 @@ export const useStaggerAnimation = (staggerDelay = 0.2) => {
         opacity: 1,
         y: 0,
         transition: {
-          duration: 0.5
-        }
-      }
-    }
+          duration: 0.5,
+        },
+      },
+    },
   };
 };

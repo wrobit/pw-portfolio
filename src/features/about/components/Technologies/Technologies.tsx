@@ -1,23 +1,37 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect } from "react";
 
+import leavesImage from "@assets/leaves.png";
 import { Typography } from "@components/shared";
+import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
+import { timelineItemVariants, timelineVariants } from "./Technologies.animations";
 import { data } from "./Technologies.data";
 import * as TechnologiesStyled from "./Technologies.styles";
 import * as Styled from "../../shared/styles";
 
 export const Technologies = () => {
-  const parentRef = useRef<HTMLDivElement>(null);
+  const { controls, isInView, ref } = useScrollAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
 
   return (
-    <Styled.Section ref={parentRef} variants={pageTransition} initial="initial" animate="animate">
+    <Styled.Section
+      ref={ref}
+      variants={pageTransition}
+      initial="initial"
+      animate={isInView ? "animate" : "initial"}
+    >
       <Styled.TypographyWrapper>
-        <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
+        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
           <Typography.Headers.H1>Technologies</Typography.Headers.H1>
         </motion.div>
-        <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
+        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
           <Typography.Headers.H5>
             As a developer, I use the latest and most advanced technologies to provide the best
             solutions for my clients. Modern technologies I work with, allows me to create
@@ -27,9 +41,12 @@ export const Technologies = () => {
           </Typography.Headers.H5>
         </motion.div>
       </Styled.TypographyWrapper>
-      <Styled.List>
+      <Styled.List variants={timelineVariants} initial="hidden" animate={controls}>
         {data.map((item, index) => (
-          <TechnologiesStyled.ListRow key={`${item.title}-${index}`}>
+          <TechnologiesStyled.ListRow
+            variants={timelineItemVariants}
+            key={`${item.title}-${index}`}
+          >
             <TechnologiesStyled.ListItemHeaderWrapper>
               <Styled.ListItemHeader>{item.title}</Styled.ListItemHeader>
               <TechnologiesStyled.ListItemDescription>
@@ -47,6 +64,16 @@ export const Technologies = () => {
           </TechnologiesStyled.ListRow>
         ))}
       </Styled.List>
+      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.8}>
+        <Styled.FooterImage
+          src={leavesImage}
+          alt="Decorative leaves"
+          loading="lazy"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        />
+      </motion.div>
     </Styled.Section>
   );
 };
