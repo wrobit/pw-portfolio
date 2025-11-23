@@ -25,14 +25,14 @@ export const AboutMe = () => {
       animate={isInView ? "animate" : "initial"}
     >
       <Styled.AboutMeHeader>
-        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
+        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1}>
           <Typography.Headers.H5>
             I'm a developer that is dedicated to every project I undertake. I closely work with
             every team and client to understand needs and deliver the best solutions. Creating a
             product that exceeds my client's expectations is what I seek to.
           </Typography.Headers.H5>
         </motion.div>
-        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
+        <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.2}>
           <Styled.AboutMeButton
             onClick={handleRouteChange}
             variants={hoverScale}
@@ -43,7 +43,7 @@ export const AboutMe = () => {
           </Styled.AboutMeButton>
         </motion.div>
       </Styled.AboutMeHeader>
-      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.6}>
+      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.4}>
         <Styled.AboutMeImage
           src={leavesImage}
           alt="Decorative leaves"
