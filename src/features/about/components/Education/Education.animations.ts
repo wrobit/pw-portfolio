@@ -13,9 +13,9 @@ export const timelineVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       when: "beforeChildren",
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
       delayChildren: 0.6,
     },
   },
@@ -26,7 +26,7 @@ export const timelineItemVariants: Variants = {
     opacity: 0,
     y: 30,
     transition: {
-      duration: 0.3,
+      duration: 0.25,
       ease: "easeIn",
     },
   },
@@ -34,7 +34,7 @@ export const timelineItemVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
       ease: "easeOut",
     },
   },
