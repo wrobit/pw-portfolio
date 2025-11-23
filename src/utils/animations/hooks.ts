@@ -1,5 +1,5 @@
 import { useAnimation, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useHoverAnimation = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,6 +22,12 @@ export const useScrollAnimation = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
 
   return {
     ref,

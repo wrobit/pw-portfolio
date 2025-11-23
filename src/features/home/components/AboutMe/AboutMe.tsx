@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import leavesImage from "@assets/leaves.png";
@@ -13,12 +12,6 @@ import * as Styled from "./AboutMe.styles";
 export const AboutMe = () => {
   const navigate = useNavigate();
   const { ref, isInView, controls } = useScrollAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls]);
 
   const handleRouteChange = () => {
     navigate(routes.about);

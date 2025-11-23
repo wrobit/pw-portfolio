@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 import leavesImage from "@assets/leaves.png";
 import { Typography } from "@components/shared";
@@ -16,12 +15,6 @@ import * as Styled from "../../shared/styles";
 
 export const Technologies = () => {
   const { controls, isInView, ref } = useScrollAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls]);
 
   return (
     <Styled.Section

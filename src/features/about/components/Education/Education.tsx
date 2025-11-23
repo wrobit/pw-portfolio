@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 import { Typography } from "@components/shared";
 import {
@@ -14,12 +13,6 @@ import * as Styled from "../../shared/styles";
 
 export const Education = () => {
   const { controls, isInView, ref } = useScrollAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls]);
 
   return (
     <Styled.Section

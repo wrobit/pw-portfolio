@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { useTheme } from "styled-components";
 
 import { Typography } from "@components/shared";
@@ -13,13 +12,7 @@ import * as Styled from "./Footer.styles";
 export const Footer = () => {
   const theme = useTheme();
   const dateYear = new Date().getFullYear() + "";
-  const { ref, isInView, controls } = useScrollAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView, controls]);
+  const { ref, controls } = useScrollAnimation();
 
   return (
     <Styled.Footer ref={ref} variants={footerVariants} initial="hidden" animate={controls}>
