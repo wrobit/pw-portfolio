@@ -3,10 +3,13 @@ import { useEffect } from "react";
 
 import leavesImage from "@assets/leaves.png";
 import { Typography } from "@components/shared";
+import {
+  timelineItemVariants,
+  timelineVariants,
+} from "@features/home/components/AboutMe/utils/animations";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
-import { timelineItemVariants, timelineVariants } from "./Technologies.animations";
 import { data } from "./Technologies.data";
 import * as TechnologiesStyled from "./Technologies.styles";
 import * as Styled from "../../shared/styles";

@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 import { Typography } from "@components/shared";
+import {
+  timelineItemVariants,
+  timelineVariants,
+} from "@features/home/components/AboutMe/utils/animations";
 import { useScrollAnimation } from "@utils/animations";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
-import { timelineVariants, timelineItemVariants } from "./Education.animations";
 import { data } from "./Education.data";
 import * as Styled from "../../shared/styles";
 

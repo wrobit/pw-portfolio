@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 
 import { Typography } from "@components/shared";
+import {
+  timelineItemVariants,
+  timelineVariants,
+} from "@features/home/components/AboutMe/utils/animations";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
-import { timelineVariants, timelineItemVariants } from "./Experience.animations";
 import { data } from "./Experience.data";
 import * as Styled from "../../shared/styles";
 
