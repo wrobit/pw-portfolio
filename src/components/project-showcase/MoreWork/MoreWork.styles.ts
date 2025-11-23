@@ -1,6 +1,7 @@
-import { hexToRgba } from "@utils/helpers/colors.helper";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+
+import { hexToRgba } from "@utils/helpers/colors.helper";
 
 const MoreWorkLink = styled(motion.a)`
   width: fit-content;

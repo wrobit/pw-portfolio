@@ -1,7 +1,8 @@
-import { hexToRgba } from "@utils/helpers/colors.helper";
+import { motion } from "framer-motion";
 import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+
+import { hexToRgba } from "@utils/helpers/colors.helper";
 
 type WrapperProps = {
   isOpen: boolean;
@@ -185,5 +186,5 @@ export {
   Link,
   NavbarWrapper,
   NavLinks,
-  Wrapper
+  Wrapper,
 };

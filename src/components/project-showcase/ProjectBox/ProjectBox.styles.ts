@@ -1,6 +1,7 @@
-import { Typography } from "@components/common";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+
+import { Typography } from "@components/shared";
 
 const ProjectBoxContainer = styled(motion.div)<{ $isExpanded: boolean }>`
   height: 500px;
@@ -107,5 +108,5 @@ export {
   ProjectBoxLinkContainer,
   ProjectBoxImageWrapperGlassOverlay,
   ProjectBoxContainerContent,
-  ProjectBoxImageContainer
+  ProjectBoxImageContainer,
 };
