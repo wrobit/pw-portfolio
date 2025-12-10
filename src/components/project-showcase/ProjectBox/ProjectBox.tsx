@@ -18,7 +18,7 @@ export const ProjectBox = ({
 }: ProjectBoxProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
 
-  const getProjectLink = (id: number) => `${routes.projects}/${id}`;
+  const getProjectLink = (projectId: number) => `${routes.project}/${projectId}`;
 
   return (
     <Styled.ProjectBoxContainer
@@ -35,7 +35,7 @@ export const ProjectBox = ({
         animate={isHovered ? "hover" : "initial"}
       >
         <Styled.ProjectBoxImageWrapper
-          href={getProjectLink(id)}
+          to={getProjectLink(id)}
           aria-label={`View project: ${title}`}
         >
           <Styled.ProjectBoxImageWrapperGlassOverlay
@@ -57,7 +57,7 @@ export const ProjectBox = ({
           </Styled.ProjectBoxImageContainer>
         </Styled.ProjectBoxImageWrapper>
       </Styled.ProjectBoxContainerContent>
-      <Styled.ProjectBoxLink href={`/project/${id}`} aria-label={`Go to project: ${title}`}>
+      <Styled.ProjectBoxLink to={getProjectLink(id)} aria-label={`Go to project: ${title}`}>
         <Styled.ProjectBoxLinkContainer
           variants={linkHover}
           initial="initial"

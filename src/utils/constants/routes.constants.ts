@@ -4,6 +4,7 @@ const about = "/about";
 const contact = "/contact";
 const project = "/project";
 const projects = "/projects";
+const projectDetails = "/project/:projectId";
 const error404 = "/404";
 
 export const routes = {
@@ -13,5 +14,6 @@ export const routes = {
   projects,
   contact,
   project,
-  error404
+  projectDetails,
+  error404,
 };

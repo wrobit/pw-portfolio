@@ -3,48 +3,48 @@ import { Project } from "@components/project-showcase/ProjectShowcase.types";
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Limur",
+    backgroundImage: "/images/gradients/green-light.png",
+    image: "/images/mockups/limur.png",
+    description: "A website for a company that provides AI-powered solutions for businesses.",
+    liveLink: "https://limur.pl/",
+  },
+  {
+    id: 2,
     title: "DreamStorm Website",
     image: "/images/mockups/dreamstorm.png",
     backgroundImage: "/images/gradients/blue.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://dreamstormstudios.com/",
-    repositoryLink: "https://github.com/wrobit/commercial-projects"
+    repositoryLink: "https://github.com/wrobit/commercial-projects",
   },
   {
-    id: 2,
+    id: 3,
     title: "Aloki",
     image: "/images/mockups/aloki.png",
     backgroundImage: "/images/gradients/green.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://aloki.io/",
-    repositoryLink: "https://github.com/wrobit/commercial-projects"
+    repositoryLink: "https://github.com/wrobit/commercial-projects",
   },
   {
-    id: 3,
+    id: 4,
     title: "Ludus AI",
     backgroundImage: "/images/gradients/orange.png",
     image: "/images/mockups/ludus-ai.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://ludusengine.com/",
     repositoryLink: "https://github.com/wrobit/commercial-projects",
-    isExpanded: true
+    isExpanded: true,
   },
   {
-    id: 4,
+    id: 5,
     title: "The Labz",
     backgroundImage: "/images/gradients/purple.png",
     image: "/images/mockups/the-labz.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://www.thelabz.com/",
-    repositoryLink: "https://github.com/wrobit/commercial-projects"
-  },
-  {
-    id: 5,
-    title: "Limur",
-    backgroundImage: "/images/gradients/green-light.png",
-    image: "/images/mockups/limur.png",
-    description: "A website for a company that provides AI-powered solutions for businesses.",
-    liveLink: "https://limur.pl/"
+    repositoryLink: "https://github.com/wrobit/commercial-projects",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://www.piotrwrobel.eu/",
     repositoryLink: "https://github.com/wrobit/pw-ajiiz-portfolio",
-    isExpanded: true
+    isExpanded: true,
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     image: "/images/mockups/listic.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://github.com/wrobit/session-organizer",
-    repositoryLink: "https://github.com/wrobit/session-organizer"
+    repositoryLink: "https://github.com/wrobit/session-organizer",
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     image: "/images/mockups/portfolio-blog.png",
     description: "A website for a company that provides AI-powered solutions for businesses.",
     liveLink: "https://pw-ajiiz-blog.netlify.app/",
-    repositoryLink: "https://github.com/wrobit/pw-ajiiz-blog"
+    repositoryLink: "https://github.com/wrobit/pw-ajiiz-blog",
   },
 
   {
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     image: "/images/mockups/plantspot.png",
     description: "Plants application using api.",
     liveLink: "https://plantspot.netlify.app",
-    repositoryLink: "https://github.com/wrobit/plantspot"
+    repositoryLink: "https://github.com/wrobit/plantspot",
   },
   {
     id: 10,
@@ -91,7 +91,7 @@ export const projects: Project[] = [
     image: "/images/mockups/niteczki-daneczki.png",
     description: "Plants application using api.",
     liveLink: "https://niteczki-daneczki.netlify.app/",
-    repositoryLink: "https://github.com/wrobit/niteczki-daneczki-website"
+    repositoryLink: "https://github.com/wrobit/niteczki-daneczki-website",
   },
   {
     id: 11,
@@ -100,6 +100,6 @@ export const projects: Project[] = [
     image: "/images/mockups/private.png",
     description: "Private projects that are not available due to NDA.",
     liveLink: "",
-    repositoryLink: ""
-  }
+    repositoryLink: "",
+  },
 ];
