@@ -12,15 +12,10 @@ import { data } from "./Experience.data";
 import * as Styled from "../../shared/styles";
 
 export const Experience = () => {
-  const heroSectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <Styled.Section
-      ref={heroSectionRef}
-      variants={pageTransition}
-      initial="initial"
-      animate="animate"
-    >
+    <Styled.Section ref={sectionRef} variants={pageTransition} initial="initial" animate="animate">
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
           <Typography.Headers.H1>Experience</Typography.Headers.H1>

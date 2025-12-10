@@ -1,7 +1,27 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import styled from "styled-components";
 
-const HeroImageWrapper = styled(motion.div)`
+import { fadeInUp, pageTransition } from "@utils/animations/variants";
+
+export const HeroImage = () => {
+  const heroSectionRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <ImageWrapper
+      ref={heroSectionRef}
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+    >
+      <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.5}>
+        <Image src={"/images/hero/hero-image.png"} alt="Hero Image" />
+      </motion.div>
+    </ImageWrapper>
+  );
+};
+
+const ImageWrapper = styled(motion.div)`
   width: 100%;
   margin: ${({ theme }) => theme.spacing.xxl} 0;
   display: flex;
@@ -17,7 +37,7 @@ const HeroImageWrapper = styled(motion.div)`
   }
 `;
 
-const HeroImage = styled.img`
+const Image = styled.img`
   width: 100%;
   height: 450px;
   object-fit: cover;
@@ -31,5 +51,3 @@ const HeroImage = styled.img`
     height: 275px;
   }
 `;
-
-export { HeroImageWrapper, HeroImage };
