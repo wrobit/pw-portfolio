@@ -5,12 +5,14 @@ import { hexToRgba } from "@utils/helpers/colors.helper";
 
 type AnimatedLinkRootProps = {
   $align?: "left" | "center";
+  $size?: "normal" | "big";
 };
 
 const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   width: fit-content;
   margin: ${({ $align }) => ($align === "center" ? "0 auto" : "0")};
-  padding: ${({ theme }) => theme.spacing.md} 0;
+  padding: ${({ theme, $size }) =>
+    $size === "big" ? `${theme.spacing.lg} 0` : `${theme.spacing.md} 0`};
   border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.3)};
   background: transparent;
   cursor: none;
@@ -42,7 +44,8 @@ const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: ${({ theme }) => theme.spacing.sm} 0;
+    padding: ${({ theme, $size }) =>
+      $size === "big" ? `${theme.spacing.md} 0` : `${theme.spacing.sm} 0`};
   }
 `;
 

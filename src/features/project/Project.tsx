@@ -34,7 +34,7 @@ export const Project = () => {
         <ProjectLinksWrapper>
           {liveLink && (
             <AnimatedLink
-              label="View live project"
+              label="LIVE PROJECT"
               href={liveLink}
               target="_blank"
               rel="noreferrer"
@@ -43,7 +43,7 @@ export const Project = () => {
           )}
           {repositoryLink && (
             <AnimatedLink
-              label="View source code"
+              label="SOURCE CODE"
               href={repositoryLink}
               target="_blank"
               rel="noreferrer"

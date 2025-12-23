@@ -21,6 +21,7 @@ export const AnimatedLink = ({
   rel,
   onClick,
   align = "center",
+  size = "normal",
 }: AnimatedLinkProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
 
@@ -31,6 +32,7 @@ export const AnimatedLink = ({
       rel={rel}
       onClick={onClick}
       $align={align}
+      $size={size}
       {...hoverProps}
       variants={fadeInUp}
       initial="hidden"

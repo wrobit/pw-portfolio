@@ -31,9 +31,9 @@ const TypographyWrapper = styled.div<{ isFullWidth?: boolean }>`
 
 const ProjectLinksWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  gap: ${({ theme }) => theme.spacing.sm};
+  gap: ${({ theme }) => theme.spacing.xl};
 `;
 
 export { ProjectLinksWrapper, Section, TypographyWrapper };
