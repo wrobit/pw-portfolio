@@ -1,6 +1,6 @@
 import { Project } from "../ProjectShowcase.types";
 
-export type ProjectBoxProps = {
+export interface ProjectBoxProps extends Project {
   image: string;
   index: number;
-} & Project;
+}

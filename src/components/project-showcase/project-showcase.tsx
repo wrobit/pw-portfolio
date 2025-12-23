@@ -4,8 +4,8 @@ import { AnimatedLink } from "@components/shared/animated-link/animated-link";
 import { routes } from "@utils/constants/routes.constants";
 import { projects } from "data/projects";
 
-import { ProjectBox } from "./ProjectBox/ProjectBox";
-import * as Styled from "./ProjectShowcase.styles";
+import { ProjectBox } from "./project-box/project-box";
+import * as Styled from "./project-showcase.styles";
 
 const PROJECTS_TO_SHOW_ON_HOME_PAGE = 6;
 

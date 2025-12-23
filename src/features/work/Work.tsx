@@ -1,5 +1,5 @@
 import { Hero } from "@components/hero/hero";
-import { ProjectShowcase } from "@components/project-showcase/ProjectShowcase";
+import { ProjectShowcase } from "@components/project-showcase/project-showcase";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
 export const Work = () => {

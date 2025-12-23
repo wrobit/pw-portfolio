@@ -5,8 +5,8 @@ import { useHoverAnimation } from "@utils/animations/hooks";
 import { arrowHover, fadeInUp, hoverScale, linkHover } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
 
-import * as Styled from "./ProjectBox.styles";
-import { ProjectBoxProps } from "./ProjectBox.types";
+import * as Styled from "./project-box.styles";
+import { ProjectBoxProps } from "./project-box.types";
 
 export const ProjectBox = ({
   title,
