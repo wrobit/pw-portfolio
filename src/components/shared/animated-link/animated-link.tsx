@@ -1,25 +1,36 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 
 import RightArrow from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/shared";
 import { useHoverAnimation } from "@utils/animations/hooks";
 import { arrowHover, fadeInUp, linkHover } from "@utils/animations/variants";
-import { routes } from "@utils/constants/routes.constants";
 
-import * as Styled from "./MoreWork.styles";
+import {
+  AnimatedLinkContent,
+  AnimatedLinkRoot,
+  ArrowIcon,
+  ArrowWrapper,
+} from "./animated-link.styles";
+import { AnimatedLinkProps } from "./animated-link.types";
 
-type MoreWorkProps = {
-  delay: number;
-};
-
-export const MoreWork = ({ delay }: MoreWorkProps) => {
+export const AnimatedLink = ({
+  label,
+  delay = 0,
+  href,
+  target,
+  rel,
+  onClick,
+  align = "center",
+}: AnimatedLinkProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
-  const navigate = useNavigate();
 
   return (
-    <Styled.MoreWorkLink
-      onClick={() => navigate(routes.work)}
+    <AnimatedLinkRoot
+      href={href}
+      target={target}
+      rel={rel}
+      onClick={onClick}
+      $align={align}
       {...hoverProps}
       variants={fadeInUp}
       initial="hidden"
@@ -27,17 +38,17 @@ export const MoreWork = ({ delay }: MoreWorkProps) => {
       custom={delay}
     >
       <motion.div variants={linkHover} initial="initial" animate={isHovered ? "hover" : "initial"}>
-        <Styled.MoreWorkContent>
-          <Typography.Headers.H6>More work</Typography.Headers.H6>
-          <Styled.ArrowWrapper
+        <AnimatedLinkContent>
+          <Typography.Headers.H6>{label}</Typography.Headers.H6>
+          <ArrowWrapper
             variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
             initial="initial"
             animate={isHovered ? "hover" : "initial"}
           >
-            <Styled.ArrowIcon src={RightArrow} alt="arrow" />
-          </Styled.ArrowWrapper>
-        </Styled.MoreWorkContent>
+            <ArrowIcon src={RightArrow} alt="arrow" />
+          </ArrowWrapper>
+        </AnimatedLinkContent>
       </motion.div>
-    </Styled.MoreWorkLink>
+    </AnimatedLinkRoot>
   );
 };

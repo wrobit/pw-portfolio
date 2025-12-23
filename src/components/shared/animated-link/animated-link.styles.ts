@@ -3,11 +3,14 @@ import styled from "styled-components";
 
 import { hexToRgba } from "@utils/helpers/colors.helper";
 
-const MoreWorkLink = styled(motion.a)`
+type AnimatedLinkRootProps = {
+  $align?: "left" | "center";
+};
+
+const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   width: fit-content;
-  margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing.md};
-  ${({ theme }) => theme.spacing.lg};
+  margin: ${({ $align }) => ($align === "center" ? "0 auto" : "0")};
+  padding: ${({ theme }) => theme.spacing.md} 0;
   border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.3)};
   background: transparent;
   cursor: none;
@@ -43,7 +46,7 @@ const MoreWorkLink = styled(motion.a)`
   }
 `;
 
-const MoreWorkContent = styled.div`
+const AnimatedLinkContent = styled.div`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
@@ -72,4 +75,4 @@ const ArrowIcon = styled.img`
   }
 `;
 
-export { ArrowIcon, ArrowWrapper, MoreWorkContent, MoreWorkLink };
+export { AnimatedLinkContent, AnimatedLinkRoot, ArrowIcon, ArrowWrapper };

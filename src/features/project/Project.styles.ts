@@ -17,7 +17,7 @@ const Section = styled(motion.div)`
   }
 `;
 
-const TypographyWrapper = styled.div`
+const TypographyWrapper = styled.div<{ isFullWidth?: boolean }>`
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -29,4 +29,11 @@ const TypographyWrapper = styled.div`
   }
 `;
 
-export { Section, TypographyWrapper };
+const ProjectLinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: ${({ theme }) => theme.spacing.sm};
+`;
+
+export { ProjectLinksWrapper, Section, TypographyWrapper };

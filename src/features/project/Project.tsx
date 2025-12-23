@@ -1,10 +1,12 @@
 import { useMemo } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
+import { AnimatedLink } from "@components/shared/animated-link/animated-link";
 import { routes } from "@utils/constants/routes.constants";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 import { projects } from "data/projects";
 
+import { ProjectLinksWrapper } from "./Project.styles";
 import { Hero } from "../../components/hero/hero";
 
 export const Project = () => {
@@ -23,11 +25,33 @@ export const Project = () => {
     return <Navigate to={routes.error404} replace />;
   }
 
-  const { title, description } = project;
+  const { title, description, liveLink, repositoryLink } = project;
 
   return (
     <PageTemplateWrapper>
       <Hero title={title} description={description} showScrollToExplore={false} />
+      {(liveLink || repositoryLink) && (
+        <ProjectLinksWrapper>
+          {liveLink && (
+            <AnimatedLink
+              label="View live project"
+              href={liveLink}
+              target="_blank"
+              rel="noreferrer"
+              align="left"
+            />
+          )}
+          {repositoryLink && (
+            <AnimatedLink
+              label="View source code"
+              href={repositoryLink}
+              target="_blank"
+              rel="noreferrer"
+              align="left"
+            />
+          )}
+        </ProjectLinksWrapper>
+      )}
     </PageTemplateWrapper>
   );
 };
