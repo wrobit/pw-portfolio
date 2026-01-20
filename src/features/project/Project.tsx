@@ -97,7 +97,7 @@ export const Project = () => {
         <Styled.ProjectLinksWrapper>
           {liveLink && (
             <AnimatedLink
-              label="LIVE PROJECT"
+              label="LIVE"
               href={liveLink}
               target="_blank"
               rel="noreferrer"

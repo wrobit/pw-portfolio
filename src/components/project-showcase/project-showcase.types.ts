@@ -9,6 +9,7 @@ export type Project = {
   image: string;
   backgroundImage: string;
   description: string;
+  activities?: string[];
   liveLink?: string;
   repositoryLink?: string;
   isExpanded?: boolean;
