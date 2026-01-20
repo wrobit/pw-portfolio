@@ -10,6 +10,11 @@ export const data = [
     date: "2025 - 2025",
   },
   {
+    title: "Fullstack Engineer",
+    company: "DreamStorm Studios",
+    date: "2023 - 2024",
+  },
+  {
     title: "Fullstack Developer",
     company: "DreamStorm Studios",
     date: "2021 - 2023",
