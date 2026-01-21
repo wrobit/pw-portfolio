@@ -13,7 +13,7 @@ export const data = [
     date: "2023 - Present",
     url: "https://limur.pl/",
     description:
-      "React Developer at Limur, a company that provides logistics solutions for businesses.",
+      "React Developer at Limur, a logistics-focused IT and IoT company that designs systems for monitoring, securing, and optimizing transport and warehouse operations. Products include Security Seal GPS tracking, temperature and humidity monitoring (THMS), yard management systems (YMS), and Driver Connect for delivery management. These tools help logistics companies improve security, visibility, and efficiency across their supply chains.",
   },
   {
     title: "Fullstack Developer",
@@ -21,7 +21,7 @@ export const data = [
     date: "2025 - 2025",
     url: "https://ludusengine.com/",
     description:
-      "Fullstack Developer at Ludus AI, a company that provides AI-powered solutions for businesses.",
+      "Fullstack Developer at Ludus AI, a platform focused on AI-driven experiences. Worked on the core web application, implementing payment integration with Stripe, subscription management, and supporting infrastructure using React, Remix, and PostgreSQL.",
   },
   {
     title: "Fullstack Engineer",
@@ -29,7 +29,7 @@ export const data = [
     date: "2023 - 2024",
     url: "https://dreamstormstudios.com/",
     description:
-      "Fullstack Engineer at DreamStorm Studios, a company that provides web development solutions for businesses.",
+      "Fullstack Engineer at DreamStorm Studios, focusing on cloud infrastructure and authentication systems. Designed AWS Lambda@Edge functions for authorization, integrated Cognito SDK for user authentication with SSO, and implemented Zoom VC SDK for virtual communications. Worked with AWS services including SES for email communications and Multi-Region Access Points for optimal performance across regions.",
   },
   {
     title: "Fullstack Developer",
@@ -37,7 +37,7 @@ export const data = [
     date: "2021 - 2023",
     url: "https://dreamstormstudios.com/",
     description:
-      "Fullstack Developer at DreamStorm Studios, a company that provides web development solutions for businesses.",
+      "Fullstack Developer at DreamStorm Studios, working on diverse web development projects including The Labz (an online event builder with 3D galleries and video conferencing) and Aloki (a blockchain gaming metaverse). Developed features using React, Next.js, TypeScript, and integrated with various APIs and services. Built the company's marketing website with Gatsby.js, implementing smooth animations using Locomotive scroll and backend integrations including Mailchimp.",
   },
   {
     title: "IT Intern",
