@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { KeyboardEvent, useRef, useState } from "react";
 
 import { Typography } from "@components/shared";
 import {
@@ -12,15 +12,22 @@ import { data } from "./Experience.data";
 import * as Styled from "../../shared/styles";
 
 export const Experience = () => {
-  const heroSectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setExpandedIndex((current) => (current === index ? null : index));
+  };
+
+  const handleToggleKeyDown = (event: KeyboardEvent<HTMLDivElement>, index: number) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleToggle(index);
+    }
+  };
 
   return (
-    <Styled.Section
-      ref={heroSectionRef}
-      variants={pageTransition}
-      initial="initial"
-      animate="animate"
-    >
+    <Styled.Section ref={sectionRef} variants={pageTransition} initial="initial" animate="animate">
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
           <Typography.Headers.H1>Experience</Typography.Headers.H1>
@@ -37,17 +44,52 @@ export const Experience = () => {
         </motion.div>
       </Styled.TypographyWrapper>
       <Styled.List variants={timelineVariants} initial="hidden" animate="visible">
-        {data.map((item, index) => (
-          <Styled.ListRow
-            key={`${item.title}-${index}`}
-            variants={timelineItemVariants}
-            custom={index * 0.1}
-          >
-            <Styled.ListItemHeader>{item.company}</Styled.ListItemHeader>
-            <Styled.ListItem>{item.title}</Styled.ListItem>
-            <Styled.ListItem>{item.date}</Styled.ListItem>
-          </Styled.ListRow>
-        ))}
+        {data.map((item, index) => {
+          const isExpanded = expandedIndex === index;
+
+          return (
+            <Styled.ExperienceRow
+              key={`${item.title}-${index}`}
+              variants={timelineItemVariants}
+              custom={index * 0.1}
+            >
+              <Styled.ExperienceRowHeader
+                role="button"
+                tabIndex={0}
+                aria-expanded={isExpanded}
+                onClick={() => handleToggle(index)}
+                onKeyDown={(event) => handleToggleKeyDown(event, index)}
+              >
+                <Styled.ListItemHeader>
+                  <Styled.ExperienceCompanyLink
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    {item.company}
+                  </Styled.ExperienceCompanyLink>
+                </Styled.ListItemHeader>
+                <Styled.ListItem>{item.title}</Styled.ListItem>
+                <Styled.ListItem>{item.date}</Styled.ListItem>
+              </Styled.ExperienceRowHeader>
+              <AnimatePresence initial={false}>
+                {isExpanded && (
+                  <Styled.ExperienceDescription
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
+                    <Styled.ExperienceDescriptionText>
+                      {item.description}
+                    </Styled.ExperienceDescriptionText>
+                  </Styled.ExperienceDescription>
+                )}
+              </AnimatePresence>
+            </Styled.ExperienceRow>
+          );
+        })}
       </Styled.List>
     </Styled.Section>
   );

@@ -1,0 +1,71 @@
+import { motion } from "framer-motion";
+
+import RightArrow from "@assets/icons/arrow-right.svg";
+import { Typography } from "@components/shared";
+import { useHoverAnimation } from "@utils/animations/hooks";
+import { arrowHover, fadeInUp, linkHover } from "@utils/animations/variants";
+
+import {
+  AnimatedLinkContent,
+  AnimatedLinkRoot,
+  ArrowIcon,
+  ArrowWrapper,
+} from "./animated-link.styles";
+import { AnimatedLinkProps } from "./animated-link.types";
+
+export const AnimatedLink = ({
+  label,
+  delay = 0,
+  href,
+  target,
+  rel,
+  onClick,
+  disabled = false,
+  align = "center",
+  size = "normal",
+}: AnimatedLinkProps) => {
+  const { isHovered, hoverProps } = useHoverAnimation();
+  const shouldHover = !disabled && isHovered;
+
+  return (
+    <AnimatedLinkRoot
+      href={disabled ? undefined : href}
+      target={disabled ? undefined : target}
+      rel={disabled ? undefined : rel}
+      onClick={
+        disabled
+          ? undefined
+          : () => {
+              onClick?.();
+            }
+      }
+      aria-disabled={disabled || undefined}
+      tabIndex={disabled ? -1 : undefined}
+      $align={align}
+      $size={size}
+      $disabled={disabled}
+      {...(disabled ? {} : hoverProps)}
+      variants={fadeInUp}
+      initial="hidden"
+      animate="visible"
+      custom={delay}
+    >
+      <motion.div
+        variants={linkHover}
+        initial="initial"
+        animate={shouldHover ? "hover" : "initial"}
+      >
+        <AnimatedLinkContent>
+          <Typography.Headers.H6>{label}</Typography.Headers.H6>
+          <ArrowWrapper
+            variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
+            initial="initial"
+            animate={shouldHover ? "hover" : "initial"}
+          >
+            <ArrowIcon src={RightArrow} alt="arrow" />
+          </ArrowWrapper>
+        </AnimatedLinkContent>
+      </motion.div>
+    </AnimatedLinkRoot>
+  );
+};

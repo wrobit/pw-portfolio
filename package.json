@@ -5,8 +5,8 @@
   "private": true,
   "version": "0.0.0",
   "engines": {
-    "node": "^23.1.0",
-    "yarn": "^1.22.19"
+    "node": ">=23.1.0",
+    "yarn": ">=1.22.19"
   },
   "type": "module",
   "scripts": {

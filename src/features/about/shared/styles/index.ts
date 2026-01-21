@@ -69,6 +69,55 @@ const ListItemHeader = styled(Typography.Headers.H4)`
   width: 100%;
 `;
 
+const ExperienceRow = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.md};
+  padding-bottom: ${({ theme }) => theme.spacing.xl};
+
+  &:not(:last-child) {
+    border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.2)};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-bottom: ${({ theme }) => theme.spacing.lg};
+  }
+`;
+
+const ExperienceRowHeader = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 0.75fr;
+  gap: ${({ theme }) => theme.spacing.md};
+  cursor: pointer;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+    gap: ${({ theme }) => theme.spacing.sm};
+  }
+`;
+
+const ExperienceCompanyLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.gray};
+  }
+`;
+
+const ExperienceDescription = styled(motion.div)`
+  overflow: hidden;
+`;
+
+const ExperienceDescriptionText = styled(Typography.Headers.H5)`
+  color: ${({ theme }) => theme.colors.gray};
+  font-family: ${({ theme }) => theme.font.regular};
+`;
+
 const FooterImage = styled(motion.img)`
   width: 100%;
   height: 300px;
@@ -84,4 +133,17 @@ const FooterImage = styled(motion.img)`
   }
 `;
 
-export { List, ListItem, ListItemHeader, ListRow, Section, TypographyWrapper, FooterImage };
+export {
+  List,
+  ListItem,
+  ListItemHeader,
+  ListRow,
+  Section,
+  TypographyWrapper,
+  FooterImage,
+  ExperienceRow,
+  ExperienceRowHeader,
+  ExperienceCompanyLink,
+  ExperienceDescription,
+  ExperienceDescriptionText,
+};

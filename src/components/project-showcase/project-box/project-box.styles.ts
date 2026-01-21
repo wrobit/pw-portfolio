@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link as RouterLink } from "react-router-dom";
 import styled from "styled-components";
 
 import { Typography } from "@components/shared";
@@ -27,7 +28,7 @@ const ProjectBoxContainerContent = styled(motion.div)`
   position: relative;
 `;
 
-const ProjectBoxImageWrapper = styled.a`
+const ProjectBoxImageWrapper = styled(RouterLink)`
   width: 100%;
   height: 454px;
   border-radius: ${({ theme }) => theme.radius.xl};
@@ -52,7 +53,7 @@ const ProjectBoxImageWrapperGlassOverlay = styled(motion.div)`
   border-radius: inherit;
 `;
 
-const ProjectBoxLink = styled.a`
+const ProjectBoxLink = styled(RouterLink)`
   text-decoration: none;
   color: inherit;
   cursor: none;

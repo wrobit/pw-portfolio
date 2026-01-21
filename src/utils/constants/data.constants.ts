@@ -1,22 +1,22 @@
 export const PROFILE_DATA = {
   GITHUB: {
     label: "github",
-    href: "https://github.com/wrobit"
+    href: "https://github.com/wrobit",
   },
   LINKEDIN: {
     label: "linkedin",
-    href: "https://linkedin.com/in/piotrwrobel-wrobit"
+    href: "https://linkedin.com/in/piotrwrobel-wrobit",
   },
-  TWITTER: {
-    label: "twitter",
-    href: "https://x.com/wrobit_"
+  LINKTREE: {
+    label: "linktree",
+    href: "https://linktr.ee/wrobit",
   },
   BENTO_ME: {
     label: "bento.me",
-    href: "https://bento.me/piotrwrobel"
+    href: "https://bento.me/piotrwrobel",
   },
   EMAIL: {
     label: "email",
-    href: "mailto:piotrwrobel.ajiiz@gmail.com"
-  }
+    href: "mailto:piotrwrobel.ajiiz@gmail.com",
+  },
 } as const;

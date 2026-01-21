@@ -1,12 +1,15 @@
-import { ProjectShowcase } from "@components/project-showcase/ProjectShowcase";
+import { Hero } from "@components/hero/hero";
+import { ProjectShowcase } from "@components/project-showcase/project-showcase";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
-
-import { Hero } from "./components/Hero/Hero";
 
 export const Work = () => {
   return (
     <PageTemplateWrapper>
-      <Hero />
+      <Hero
+        title="Work"
+        description="Check out my latest commercial and personal projects and see how I've managed to bring visions to life."
+        showScrollToExplore={false}
+      />
       <ProjectShowcase />
     </PageTemplateWrapper>
   );
