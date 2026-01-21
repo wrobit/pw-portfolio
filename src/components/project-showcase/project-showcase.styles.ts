@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Typography } from "@components/shared";
+
 const ProjectShowcaseContainer = styled.div`
   width: 100%;
   height: fit-content;
@@ -18,4 +20,20 @@ const ProjectShowcaseWrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xxl};
 `;
 
-export { ProjectShowcaseContainer, ProjectShowcaseWrapper };
+const ProjectShowcaseSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.lg};
+`;
+
+const ProjectShowcaseTitle = styled(Typography.Headers.H4)`
+  margin: 0;
+`;
+
+export {
+  ProjectShowcaseContainer,
+  ProjectShowcaseWrapper,
+  ProjectShowcaseSection,
+  ProjectShowcaseTitle,
+};
