@@ -243,6 +243,7 @@ export const Project = () => {
               <AnimatedLink
                 label="Previous"
                 align="left"
+                direction="left"
                 onClick={() => handleProjectNavigate(previousProject?.id)}
                 delay={0.2}
               />

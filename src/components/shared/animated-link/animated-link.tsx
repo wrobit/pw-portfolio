@@ -22,10 +22,19 @@ export const AnimatedLink = ({
   onClick,
   disabled = false,
   align = "center",
+  direction = "right",
   size = "normal",
 }: AnimatedLinkProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
   const shouldHover = !disabled && isHovered;
+  const contentVariants =
+    direction === "left"
+      ? {
+          ...linkHover,
+          initial: { ...linkHover.initial, x: 5 },
+          hover: { ...linkHover.hover, x: 0 },
+        }
+      : linkHover;
 
   return (
     <AnimatedLinkRoot
@@ -51,18 +60,18 @@ export const AnimatedLink = ({
       custom={delay}
     >
       <motion.div
-        variants={linkHover}
+        variants={contentVariants}
         initial="initial"
         animate={shouldHover ? "hover" : "initial"}
       >
-        <AnimatedLinkContent>
+        <AnimatedLinkContent $direction={direction}>
           <Typography.Headers.H6>{label}</Typography.Headers.H6>
           <ArrowWrapper
             variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
             initial="initial"
             animate={shouldHover ? "hover" : "initial"}
           >
-            <ArrowIcon src={RightArrow} alt="arrow" />
+            <ArrowIcon src={RightArrow} alt="arrow" $direction={direction} />
           </ArrowWrapper>
         </AnimatedLinkContent>
       </motion.div>

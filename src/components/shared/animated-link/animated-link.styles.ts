@@ -9,6 +9,14 @@ type AnimatedLinkRootProps = {
   $disabled?: boolean;
 };
 
+type AnimatedLinkContentProps = {
+  $direction?: "left" | "right";
+};
+
+type ArrowIconProps = {
+  $direction?: "left" | "right";
+};
+
 const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   width: fit-content;
   margin: ${({ $align }) => ($align === "center" ? "0 auto" : "0")};
@@ -58,10 +66,11 @@ const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   }
 `;
 
-const AnimatedLinkContent = styled.div`
+const AnimatedLinkContent = styled.div<AnimatedLinkContentProps>`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
+  flex-direction: ${({ $direction }) => ($direction === "left" ? "row-reverse" : "row")};
   will-change: transform;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -76,10 +85,11 @@ const ArrowWrapper = styled(motion.div)`
   will-change: transform;
 `;
 
-const ArrowIcon = styled.img`
+const ArrowIcon = styled.img<ArrowIconProps>`
   width: 20px;
   height: 20px;
   display: block;
+  transform: ${({ $direction }) => ($direction === "left" ? "rotate(180deg)" : "none")};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 16px;
