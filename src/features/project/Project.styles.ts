@@ -87,6 +87,10 @@ const ProjectInfoList = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
 `;
 
+const ProjectBreadcrumb = styled(motion.div)`
+  width: 100%;
+`;
+
 const ProjectMediaSection = styled(motion.div)`
   width: 100%;
   display: flex;
@@ -159,6 +163,20 @@ const ProjectActivitiesText = styled(Typography.Headers.H5)`
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
+const ProjectNavigation = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing.xl};
+  flex-wrap: wrap;
+`;
+
+const ProjectNavigationItem = styled.div<{ $align?: "left" | "right" }>`
+  display: flex;
+  ${({ $align }) => $align === "right" && "margin-left: auto;"}
+`;
+
 export {
   ProjectLinksWrapper,
   ProjectInfoGrid,
@@ -169,6 +187,7 @@ export {
   ProjectInfoValue,
   Section,
   TypographyWrapper,
+  ProjectBreadcrumb,
   ProjectMediaSection,
   ProjectSectionTitle,
   ProjectImageWrapper,
@@ -177,4 +196,6 @@ export {
   ProjectActivitiesItem,
   ProjectActivitiesIndex,
   ProjectActivitiesText,
+  ProjectNavigation,
+  ProjectNavigationItem,
 };

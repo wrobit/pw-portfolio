@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AnimatedLink } from "@components/shared/animated-link/animated-link";
 import { fadeInUp } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
-import { projects } from "data/projects";
+import { projects } from "data/projects.data";
 
 import { ProjectBox } from "./project-box/project-box";
 import * as Styled from "./project-showcase.styles";
