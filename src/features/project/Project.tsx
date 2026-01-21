@@ -241,7 +241,7 @@ export const Project = () => {
           {previousProject && (
             <Styled.ProjectNavigationItem>
               <AnimatedLink
-                label="Previous project"
+                label="Previous"
                 align="left"
                 onClick={() => handleProjectNavigate(previousProject?.id)}
                 delay={0.2}
@@ -251,7 +251,7 @@ export const Project = () => {
           {nextProject && (
             <Styled.ProjectNavigationItem $align="right">
               <AnimatedLink
-                label="Next project"
+                label="Next"
                 align="left"
                 onClick={() => handleProjectNavigate(nextProject?.id)}
                 delay={0.4}

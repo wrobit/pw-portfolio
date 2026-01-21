@@ -1,17 +1,27 @@
-import { Link as StyledLink, Typography } from "@components/shared";
+import { Breadcrumb, Link as StyledLink, Typography } from "@components/shared";
+import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import * as Styled from "@features/contact/Contact.styles";
 import { contactLinks } from "@features/contact/utils/linksData";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+import { routes } from "@utils/constants/routes.constants";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
 import ContactBackground from "./components/ContactBackground";
+
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: "Home", href: routes.home },
+  { label: "Contact" },
+];
 
 export const Contact = () => {
   const { controls, isInView, ref } = useScrollAnimation();
 
   return (
     <PageTemplateWrapper>
+      <Styled.ContactBreadcrumb variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
+        <Breadcrumb items={breadcrumbItems} />
+      </Styled.ContactBreadcrumb>
       <Styled.ContactContainer
         ref={ref}
         variants={pageTransition}

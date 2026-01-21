@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+const ContactBreadcrumb = styled(motion.div)`
+  width: 100%;
+`;
+
 const ContactContainer = styled(motion.div)`
   position: relative;
   width: 100%;
@@ -106,6 +110,7 @@ const ContactBackgroundImage = styled.img`
 export {
   ContactBackgroundImage,
   ContactBackgroundImageWrapper,
+  ContactBreadcrumb,
   ContactContainer,
   ContactContentWrapper,
   ContactLinksWrapper,

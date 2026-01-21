@@ -1,26 +1,38 @@
 import { Hero } from "@components/hero/hero";
 import { HeroImage } from "@components/hero-image/hero-image";
+import { Breadcrumb } from "@components/shared";
+import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
+import { fadeInUp } from "@utils/animations/variants";
+import { routes } from "@utils/constants/routes.constants";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
-import { SectionsWrapper } from "./About.styles";
+import * as Styled from "./About.styles";
 import { Education } from "./components/Education/Education";
 import { Experience } from "./components/Experience/Experience";
 import { Technologies } from "./components/Technologies/Technologies";
 
+const breadcrumbItems: BreadcrumbItem[] = [
+  { label: "Home", href: routes.home },
+  { label: "About" },
+];
+
 export const About = () => {
   return (
     <PageTemplateWrapper>
+      <Styled.BreadcrumbWrapper variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
+        <Breadcrumb items={breadcrumbItems} />
+      </Styled.BreadcrumbWrapper>
       <Hero
         title="About me"
         description="I am passionate about using my skills and experience to help individuals and businesses achieve their goals. I have honed my craft and developed a strong understanding of what it takes to deliver successful projects."
         showScrollToExplore={false}
       />
       <HeroImage />
-      <SectionsWrapper>
+      <Styled.SectionsWrapper>
         <Experience />
         <Education />
         <Technologies />
-      </SectionsWrapper>
+      </Styled.SectionsWrapper>
     </PageTemplateWrapper>
   );
 };
