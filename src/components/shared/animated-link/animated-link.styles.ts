@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { hexToRgba } from "@utils/helpers/colors.helper";
 
 type AnimatedLinkRootProps = {
   $align?: "left" | "center";
   $size?: "normal" | "big";
+  $disabled?: boolean;
 };
 
 const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
@@ -13,13 +14,16 @@ const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   margin: ${({ $align }) => ($align === "center" ? "0 auto" : "0")};
   padding: ${({ theme, $size }) =>
     $size === "big" ? `${theme.spacing.lg} 0` : `${theme.spacing.md} 0`};
-  border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.3)};
+  border-bottom: 1px solid
+    ${({ theme, $disabled }) => hexToRgba(theme.colors.white, $disabled ? 0.2 : 0.3)};
   background: transparent;
-  cursor: none;
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "none")};
   text-decoration: none;
   color: ${({ theme }) => theme.colors.white};
-  opacity: 0.8;
+  opacity: ${({ $disabled }) => ($disabled ? 0.4 : 0.8)};
   position: relative;
+  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+  user-select: none;
 
   &::after {
     content: "";
@@ -28,20 +32,25 @@ const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme, $disabled }) =>
+      hexToRgba(theme.colors.white, $disabled ? 0.2 : 1)};
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;
   }
 
-  &:hover {
-    opacity: 1;
+  ${({ $disabled }) =>
+    !$disabled &&
+    css`
+      &:hover {
+        opacity: 1;
 
-    &::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  }
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    `}
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: ${({ theme, $size }) =>

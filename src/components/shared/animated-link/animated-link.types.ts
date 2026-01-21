@@ -5,6 +5,7 @@ export interface AnimatedLinkProps {
   target?: string;
   rel?: string;
   onClick?: () => void;
+  disabled?: boolean;
   align?: "left" | "center";
   size?: "normal" | "big";
 }

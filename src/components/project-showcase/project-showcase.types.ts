@@ -13,4 +13,5 @@ export type Project = {
   liveLink?: string;
   repositoryLink?: string;
   isExpanded?: boolean;
+  commercial: boolean;
 };

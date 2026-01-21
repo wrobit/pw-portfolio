@@ -95,24 +95,21 @@ export const Project = () => {
       </Styled.ProjectInfoSection>
       {(liveLink || repositoryLink) && (
         <Styled.ProjectLinksWrapper>
-          {liveLink && (
-            <AnimatedLink
-              label="LIVE"
-              href={liveLink}
-              target="_blank"
-              rel="noreferrer"
-              align="left"
-            />
-          )}
-          {repositoryLink && (
-            <AnimatedLink
-              label="SOURCE CODE"
-              href={repositoryLink}
-              target="_blank"
-              rel="noreferrer"
-              align="left"
-            />
-          )}
+          <AnimatedLink
+            label="LIVE"
+            href={liveLink}
+            target="_blank"
+            rel="noreferrer"
+            align="left"
+          />
+          <AnimatedLink
+            label="SOURCE CODE"
+            href={repositoryLink}
+            target="_blank"
+            rel="noreferrer"
+            align="left"
+            disabled={!repositoryLink}
+          />
         </Styled.ProjectLinksWrapper>
       )}
     </PageTemplateWrapper>
