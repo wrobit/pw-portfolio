@@ -7,46 +7,46 @@ export const data = [
     links: [
       {
         label: "home",
-        href: routes.home
+        href: routes.home,
       },
       {
         label: "work",
-        href: routes.work
+        href: routes.work,
       },
       {
         label: "about",
-        href: routes.about
+        href: routes.about,
       },
       {
         label: "contact",
-        href: routes.contact
-      }
-    ]
+        href: routes.contact,
+      },
+    ],
   },
   {
     header: "socials",
     links: [
       {
         label: PROFILE_DATA.GITHUB.label,
-        href: PROFILE_DATA.GITHUB.href
+        href: PROFILE_DATA.GITHUB.href,
       },
       {
         label: PROFILE_DATA.LINKEDIN.label,
-        href: PROFILE_DATA.LINKEDIN.href
+        href: PROFILE_DATA.LINKEDIN.href,
       },
       {
-        label: PROFILE_DATA.TWITTER.label,
-        href: PROFILE_DATA.TWITTER.href
-      }
-    ]
+        label: PROFILE_DATA.LINKTREE.label,
+        href: PROFILE_DATA.LINKTREE.href,
+      },
+    ],
   },
   {
     header: "contact",
     links: [
       {
         label: PROFILE_DATA.EMAIL.label,
-        href: PROFILE_DATA.EMAIL.href
-      }
-    ]
-  }
+        href: PROFILE_DATA.EMAIL.href,
+      },
+    ],
+  },
 ];
