@@ -6,6 +6,7 @@ import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 export const HeroImage = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null);
+  const heroImageSrc = `${import.meta.env.BASE_URL}images/hero/hero-image.png`;
 
   return (
     <ImageWrapper
@@ -15,7 +16,7 @@ export const HeroImage = () => {
       animate="animate"
     >
       <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.5}>
-        <Image src={"/images/hero/hero-image.png"} alt="Hero Image" />
+        <Image src={heroImageSrc} alt="Hero Image" />
       </motion.div>
     </ImageWrapper>
   );
