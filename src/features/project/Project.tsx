@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useMemo } from "react";
 import { Navigate, useParams } from "react-router-dom";
 
@@ -14,6 +15,12 @@ import { Hero } from "../../components/hero/hero";
 export const Project = () => {
   const { projectId } = useParams();
   const { controls, isInView, ref } = useScrollAnimation();
+  const { controls: imageControls, isInView: isImageInView, ref: imageRef } = useScrollAnimation();
+  const {
+    controls: activitiesControls,
+    isInView: isActivitiesInView,
+    ref: activitiesRef,
+  } = useScrollAnimation();
 
   const numericProjectId = useMemo(() => Number(projectId), [projectId]);
   const project = useMemo(
@@ -38,6 +45,9 @@ export const Project = () => {
     technologies,
     dateFrom,
     dateTo,
+    image,
+    backgroundImage,
+    activities,
   } = project;
   const dateRange = [dateFrom, dateTo].filter(Boolean).join(" – ");
 
@@ -101,6 +111,7 @@ export const Project = () => {
             target="_blank"
             rel="noreferrer"
             align="left"
+            delay={1}
           />
           <AnimatedLink
             label="SOURCE CODE"
@@ -108,9 +119,64 @@ export const Project = () => {
             target="_blank"
             rel="noreferrer"
             align="left"
+            delay={1.2}
             disabled={!repositoryLink}
           />
         </Styled.ProjectLinksWrapper>
+      )}
+      <Styled.ProjectMediaSection
+        ref={imageRef}
+        variants={pageTransition}
+        initial="initial"
+        animate={isImageInView ? "animate" : "initial"}
+      >
+        <Styled.ProjectImageWrapper
+          $backgroundImage={backgroundImage}
+          variants={fadeInUp}
+          initial="hidden"
+          animate={imageControls}
+          custom={0.4}
+        >
+          <Styled.ProjectImage src={image} alt={`${title} preview`} loading="lazy" />
+        </Styled.ProjectImageWrapper>
+      </Styled.ProjectMediaSection>
+      {activities && activities.length > 0 && (
+        <Styled.ProjectMediaSection
+          ref={activitiesRef}
+          variants={pageTransition}
+          initial="initial"
+          animate={isActivitiesInView ? "animate" : "initial"}
+        >
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            animate={activitiesControls}
+            custom={0.2}
+          >
+            <Styled.ProjectSectionTitle>Activities</Styled.ProjectSectionTitle>
+          </motion.div>
+          <Styled.ProjectActivitiesList
+            variants={fadeInUp}
+            initial="hidden"
+            animate={activitiesControls}
+            custom={0.3}
+          >
+            {activities.map((activity, index) => (
+              <Styled.ProjectActivitiesItem
+                key={`${activity}-${index}`}
+                variants={fadeInUp}
+                initial="hidden"
+                animate={activitiesControls}
+                custom={0.4 + index * 0.1}
+              >
+                <Styled.ProjectActivitiesIndex>
+                  {String(index + 1).padStart(2, "0")}
+                </Styled.ProjectActivitiesIndex>
+                <Styled.ProjectActivitiesText>{activity}</Styled.ProjectActivitiesText>
+              </Styled.ProjectActivitiesItem>
+            ))}
+          </Styled.ProjectActivitiesList>
+        </Styled.ProjectMediaSection>
       )}
     </PageTemplateWrapper>
   );

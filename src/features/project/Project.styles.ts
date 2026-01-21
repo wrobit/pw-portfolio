@@ -87,6 +87,78 @@ const ProjectInfoList = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
 `;
 
+const ProjectMediaSection = styled(motion.div)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.xl};
+`;
+
+const ProjectSectionTitle = styled(Typography.Headers.H4)`
+  font-family: ${({ theme }) => theme.font.regular};
+`;
+
+const ProjectImageWrapper = styled(motion.div)<{ $backgroundImage: string }>`
+  width: 100%;
+  height: 360px;
+  border-radius: ${({ theme }) => theme.radius.lg};
+  background-image: url(${({ $backgroundImage }) => $backgroundImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    height: 240px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 180px;
+  }
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+`;
+
+const ProjectActivitiesList = styled(motion.ul)`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.md};
+  padding: 0;
+  margin: 0;
+  list-style: none;
+`;
+
+const ProjectActivitiesItem = styled(motion.li)`
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: ${({ theme }) => theme.spacing.md};
+  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
+  border-radius: ${({ theme }) => theme.radius.md};
+  border: 1px solid ${({ theme }) => theme.colors.gray}33;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: ${({ theme }) => theme.spacing.md};
+  }
+`;
+
+const ProjectActivitiesIndex = styled(Typography.Headers.H6)`
+  color: ${({ theme }) => theme.colors.gray};
+  font-family: ${({ theme }) => theme.font.medium};
+`;
+
+const ProjectActivitiesText = styled(Typography.Headers.H5)`
+  color: ${({ theme }) => theme.colors.gray};
+  font-family: ${({ theme }) => theme.font.regular};
+`;
+
 export {
   ProjectLinksWrapper,
   ProjectInfoGrid,
@@ -97,4 +169,12 @@ export {
   ProjectInfoValue,
   Section,
   TypographyWrapper,
+  ProjectMediaSection,
+  ProjectSectionTitle,
+  ProjectImageWrapper,
+  ProjectImage,
+  ProjectActivitiesList,
+  ProjectActivitiesItem,
+  ProjectActivitiesIndex,
+  ProjectActivitiesText,
 };
