@@ -7,6 +7,7 @@ export type Project = {
   dateFrom: string;
   dateTo: string;
   image: string;
+  descriptionImage: string;
   backgroundImage: string;
   description: string;
   activities?: string[];

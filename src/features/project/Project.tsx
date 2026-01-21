@@ -45,7 +45,7 @@ export const Project = () => {
     technologies,
     dateFrom,
     dateTo,
-    image,
+    descriptionImage,
     backgroundImage,
     activities,
   } = project;
@@ -137,7 +137,7 @@ export const Project = () => {
           animate={imageControls}
           custom={0.4}
         >
-          <Styled.ProjectImage src={image} alt={`${title} preview`} loading="lazy" />
+          <Styled.ProjectImage src={descriptionImage} alt={`${title} preview`} loading="lazy" />
         </Styled.ProjectImageWrapper>
       </Styled.ProjectMediaSection>
       {activities && activities.length > 0 && (
