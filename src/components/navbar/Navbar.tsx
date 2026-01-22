@@ -27,7 +27,11 @@ export const Navbar = () => {
   }, [location]);
 
   const renderNavbar = () => (
-    <Styled.NavbarWrapper>
+    <Styled.NavbarWrapper
+      initial={{ opacity: 0, y: -12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <Logo />
       <Styled.NavLinks>
         {MENU_ITEMS.map((item) => (

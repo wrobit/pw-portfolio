@@ -22,7 +22,7 @@ const Wrapper = styled.div<WrapperProps>`
   transition: all 300ms ease-in-out;
 `;
 
-const NavbarWrapper = styled.div`
+const NavbarWrapper = styled(motion.div)`
   width: 100%;
   height: ${({ theme }) => theme.sizes.navbar.height};
   padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
