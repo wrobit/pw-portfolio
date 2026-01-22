@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "styled-components";
 
+import { Seo } from "@components/seo/Seo";
 import { Button, Typography } from "@components/shared";
 import * as Styled from "@features/error/Error.styles";
 import { routes } from "@utils/constants/routes.constants";
@@ -16,6 +17,12 @@ export const Error = () => {
 
   return (
     <PageTemplateWrapper>
+      <Seo
+        title="404 - Page Not Found"
+        description="The page you are looking for does not exist or has been moved. Please try again."
+        path={routes.error404}
+        noIndex
+      />
       <Styled.ErrorContainer>
         <Styled.ErrorContentWrapper>
           <Styled.ErrorTitle>

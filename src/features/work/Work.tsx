@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { Hero } from "@components/hero/hero";
 import { ProjectShowcase } from "@components/project-showcase/project-showcase";
+import { Seo } from "@components/seo/Seo";
 import { Breadcrumb } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import { fadeInUp } from "@utils/animations/variants";
@@ -13,6 +14,11 @@ const breadcrumbItems: BreadcrumbItem[] = [{ label: "Home", href: routes.home },
 export const Work = () => {
   return (
     <PageTemplateWrapper>
+      <Seo
+        title="Work"
+        description="Explore commercial and personal projects built by Piotr Wrobel, showcasing web development, UI design, and product engineering work."
+        path={routes.work}
+      />
       <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
         <Breadcrumb items={breadcrumbItems} />
       </motion.div>

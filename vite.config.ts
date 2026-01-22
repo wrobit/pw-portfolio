@@ -9,6 +9,7 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 1600,
     assetsDir: "assets",
+    sourcemap: false,
     rollupOptions: {
       output: {
         assetFileNames: "assets/[name]-[hash][extname]",
