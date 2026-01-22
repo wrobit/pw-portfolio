@@ -43,6 +43,7 @@ export const Project = () => {
   const previousProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
   const nextProject =
     projectIndex >= 0 && projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+
   const breadcrumbItems = useMemo(
     () => [
       { label: "Home", href: routes.home },
