@@ -1,16 +1,22 @@
 import resumePdf from "@assets/piotrwrobel_cv.pdf";
-import { Typography } from "@components/shared/Typography/Typography";
-
-import * as Styled from "./ResumeDownloadButton.styles";
+import { Button } from "@components/shared";
 
 type ResumeDownloadButtonProps = {
   label?: string;
 };
 
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.href = resumePdf;
+  link.download = "piotr-wrobel-resume.pdf";
+  link.rel = "noreferrer";
+  link.click();
+};
+
 export const ResumeDownloadButton = ({ label = "Download resume" }: ResumeDownloadButtonProps) => {
   return (
-    <Styled.Link href={resumePdf} download="piotr-wrobel-resume.pdf" aria-label="Download resume">
-      <Typography.Buttons.Small color="inherit">{label}</Typography.Buttons.Small>
-    </Styled.Link>
+    <Button type="button" onClick={downloadResume}>
+      {label}
+    </Button>
   );
 };

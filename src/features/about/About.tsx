@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Hero } from "@components/hero/hero";
 import { HeroImage } from "@components/hero-image/hero-image";
 import { Seo } from "@components/seo/Seo";
@@ -33,8 +35,10 @@ export const About = () => {
         description="My name is Piotr Wrobel. I am passionate about using my skills and experience to help individuals and businesses achieve their goals. I have honed my craft and developed a strong understanding of what it takes to deliver successful projects."
         showScrollToExplore={false}
       />
-      <Styled.ResumeActions variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
-        <ResumeDownloadButton />
+      <Styled.ResumeActions>
+        <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
+          <ResumeDownloadButton />
+        </motion.div>
       </Styled.ResumeActions>
       <HeroImage />
       <Styled.SectionsWrapper>
