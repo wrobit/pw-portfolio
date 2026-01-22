@@ -202,7 +202,7 @@ export const projects: Project[] = [
     image: mockupExPortfolio,
     descriptionImage: mockupExPortfolio,
     description: "My old minimalist portfolio website.",
-    liveLink: "https://www.piotrwrobel.eu/",
+    liveLink: "https://piotrwrobel-apb7jt6vb-ajiiz.vercel.app",
     repositoryLink: "https://github.com/wrobit/pw-ajiiz-portfolio",
     client: "Personal",
     role: "Frontend Developer",
