@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "vite --port 8080",
     "build": "tsc && vite build",
+    "vercel-build": "git lfs pull && yarn build",
     "preview": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier -write .",
