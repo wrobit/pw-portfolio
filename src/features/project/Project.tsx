@@ -161,6 +161,7 @@ export const Project = () => {
             rel="noreferrer"
             align="left"
             delay={1}
+            disabled={!project?.liveLink}
           />
           <AnimatedLink
             label="SOURCE CODE"

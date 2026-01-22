@@ -1,3 +1,4 @@
+
 import gradientBlue from "@assets/images/gradients/blue.png";
 import gradientGray from "@assets/images/gradients/gray.png";
 import gradientGrayish from "@assets/images/gradients/grayish.png";
@@ -8,6 +9,7 @@ import gradientOrange from "@assets/images/gradients/orange.png";
 import gradientPinkish from "@assets/images/gradients/pinkish.png";
 import gradientPurple from "@assets/images/gradients/purple.png";
 import mockupAloki from "@assets/images/mockups/aloki.png";
+import mockupCS2Cheats from "@assets/images/mockups/cs2-cheats.png";
 import mockupDreamstorm from "@assets/images/mockups/dreamstorm.png";
 import mockupExPortfolio from "@assets/images/mockups/ex-portfolio.png";
 import mockupLimur from "@assets/images/mockups/limur.png";
@@ -17,6 +19,7 @@ import mockupNiteczkiDaneczki from "@assets/images/mockups/niteczki-daneczki.png
 import mockupPlantspot from "@assets/images/mockups/plantspot.png";
 import mockupPomodoroTimer from "@assets/images/mockups/pomodoro-timer.png";
 import mockupPortfolioBlog from "@assets/images/mockups/portfolio-blog.png";
+import mockupPrivate from "@assets/images/mockups/private.png";
 import mockupTheLabzTwo from "@assets/images/mockups/the-labz-2.png";
 import mockupTheLabz from "@assets/images/mockups/the-labz.png";
 import { Project } from "@components/project-showcase/project-showcase.types";
@@ -257,7 +260,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 11,
+    id: 8,
     title: "Pomodoro Timer",
     backgroundImage: gradientOrange,
     image: mockupPomodoroTimer,
@@ -284,7 +287,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 8,
+    id: 9,
     title: "Portfolio blog",
     backgroundImage: gradientGray,
     image: mockupPortfolioBlog,
@@ -307,9 +310,56 @@ export const projects: Project[] = [
     dateTo: "2021",
     commercial: false,
   },
-
   {
-    id: 9,
+    id: 10,
+    title: "Music Shop",
+    backgroundImage: gradientPurple,
+    image: mockupPrivate,
+    descriptionImage: mockupPrivate,
+    description:
+      "An online music shop platform where music enthusiasts can discover and purchase their favorite music. Built as a collaborative educational project featuring a full-stack architecture with Next.js, TypeScript, and PostgreSQL. Includes user authentication with NextAuth, shopping cart functionality, order history tracking, and admin panel for shop management. Deployed using AWS serverless infrastructure with ECS, ECR, Load Balancer, and RDS. Features comprehensive E2E testing with Cypress and CI/CD pipeline through GitLab.",
+    liveLink: "",
+    repositoryLink: "https://github.com/wrobit/music-shop",
+    client: "Personal",
+    role: "Fullstack Developer",
+    technologies: [
+      "Typescript",
+      "Next.js",
+      "NextAuth",
+      "React",
+      "Redux Toolkit",
+      "axios",
+      "styled-components",
+      "Material UI",
+      "Prisma",
+      "PostgreSQL",
+      "Cypress",
+      "Docker",
+      "AWS ECS",
+      "AWS ECR",
+      "AWS Load Balancer",
+      "AWS RDS",
+      "GitLab CI/CD",
+    ],
+    activities: [
+      "Developed a full-stack online music shop platform as an educational collaborative project.",
+      "Implemented user authentication and authorization using NextAuth for secure access control.",
+      "Built shopping cart functionality with persistent state management using Redux Toolkit.",
+      "Created comprehensive admin panel for managing shop inventory, orders, and users.",
+      "Designed and implemented database schema using Prisma ORM with PostgreSQL for data persistence.",
+      "Developed order history tracking system allowing users to view past purchases and transactions.",
+      "Implemented responsive UI components using Material UI and styled-components for consistent design.",
+      "Wrote end-to-end tests using Cypress to ensure application reliability and user flow integrity.",
+      "Containerized application with Docker for consistent development and deployment environments.",
+      "Deployed to AWS serverless infrastructure using ECS, ECR, Load Balancer, and RDS for scalability.",
+      "Set up CI/CD pipeline with GitLab for automated testing, building, and deployment.",
+    ],
+    dateFrom: "2022",
+    dateTo: "2023",
+    commercial: false,
+  },
+  {
+    id: 11,
     title: "Plantspot",
     backgroundImage: gradientGreenish,
     image: mockupPlantspot,
@@ -333,7 +383,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 10,
+    id: 12,
     title: "Niteczki-Daneczki",
     backgroundImage: gradientPinkish,
     image: mockupNiteczkiDaneczki,
@@ -354,6 +404,142 @@ export const projects: Project[] = [
     ],
     dateFrom: "2021",
     dateTo: "2021",
+    commercial: false,
+  },
+  {
+    id: 13,
+    title: "CS2 Cheats - Troll Website",
+    backgroundImage: gradientBlue,
+    image: mockupCS2Cheats,
+    descriptionImage: mockupCS2Cheats,
+    description:
+      "A satirical troll website designed to prank Counter-Strike 2 players who accuse skilled gamers of cheating. Instead of actual cheats, visitors are greeted with an intentionally chaotic MLG-meme explosion featuring dancing Roblox characters, rainbow backgrounds, airhorn sound effects, cursor particles, and a fake aimbot button that triggers rickrolls and screen shake effects. Built with vanilla JavaScript and HTML5 Audio API for maximum comedic chaos.",
+    liveLink: "https://www.cheats-cs.live/",
+    repositoryLink: "https://github.com/wrobit/cs2-cheats",
+    client: "Personal",
+    role: "Frontend Developer",
+    technologies: ["HTML5", "CSS3", "JavaScript", "HTML5 Audio API"],
+    activities: [
+      "Created a satirical troll website as a humorous response to hackusations in Counter-Strike 2.",
+      "Implemented rainbow background animation with color changes every second for visual chaos.",
+      "Built interactive features including cursor particle effects with sparkles and meme images.",
+      "Integrated HTML5 Audio API for autoplay MLG sound effects including airhorns and hitmarkers.",
+      "Developed fake aimbot button that triggers rickroll redirects and screen shake animations.",
+      "Created fully responsive design ensuring the chaos scales appropriately across all devices.",
+      "Implemented hidden Easter egg keybinds for additional surprise interactions.",
+      "Used vanilla JavaScript for all interactive elements without external frameworks.",
+      "Deployed to custom domain with GitHub Pages for free static site hosting.",
+      "Designed intentionally poor UX with flashing lights and rapid animations for comedic effect.",
+    ],
+    dateFrom: "2025",
+    dateTo: "2025",
+    commercial: false,
+  },
+  {
+    id: 14,
+    title: "CS Case Opening Simulator",
+    backgroundImage: gradientGray,
+    image: mockupPrivate,
+    descriptionImage: mockupPrivate,
+    description:
+      "A terminal-based Counter-Strike case opening simulator featuring real-time statistics, elegant visual feedback, and comprehensive financial tracking. Built with Python and Rich library for beautiful terminal UI with colors and animations. Includes live progress bars, profit/loss analysis with ROI calculations, detailed drop rate statistics comparing actual vs expected results, recent drops tracking with market values, and modular architecture for maintainability and extensibility.",
+    liveLink: "",
+    repositoryLink: "https://github.com/wrobit/case-simulator",
+    client: "Personal",
+    role: "Python Developer",
+    technologies: ["Python", "Rich", "Statistics", "Probability", "Makefile"],
+    activities: [
+      "Developed a terminal-based Counter-Strike case opening simulator with real-time statistics tracking.",
+      "Built elegant terminal UI using Rich library with colors, animations, and progress bars.",
+      "Implemented comprehensive financial tracking including profit/loss analysis and ROI calculations.",
+      "Created probability-based simulation engine with configurable drop rates and item rarities.",
+      "Developed detailed statistics system comparing actual vs expected drop rates with market values.",
+      "Built recent drops tracking feature displaying last 10 valuable items with their market prices.",
+      "Designed modular architecture with clear separation of concerns across multiple modules.",
+      "Implemented configuration management system for simulation parameters and item pricing.",
+      "Created Makefile with convenient development commands for installation and workflow automation.",
+      "Added type hints and comprehensive docstrings following Python best practices.",
+      "Built data classes for clean result handling with computed properties for analysis metrics.",
+      "Implemented break-even rate calculations and average value per case statistics.",
+    ],
+    dateFrom: "2025",
+    dateTo: "2025",
+    commercial: false,
+  },
+  {
+    id: 15,
+    title: "Weather App",
+    backgroundImage: gradientGray,
+    image: mockupPrivate,
+    descriptionImage: mockupPrivate,
+    description:
+      "A weather application built with React that allows users to search for current temperature and weather conditions in any city. Integrates with the OpenWeather API to fetch real-time weather data. Features a clean, user-friendly interface with React Hooks for state management. Created as a learning project to practice API integration and React fundamentals.",
+    liveLink: "https://weather-react-app-pw.netlify.app/",
+    repositoryLink: "https://github.com/wrobit/weather-react-app",
+    client: "Personal",
+    role: "Frontend Developer",
+    technologies: ["React", "React Hooks", "OpenWeather API", "JavaScript", "CSS"],
+    activities: [
+      "Built a weather application allowing users to search for temperature by city name.",
+      "Integrated OpenWeather API for fetching real-time weather data and conditions.",
+      "Implemented state management using React Hooks for handling API responses and user input.",
+      "Created responsive user interface with custom CSS styling.",
+      "Configured environment variables for secure API key management.",
+      "Deployed application to Netlify with continuous deployment pipeline.",
+    ],
+    dateFrom: "2020",
+    dateTo: "2020",
+    commercial: false,
+  },
+  {
+    id: 16,
+    title: "Schedule Maker App",
+    backgroundImage: gradientGray,
+    image: mockupPrivate,
+    descriptionImage: mockupPrivate,
+    description:
+      "A weekly schedule creator built with React that enables users to organize and plan their week. Features local storage integration to persist schedules across sessions, with save and clear functionality. Provides an intuitive interface for adding, editing, and managing weekly tasks and events. Built as a practical tool for personal productivity and time management.",
+    liveLink: "https://ajiiz.github.io/schedule-maker-react-app/",
+    repositoryLink: "https://github.com/wrobit/schedule-maker-react-app",
+    client: "Personal",
+    role: "Frontend Developer",
+    technologies: ["React", "JavaScript", "CSS", "Local Storage"],
+    activities: [
+      "Developed a weekly schedule creator application for personal productivity and planning.",
+      "Implemented local storage integration to persist schedules across browser sessions.",
+      "Built save and clear functionality for managing schedule data.",
+      "Created intuitive user interface for adding, editing, and organizing weekly tasks.",
+      "Developed responsive layout ensuring usability across different screen sizes.",
+      "Deployed to GitHub Pages for free static hosting.",
+    ],
+    dateFrom: "2020",
+    dateTo: "2020",
+    commercial: false,
+  },
+  {
+    id: 17,
+    title: "Room Homepage",
+    backgroundImage: gradientGray,
+    image: mockupPrivate,
+    descriptionImage: mockupPrivate,
+    description:
+      "A furniture showcase website template based on a Frontend Mentor design challenge. Features an elegant, modern interface for displaying furniture collections with interactive image sliders and responsive layouts. Built with React and SCSS to demonstrate frontend design implementation skills and attention to design details. Focuses on creating pixel-perfect implementations of professional designs.",
+    liveLink: "https://room-home-ajiiz.netlify.app/home",
+    repositoryLink: "https://github.com/wrobit/room-homepage-react",
+    client: "Personal",
+    role: "Frontend Developer",
+    technologies: ["React", "React Hooks", "SCSS", "JavaScript"],
+    activities: [
+      "Implemented furniture showcase website template from Frontend Mentor design challenge.",
+      "Built interactive image slider component for browsing furniture collections.",
+      "Created responsive layouts using SCSS ensuring perfect display across all devices.",
+      "Developed reusable React components with React Hooks for state management.",
+      "Implemented pixel-perfect design matching Frontend Mentor specifications.",
+      "Styled components using SCSS with BEM methodology for maintainable CSS architecture.",
+      "Deployed to Netlify with optimized build configuration.",
+    ],
+    dateFrom: "2020",
+    dateTo: "2020",
     commercial: false,
   },
 ];
