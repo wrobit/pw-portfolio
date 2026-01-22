@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
+import { Seo } from "@components/seo/Seo";
 import { Breadcrumb } from "@components/shared";
 import { AnimatedLink } from "@components/shared/animated-link/animated-link";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
@@ -43,6 +44,7 @@ export const Project = () => {
   const previousProject = projectIndex > 0 ? projects[projectIndex - 1] : null;
   const nextProject =
     projectIndex >= 0 && projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
+  const projectPath = project ? `${routes.project}/${project.id}` : routes.project;
 
   const breadcrumbItems = useMemo(
     () => [
@@ -100,6 +102,12 @@ export const Project = () => {
 
   return (
     <PageTemplateWrapper key={numericProjectId}>
+      <Seo
+        title={project?.title}
+        description={project?.description}
+        path={projectPath}
+        type="article"
+      />
       <Styled.ProjectBreadcrumb variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
         <Breadcrumb items={breadcrumbItems as BreadcrumbItem[]} />
       </Styled.ProjectBreadcrumb>

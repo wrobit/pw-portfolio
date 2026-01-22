@@ -1,5 +1,6 @@
 import { FiArrowLeft } from "react-icons/fi";
 
+import { Seo } from "@components/seo/Seo";
 import { Breadcrumb, Link as StyledLink, Typography } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import * as Styled from "@features/contact/Contact.styles";
@@ -21,6 +22,11 @@ export const Contact = () => {
 
   return (
     <PageTemplateWrapper>
+      <Seo
+        title="Contact"
+        description="Get in touch with Piotr Wrobel for collaboration, product design, or software engineering opportunities."
+        path={routes.contact}
+      />
       <Styled.ContactBreadcrumb variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
         <Breadcrumb items={breadcrumbItems} />
       </Styled.ContactBreadcrumb>

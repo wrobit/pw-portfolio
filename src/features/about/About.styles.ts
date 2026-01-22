@@ -5,6 +5,12 @@ export const BreadcrumbWrapper = styled(motion.div)`
   width: 100%;
 `;
 
+export const ResumeActions = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: ${({ theme }) => theme.spacing.lg};
+`;
+
 export const SectionsWrapper = styled.div`
   width: 100%;
   display: flex;
