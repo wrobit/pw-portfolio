@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { KeyboardEvent, useRef, useState } from "react";
 
+import ArrowRight from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/shared";
 import {
   timelineItemVariants,
@@ -72,6 +73,13 @@ export const Experience = () => {
                 </Styled.ListItemHeader>
                 <Styled.ListItem>{item.title}</Styled.ListItem>
                 <Styled.ListItem>{item.date}</Styled.ListItem>
+                <Styled.ExpandIcon
+                  src={ArrowRight}
+                  alt=""
+                  aria-hidden="true"
+                  animate={{ rotate: isExpanded ? 90 : 0 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                />
               </Styled.ExperienceRowHeader>
               <AnimatePresence initial={false}>
                 {isExpanded && (

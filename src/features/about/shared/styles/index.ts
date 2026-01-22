@@ -88,14 +88,25 @@ const ExperienceRow = styled(motion.div)`
 const ExperienceRowHeader = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1.25fr 1fr 0.75fr;
+  grid-template-columns: 1.25fr 1fr 0.75fr auto;
   gap: ${({ theme }) => theme.spacing.md};
-  cursor: pointer;
+  align-items: center;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.gray};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
     gap: ${({ theme }) => theme.spacing.sm};
   }
+`;
+
+const ExpandIcon = styled(motion.img)`
+  width: 16px;
+  height: 16px;
+  justify-self: end;
 `;
 
 const ExperienceCompanyLink = styled.a`
@@ -146,4 +157,5 @@ export {
   ExperienceCompanyLink,
   ExperienceDescription,
   ExperienceDescriptionText,
+  ExpandIcon,
 };
