@@ -1,4 +1,3 @@
-
 import gradientBlue from "@assets/images/gradients/blue.png";
 import gradientGray from "@assets/images/gradients/gray.png";
 import gradientGrayish from "@assets/images/gradients/grayish.png";
