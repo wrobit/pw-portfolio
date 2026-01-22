@@ -51,6 +51,7 @@ const ContactEmailRow = styled.div`
 const ContactEmailBadge = styled.span`
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   padding: 4px 10px;
   border-radius: 999px;
   background: ${({ theme }) => theme.colors.gray}22;

@@ -1,3 +1,5 @@
+import { FiArrowLeft } from "react-icons/fi";
+
 import { Breadcrumb, Link as StyledLink, Typography } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import * as Styled from "@features/contact/Contact.styles";
@@ -53,7 +55,10 @@ export const Contact = () => {
                 piotrwrobel.ajiiz@gmail.com
               </StyledLink>
             </Typography.Headers.H4>
-            <Styled.ContactEmailBadge>Click to email</Styled.ContactEmailBadge>
+            <Styled.ContactEmailBadge>
+              {FiArrowLeft({ "aria-hidden": true })}
+              Click to email
+            </Styled.ContactEmailBadge>
           </Styled.ContactEmailRow>
           <Styled.ContactLinksWrapper>
             {contactLinks?.map(({ id, name, url, icon }, index) => (
