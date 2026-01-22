@@ -3,16 +3,24 @@ import { useRef } from "react";
 import styled, { useTheme } from "styled-components";
 
 import ScrollDownIcon from "@assets/icons/expand-down-double.svg";
-import { Typography } from "@components/shared";
+import { Button, Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 type HeroProps = {
   title: string;
   description: string;
+  ctaLabel?: string;
+  onCtaClick?: () => void;
   showScrollToExplore?: boolean;
 };
 
-export const Hero = ({ title, description, showScrollToExplore = true }: HeroProps) => {
+export const Hero = ({
+  title,
+  description,
+  ctaLabel,
+  onCtaClick,
+  showScrollToExplore = true,
+}: HeroProps) => {
   const theme = useTheme();
   const heroSectionRef = useRef<HTMLDivElement>(null);
 
@@ -34,6 +42,15 @@ export const Hero = ({ title, description, showScrollToExplore = true }: HeroPro
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
           <Typography.Headers.H4>{description}</Typography.Headers.H4>
         </motion.div>
+        {ctaLabel && onCtaClick && (
+          <HeroActions>
+            <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
+              <Button type="button" onClick={onCtaClick}>
+                {ctaLabel}
+              </Button>
+            </motion.div>
+          </HeroActions>
+        )}
       </HeroTypographyWrapper>
 
       {showScrollToExplore && (
@@ -42,7 +59,7 @@ export const Hero = ({ title, description, showScrollToExplore = true }: HeroPro
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            custom={0.6}
+            custom={0.8}
             whileHover={{ y: -5 }}
           >
             <HeroButton onClick={scrollToExplore}>
@@ -82,6 +99,12 @@ const HeroTypographyWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
   }
+`;
+
+const HeroActions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.lg};
 `;
 
 const HeroButtonWrapper = styled.div`
