@@ -1,6 +1,5 @@
 import { AnimatePresence } from "framer-motion";
 
-import { Button } from "@components/shared/Button/Button";
 import { Typography } from "@components/shared/Typography/Typography";
 import { CookieConsentStatus } from "@utils/cookies/consent";
 
@@ -33,12 +32,12 @@ export const CookieBanner = ({ status, onAccept, onReject }: CookieBannerProps) 
               </Typography.Default>
             </Styled.BannerContent>
             <Styled.BannerActions>
-              <Button type="button" onClick={onAccept}>
+              <Styled.BannerButton type="button" onClick={onAccept}>
                 Accept
-              </Button>
-              <Button type="button" onClick={onReject}>
+              </Styled.BannerButton>
+              <Styled.BannerButton type="button" onClick={onReject}>
                 Reject
-              </Button>
+              </Styled.BannerButton>
             </Styled.BannerActions>
           </Styled.Banner>
         </Styled.BannerWrapper>
