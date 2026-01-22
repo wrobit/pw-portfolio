@@ -1,14 +1,33 @@
+import gradientBlue from "@assets/images/gradients/blue.png";
+import gradientGray from "@assets/images/gradients/gray.png";
+import gradientGrayish from "@assets/images/gradients/grayish.png";
+import gradientGreenLight from "@assets/images/gradients/green-light.png";
+import gradientGreen from "@assets/images/gradients/green.png";
+import gradientGreenish from "@assets/images/gradients/greenish.png";
+import gradientOrange from "@assets/images/gradients/orange.png";
+import gradientPinkish from "@assets/images/gradients/pinkish.png";
+import gradientPurple from "@assets/images/gradients/purple.png";
+import mockupAloki from "@assets/images/mockups/aloki.png";
+import mockupDreamstorm from "@assets/images/mockups/dreamstorm.png";
+import mockupExPortfolio from "@assets/images/mockups/ex-portfolio.png";
+import mockupLimur from "@assets/images/mockups/limur.png";
+import mockupListic from "@assets/images/mockups/listic.png";
+import mockupLudusAi from "@assets/images/mockups/ludus-ai.png";
+import mockupNiteczkiDaneczki from "@assets/images/mockups/niteczki-daneczki.png";
+import mockupPlantspot from "@assets/images/mockups/plantspot.png";
+import mockupPomodoroTimer from "@assets/images/mockups/pomodoro-timer.png";
+import mockupPortfolioBlog from "@assets/images/mockups/portfolio-blog.png";
+import mockupTheLabzTwo from "@assets/images/mockups/the-labz-2.png";
+import mockupTheLabz from "@assets/images/mockups/the-labz.png";
 import { Project } from "@components/project-showcase/project-showcase.types";
-
-const withBaseUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 
 export const projects: Project[] = [
   {
     id: 1,
     title: "Limur",
-    backgroundImage: withBaseUrl("images/gradients/green-light.png"),
-    image: withBaseUrl("images/mockups/limur.png"),
-    descriptionImage: withBaseUrl("images/mockups/limur.png"),
+    backgroundImage: gradientGreenLight,
+    image: mockupLimur,
+    descriptionImage: mockupLimur,
     description:
       "Limur is a logistics‑focused IT and IoT company that designs and develops systems for monitoring, securing and optimizing transport and warehouse operations. Its products include the Security Seal electronic GPS seal for high‑value transports, THMS for real‑time temperature and humidity monitoring, YMS for yard and warehouse operation tracking, IoT for sensor‑based asset protection, active transport monitoring, and Driver Connect for managing drivers and delivery tasks. Together these tools help logistics companies improve security, visibility and efficiency across their supply chains — and that’s what we build at Limur.",
     liveLink: "https://limur.pl/",
@@ -46,9 +65,9 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "DreamStorm Studios Website",
-    image: withBaseUrl("images/mockups/dreamstorm.png"),
-    descriptionImage: withBaseUrl("images/mockups/dreamstorm.png"),
-    backgroundImage: withBaseUrl("images/gradients/blue.png"),
+    image: mockupDreamstorm,
+    descriptionImage: mockupDreamstorm,
+    backgroundImage: gradientBlue,
     description:
       "A beautiful company website for DreamStorm Studios, built with Gatsby.js and the Locomotive scroll library to deliver a smooth, animated browsing experience.",
     liveLink: "https://dreamstormstudios.com/",
@@ -70,9 +89,9 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Ludus AI",
-    backgroundImage: withBaseUrl("images/gradients/orange.png"),
-    image: withBaseUrl("images/mockups/ludus-ai.png"),
-    descriptionImage: withBaseUrl("images/mockups/ludus-ai.png"),
+    backgroundImage: gradientOrange,
+    image: mockupLudusAi,
+    descriptionImage: mockupLudusAi,
     description:
       "Ludus AI is a platform focused on AI‑driven experiences, where I worked as a freelance fullstack web developer on the core web application, payments and supporting infrastructure.",
     liveLink: "https://ludusengine.com/",
@@ -110,9 +129,9 @@ export const projects: Project[] = [
     title: "The Labz",
     description:
       "A powerful tool to create online events from scratch using simple components. With the ability to change the size, color, pattern, and arrangement of the elements, the user can easily create a website or an online event. It has a lot of extensions and breathtaking features like 3D Pannellum gallery, live streams and authentication. It even allows users to create a video conference with a live chat.",
-    backgroundImage: withBaseUrl("images/gradients/purple.png"),
-    image: withBaseUrl("images/mockups/the-labz.png"),
-    descriptionImage: withBaseUrl("images/mockups/the-labz-2.png"),
+    backgroundImage: gradientPurple,
+    image: mockupTheLabz,
+    descriptionImage: mockupTheLabzTwo,
     liveLink: "https://www.thelabz.com/",
     repositoryLink: "https://github.com/wrobit/commercial-projects",
     technologies: [
@@ -147,9 +166,9 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Aloki",
-    image: withBaseUrl("images/mockups/aloki.png"),
-    descriptionImage: withBaseUrl("images/mockups/aloki.png"),
-    backgroundImage: withBaseUrl("images/gradients/green.png"),
+    image: mockupAloki,
+    descriptionImage: mockupAloki,
+    backgroundImage: gradientGreen,
     description:
       "Alóki is a play‑to‑own blockchain gaming project with sustainability at its core. Through the Alóki metaverse, players explore a nature‑inspired world where in‑game actions translate into real‑world impact at the Alóki sanctuary, reconnecting people with nature and supporting positive environmental change.",
     liveLink: "https://aloki.io/",
@@ -179,9 +198,9 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Ex-portfolio",
-    backgroundImage: withBaseUrl("images/gradients/gray.png"),
-    image: withBaseUrl("images/mockups/ex-portfolio.png"),
-    descriptionImage: withBaseUrl("images/mockups/ex-portfolio.png"),
+    backgroundImage: gradientGray,
+    image: mockupExPortfolio,
+    descriptionImage: mockupExPortfolio,
     description: "My old minimalist portfolio website.",
     liveLink: "https://www.piotrwrobel.eu/",
     repositoryLink: "https://github.com/wrobit/pw-ajiiz-portfolio",
@@ -202,9 +221,9 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Listic",
-    backgroundImage: withBaseUrl("images/gradients/grayish.png"),
-    image: withBaseUrl("images/mockups/listic.png"),
-    descriptionImage: withBaseUrl("images/mockups/listic.png"),
+    backgroundImage: gradientGrayish,
+    image: mockupListic,
+    descriptionImage: mockupListic,
     description:
       "A session-organizer web application designed to make exam sessions easier. It provides tools to organize exams and display them for students, allowing users to create and manage individual and group events throughout the exam session. Created as an engineering thesis project.",
     liveLink: "https://github.com/wrobit/session-organizer",
@@ -240,9 +259,9 @@ export const projects: Project[] = [
   {
     id: 11,
     title: "Pomodoro Timer",
-    backgroundImage: withBaseUrl("images/gradients/orange.png"),
-    image: withBaseUrl("images/mockups/pomodoro-timer.png"),
-    descriptionImage: withBaseUrl("images/mockups/pomodoro-timer.png"),
+    backgroundImage: gradientOrange,
+    image: mockupPomodoroTimer,
+    descriptionImage: mockupPomodoroTimer,
     description:
       "A minimalistic Pomodoro timer designed for focused productivity. Features preset timers (5, 15, 30, 60 minutes), custom duration settings, automatic break suggestions, circular progress visualization with smooth animations, dark/light theme toggle, and elegant completion feedback with sound and confetti celebration. Built with a monochromatic aesthetic using Dank Mono typography and shadcn/ui components.",
     liveLink: "https://v0-pomodoro-app-design-nine.vercel.app/",
@@ -267,9 +286,9 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "Portfolio blog",
-    backgroundImage: withBaseUrl("images/gradients/gray.png"),
-    image: withBaseUrl("images/mockups/portfolio-blog.png"),
-    descriptionImage: withBaseUrl("images/mockups/portfolio-blog.png"),
+    backgroundImage: gradientGray,
+    image: mockupPortfolioBlog,
+    descriptionImage: mockupPortfolioBlog,
     description: "My old portfolio blog website.",
     liveLink: "https://pw-ajiiz-blog.netlify.app/",
     repositoryLink: "https://github.com/wrobit/pw-ajiiz-blog",
@@ -292,9 +311,9 @@ export const projects: Project[] = [
   {
     id: 9,
     title: "Plantspot",
-    backgroundImage: withBaseUrl("images/gradients/greenish.png"),
-    image: withBaseUrl("images/mockups/plantspot.png"),
-    descriptionImage: withBaseUrl("images/mockups/plantspot.png"),
+    backgroundImage: gradientGreenish,
+    image: mockupPlantspot,
+    descriptionImage: mockupPlantspot,
     description: "Plants application using api.",
     liveLink: "https://plantspot.netlify.app",
     repositoryLink: "https://github.com/wrobit/plantspot",
@@ -316,9 +335,9 @@ export const projects: Project[] = [
   {
     id: 10,
     title: "Niteczki-Daneczki",
-    backgroundImage: withBaseUrl("images/gradients/pinkish.png"),
-    image: withBaseUrl("images/mockups/niteczki-daneczki.png"),
-    descriptionImage: withBaseUrl("images/mockups/niteczki-daneczki.png"),
+    backgroundImage: gradientPinkish,
+    image: mockupNiteczkiDaneczki,
+    descriptionImage: mockupNiteczkiDaneczki,
     description: "Crocheting portfolio website for my grandmother.",
     liveLink: "https://niteczki-daneczki.netlify.app/",
     repositoryLink: "https://github.com/wrobit/niteczki-daneczki-website",

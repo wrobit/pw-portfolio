@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import styled from "styled-components";
 
+import heroImage from "@assets/images/hero/hero-image.png";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 export const HeroImage = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null);
-  const heroImageSrc = `${import.meta.env.BASE_URL}images/hero/hero-image.png`;
 
   return (
     <ImageWrapper
@@ -16,7 +16,7 @@ export const HeroImage = () => {
       animate="animate"
     >
       <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.5}>
-        <Image src={heroImageSrc} alt="Hero Image" />
+        <Image src={heroImage} alt="Hero Image" />
       </motion.div>
     </ImageWrapper>
   );
