@@ -45,7 +45,7 @@ export const Contact = () => {
           custom={0.2}
         >
           <Typography.Headers.H1>Contact me</Typography.Headers.H1>
-          <Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">
             Connect with me and let's deploy our ideas together. Communicating is the key.
           </Typography.Headers.H5>
         </Styled.ContactContentWrapper>
@@ -56,7 +56,7 @@ export const Contact = () => {
           custom={0.4}
         >
           <Styled.ContactEmailRow>
-            <Typography.Headers.H4>
+            <Typography.Headers.H4 as="p">
               <StyledLink href="mailto: piotrwrobel.ajiiz@gmail.com" target="_blank">
                 piotrwrobel.ajiiz@gmail.com
               </StyledLink>
@@ -76,7 +76,7 @@ export const Contact = () => {
                 custom={0.6 + index * 0.1}
               >
                 <Styled.ContactLinkIcon>{icon()}</Styled.ContactLinkIcon>
-                <Typography.Headers.H6>
+                <Typography.Headers.H6 as="span">
                   <StyledLink href={url} target="_blank">
                     {name}
                   </StyledLink>
@@ -92,8 +92,10 @@ export const Contact = () => {
           animate={controls}
           custom={0.8}
         >
-          <Typography.Headers.H6>From Poland with love, coding at home</Typography.Headers.H6>
-          <Typography.Headers.H6></Typography.Headers.H6>
+          <Typography.Headers.H6 as="p">
+            From Poland with love, coding at home
+          </Typography.Headers.H6>
+          <Typography.Headers.H6 as="p"></Typography.Headers.H6>
         </Styled.ContactContentWrapper>
       </Styled.ContactContainer>
     </PageTemplateWrapper>

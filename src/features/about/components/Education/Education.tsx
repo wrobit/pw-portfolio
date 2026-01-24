@@ -37,7 +37,7 @@ export const Education = () => {
     >
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
-          <Typography.Headers.H1>Education</Typography.Headers.H1>
+          <Typography.Headers.H1 as="h2">Education</Typography.Headers.H1>
         </motion.div>
       </Styled.TypographyWrapper>
       <Styled.List variants={timelineVariants} initial="hidden" animate={controls}>

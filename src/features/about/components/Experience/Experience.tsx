@@ -31,10 +31,10 @@ export const Experience = () => {
     <Styled.Section ref={sectionRef} variants={pageTransition} initial="initial" animate="animate">
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
-          <Typography.Headers.H1>Experience</Typography.Headers.H1>
+          <Typography.Headers.H1 as="h2">Experience</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
-          <Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">
             I have had the opportunity to work with a diverse range of clients and projects,
             providing me with years of experience in Frontend Development and UX/UI Design. I have
             also collaborated with teams on various projects, which has allowed me to develop my

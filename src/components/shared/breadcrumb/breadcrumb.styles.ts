@@ -29,12 +29,12 @@ const BreadcrumbLink = styled(Link)`
   text-decoration: none;
 `;
 
-const BreadcrumbText = styled(Typography.Headers.H6)<{ $isActive?: boolean }>`
+const BreadcrumbText = styled(Typography.Headers.H6).attrs({ as: "span" })<{ $isActive?: boolean }>`
   color: ${({ theme, $isActive }) => ($isActive ? theme.colors.white : theme.colors.gray)};
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const BreadcrumbSeparator = styled(Typography.Headers.H6)`
+const BreadcrumbSeparator = styled(Typography.Headers.H6).attrs({ as: "span" })`
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.font.regular};
 `;

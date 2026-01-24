@@ -11,7 +11,7 @@ export const Logo = () => {
       <Link to={routes.home}>
         <Styled.LogoContent>
           <Styled.LogoImage src={logo} alt="Wrobit logo" />
-          <Typography.Logo>wrobit.</Typography.Logo>
+          <Typography.Logo as="span">wrobit.</Typography.Logo>
         </Styled.LogoContent>
       </Link>
     </Styled.Wrapper>

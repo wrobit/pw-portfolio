@@ -25,7 +25,7 @@ export const CookieBanner = ({ status, onAccept, onReject }: CookieBannerProps) 
         >
           <Styled.Banner>
             <Styled.BannerContent>
-              <Typography.Headers.H6>Cookies & Analytics</Typography.Headers.H6>
+              <Typography.Headers.H6 as="p">Cookies & Analytics</Typography.Headers.H6>
               <Typography.Default>
                 Cookies are used to measure usage and improve this website experience. You can
                 accept or reject analytics cookies.

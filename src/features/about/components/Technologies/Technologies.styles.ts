@@ -11,7 +11,7 @@ const ListItemHeaderWrapper = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
 `;
 
-const ListItemDescription = styled(Typography.Headers.H6)`
+const ListItemDescription = styled(Typography.Headers.H6).attrs({ as: "p" })`
   width: 100%;
   font-family: ${({ theme }) => theme.font.regular};
 `;

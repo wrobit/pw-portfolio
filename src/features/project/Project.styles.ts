@@ -69,14 +69,14 @@ const ProjectInfoItem = styled(motion.div)`
   min-width: 0;
 `;
 
-const ProjectInfoLabel = styled(Typography.Headers.H6)`
+const ProjectInfoLabel = styled(Typography.Headers.H6).attrs({ as: "span" })`
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.font.medium};
   text-transform: uppercase;
   letter-spacing: 0.08em;
 `;
 
-const ProjectInfoValue = styled(Typography.Headers.H6)`
+const ProjectInfoValue = styled(Typography.Headers.H6).attrs({ as: "span" })`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font.regular};
 `;
@@ -98,7 +98,7 @@ const ProjectMediaSection = styled(motion.div)`
   gap: ${({ theme }) => theme.spacing.xl};
 `;
 
-const ProjectSectionTitle = styled(Typography.Headers.H4)`
+const ProjectSectionTitle = styled(Typography.Headers.H4).attrs({ as: "h2" })`
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
@@ -153,12 +153,12 @@ const ProjectActivitiesItem = styled(motion.li)`
   }
 `;
 
-const ProjectActivitiesIndex = styled(Typography.Headers.H6)`
+const ProjectActivitiesIndex = styled(Typography.Headers.H6).attrs({ as: "span" })`
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.font.medium};
 `;
 
-const ProjectActivitiesText = styled(Typography.Headers.H5)`
+const ProjectActivitiesText = styled(Typography.Headers.H5).attrs({ as: "p" })`
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.font.regular};
 `;

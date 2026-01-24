@@ -18,7 +18,7 @@ export const Footer = () => {
     <Styled.Footer ref={ref} variants={footerVariants} initial="hidden" animate={controls}>
       <Styled.FooterNavigation>
         <motion.div variants={footerItemVariants}>
-          <Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">
             From pixel-perfect designs to intuitive user experiences. Let's collaborate and create
             something remarkable together.
           </Typography.Headers.H5>
@@ -39,7 +39,7 @@ export const Footer = () => {
         </Styled.FooterNavigationLinksContainer>
       </Styled.FooterNavigation>
       <motion.div variants={footerItemVariants}>
-        <Typography.Headers.H6 color={theme.colors.gray}>
+        <Typography.Headers.H6 as="p" color={theme.colors.gray}>
           Copyright &copy; {`${dateYear}`}
           <Typography.Default color={theme.colors.white}> Wrobel Piotr @wrobit</Typography.Default>.
           All rights reserved.

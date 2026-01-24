@@ -25,10 +25,10 @@ export const Technologies = () => {
     >
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
-          <Typography.Headers.H1>Technologies</Typography.Headers.H1>
+          <Typography.Headers.H1 as="h2">Technologies</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
-          <Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">
             As a developer, I use the latest and most advanced technologies to provide the best
             solutions for my clients. Modern technologies I work with, allows me to create
             innovative and cutting-edge solutions that are tailored to my clients' needs. I am
@@ -53,7 +53,7 @@ export const Technologies = () => {
               {item.technologies.map((technology) => (
                 <TechnologiesStyled.ListItemContent key={technology.name}>
                   {technology.icon()}
-                  <Typography.Headers.H6>{technology.name}</Typography.Headers.H6>
+                  <Typography.Headers.H6 as="span">{technology.name}</Typography.Headers.H6>
                 </TechnologiesStyled.ListItemContent>
               ))}
             </TechnologiesStyled.TechnologiesList>
