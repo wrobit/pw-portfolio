@@ -1,4 +1,4 @@
-import heroImage from "@assets/images/hero/hero-image.png";
+import heroImage from "@assets/images/hero/hero-image.avif";
 
 export const seoConfig = {
   siteName: "Wrobit - Piotr Wrobel",

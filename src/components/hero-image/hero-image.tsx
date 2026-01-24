@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import styled from "styled-components";
 
-import heroImage from "@assets/images/hero/hero-image.png";
+import heroImage from "@assets/images/hero/hero-image.avif";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
 export const HeroImage = () => {

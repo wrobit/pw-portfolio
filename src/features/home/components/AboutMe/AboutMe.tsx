@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import leavesImage from "@assets/leaves.png";
+import leavesImage from "@assets/leaves.avif";
 import { Typography } from "@components/shared";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, hoverScale, pageTransition } from "@utils/animations/variants";

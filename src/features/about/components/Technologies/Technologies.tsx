@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import leavesImage from "@assets/leaves.png";
+import leavesImage from "@assets/leaves.avif";
 import { Typography } from "@components/shared";
 import {
   timelineItemVariants,

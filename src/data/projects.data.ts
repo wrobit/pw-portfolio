@@ -1,26 +1,25 @@
-import gradientBlue from "@assets/images/gradients/blue.png";
-import gradientGray from "@assets/images/gradients/gray.png";
-import gradientGrayish from "@assets/images/gradients/grayish.png";
-import gradientGreenLight from "@assets/images/gradients/green-light.png";
-import gradientGreen from "@assets/images/gradients/green.png";
-import gradientGreenish from "@assets/images/gradients/greenish.png";
-import gradientOrange from "@assets/images/gradients/orange.png";
-import gradientPinkish from "@assets/images/gradients/pinkish.png";
-import gradientPurple from "@assets/images/gradients/purple.png";
-import mockupAloki from "@assets/images/mockups/aloki.png";
-import mockupCS2Cheats from "@assets/images/mockups/cs2-cheats.png";
-import mockupDreamstorm from "@assets/images/mockups/dreamstorm.png";
-import mockupExPortfolio from "@assets/images/mockups/ex-portfolio.png";
-import mockupLimur from "@assets/images/mockups/limur.png";
-import mockupListic from "@assets/images/mockups/listic.png";
-import mockupLudusAi from "@assets/images/mockups/ludus-ai.png";
-import mockupNiteczkiDaneczki from "@assets/images/mockups/niteczki-daneczki.png";
-import mockupPlantspot from "@assets/images/mockups/plantspot.png";
-import mockupPomodoroTimer from "@assets/images/mockups/pomodoro-timer.png";
-import mockupPortfolioBlog from "@assets/images/mockups/portfolio-blog.png";
-import mockupPrivate from "@assets/images/mockups/private.png";
-import mockupTheLabzTwo from "@assets/images/mockups/the-labz-2.png";
-import mockupTheLabz from "@assets/images/mockups/the-labz.png";
+import gradientBlue from "@assets/images/gradients/blue.avif";
+import gradientGray from "@assets/images/gradients/gray.avif";
+import gradientGrayish from "@assets/images/gradients/grayish.avif";
+import gradientGreenLight from "@assets/images/gradients/green-light.avif";
+import gradientGreen from "@assets/images/gradients/green.avif";
+import gradientGreenish from "@assets/images/gradients/greenish.avif";
+import gradientOrange from "@assets/images/gradients/orange.avif";
+import gradientPinkish from "@assets/images/gradients/pinkish.avif";
+import gradientPurple from "@assets/images/gradients/purple.avif";
+import mockupAloki from "@assets/images/mockups/aloki.avif";
+import mockupDreamstorm from "@assets/images/mockups/dreamstorm.avif";
+import mockupExPortfolio from "@assets/images/mockups/ex-portfolio.avif";
+import mockupLimur from "@assets/images/mockups/limur.avif";
+import mockupListic from "@assets/images/mockups/listic.avif";
+import mockupLudusAi from "@assets/images/mockups/ludus-ai.avif";
+import mockupNiteczkiDaneczki from "@assets/images/mockups/niteczki-daneczki.avif";
+import mockupPlantspot from "@assets/images/mockups/plantspot.avif";
+import mockupPomodoroTimer from "@assets/images/mockups/pomodoro-timer.avif";
+import mockupPortfolioBlog from "@assets/images/mockups/portfolio-blog.avif";
+import mockupPrivate from "@assets/images/mockups/private.avif";
+import mockupTheLabzTwo from "@assets/images/mockups/the-labz-2.avif";
+import mockupTheLabz from "@assets/images/mockups/the-labz.avif";
 import { Project } from "@components/project-showcase/project-showcase.types";
 
 export const projects: Project[] = [
@@ -405,37 +404,9 @@ export const projects: Project[] = [
     dateTo: "2021",
     commercial: false,
   },
+
   {
     id: 13,
-    title: "CS2 Cheats - Troll Website",
-    backgroundImage: gradientBlue,
-    image: mockupCS2Cheats,
-    descriptionImage: mockupCS2Cheats,
-    description:
-      "A satirical troll website designed to prank Counter-Strike 2 players who accuse skilled gamers of cheating. Instead of actual cheats, visitors are greeted with an intentionally chaotic MLG-meme explosion featuring dancing Roblox characters, rainbow backgrounds, airhorn sound effects, cursor particles, and a fake aimbot button that triggers rickrolls and screen shake effects. Built with vanilla JavaScript and HTML5 Audio API for maximum comedic chaos.",
-    liveLink: "https://www.cheats-cs.live/",
-    repositoryLink: "https://github.com/wrobit/cs2-cheats",
-    client: "Personal",
-    role: "Frontend Developer",
-    technologies: ["HTML5", "CSS3", "JavaScript", "HTML5 Audio API"],
-    activities: [
-      "Created a satirical troll website as a humorous response to hackusations in Counter-Strike 2.",
-      "Implemented rainbow background animation with color changes every second for visual chaos.",
-      "Built interactive features including cursor particle effects with sparkles and meme images.",
-      "Integrated HTML5 Audio API for autoplay MLG sound effects including airhorns and hitmarkers.",
-      "Developed fake aimbot button that triggers rickroll redirects and screen shake animations.",
-      "Created fully responsive design ensuring the chaos scales appropriately across all devices.",
-      "Implemented hidden Easter egg keybinds for additional surprise interactions.",
-      "Used vanilla JavaScript for all interactive elements without external frameworks.",
-      "Deployed to custom domain with GitHub Pages for free static site hosting.",
-      "Designed intentionally poor UX with flashing lights and rapid animations for comedic effect.",
-    ],
-    dateFrom: "2025",
-    dateTo: "2025",
-    commercial: false,
-  },
-  {
-    id: 14,
     title: "CS Case Opening Simulator",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -460,6 +431,35 @@ export const projects: Project[] = [
       "Added type hints and comprehensive docstrings following Python best practices.",
       "Built data classes for clean result handling with computed properties for analysis metrics.",
       "Implemented break-even rate calculations and average value per case statistics.",
+    ],
+    dateFrom: "2025",
+    dateTo: "2025",
+    commercial: false,
+  },
+  {
+    id: 14,
+    title: "CS2 Cheats - Troll Website",
+    backgroundImage: gradientGray,
+    image: mockupPrivate,
+    descriptionImage: mockupPrivate,
+    description:
+      "A satirical troll website designed to prank Counter-Strike 2 players who accuse skilled gamers of cheating. Instead of actual cheats, visitors are greeted with an intentionally chaotic MLG-meme explosion featuring dancing Roblox characters, rainbow backgrounds, airhorn sound effects, cursor particles, and a fake aimbot button that triggers rickrolls and screen shake effects. Built with vanilla JavaScript and HTML5 Audio API for maximum comedic chaos.",
+    liveLink: "https://www.cheats-cs.live/",
+    repositoryLink: "https://github.com/wrobit/cs2-cheats",
+    client: "Personal",
+    role: "Frontend Developer",
+    technologies: ["HTML5", "CSS3", "JavaScript", "HTML5 Audio API"],
+    activities: [
+      "Created a satirical troll website as a humorous response to hackusations in Counter-Strike 2.",
+      "Implemented rainbow background animation with color changes every second for visual chaos.",
+      "Built interactive features including cursor particle effects with sparkles and meme images.",
+      "Integrated HTML5 Audio API for autoplay MLG sound effects including airhorns and hitmarkers.",
+      "Developed fake aimbot button that triggers rickroll redirects and screen shake animations.",
+      "Created fully responsive design ensuring the chaos scales appropriately across all devices.",
+      "Implemented hidden Easter egg keybinds for additional surprise interactions.",
+      "Used vanilla JavaScript for all interactive elements without external frameworks.",
+      "Deployed to custom domain with GitHub Pages for free static site hosting.",
+      "Designed intentionally poor UX with flashing lights and rapid animations for comedic effect.",
     ],
     dateFrom: "2025",
     dateTo: "2025",
