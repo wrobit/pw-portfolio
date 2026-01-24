@@ -64,7 +64,7 @@ export const AnimatedLink = ({
       animate={shouldHover ? "hover" : "initial"}
     >
       <AnimatedLinkContent $direction={direction}>
-        <Typography.Headers.H6>{label}</Typography.Headers.H6>
+        <Typography.Headers.H6 as="span">{label}</Typography.Headers.H6>
         <ArrowWrapper
           variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
           initial="initial"
