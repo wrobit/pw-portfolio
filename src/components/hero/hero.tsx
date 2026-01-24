@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled, { useTheme } from "styled-components";
 
 import ScrollDownIcon from "@assets/icons/expand-down-double.svg";
@@ -23,14 +23,44 @@ export const Hero = ({
 }: HeroProps) => {
   const theme = useTheme();
   const heroSectionRef = useRef<HTMLDivElement>(null);
+  const [heroSectionHeight, setHeroSectionHeight] = useState(0);
+
+  useEffect(() => {
+    const heroSection = heroSectionRef.current;
+
+    if (!heroSection) {
+      return undefined;
+    }
+
+    const updateHeight = (height: number) => {
+      setHeroSectionHeight(height);
+    };
+
+    updateHeight(heroSection.getBoundingClientRect().height);
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === heroSection) {
+          updateHeight(entry.contentRect.height);
+        }
+      });
+    });
+
+    resizeObserver.observe(heroSection);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   const scrollToExplore = () => {
-    if (heroSectionRef.current) {
-      window.scrollTo({
-        top: heroSectionRef.current.offsetHeight + Number(theme.sizes.navbar.height.slice(0, 2)),
-        behavior: "smooth",
-      });
-    }
+    const navbarHeight = Number.parseFloat(theme.sizes.navbar.height);
+    const scrollTarget = heroSectionHeight || window.innerHeight;
+
+    window.scrollTo({
+      top: scrollTarget + navbarHeight,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -62,9 +92,9 @@ export const Hero = ({
             custom={0.8}
             whileHover={{ y: -5 }}
           >
-            <HeroButton onClick={scrollToExplore}>
+            <HeroButton onClick={scrollToExplore} aria-label="Scroll to explore">
               <Typography.Buttons.Small color="inherit">scroll to explore</Typography.Buttons.Small>
-              <HeroButtonIcon src={ScrollDownIcon} />
+              <HeroButtonIcon src={ScrollDownIcon} alt="" aria-hidden="true" />
             </HeroButton>
           </motion.div>
         </HeroButtonWrapper>
