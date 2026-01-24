@@ -6,6 +6,7 @@ import { useHoverAnimation } from "@utils/animations/hooks";
 import { arrowHover, fadeInUp, linkHover } from "@utils/animations/variants";
 
 import {
+  AnimatedLinkButtonRoot,
   AnimatedLinkContent,
   AnimatedLinkRoot,
   ArrowIcon,
@@ -24,6 +25,7 @@ export const AnimatedLink = ({
   align = "center",
   direction = "right",
   size = "normal",
+  as = "a",
 }: AnimatedLinkProps) => {
   const { isHovered, hoverProps } = useHoverAnimation();
   const shouldHover = !disabled && isHovered;
@@ -36,45 +38,60 @@ export const AnimatedLink = ({
         }
       : linkHover;
 
+  const isButton = as === "button";
+  const sharedProps = {
+    onClick: disabled
+      ? undefined
+      : () => {
+          onClick?.();
+        },
+    "aria-disabled": disabled || undefined,
+    tabIndex: disabled ? -1 : undefined,
+    $align: align,
+    $size: size,
+    $disabled: disabled,
+    ...(disabled ? {} : hoverProps),
+    variants: fadeInUp,
+    initial: "hidden",
+    animate: "visible",
+    custom: delay,
+  };
+
+  const content = (
+    <motion.div
+      variants={contentVariants}
+      initial="initial"
+      animate={shouldHover ? "hover" : "initial"}
+    >
+      <AnimatedLinkContent $direction={direction}>
+        <Typography.Headers.H6>{label}</Typography.Headers.H6>
+        <ArrowWrapper
+          variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
+          initial="initial"
+          animate={shouldHover ? "hover" : "initial"}
+        >
+          <ArrowIcon src={RightArrow} alt="arrow" $direction={direction} />
+        </ArrowWrapper>
+      </AnimatedLinkContent>
+    </motion.div>
+  );
+
+  if (isButton) {
+    return (
+      <AnimatedLinkButtonRoot type="button" {...sharedProps}>
+        {content}
+      </AnimatedLinkButtonRoot>
+    );
+  }
+
   return (
     <AnimatedLinkRoot
       href={disabled ? undefined : href}
       target={disabled ? undefined : target}
       rel={disabled ? undefined : rel}
-      onClick={
-        disabled
-          ? undefined
-          : () => {
-              onClick?.();
-            }
-      }
-      aria-disabled={disabled || undefined}
-      tabIndex={disabled ? -1 : undefined}
-      $align={align}
-      $size={size}
-      $disabled={disabled}
-      {...(disabled ? {} : hoverProps)}
-      variants={fadeInUp}
-      initial="hidden"
-      animate="visible"
-      custom={delay}
+      {...sharedProps}
     >
-      <motion.div
-        variants={contentVariants}
-        initial="initial"
-        animate={shouldHover ? "hover" : "initial"}
-      >
-        <AnimatedLinkContent $direction={direction}>
-          <Typography.Headers.H6>{label}</Typography.Headers.H6>
-          <ArrowWrapper
-            variants={{ ...arrowHover, hover: { ...arrowHover.hover, scale: 0.9, x: 0 } }}
-            initial="initial"
-            animate={shouldHover ? "hover" : "initial"}
-          >
-            <ArrowIcon src={RightArrow} alt="arrow" $direction={direction} />
-          </ArrowWrapper>
-        </AnimatedLinkContent>
-      </motion.div>
+      {content}
     </AnimatedLinkRoot>
   );
 };

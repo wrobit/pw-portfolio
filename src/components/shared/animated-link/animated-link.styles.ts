@@ -17,7 +17,7 @@ type ArrowIconProps = {
   $direction?: "left" | "right";
 };
 
-const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
+const animatedLinkRootStyles = css<AnimatedLinkRootProps>`
   width: fit-content;
   margin: ${({ $align }) => ($align === "center" ? "0 auto" : "0")};
   padding: ${({ theme, $size }) =>
@@ -66,6 +66,14 @@ const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
   }
 `;
 
+const AnimatedLinkRoot = styled(motion.a)<AnimatedLinkRootProps>`
+  ${animatedLinkRootStyles}
+`;
+
+const AnimatedLinkButtonRoot = styled(motion.button)<AnimatedLinkRootProps>`
+  ${animatedLinkRootStyles}
+`;
+
 const AnimatedLinkContent = styled.div<AnimatedLinkContentProps>`
   display: flex;
   align-items: center;
@@ -97,4 +105,4 @@ const ArrowIcon = styled.img<ArrowIconProps>`
   }
 `;
 
-export { AnimatedLinkContent, AnimatedLinkRoot, ArrowIcon, ArrowWrapper };
+export { AnimatedLinkButtonRoot, AnimatedLinkContent, AnimatedLinkRoot, ArrowIcon, ArrowWrapper };

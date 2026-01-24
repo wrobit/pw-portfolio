@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { AnimatedLink } from "@components/shared/animated-link/animated-link";
 import { fadeInUp } from "@utils/animations/variants";
@@ -14,6 +14,7 @@ const PROJECTS_TO_SHOW_ON_HOME_PAGE = 7;
 
 export const ProjectShowcase = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const isWorkPage = location.pathname === routes.work;
   const projectsToShow = isWorkPage ? projects : projects.slice(0, PROJECTS_TO_SHOW_ON_HOME_PAGE);
   const commercialProjects = projectsToShow.filter((project) => project.commercial);
@@ -55,9 +56,10 @@ export const ProjectShowcase = () => {
       {!isWorkPage && (
         <AnimatedLink
           label="More work"
-          delay={0.8 + projects.length * 0.2}
+          delay={projects.length * 0.175}
           align="center"
-          href={routes.work}
+          onClick={() => navigate(routes.work)}
+          as="button"
         />
       )}
     </Styled.ProjectShowcaseWrapper>
