@@ -1,35 +1,41 @@
 @font-face {
   font-family: "DMSansRegular";
   src: url("/fonts/DMSans-Regular.ttf") format("truetype");
+  font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansMedium";
   src: url("/fonts/DMSans-Medium.ttf") format("truetype");
+  font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansBold";
   src: url("/fonts/DMSans-Bold.ttf") format("truetype");
+  font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansItalic";
   src: url("/fonts/DMSans-Italic.ttf") format("truetype");
+  font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansMediumItalic";
   src: url("/fonts/DMSans-MediumItalic.ttf") format("truetype");
+  font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansBoldItalic";
   src: url("/fonts/DMSans-BoldItalic.ttf") format("truetype");
+  font-display: optional;
 }
 
 :root {
-  font-family: DMSansRegular;
+  font-family: "DMSansRegular", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   background-color: #080808;

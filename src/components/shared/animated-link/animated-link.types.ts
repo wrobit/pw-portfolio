@@ -9,4 +9,5 @@ export interface AnimatedLinkProps {
   align?: "left" | "center";
   direction?: "left" | "right";
   size?: "normal" | "big";
+  as?: "a" | "button";
 }

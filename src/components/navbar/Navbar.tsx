@@ -43,6 +43,9 @@ export const Navbar = () => {
       <Styled.Hamburger
         isOpen={isHamburgerOpen}
         onClick={() => setIsHamburgerOpen((prev) => !prev)}
+        aria-label={isHamburgerOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={isHamburgerOpen}
+        aria-controls="mobile-navigation"
       >
         <Styled.HamburgerLine />
         <Styled.HamburgerLine />
@@ -54,7 +57,7 @@ export const Navbar = () => {
   const renderHamburgerMenu = () => (
     <AnimatePresence mode="wait">
       {isHamburgerOpen && (
-        <Styled.HamburgerMenu isOpen={isHamburgerOpen}>
+        <Styled.HamburgerMenu id="mobile-navigation" isOpen={isHamburgerOpen}>
           <motion.div
             variants={menuVariants}
             initial="hidden"

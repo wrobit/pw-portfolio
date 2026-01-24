@@ -20,10 +20,6 @@ export const ProjectShowcase = () => {
   const commercialProjects = projectsToShow.filter((project) => project.commercial);
   const nonCommercialProjects = projectsToShow.filter((project) => !project.commercial);
 
-  const handleMoreWorkClick = () => {
-    navigate(routes.work);
-  };
-
   const renderProjectSection = (
     sectionTitle: string,
     sectionProjects: Project[],
@@ -60,9 +56,10 @@ export const ProjectShowcase = () => {
       {!isWorkPage && (
         <AnimatedLink
           label="More work"
-          delay={0.8 + projects.length * 0.2}
+          delay={projects.length * 0.175}
           align="center"
-          onClick={handleMoreWorkClick}
+          onClick={() => navigate(routes.work)}
+          as="button"
         />
       )}
     </Styled.ProjectShowcaseWrapper>
