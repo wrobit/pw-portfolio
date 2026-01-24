@@ -32,7 +32,7 @@ export const ProjectShowcase = () => {
         animate="visible"
         custom={0.6 + startIndex * 0.2}
       >
-        <Styled.ProjectShowcaseTitle>{sectionTitle}</Styled.ProjectShowcaseTitle>
+        <Styled.ProjectShowcaseTitle as="h2">{sectionTitle}</Styled.ProjectShowcaseTitle>
       </motion.div>
       <Styled.ProjectShowcaseContainer>
         {sectionProjects.map((project, index) => (

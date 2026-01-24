@@ -63,7 +63,7 @@ export const ProjectBox = ({
           initial="initial"
           animate={isHovered ? "hover" : "initial"}
         >
-          <Styled.ProjectBoxTitle>{title}</Styled.ProjectBoxTitle>
+          <Styled.ProjectBoxTitle as="h3">{title}</Styled.ProjectBoxTitle>
           <motion.div
             variants={arrowHover}
             initial="initial"

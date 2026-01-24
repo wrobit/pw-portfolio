@@ -70,7 +70,7 @@ export const Hero = ({
           <Typography.Headers.H1>{title}</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
-          <Typography.Headers.H4>{description}</Typography.Headers.H4>
+          <Typography.Headers.H4 as="p">{description}</Typography.Headers.H4>
         </motion.div>
         {ctaLabel && onCtaClick && (
           <HeroActions>
