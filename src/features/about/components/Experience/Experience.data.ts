@@ -13,7 +13,7 @@ export const data = [
     date: "2023 - Present",
     url: "https://limur.pl/",
     description:
-      "React Developer at Limur, a logistics-focused IT and IoT company that designs systems for monitoring, securing, and optimizing transport and warehouse operations. Products include Security Seal GPS tracking, temperature and humidity monitoring (THMS), yard management systems (YMS), and Driver Connect for delivery management. These tools help logistics companies improve security, visibility, and efficiency across their supply chains.",
+      "React Developer at Limur, a logistics-focused IT and IoT company specializing in transport and warehouse operations. Led frontend development across multiple applications with focus on architecture and seamless API integration. Implemented custom marker clustering using Google Maps API, developed comprehensive UI component library with Storybook, and built React Native applications for iOS and Android. Worked with AG-Grid for advanced data visualization, maintained code quality through Jest and RTL testing, and streamlined workflows by integrating ClickUp with GitHub for agile project management.",
   },
   {
     title: "Fullstack Developer",
