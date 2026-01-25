@@ -60,12 +60,12 @@ const ListRow = styled(motion.div)`
   }
 `;
 
-const ListItem = styled(Typography.Headers.H4).attrs({ as: "p" })`
+const ListItem = styled(Typography.Headers.H4)`
   width: 100%;
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const ListItemHeader = styled(Typography.Headers.H4).attrs({ as: "p" })`
+const ListItemHeader = styled(Typography.Headers.H4)`
   width: 100%;
 `;
 
@@ -124,7 +124,7 @@ const ExperienceDescription = styled(motion.div)`
   overflow: hidden;
 `;
 
-const ExperienceDescriptionText = styled(Typography.Headers.H5).attrs({ as: "p" })`
+const ExperienceDescriptionText = styled(Typography.Headers.H5)`
   color: ${({ theme }) => theme.colors.gray};
   font-family: ${({ theme }) => theme.font.regular};
 `;

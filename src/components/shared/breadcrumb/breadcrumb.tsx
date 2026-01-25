@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 import * as Styled from "./breadcrumb.styles";
 import { BreadcrumbProps } from "./breadcrumb.types";
 
 export const Breadcrumb = ({ items }: BreadcrumbProps) => {
+  const navigate = useNavigate();
+
   return (
     <Styled.BreadcrumbNav aria-label="Breadcrumb">
       <Styled.BreadcrumbList>
@@ -11,7 +15,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
           return (
             <Styled.BreadcrumbItem key={`${item.label}-${index}`}>
               {item.href && !isLast ? (
-                <Styled.BreadcrumbLink href={item.href}>
+                <Styled.BreadcrumbLink onClick={() => item?.href && navigate(item.href)}>
                   <Styled.BreadcrumbText>{item.label}</Styled.BreadcrumbText>
                 </Styled.BreadcrumbLink>
               ) : (
