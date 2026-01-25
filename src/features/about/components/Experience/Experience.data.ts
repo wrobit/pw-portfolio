@@ -3,9 +3,9 @@ export const data = [
     title: "CTO",
     company: "Quadrantive",
     date: "2025 - Present",
-    url: "https://quadrantive.com/",
+    url: "https://www.re-medio.pl/",
     description:
-      "CTO at Quadrantive, a digital marketing agency that provides comprehensive solutions including website development, SEO optimization, marketing campaigns, and strategic digital services for businesses.",
+      "CTO at Quadrantive, powering Remedio - a specialized agency for medical facilities. We provide comprehensive growth solutions including marketing strategy, patient acquisition campaigns (Google Ads, Meta, SEO), physician recruitment, website development with online registration, content & social media, and analytics. We help clinics, medical centers, and private practices scale their operations, increase patient visits, and optimize their digital presence.",
   },
   {
     title: "React Developer",
