@@ -32,7 +32,7 @@ export const About = () => {
       </Styled.BreadcrumbWrapper>
       <Hero
         title="About me"
-        description="My name is Piotr Wrobel. I am passionate about using my skills and experience to help individuals and businesses achieve their goals. I have honed my craft and developed a strong understanding of what it takes to deliver successful projects."
+        description="My name is Piotr Wrobel. I'm a fullstack developer with expertise in frontend, backend, and mobile development. I'm passionate about building scalable web and mobile applications, leading technical teams, and bridging the gap between design and engineering. I help individuals and businesses achieve their goals by delivering high-quality digital products that solve real problems."
         showScrollToExplore={false}
       />
       <Styled.ResumeActions>
