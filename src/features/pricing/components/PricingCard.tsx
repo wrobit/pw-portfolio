@@ -26,16 +26,11 @@ export const PricingCard = ({ plan, animationDelay }: PricingCardProps) => {
 
       <Styled.PriceRows>
         <PriceRow
-          netValue={plan.buildPricePlnNet}
-          usdApproxValue={plan.usdApproxBuild}
-          ariaLabel={`${plan.name} build pricing`}
-        />
-        <PriceRow
-          label="Managed mode"
-          caption="Monthly"
-          netValue={plan.maintenancePlnNetMonthly}
-          usdApproxValue={plan.usdApproxMaintenanceMonthly}
-          ariaLabel={`${plan.name} maintenance pricing`}
+          buildNetValue={plan.buildPricePlnNet}
+          buildUsdValue={plan.usdApproxBuild}
+          maintenanceNetValue={plan.maintenancePlnNetMonthly}
+          maintenanceUsdValue={plan.usdApproxMaintenanceMonthly}
+          ariaLabel={`${plan.name} pricing`}
         />
       </Styled.PriceRows>
 

@@ -171,7 +171,14 @@ export const PriceRows = styled.div`
 
 export const PriceRow = styled.div`
   border-top: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.06)};
+  border-bottom: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.06)};
   padding: ${({ theme }) => `${theme.spacing.md} 0`};
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.md};
+`;
+
+export const PriceRowSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2px;

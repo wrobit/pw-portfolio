@@ -3,31 +3,40 @@ import { formatPln, formatUsd } from "@features/pricing/utils/pricing.utils";
 import * as Styled from "../Pricing.styles";
 
 type PriceRowProps = {
-  label?: string;
-  netValue: number;
-  usdApproxValue: number;
-  caption?: string;
+  buildNetValue: number;
+  buildUsdValue: number;
+  maintenanceNetValue: number;
+  maintenanceUsdValue: number;
   ariaLabel: string;
 };
 
 export const PriceRow = ({
-  label,
-  netValue,
-  usdApproxValue,
-  caption,
+  buildNetValue,
+  buildUsdValue,
+  maintenanceNetValue,
+  maintenanceUsdValue,
   ariaLabel,
 }: PriceRowProps) => {
   return (
     <Styled.PriceRow role="group" aria-label={ariaLabel}>
-      {(label || caption) && (
+      <Styled.PriceRowSection>
         <Styled.PriceRowHeading>
-          {label && <Styled.PriceValue as="p">{label}</Styled.PriceValue>}
-          {caption && <Styled.PriceRowCaption as="p">{caption}</Styled.PriceRowCaption>}
+          <Styled.PriceValue as="p">Build price</Styled.PriceValue>
         </Styled.PriceRowHeading>
-      )}
-      <Styled.PriceMeta as="p">
-        Net: {formatPln(netValue)} + VAT; {formatUsd(usdApproxValue)};
-      </Styled.PriceMeta>
+        <Styled.PriceMeta as="p">
+          {formatPln(buildNetValue)} + VAT or {formatUsd(buildUsdValue)}
+        </Styled.PriceMeta>
+      </Styled.PriceRowSection>
+
+      <Styled.PriceRowSection>
+        <Styled.PriceRowHeading>
+          <Styled.PriceValue as="p">Maintenance (if no handover)</Styled.PriceValue>
+          <Styled.PriceRowCaption as="p">Monthly</Styled.PriceRowCaption>
+        </Styled.PriceRowHeading>
+        <Styled.PriceMeta as="p">
+          {formatPln(maintenanceNetValue)} + VAT or {formatUsd(maintenanceUsdValue)}
+        </Styled.PriceMeta>
+      </Styled.PriceRowSection>
     </Styled.PriceRow>
   );
 };
