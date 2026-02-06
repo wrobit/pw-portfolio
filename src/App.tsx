@@ -9,7 +9,7 @@ import {
 import { ThemeProvider } from "styled-components";
 
 import { About } from "@features/about/About";
-import { Contact, Error, Home, Project, Work } from "@features/index";
+import { Contact, Error, Home, Pricing, Project, Work } from "@features/index";
 import { Root } from "@pages/root/Root";
 import { animatedCursorOptions, reactLenisOptions } from "@utils/animations";
 import { defaultTheme } from "@utils/theme";
@@ -20,6 +20,7 @@ const App = () => {
       <Route path="/" element={<Root />} errorElement={<Error />}>
         <Route index element={<Home />} />
         <Route path="work" element={<Work />} />
+        <Route path="pricing" element={<Pricing />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
         <Route path="project/:projectId" element={<Project />} />
