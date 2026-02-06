@@ -1,8 +1,8 @@
 import { fadeInUp } from "@utils/animations/variants";
 import { PricingPlan } from "data/pricing.data";
 
-import { PriceRow } from "./PriceRow";
-import * as Styled from "../Pricing.styles";
+import { PriceRow } from "./price-row";
+import * as Styled from "../pricing.styles";
 
 type PricingCardProps = {
   plan: PricingPlan;

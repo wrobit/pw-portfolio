@@ -1,6 +1,6 @@
 import { fadeInUp } from "@utils/animations/variants";
 
-import * as Styled from "../Pricing.styles";
+import * as Styled from "../pricing.styles";
 
 const PRICING_NOTES = [
   "All PLN prices are net unless marked as PLN + VAT (gross at 23%).",

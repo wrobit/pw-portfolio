@@ -1,12 +1,12 @@
 import { Seo } from "@components/seo/Seo";
 import { Breadcrumb, Typography } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
-import { PricingSection } from "@features/pricing/components/PricingSection";
+import { PricingSection } from "@features/pricing/components/pricing-section";
 import { fadeInUp } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
-import * as Styled from "./Pricing.styles";
+import * as Styled from "./pricing.styles";
 
 const breadcrumbItems: BreadcrumbItem[] = [
   { label: "Home", href: routes.home },

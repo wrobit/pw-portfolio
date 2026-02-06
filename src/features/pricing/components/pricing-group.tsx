@@ -1,8 +1,8 @@
 import { PricingGroupModel } from "@features/pricing/pricing.types";
 import { fadeInUp } from "@utils/animations/variants";
 
-import { PricingCard } from "./PricingCard";
-import * as Styled from "../Pricing.styles";
+import { PricingCard } from "./pricing-card";
+import * as Styled from "../pricing.styles";
 
 type PricingGroupProps = {
   group: PricingGroupModel;

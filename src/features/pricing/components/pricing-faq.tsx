@@ -1,6 +1,6 @@
 import { fadeInUp } from "@utils/animations/variants";
 
-import * as Styled from "../Pricing.styles";
+import * as Styled from "../pricing.styles";
 
 const FAQ_ITEMS = [
   {

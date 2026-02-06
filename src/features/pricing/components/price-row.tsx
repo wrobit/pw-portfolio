@@ -1,6 +1,6 @@
 import { formatPln, formatUsd } from "@features/pricing/utils/pricing.utils";
 
-import * as Styled from "../Pricing.styles";
+import * as Styled from "../pricing.styles";
 
 type PriceRowProps = {
   buildNetValue: number;

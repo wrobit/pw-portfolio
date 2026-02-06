@@ -4,8 +4,8 @@ import { PricingGroupModel } from "@features/pricing/pricing.types";
 import { fadeInUp } from "@utils/animations/variants";
 import { PricingCategory, pricingPlans } from "data/pricing.data";
 
-import { PricingGroup } from "./PricingGroup";
-import * as Styled from "../Pricing.styles";
+import { PricingGroup } from "./pricing-group";
+import * as Styled from "../pricing.styles";
 
 const CATEGORY_OPTIONS: { label: string; value: PricingCategory }[] = [
   { label: "Framer", value: "framer" },
