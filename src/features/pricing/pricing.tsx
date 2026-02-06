@@ -29,9 +29,9 @@ export const Pricing = () => {
       <Styled.IntroSection variants={fadeInUp} initial="hidden" animate="visible" custom={0.16}>
         <Typography.Headers.H1>Pricing</Typography.Headers.H1>
         <Styled.IntroLead as="p">
-          Transparent pricing for custom website builds. Every plan is designed to be as flexible as
-          possible and can be customized to fit your needs. Contact me to discuss your project and
-          get a custom quote.
+          These packages reflect pricing for custom website projects. I also deliver advanced web
+          applications, and project scope can be adjusted based on product complexity, integrations,
+          and delivery goals. If you need a tailored engagement, contact me for a custom quote.
         </Styled.IntroLead>
       </Styled.IntroSection>
 
