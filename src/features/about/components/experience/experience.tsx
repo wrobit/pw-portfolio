@@ -3,16 +3,18 @@ import { KeyboardEvent, useRef, useState } from "react";
 
 import ArrowRight from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/shared";
+import { data } from "@data/about-experience.data";
 import {
   timelineItemVariants,
   timelineVariants,
 } from "@features/home/components/about-me/utils/animations";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 
-import { data } from "./experience.data";
 import * as Styled from "../../shared/styles";
 
 export const Experience = () => {
+  const { messages } = useI18n();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -31,17 +33,10 @@ export const Experience = () => {
     <Styled.Section ref={sectionRef} variants={pageTransition} initial="initial" animate="animate">
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
-          <Typography.Headers.H1 as="h2">Experience</Typography.Headers.H1>
+          <Typography.Headers.H1 as="h2">{messages.about.experienceTitle}</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
-          <Typography.Headers.H5 as="p">
-            I have had the opportunity to work with a diverse range of clients and projects,
-            providing me with years of experience in Frontend Development and UX/UI Design. I have
-            also collaborated with teams on various projects, which has allowed me to develop my
-            team working skills. My experience allows me to provide high-quality solutions that meet
-            the unique needs of each of my clients, whether it's working independently or as part of
-            a team.
-          </Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">{messages.about.experienceIntro}</Typography.Headers.H5>
         </motion.div>
       </Styled.TypographyWrapper>
       <Styled.List variants={timelineVariants} initial="hidden" animate="visible">

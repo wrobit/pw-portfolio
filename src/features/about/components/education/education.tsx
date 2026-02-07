@@ -3,17 +3,19 @@ import { KeyboardEvent, useState } from "react";
 
 import ArrowRight from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/shared";
+import { data } from "@data/about-education.data";
 import {
   timelineItemVariants,
   timelineVariants,
 } from "@features/home/components/about-me/utils/animations";
 import { useScrollAnimation } from "@utils/animations";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 
-import { data } from "./education.data";
 import * as Styled from "../../shared/styles";
 
 export const Education = () => {
+  const { messages } = useI18n();
   const { controls, isInView, ref } = useScrollAnimation();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -37,7 +39,7 @@ export const Education = () => {
     >
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
-          <Typography.Headers.H1 as="h2">Education</Typography.Headers.H1>
+          <Typography.Headers.H1 as="h2">{messages.about.educationTitle}</Typography.Headers.H1>
         </motion.div>
       </Styled.TypographyWrapper>
       <Styled.List variants={timelineVariants} initial="hidden" animate={controls}>

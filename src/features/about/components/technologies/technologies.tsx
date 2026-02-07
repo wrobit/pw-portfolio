@@ -2,18 +2,20 @@ import { motion } from "framer-motion";
 
 import leavesImage from "@assets/leaves.avif";
 import { Typography } from "@components/shared";
+import { data } from "@data/about-technologies.data";
 import {
   timelineItemVariants,
   timelineVariants,
 } from "@features/home/components/about-me/utils/animations";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 
-import { data } from "./technologies.data";
 import * as TechnologiesStyled from "./technologies.styles";
 import * as Styled from "../../shared/styles";
 
 export const Technologies = () => {
+  const { messages } = useI18n();
   const { controls, isInView, ref } = useScrollAnimation();
 
   return (
@@ -25,16 +27,10 @@ export const Technologies = () => {
     >
       <Styled.TypographyWrapper>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.2}>
-          <Typography.Headers.H1 as="h2">Technologies</Typography.Headers.H1>
+          <Typography.Headers.H1 as="h2">{messages.about.technologiesTitle}</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
-          <Typography.Headers.H5 as="p">
-            As a developer, I use the latest and most advanced technologies to provide the best
-            solutions for my clients. Modern technologies I work with, allows me to create
-            innovative and cutting-edge solutions that are tailored to my clients' needs. I am
-            always eager to explore new technologies and tools, and I believe it's always a great
-            opportunity to learn new ways of developing applications.
-          </Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">{messages.about.technologiesIntro}</Typography.Headers.H5>
         </motion.div>
       </Styled.TypographyWrapper>
       <Styled.List variants={timelineVariants} initial="hidden" animate={controls}>

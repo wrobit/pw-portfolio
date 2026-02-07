@@ -3,10 +3,10 @@ import { useTheme } from "styled-components";
 
 import { Typography } from "@components/shared";
 import { Link } from "@components/shared/link/link";
+import { data } from "@data/footer.data";
 import { useScrollAnimation } from "@utils/animations/hooks";
 
 import { footerItemVariants, footerVariants } from "./footer.animations";
-import { data } from "./footer.data";
 import * as Styled from "./footer.styles";
 
 export const Footer = () => {

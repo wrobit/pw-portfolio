@@ -7,6 +7,7 @@ import { Breadcrumb, ResumeDownloadButton } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import { fadeInUp } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
 import * as Styled from "./about.styles";
@@ -14,12 +15,13 @@ import { Education } from "./components/education/education";
 import { Experience } from "./components/experience/experience";
 import { Technologies } from "./components/technologies/technologies";
 
-const breadcrumbItems: BreadcrumbItem[] = [
-  { label: "Home", href: routes.home },
-  { label: "About" },
-];
-
 export const About = () => {
+  const { messages } = useI18n();
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: messages.breadcrumb.home, href: routes.home },
+    { label: messages.breadcrumb.about },
+  ];
+
   return (
     <PageTemplateWrapper>
       <Seo
@@ -31,14 +33,14 @@ export const About = () => {
         <Breadcrumb items={breadcrumbItems} />
       </Styled.BreadcrumbWrapper>
       <Hero
-        title="About me"
-        description="My name is Piotr Wrobel. I'm a fullstack developer with expertise in frontend, backend, and mobile development. I'm passionate about building scalable web and mobile applications, leading technical teams, and bridging the gap between design and engineering. I help individuals and businesses achieve their goals by delivering high-quality digital products that solve real problems."
+        title={messages.about.heroTitle}
+        description={messages.about.heroDescription}
         showScrollToExplore={false}
         compactSpacing
       />
       <Styled.ResumeActions>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
-          <ResumeDownloadButton />
+          <ResumeDownloadButton label={messages.about.downloadResume} />
         </motion.div>
       </Styled.ResumeActions>
       <HeroImage />
