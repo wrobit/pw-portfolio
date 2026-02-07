@@ -22,6 +22,7 @@ export const ProjectShowcase = () => {
 
   const renderProjectSection = (
     sectionTitle: string,
+    sectionDescription: string,
     sectionProjects: Project[],
     startIndex: number
   ) => (
@@ -32,7 +33,12 @@ export const ProjectShowcase = () => {
         animate="visible"
         custom={0.6 + startIndex * 0.2}
       >
-        <Styled.ProjectShowcaseTitle as="h2">{sectionTitle}</Styled.ProjectShowcaseTitle>
+        <Styled.ProjectShowcaseHeader>
+          <Styled.ProjectShowcaseTitle as="h2">{sectionTitle}</Styled.ProjectShowcaseTitle>
+          <Styled.ProjectShowcaseDescription as="p">
+            {sectionDescription}
+          </Styled.ProjectShowcaseDescription>
+        </Styled.ProjectShowcaseHeader>
       </motion.div>
       <Styled.ProjectShowcaseContainer>
         {sectionProjects.map((project, index) => (
@@ -48,11 +54,21 @@ export const ProjectShowcase = () => {
   );
 
   return (
-    <Styled.ProjectShowcaseWrapper>
+    <Styled.ProjectShowcaseWrapper $isWorkPage={isWorkPage}>
       {commercialProjects.length > 0 &&
-        renderProjectSection("Commercial projects", commercialProjects, 0)}
+        renderProjectSection(
+          "Client Builds",
+          "Production projects delivered for companies and growing teams.",
+          commercialProjects,
+          0
+        )}
       {nonCommercialProjects.length > 0 &&
-        renderProjectSection("Personal projects", nonCommercialProjects, commercialProjects.length)}
+        renderProjectSection(
+          "Independent Builds",
+          "Self-initiated products, experiments, and engineering explorations.",
+          nonCommercialProjects,
+          commercialProjects.length
+        )}
       {!isWorkPage && (
         <AnimatedLink
           label="More work"
