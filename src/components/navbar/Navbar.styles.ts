@@ -46,7 +46,7 @@ const NavLinks = styled.nav`
 `;
 
 const Link = styled(RouterLink)<{ $isActive?: boolean }>`
-  width: 50px;
+  min-width: 50px;
   font-family: ${({ theme }) => theme.font.regular};
   font-size: 16px;
   margin: 0 16px;

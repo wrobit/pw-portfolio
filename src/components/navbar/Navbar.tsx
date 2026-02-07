@@ -11,7 +11,8 @@ import * as Styled from "./Navbar.styles";
 export const MENU_ITEMS = [
   { path: routes.work, label: "Work", index: 1 },
   { path: routes.about, label: "About", index: 2 },
-  { path: routes.contact, label: "Contact", index: 3 },
+  { path: routes.pricing, label: "Pricing", index: 3 },
+  { path: routes.contact, label: "Contact", index: 4 },
 ];
 
 export const Navbar = () => {

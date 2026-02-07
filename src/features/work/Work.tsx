@@ -26,6 +26,7 @@ export const Work = () => {
         title="Work"
         description="Check out my latest commercial and personal projects and see how I've managed to bring visions to life."
         showScrollToExplore={false}
+        compactSpacing
       />
       <ProjectShowcase />
     </PageTemplateWrapper>

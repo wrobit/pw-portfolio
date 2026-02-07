@@ -14,8 +14,8 @@ const LogoContent = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
 `;
 

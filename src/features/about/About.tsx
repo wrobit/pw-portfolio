@@ -34,6 +34,7 @@ export const About = () => {
         title="About me"
         description="My name is Piotr Wrobel. I'm a fullstack developer with expertise in frontend, backend, and mobile development. I'm passionate about building scalable web and mobile applications, leading technical teams, and bridging the gap between design and engineering. I help individuals and businesses achieve their goals by delivering high-quality digital products that solve real problems."
         showScrollToExplore={false}
+        compactSpacing
       />
       <Styled.ResumeActions>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
