@@ -3,6 +3,7 @@ import { KeyboardEvent, useState } from "react";
 
 import ArrowRight from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/shared";
+import { data } from "@data/Education.data";
 import {
   timelineItemVariants,
   timelineVariants,
@@ -10,7 +11,6 @@ import {
 import { useScrollAnimation } from "@utils/animations";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
-import { data } from "./Education.data";
 import * as Styled from "../../shared/styles";
 
 export const Education = () => {

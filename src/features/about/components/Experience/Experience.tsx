@@ -3,13 +3,13 @@ import { KeyboardEvent, useRef, useState } from "react";
 
 import ArrowRight from "@assets/icons/arrow-right.svg";
 import { Typography } from "@components/shared";
+import { data } from "@data/Experience.data";
 import {
   timelineItemVariants,
   timelineVariants,
 } from "@features/home/components/AboutMe/utils/animations";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 
-import { data } from "./Experience.data";
 import * as Styled from "../../shared/styles";
 
 export const Experience = () => {
