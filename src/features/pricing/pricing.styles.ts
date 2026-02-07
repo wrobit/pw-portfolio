@@ -36,18 +36,6 @@ export const ControlsRow = styled(motion.section)`
   margin-top: ${({ theme }) => theme.spacing.md};
 `;
 
-export const ControlGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.sm};
-`;
-
-export const ControlLabel = styled(Typography.Headers.H6)`
-  color: ${({ theme }) => theme.colors.gray};
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-`;
-
 export const ControlButtonGroup = styled.div`
   display: inline-flex;
   align-items: center;
@@ -236,121 +224,8 @@ export const FeatureItem = styled.li`
 
 export const CardFooter = styled.div`
   margin-top: auto;
+  padding-top: ${({ theme }) => theme.spacing.lg};
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
-`;
-
-export const PlanButton = styled.a`
-  width: 100%;
-  text-align: center;
-  padding: ${({ theme }) => `${theme.spacing.md} ${theme.spacing.lg}`};
-  border-radius: 999px;
-  border: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.12)};
-  background-color: ${({ theme }) => hexToRgba(theme.colors.black, 0.45)};
-  color: ${({ theme }) => theme.colors.white};
-  font-family: ${({ theme }) => theme.font.medium};
-  font-size: ${({ theme }) => theme.fontSize.h6};
-  transition: all 200ms ease-in-out;
-
-  &:hover,
-  &:active {
-    background-color: ${({ theme }) => hexToRgba(theme.colors.white, 0.1)};
-    color: ${({ theme }) => theme.colors.white};
-    border-color: ${({ theme }) => hexToRgba(theme.colors.white, 0.2)};
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors.white};
-    outline-offset: 2px;
-  }
-`;
-
-export const CardHint = styled(Typography.Headers.H6)`
-  color: ${({ theme }) => theme.colors.gray};
-`;
-
-export const NotesSection = styled(motion.section)`
-  border: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.12)};
-  border-radius: ${({ theme }) => theme.radius.xl};
-  padding: ${({ theme }) => theme.spacing.lg};
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
-`;
-
-export const NoteList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: ${({ theme }) => theme.spacing.md};
-`;
-
-export const NoteItem = styled.li`
-  color: ${({ theme }) => hexToRgba(theme.colors.white, 0.75)};
-`;
-
-export const FaqSection = styled(motion.section)`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.lg};
-`;
-
-export const FaqList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
-`;
-
-export const FaqItem = styled.details`
-  border: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.12)};
-  border-radius: ${({ theme }) => theme.radius.lg};
-  padding: ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => hexToRgba(theme.colors.white, 0.01)};
-
-  &[open] {
-    background-color: ${({ theme }) => hexToRgba(theme.colors.white, 0.06)};
-  }
-`;
-
-export const FaqQuestion = styled.summary`
-  list-style: none;
-  cursor: pointer;
-  font-family: ${({ theme }) => theme.font.medium};
-  font-size: ${({ theme }) => theme.fontSize.h6};
-
-  &::-webkit-details-marker {
-    display: none;
-  }
-
-  &:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors.white};
-    outline-offset: 4px;
-  }
-`;
-
-export const FaqAnswer = styled(Typography.Headers.H6)`
-  margin-top: ${({ theme }) => theme.spacing.sm};
-  color: ${({ theme }) => hexToRgba(theme.colors.white, 0.68)};
-`;
-
-export const CtaSection = styled(motion.section)`
-  border-radius: ${({ theme }) => theme.radius.xl};
-  border: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.14)};
-  padding: ${({ theme }) => theme.spacing.xl};
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
-  background-color: ${({ theme }) => hexToRgba(theme.colors.white, 0.01)};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: ${({ theme }) => theme.spacing.xl};
-  }
-`;
-
-export const CtaActions = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing.md};
-  flex-wrap: wrap;
 `;

@@ -1,3 +1,5 @@
+import { Button } from "@components/shared";
+import { createPlanMailtoHref, trackPricingCtaClick } from "@features/pricing/utils/pricing.utils";
 import { fadeInUp } from "@utils/animations/variants";
 import { PricingPlan } from "data/pricing.data";
 
@@ -10,6 +12,20 @@ type PricingCardProps = {
 };
 
 export const PricingCard = ({ plan, animationDelay }: PricingCardProps) => {
+  const planHref = createPlanMailtoHref({
+    category: plan.category,
+    planSlug: plan.slug,
+  });
+
+  const onPlanCtaClick = () => {
+    trackPricingCtaClick({
+      category: plan.category,
+      planSlug: plan.slug,
+    });
+
+    window.location.href = planHref;
+  };
+
   return (
     <Styled.PricingCard
       variants={fadeInUp}
@@ -41,6 +57,12 @@ export const PricingCard = ({ plan, animationDelay }: PricingCardProps) => {
           </Styled.FeatureItem>
         ))}
       </Styled.FeatureList>
+
+      <Styled.CardFooter>
+        <Button type="button" onClick={onPlanCtaClick}>
+          Get this plan
+        </Button>
+      </Styled.CardFooter>
     </Styled.PricingCard>
   );
 };
