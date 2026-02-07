@@ -1,6 +1,7 @@
 import { Button } from "@components/shared";
 import { createPlanMailtoHref, trackPricingCtaClick } from "@features/pricing/utils/pricing.utils";
 import { fadeInUp } from "@utils/animations/variants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 import { PricingPlan } from "data/pricing.data";
 
 import { PriceRow } from "./price-row";
@@ -12,6 +13,7 @@ type PricingCardProps = {
 };
 
 export const PricingCard = ({ plan, animationDelay }: PricingCardProps) => {
+  const { messages } = useI18n();
   const planHref = createPlanMailtoHref({
     category: plan.category,
     planSlug: plan.slug,
@@ -60,7 +62,7 @@ export const PricingCard = ({ plan, animationDelay }: PricingCardProps) => {
 
       <Styled.CardFooter>
         <Button type="button" onClick={onPlanCtaClick}>
-          Get this plan
+          {messages.pricing.planCta}
         </Button>
       </Styled.CardFooter>
     </Styled.PricingCard>

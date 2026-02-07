@@ -7,11 +7,16 @@ import { Breadcrumb } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import { fadeInUp } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
-const breadcrumbItems: BreadcrumbItem[] = [{ label: "Home", href: routes.home }, { label: "Work" }];
-
 export const Work = () => {
+  const { messages } = useI18n();
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: messages.breadcrumb.home, href: routes.home },
+    { label: messages.breadcrumb.work },
+  ];
+
   return (
     <PageTemplateWrapper>
       <Seo
@@ -23,8 +28,8 @@ export const Work = () => {
         <Breadcrumb items={breadcrumbItems} />
       </motion.div>
       <Hero
-        title="Work"
-        description="Check out my latest commercial and personal projects and see how I've managed to bring visions to life."
+        title={messages.work.heroTitle}
+        description={messages.work.heroDescription}
         showScrollToExplore={false}
         compactSpacing
       />

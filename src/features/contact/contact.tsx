@@ -8,17 +8,18 @@ import { contactLinks } from "@features/contact/utils/links-data";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
 import ContactBackground from "./components/contact-background";
 
-const breadcrumbItems: BreadcrumbItem[] = [
-  { label: "Home", href: routes.home },
-  { label: "Contact" },
-];
-
 export const Contact = () => {
+  const { messages } = useI18n();
   const { controls, isInView, ref } = useScrollAnimation();
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: messages.breadcrumb.home, href: routes.home },
+    { label: messages.breadcrumb.contact },
+  ];
 
   return (
     <PageTemplateWrapper>
@@ -44,10 +45,8 @@ export const Contact = () => {
           animate={controls}
           custom={0.2}
         >
-          <Typography.Headers.H1>Contact me</Typography.Headers.H1>
-          <Typography.Headers.H5 as="p">
-            Connect with me and let's deploy our ideas together. Communicating is the key.
-          </Typography.Headers.H5>
+          <Typography.Headers.H1>{messages.contact.heading}</Typography.Headers.H1>
+          <Typography.Headers.H5 as="p">{messages.contact.description}</Typography.Headers.H5>
         </Styled.ContactContentWrapper>
         <Styled.ContactContentWrapper
           variants={fadeInUp}
@@ -63,7 +62,7 @@ export const Contact = () => {
             </Typography.Headers.H4>
             <Styled.ContactEmailBadge>
               {FiArrowLeft({ "aria-hidden": true })}
-              Click to email
+              {messages.contact.emailBadge}
             </Styled.ContactEmailBadge>
           </Styled.ContactEmailRow>
           <Styled.ContactLinksWrapper>
@@ -92,9 +91,7 @@ export const Contact = () => {
           animate={controls}
           custom={0.8}
         >
-          <Typography.Headers.H6 as="p">
-            From Poland with love, coding at home
-          </Typography.Headers.H6>
+          <Typography.Headers.H6 as="p">{messages.contact.signature}</Typography.Headers.H6>
           <Typography.Headers.H6 as="p"></Typography.Headers.H6>
         </Styled.ContactContentWrapper>
       </Styled.ContactContainer>

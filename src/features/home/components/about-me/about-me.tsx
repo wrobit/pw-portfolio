@@ -6,10 +6,12 @@ import { Typography } from "@components/shared";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, hoverScale, pageTransition } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 
 import * as Styled from "./about-me.styles";
 
 export const AboutMe = () => {
+  const { messages } = useI18n();
   const navigate = useNavigate();
   const { ref, isInView, controls } = useScrollAnimation();
 
@@ -26,11 +28,7 @@ export const AboutMe = () => {
     >
       <Styled.AboutMeHeader>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1}>
-          <Typography.Headers.H5 as="p">
-            I'm a developer that is dedicated to every project I undertake. I closely work with
-            every team and client to understand needs and deliver the best solutions. Creating a
-            product that exceeds my client's expectations is what I seek to.
-          </Typography.Headers.H5>
+          <Typography.Headers.H5 as="p">{messages.home.aboutTeaser}</Typography.Headers.H5>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.2}>
           <Styled.AboutMeButton
@@ -39,7 +37,7 @@ export const AboutMe = () => {
             initial="initial"
             whileHover="hover"
           >
-            About me
+            {messages.home.aboutCta}
           </Styled.AboutMeButton>
         </motion.div>
       </Styled.AboutMeHeader>

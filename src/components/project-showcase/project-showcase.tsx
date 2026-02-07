@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { AnimatedLink } from "@components/shared/animated-link/animated-link";
 import { fadeInUp } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 import { projects } from "data/projects.data";
 
 import { ProjectBox } from "./project-box/project-box";
@@ -13,6 +14,7 @@ import { Project } from "./project-showcase.types";
 const PROJECTS_TO_SHOW_ON_HOME_PAGE = 7;
 
 export const ProjectShowcase = () => {
+  const { messages } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
   const isWorkPage = location.pathname === routes.work;
@@ -57,21 +59,21 @@ export const ProjectShowcase = () => {
     <Styled.ProjectShowcaseWrapper $isWorkPage={isWorkPage}>
       {commercialProjects.length > 0 &&
         renderProjectSection(
-          "Client Builds",
-          "Production projects delivered for companies and growing teams.",
+          messages.work.clientBuildsTitle,
+          messages.work.clientBuildsDescription,
           commercialProjects,
           0
         )}
       {nonCommercialProjects.length > 0 &&
         renderProjectSection(
-          "Independent Builds",
-          "Self-initiated products, experiments, and engineering explorations.",
+          messages.work.independentBuildsTitle,
+          messages.work.independentBuildsDescription,
           nonCommercialProjects,
           commercialProjects.length
         )}
       {!isWorkPage && (
         <AnimatedLink
-          label="More work"
+          label={messages.home.moreWork}
           delay={projects.length * 0.175}
           align="center"
           onClick={() => navigate(routes.work)}

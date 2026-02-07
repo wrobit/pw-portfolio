@@ -45,6 +45,36 @@ const NavLinks = styled.nav`
   justify-content: space-evenly;
 `;
 
+const LanguageSwitcher = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: ${({ theme }) => theme.spacing.md};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
+`;
+
+const LanguageButton = styled.button<{ $isActive?: boolean }>`
+  border: 1px solid
+    ${({ theme, $isActive }) =>
+      $isActive ? hexToRgba(theme.colors.white, 0.8) : hexToRgba(theme.colors.white, 0.18)};
+  background-color: ${({ theme, $isActive }) =>
+    $isActive ? hexToRgba(theme.colors.white, 0.14) : "transparent"};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.radius.xl};
+  font-family: ${({ theme }) => theme.font.medium};
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    border-color: ${({ theme }) => hexToRgba(theme.colors.white, 0.45)};
+  }
+`;
+
 const Link = styled(RouterLink)<{ $isActive?: boolean }>`
   min-width: 50px;
   font-family: ${({ theme }) => theme.font.regular};
@@ -133,6 +163,13 @@ const HamburgerMenuWrapper = styled.div`
   gap: ${({ theme }) => theme.spacing.lg};
 `;
 
+const MobileLanguageSwitcher = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
+  margin-top: ${({ theme }) => theme.spacing.md};
+`;
+
 const HamburgerMenuLinkIndex = styled.span`
   font-family: ${({ theme }) => theme.font.regular};
   font-size: 16px;
@@ -184,6 +221,9 @@ export {
   HamburgerMenuLinkIndex,
   HamburgerMenuWrapper,
   Link,
+  LanguageButton,
+  LanguageSwitcher,
+  MobileLanguageSwitcher,
   NavbarWrapper,
   NavLinks,
   Wrapper,

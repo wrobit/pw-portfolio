@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion";
 
 import { Typography } from "@components/shared/typography/typography";
 import { CookieConsentStatus } from "@utils/cookies/consent";
+import { useI18n } from "@utils/i18n/i18n-provider";
 
 import * as Styled from "./cookie-banner.styles";
 
@@ -12,6 +13,7 @@ type CookieBannerProps = {
 };
 
 export const CookieBanner = ({ status, onAccept, onReject }: CookieBannerProps) => {
+  const { messages } = useI18n();
   const shouldShow = status === "unset";
 
   return (
@@ -25,18 +27,15 @@ export const CookieBanner = ({ status, onAccept, onReject }: CookieBannerProps) 
         >
           <Styled.Banner>
             <Styled.BannerContent>
-              <Typography.Headers.H6 as="p">Cookies & Analytics</Typography.Headers.H6>
-              <Typography.Default>
-                Cookies are used to measure usage and improve this website experience. You can
-                accept or reject analytics cookies.
-              </Typography.Default>
+              <Typography.Headers.H6 as="p">{messages.cookieBanner.title}</Typography.Headers.H6>
+              <Typography.Default>{messages.cookieBanner.description}</Typography.Default>
             </Styled.BannerContent>
             <Styled.BannerActions>
               <Styled.BannerButton type="button" onClick={onAccept}>
-                Accept
+                {messages.cookieBanner.accept}
               </Styled.BannerButton>
               <Styled.BannerButton type="button" onClick={onReject}>
-                Reject
+                {messages.cookieBanner.reject}
               </Styled.BannerButton>
             </Styled.BannerActions>
           </Styled.Banner>

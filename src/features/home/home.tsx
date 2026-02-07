@@ -4,11 +4,13 @@ import { Hero } from "@components/hero/hero";
 import { ProjectShowcase } from "@components/project-showcase/project-showcase";
 import { Seo } from "@components/seo/seo";
 import { routes } from "@utils/constants/routes.constants";
+import { useI18n } from "@utils/i18n/i18n-provider";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
 import { AboutMe } from "./components/about-me/about-me";
 
 export const Home = () => {
+  const { messages } = useI18n();
   const navigate = useNavigate();
 
   return (
@@ -18,9 +20,9 @@ export const Home = () => {
         path={routes.home}
       />
       <Hero
-        title="Software Engineer & UX / UI Designer"
-        description="Software developer based in Poland. Mostly interested in web development and UI/UX design. Person that always seek to create everything from his own ideas. Looking for new opportunities and ideas."
-        ctaLabel="Connect with me"
+        title={messages.home.heroTitle}
+        description={messages.home.heroDescription}
+        ctaLabel={messages.home.connectCta}
         onCtaClick={() => navigate(routes.contact)}
       />
       <ProjectShowcase />
