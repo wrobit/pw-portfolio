@@ -22,8 +22,7 @@ const getGroupedPlans = (): PricingGroupModel[] => [
   {
     category: "code",
     title: "Code plans",
-    description:
-      "Custom React and TypeScript implementations for flexible product and business needs.",
+    description: "Custom software solutions tailored to your product goals and business needs.",
     plans: pricingPlans.filter((plan) => plan.category === "code"),
   },
 ];

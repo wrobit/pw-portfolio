@@ -21,7 +21,7 @@ export const PriceRow = ({
     <Styled.PriceRow role="group" aria-label={ariaLabel}>
       <Styled.PriceRowSection>
         <Styled.PriceRowHeading>
-          <Styled.PriceValue as="p">Build price</Styled.PriceValue>
+          <Styled.PriceValue as="p">Build price (starting from)</Styled.PriceValue>
         </Styled.PriceRowHeading>
         <Styled.PriceMeta as="p">
           {formatPln(buildNetValue)} + VAT or {formatUsd(buildUsdValue)}
