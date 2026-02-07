@@ -5,19 +5,14 @@ type PricingAnalyticsPayload = {
   category: PricingCategory;
 };
 
-const plnFormatter = new Intl.NumberFormat("pl-PL", {
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-});
+const formatCurrencyAmount = (value: number) =>
+  Math.round(value)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
-const usdFormatter = new Intl.NumberFormat("en-US", {
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-});
+export const formatPln = (value: number) => `${formatCurrencyAmount(value)} PLN`;
 
-export const formatPln = (value: number) => `${plnFormatter.format(Math.round(value))} PLN`;
-
-export const formatUsd = (value: number) => `${usdFormatter.format(Math.round(value))} USD`;
+export const formatUsd = (value: number) => `${formatCurrencyAmount(value)} USD`;
 
 export const createPlanMailtoHref = ({ category, planSlug }: PricingAnalyticsPayload) => {
   const subject = encodeURIComponent(`Pricing inquiry: ${planSlug}`);
