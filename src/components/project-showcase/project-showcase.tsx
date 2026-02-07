@@ -10,7 +10,7 @@ import { ProjectBox } from "./project-box/project-box";
 import * as Styled from "./project-showcase.styles";
 import { Project } from "./project-showcase.types";
 
-const PROJECTS_TO_SHOW_ON_HOME_PAGE = 7;
+const PROJECTS_TO_SHOW_ON_HOME_PAGE = 10;
 
 export const ProjectShowcase = () => {
   const location = useLocation();

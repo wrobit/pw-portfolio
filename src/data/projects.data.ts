@@ -10,6 +10,7 @@ import gradientPurple from "@assets/images/gradients/purple.avif";
 import mockupAloki from "@assets/images/mockups/aloki.avif";
 import mockupDreamstorm from "@assets/images/mockups/dreamstorm.avif";
 import mockupExPortfolio from "@assets/images/mockups/ex-portfolio.avif";
+import mockupFocusMedicine from "@assets/images/mockups/focus-medicine.avif";
 import mockupLimur from "@assets/images/mockups/limur.avif";
 import mockupListic from "@assets/images/mockups/listic.avif";
 import mockupLudusAi from "@assets/images/mockups/ludus-ai.avif";
@@ -18,6 +19,7 @@ import mockupPlantspot from "@assets/images/mockups/plantspot.avif";
 import mockupPomodoroTimer from "@assets/images/mockups/pomodoro-timer.avif";
 import mockupPortfolioBlog from "@assets/images/mockups/portfolio-blog.avif";
 import mockupPrivate from "@assets/images/mockups/private.avif";
+import mockupReMedio from "@assets/images/mockups/re-medio.avif";
 import mockupTheLabzTwo from "@assets/images/mockups/the-labz-2.avif";
 import mockupTheLabz from "@assets/images/mockups/the-labz.avif";
 import { Project } from "@components/project-showcase/project-showcase.types";
@@ -65,6 +67,53 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: "Remedio",
+    backgroundImage: gradientPurple,
+    image: mockupReMedio,
+    descriptionImage: mockupReMedio,
+    description:
+      "Remedio is a specialized agency for medical facilities. We provide comprehensive growth solutions including marketing strategy, patient acquisition campaigns (Google Ads, Meta, SEO), physician recruitment, website development with online registration, content & social media, and analytics. We help clinics, medical centers, and private practices scale their operations, increase patient visits, and optimize their digital presence.",
+    liveLink: "https://www.re-medio.pl/",
+    client: "Quadrantive",
+    role: "Developer & Designer",
+    technologies: ["Framer", "Figma"],
+    activities: [
+      "Developed and maintained the marketing website for Remedio, implementing new sections, components and UX improvements.",
+    ],
+    dateFrom: "2025",
+    dateTo: "Present",
+    commercial: true,
+  },
+  {
+    id: 3,
+    title: "Focus Medicine",
+    backgroundImage: gradientGreen,
+    image: mockupFocusMedicine,
+    descriptionImage: mockupFocusMedicine,
+    description:
+      "Focus Medicine is a modern clinic specializing in obesity treatment and telemedicine, with care built around safe, effective and holistic therapy. Their services combine endocrinology, diabetology, bariatric surgery, clinical dietetics, psychiatry, and internal medicine, supported by online consultations, e-prescriptions and continuous specialist guidance.",
+    liveLink: "https://focusmedicine.pl/",
+    client: "Focus Medicine",
+    role: "Web Developer",
+    technologies: [
+      "Framer",
+      "Figma",
+      "Google Analytics",
+      "Advanced CMS",
+      "Custom Integrations",
+      "SEO",
+      "Social Media",
+      "Analytics",
+    ],
+    activities: [
+      "Developed and maintained the marketing website for Focus Medicine, implementing new sections, components and UX improvements.",
+    ],
+    dateFrom: "2026",
+    dateTo: "Present",
+    commercial: true,
+  },
+  {
+    id: 4,
     title: "DreamStorm Studios Website",
     image: mockupDreamstorm,
     descriptionImage: mockupDreamstorm,
@@ -88,7 +137,7 @@ export const projects: Project[] = [
     commercial: true,
   },
   {
-    id: 3,
+    id: 5,
     title: "Ludus AI",
     backgroundImage: gradientOrange,
     image: mockupLudusAi,
@@ -125,7 +174,7 @@ export const projects: Project[] = [
     commercial: true,
   },
   {
-    id: 4,
+    id: 6,
     client: "The Labz",
     title: "The Labz",
     description:
@@ -165,7 +214,7 @@ export const projects: Project[] = [
     commercial: true,
   },
   {
-    id: 5,
+    id: 7,
     title: "Aloki",
     image: mockupAloki,
     descriptionImage: mockupAloki,
@@ -197,7 +246,7 @@ export const projects: Project[] = [
     commercial: true,
   },
   {
-    id: 6,
+    id: 8,
     title: "Ex-portfolio",
     backgroundImage: gradientGray,
     image: mockupExPortfolio,
@@ -220,7 +269,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 7,
+    id: 9,
     title: "Listic",
     backgroundImage: gradientGrayish,
     image: mockupListic,
@@ -258,7 +307,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 8,
+    id: 10,
     title: "Pomodoro Timer",
     backgroundImage: gradientOrange,
     image: mockupPomodoroTimer,
@@ -285,7 +334,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 9,
+    id: 11,
     title: "Portfolio blog",
     backgroundImage: gradientGray,
     image: mockupPortfolioBlog,
@@ -309,7 +358,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 10,
+    id: 12,
     title: "Music Shop",
     backgroundImage: gradientPurple,
     image: mockupPrivate,
@@ -357,7 +406,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 11,
+    id: 13,
     title: "Plantspot",
     backgroundImage: gradientGreenish,
     image: mockupPlantspot,
@@ -381,7 +430,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 12,
+    id: 14,
     title: "Niteczki-Daneczki",
     backgroundImage: gradientPinkish,
     image: mockupNiteczkiDaneczki,
@@ -406,7 +455,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 13,
+    id: 15,
     title: "CS Case Opening Simulator",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -437,7 +486,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 14,
+    id: 16,
     title: "CS2 Cheats - Troll Website",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -466,7 +515,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 15,
+    id: 17,
     title: "Weather App",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -491,7 +540,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 16,
+    id: 18,
     title: "Schedule Maker App",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -516,7 +565,7 @@ export const projects: Project[] = [
     commercial: false,
   },
   {
-    id: 17,
+    id: 19,
     title: "Room Homepage",
     backgroundImage: gradientGray,
     image: mockupPrivate,
