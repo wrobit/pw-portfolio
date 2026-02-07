@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Typography } from "@components/shared/Typography/Typography";
+import { Typography } from "@components/shared/typography/typography";
 
 const BreadcrumbNav = styled.nav`
   width: 100%;

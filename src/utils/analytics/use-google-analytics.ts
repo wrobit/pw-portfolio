@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import { CookieConsentStatus } from "@utils/cookies/consent";
 
-import { clearAnalyticsCookies, disableAnalytics, enableAnalytics } from "./googleAnalytics";
+import { clearAnalyticsCookies, disableAnalytics, enableAnalytics } from "./google-analytics";
 
 type ReactGAType = (typeof import("react-ga4"))["default"];
 

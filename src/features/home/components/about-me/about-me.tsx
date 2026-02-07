@@ -7,7 +7,7 @@ import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, hoverScale, pageTransition } from "@utils/animations/variants";
 import { routes } from "@utils/constants/routes.constants";
 
-import * as Styled from "./AboutMe.styles";
+import * as Styled from "./about-me.styles";
 
 export const AboutMe = () => {
   const navigate = useNavigate();

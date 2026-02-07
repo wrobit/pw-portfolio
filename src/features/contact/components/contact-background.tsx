@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-import { paths, strokeStyle, variants } from "../animations/ContactBackground.animations";
+import { paths, strokeStyle, variants } from "../animations/contact-background.animations";
 
 const StyledSVG = styled(motion.svg)`
   position: absolute;

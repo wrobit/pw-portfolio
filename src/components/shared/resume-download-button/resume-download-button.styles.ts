@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Button } from "@components/shared/Button/Button.styles";
+import { Button } from "@components/shared/button/button.styles";
 
 const ResumeButton = styled(Button)`
   text-decoration: none;

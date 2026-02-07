@@ -1,5 +1,5 @@
-import * as Styled from "@components/shared/Typography/Default/Default.styles";
-import { TypographyProps } from "@components/shared/Typography/Typography.types";
+import * as Styled from "@components/shared/typography/default/default.styles";
+import { TypographyProps } from "@components/shared/typography/typography.types";
 
 export const Default = ({ children, ...props }: TypographyProps) => {
   return <Styled.Default {...props}>{children}</Styled.Default>;

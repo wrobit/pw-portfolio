@@ -1,9 +1,9 @@
 import { AnimatePresence } from "framer-motion";
 
-import { Typography } from "@components/shared/Typography/Typography";
+import { Typography } from "@components/shared/typography/typography";
 import { CookieConsentStatus } from "@utils/cookies/consent";
 
-import * as Styled from "./CookieBanner.styles";
+import * as Styled from "./cookie-banner.styles";
 
 type CookieBannerProps = {
   status: CookieConsentStatus;
