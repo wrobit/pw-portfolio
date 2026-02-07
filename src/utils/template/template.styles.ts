@@ -7,7 +7,7 @@ export const PageTemplateWrapper = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.xl};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     padding: 0 ${({ theme }) => theme.spacing.xxxxl};
   }
 

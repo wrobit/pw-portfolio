@@ -2,6 +2,7 @@ const home = "/";
 const work = "/work";
 const about = "/about";
 const contact = "/contact";
+const pricing = "/pricing";
 const project = "/project";
 const projects = "/projects";
 const projectDetails = "/project/:projectId";
@@ -11,6 +12,7 @@ export const routes = {
   home,
   about,
   work,
+  pricing,
   projects,
   contact,
   project,

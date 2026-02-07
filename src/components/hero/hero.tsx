@@ -5,6 +5,7 @@ import styled, { useTheme } from "styled-components";
 import ScrollDownIcon from "@assets/icons/expand-down-double.svg";
 import { Button, Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+import { hexToRgba } from "@utils/helpers/colors.helper";
 
 type HeroProps = {
   title: string;
@@ -12,6 +13,7 @@ type HeroProps = {
   ctaLabel?: string;
   onCtaClick?: () => void;
   showScrollToExplore?: boolean;
+  compactSpacing?: boolean;
 };
 
 export const Hero = ({
@@ -20,6 +22,7 @@ export const Hero = ({
   ctaLabel,
   onCtaClick,
   showScrollToExplore = true,
+  compactSpacing = false,
 }: HeroProps) => {
   const theme = useTheme();
   const heroSectionRef = useRef<HTMLDivElement>(null);
@@ -64,13 +67,21 @@ export const Hero = ({
   };
 
   return (
-    <HeroSection ref={heroSectionRef} variants={pageTransition} initial="initial" animate="animate">
-      <HeroTypographyWrapper>
+    <HeroSection
+      ref={heroSectionRef}
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+      $compactSpacing={compactSpacing}
+    >
+      <HeroTypographyWrapper $compactSpacing={compactSpacing}>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
           <Typography.Headers.H1>{title}</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
-          <Typography.Headers.H4 as="p">{description}</Typography.Headers.H4>
+          <Typography.Headers.H5 as="p" color={hexToRgba(theme.colors.white, 0.85)}>
+            {description}
+          </Typography.Headers.H5>
         </motion.div>
         {ctaLabel && onCtaClick && (
           <HeroActions>
@@ -103,12 +114,16 @@ export const Hero = ({
   );
 };
 
-const HeroSection = styled(motion.div)`
+type HeroLayoutProps = {
+  $compactSpacing?: boolean;
+};
+
+const HeroSection = styled(motion.div)<HeroLayoutProps>`
   width: 100%;
-  margin-top: ${({ theme }) => theme.spacing.xxl};
+  margin-top: ${({ theme, $compactSpacing }) => ($compactSpacing ? 0 : theme.spacing.xxl)};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xxxl};
+  gap: ${({ theme, $compactSpacing }) => ($compactSpacing ? theme.spacing.lg : theme.spacing.xxxl)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
@@ -116,15 +131,15 @@ const HeroSection = styled(motion.div)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     gap: ${({ theme }) => theme.spacing.lg};
-    margin-top: ${({ theme }) => theme.spacing.lg};
+    margin-top: ${({ theme, $compactSpacing }) => ($compactSpacing ? 0 : theme.spacing.lg)};
   }
 `;
 
-const HeroTypographyWrapper = styled.div`
-  width: 80%;
+const HeroTypographyWrapper = styled.div<HeroLayoutProps>`
+  width: ${({ $compactSpacing }) => ($compactSpacing ? "100%" : "80%")};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xxl};
+  gap: ${({ theme, $compactSpacing }) => ($compactSpacing ? theme.spacing.lg : theme.spacing.xxl)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;

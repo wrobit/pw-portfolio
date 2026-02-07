@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Typography } from "@components/shared";
+import { hexToRgba } from "@utils/helpers/colors.helper";
 
 const ProjectShowcaseContainer = styled.div`
   width: 100%;
@@ -11,12 +12,13 @@ const ProjectShowcaseContainer = styled.div`
   gap: ${({ theme }) => theme.spacing.xxl};
 `;
 
-const ProjectShowcaseWrapper = styled.div`
+const ProjectShowcaseWrapper = styled.div<{ $isWorkPage?: boolean }>`
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xl};
+  gap: ${({ theme, $isWorkPage }) => ($isWorkPage ? theme.spacing.xxxl : theme.spacing.xl)};
+  margin-top: ${({ theme, $isWorkPage }) => ($isWorkPage ? theme.spacing.xxl : 0)};
   margin-bottom: ${({ theme }) => theme.spacing.xxl};
 `;
 
@@ -27,13 +29,26 @@ const ProjectShowcaseSection = styled.div`
   gap: ${({ theme }) => theme.spacing.lg};
 `;
 
+const ProjectShowcaseHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.sm};
+`;
+
 const ProjectShowcaseTitle = styled(Typography.Headers.H4)`
   margin: 0;
+`;
+
+const ProjectShowcaseDescription = styled(Typography.Headers.H6)`
+  color: ${({ theme }) => hexToRgba(theme.colors.white, 0.66)};
+  max-width: 720px;
 `;
 
 export {
   ProjectShowcaseContainer,
   ProjectShowcaseWrapper,
   ProjectShowcaseSection,
+  ProjectShowcaseHeader,
   ProjectShowcaseTitle,
+  ProjectShowcaseDescription,
 };

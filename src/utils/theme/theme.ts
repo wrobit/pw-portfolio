@@ -51,7 +51,7 @@ const defaultTheme: DefaultTheme = {
       height: "60px",
     },
     navbar: {
-      height: "72px",
+      height: "64px",
     },
   },
 };
