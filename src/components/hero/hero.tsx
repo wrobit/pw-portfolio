@@ -5,6 +5,7 @@ import styled, { useTheme } from "styled-components";
 import ScrollDownIcon from "@assets/icons/expand-down-double.svg";
 import { Button, Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+import { hexToRgba } from "@utils/helpers/colors.helper";
 
 type HeroProps = {
   title: string;
@@ -78,7 +79,9 @@ export const Hero = ({
           <Typography.Headers.H1>{title}</Typography.Headers.H1>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
-          <Typography.Headers.H4 as="p">{description}</Typography.Headers.H4>
+          <Typography.Headers.H5 as="p" color={hexToRgba(theme.colors.white, 0.85)}>
+            {description}
+          </Typography.Headers.H5>
         </motion.div>
         {ctaLabel && onCtaClick && (
           <HeroActions>
