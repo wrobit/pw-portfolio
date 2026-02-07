@@ -1,4 +1,5 @@
 import resumePdf from "@assets/piotrwrobel-cv.pdf";
+
 import { Button } from "@components/shared";
 
 type ResumeDownloadButtonProps = {
