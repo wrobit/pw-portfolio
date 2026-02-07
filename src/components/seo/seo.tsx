@@ -44,12 +44,37 @@ export const Seo = ({
   const canonicalUrl = getCanonicalUrl(path);
   const pageImage = getMetaImage(image);
   const robotsContent = noIndex ? "noindex, nofollow" : "index, follow";
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: seoConfig.siteName,
+      url: seoConfig.siteUrl,
+      inLanguage: "en",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: seoConfig.personName,
+      jobTitle: seoConfig.personJobTitle,
+      url: seoConfig.siteUrl,
+      email: seoConfig.personEmail,
+      sameAs: seoConfig.sameAs,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: pageTitle,
+      description: pageDescription,
+      url: canonicalUrl,
+      inLanguage: "en",
+    },
+  ];
 
   return (
     <Helmet>
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
-      <meta name="keywords" content={seoConfig.defaultKeywords} />
       <meta name="robots" content={robotsContent} />
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={pageTitle} />
@@ -61,9 +86,11 @@ export const Seo = ({
       <meta property="og:image" content={pageImage} />
       <meta property="og:image:alt" content={pageTitle} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={seoConfig.twitterHandle} />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={pageImage} />
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
   );
 };

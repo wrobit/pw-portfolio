@@ -5,7 +5,15 @@
       "handle": "filesystem"
     },
     {
-      "src": "/(.*)",
+      "src": "^/$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/(about|work|pricing|contact|404)/?$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/project/(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17)/?$",
       "dest": "/index.html"
     }
   ]
