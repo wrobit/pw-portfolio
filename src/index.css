@@ -1,36 +1,36 @@
 @font-face {
   font-family: "DMSansRegular";
-  src: url("/fonts/DMSans-Regular.ttf") format("truetype");
+  src: url("/fonts/dm-sans-regular.ttf") format("truetype");
   font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansMedium";
-  src: url("/fonts/DMSans-Medium.ttf") format("truetype");
+  src: url("/fonts/dm-sans-medium.ttf") format("truetype");
   font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansBold";
-  src: url("/fonts/DMSans-Bold.ttf") format("truetype");
+  src: url("/fonts/dm-sans-bold.ttf") format("truetype");
   font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansItalic";
-  src: url("/fonts/DMSans-Italic.ttf") format("truetype");
+  src: url("/fonts/dm-sans-italic.ttf") format("truetype");
   font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansMediumItalic";
-  src: url("/fonts/DMSans-MediumItalic.ttf") format("truetype");
+  src: url("/fonts/dm-sans-medium-italic.ttf") format("truetype");
   font-display: optional;
 }
 
 @font-face {
   font-family: "DMSansBoldItalic";
-  src: url("/fonts/DMSans-BoldItalic.ttf") format("truetype");
+  src: url("/fonts/dm-sans-bold-italic.ttf") format("truetype");
   font-display: optional;
 }
 

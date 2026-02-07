@@ -1,4 +1,4 @@
-import { Seo } from "@components/seo/Seo";
+import { Seo } from "@components/seo/seo";
 import { Breadcrumb, Typography } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
 import { PricingSection } from "@features/pricing/components/pricing-section";
