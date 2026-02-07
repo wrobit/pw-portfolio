@@ -30,7 +30,7 @@ const NavbarWrapper = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     padding: 0 ${({ theme }) => theme.spacing.xxxxl};
   }
 

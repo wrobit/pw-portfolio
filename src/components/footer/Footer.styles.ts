@@ -16,11 +16,6 @@ const Footer = styled(motion.footer)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     padding: ${({ theme }) =>
-      `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: ${({ theme }) =>
       `${theme.spacing.xxxl} ${theme.spacing.xxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxl}`};
   }
 
