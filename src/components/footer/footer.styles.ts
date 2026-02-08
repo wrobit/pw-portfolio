@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import { Link } from "@components/shared/link/link";
 import { Typography } from "@components/shared/typography/typography";
 import { hexToRgba } from "@utils/helpers/colors.helper";
 
@@ -68,6 +69,16 @@ const FooterNavigationLinks = styled(motion.div)`
 const FooterNavigationHeaderText = styled(Typography.Default)`
   font-family: ${({ theme }) => theme.font.bold};
   font-size: ${({ theme }) => theme.fontSize.h6};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSize.body};
+  }
+`;
+
+const FooterNavigationLink = styled(Link)`
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSize.small};
+  }
 `;
 
 export {
@@ -76,4 +87,5 @@ export {
   FooterNavigationLinksContainer,
   FooterNavigationLinks,
   FooterNavigationHeaderText,
+  FooterNavigationLink,
 };

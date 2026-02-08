@@ -1,9 +1,8 @@
-import { data } from "@data/footer.data";
 import { motion } from "framer-motion";
 import { useTheme } from "styled-components";
 
 import { Typography } from "@components/shared";
-import { Link } from "@components/shared/link/link";
+import { data } from "@data/footer.data";
 import { useScrollAnimation } from "@utils/animations/hooks";
 
 import { footerItemVariants, footerVariants } from "./footer.animations";
@@ -30,9 +29,9 @@ export const Footer = () => {
                 {item.header.toUpperCase()}
               </Styled.FooterNavigationHeaderText>
               {item.links.map((link) => (
-                <Link key={link.label} href={link.href}>
+                <Styled.FooterNavigationLink key={link.label} href={link.href}>
                   {link.label.charAt(0).toUpperCase() + link.label.slice(1)}
-                </Link>
+                </Styled.FooterNavigationLink>
               ))}
             </Styled.FooterNavigationLinks>
           ))}
