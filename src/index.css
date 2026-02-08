@@ -60,6 +60,12 @@ body {
   padding: 0;
 }
 
+html.menu-open,
+body.menu-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 a,
 a:hover,
 a:visited {

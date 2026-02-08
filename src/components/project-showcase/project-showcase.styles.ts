@@ -37,11 +37,19 @@ const ProjectShowcaseHeader = styled.div`
 
 const ProjectShowcaseTitle = styled(Typography.Headers.H4)`
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSize.h6};
+  }
 `;
 
 const ProjectShowcaseDescription = styled(Typography.Headers.H6)`
   color: ${({ theme }) => hexToRgba(theme.colors.white, 0.66)};
   max-width: 720px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSize.body};
+  }
 `;
 
 export {

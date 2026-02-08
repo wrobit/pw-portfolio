@@ -9,6 +9,10 @@ export const ResumeActions = styled.div`
   width: 100%;
   display: flex;
   margin-top: ${({ theme }) => theme.spacing.lg};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin-top: ${({ theme }) => theme.spacing.sm};
+  }
 `;
 
 export const SectionsWrapper = styled.div`

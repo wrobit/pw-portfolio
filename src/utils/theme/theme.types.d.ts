@@ -23,6 +23,7 @@ declare module "styled-components" {
       h5: string;
       h6: string;
       body: string;
+      small: string;
     };
     breakpoints: {
       mobile: string;
