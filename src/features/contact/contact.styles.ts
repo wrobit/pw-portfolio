@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+import { hexToRgba } from "@utils/helpers/colors.helper";
+
 const ContactBreadcrumb = styled(motion.div)`
   width: 100%;
 `;
@@ -9,15 +11,21 @@ const ContactContainer = styled(motion.div)`
   position: relative;
   width: 100%;
   height: ${({ theme }) =>
-    `calc(100vh - ${theme.sizes.navbar.height} - ${theme.sizes.footer.height})`};
+    `calc(100vh - (${theme.sizes.navbar.height} + ${theme.sizes.footer.height}) - ${theme.spacing.xxxxl})`};
+  padding-bottom: ${({ theme }) => theme.spacing.xxxxl};
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 70px;
+  gap: ${({ theme }) => theme.spacing.xxxl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    gap: 50px;
+    gap: ${({ theme }) => theme.spacing.xxl};
+    padding-bottom: ${({ theme }) => theme.spacing.xxxl};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-bottom: ${({ theme }) => theme.spacing.xxl};
   }
 `;
 
@@ -51,14 +59,18 @@ const ContactEmailRow = styled.div`
 const ContactEmailBadge = styled.span`
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: ${({ theme }) => theme.colors.gray}22;
+  gap: ${({ theme }) => theme.spacing.sm};
+  padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.md}`};
+  border-radius: ${({ theme }) => theme.radius.lg};
+  background: ${({ theme }) => hexToRgba(theme.colors.gray, 0.14)};
   color: ${({ theme }) => theme.colors.gray};
-  font-size: 12px;
+  font-size: ${({ theme }) => theme.fontSize.small};
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 const ContactLinkItem = styled(motion.div)`

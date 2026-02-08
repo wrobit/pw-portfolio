@@ -27,9 +27,11 @@ export const Contact = () => {
         description="Get in touch with Piotr Wrobel for collaboration, product design, or software engineering opportunities."
         path={routes.contact}
       />
+
       <Styled.ContactBreadcrumb variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
         <Breadcrumb items={breadcrumbItems} />
       </Styled.ContactBreadcrumb>
+
       <Styled.ContactContainer
         ref={ref}
         variants={pageTransition}
