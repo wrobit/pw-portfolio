@@ -72,7 +72,7 @@ export const projects: Project[] = [
     image: mockupReMedio,
     descriptionImage: mockupReMedio,
     description:
-      "Remedio is a specialized agency for medical facilities. We provide comprehensive growth solutions including marketing strategy, patient acquisition campaigns (Google Ads, Meta, SEO), physician recruitment, website development with online registration, content & social media, and analytics. We help clinics, medical centers, and private practices scale their operations, increase patient visits, and optimize their digital presence.",
+      "Remedio is a specialized agency for medical facilities. They provide comprehensive growth solutions including marketing strategy, patient acquisition campaigns (Google Ads, Meta, SEO), physician recruitment, website development with online registration, content & social media, and analytics. They help clinics, medical centers, and private practices scale their operations, increase patient visits, and optimize their digital presence.",
     liveLink: "https://www.re-medio.pl/",
     client: "Quadrantive",
     role: "Developer & Designer",
