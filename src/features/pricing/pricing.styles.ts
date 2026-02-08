@@ -142,6 +142,10 @@ export const CardHeader = styled.div`
 
 export const CardDescription = styled(Typography.Headers.H6)`
   color: ${({ theme }) => hexToRgba(theme.colors.white, 0.62)};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSize.small};
+  }
 `;
 
 export const Badge = styled.span`
@@ -153,6 +157,10 @@ export const Badge = styled.span`
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: calc(${({ theme }) => theme.fontSize.small});
+  }
 `;
 
 export const PriceRows = styled.div`
@@ -192,12 +200,16 @@ export const PriceValue = styled(Typography.Headers.H4)`
   font-family: ${({ theme }) => theme.font.medium};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 22px;
+    font-size: calc(${({ theme }) => theme.fontSize.h5} - 2px);
   }
 `;
 
 export const PriceMeta = styled(Typography.Headers.H6)`
   color: ${({ theme }) => hexToRgba(theme.colors.white, 0.66)};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fontSize.small};
+  }
 `;
 
 export const FeatureList = styled.ul`
