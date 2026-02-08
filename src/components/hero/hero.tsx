@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
 
 import ScrollDownIcon from "@assets/icons/expand-down-double.svg";
 import { Button, Typography } from "@components/shared";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
 import { hexToRgba } from "@utils/helpers/colors.helper";
+
+import * as Styled from "./hero.styles";
 
 type HeroProps = {
   title: string;
@@ -67,14 +69,14 @@ export const Hero = ({
   };
 
   return (
-    <HeroSection
+    <Styled.HeroSection
       ref={heroSectionRef}
       variants={pageTransition}
       initial="initial"
       animate="animate"
       $compactSpacing={compactSpacing}
     >
-      <HeroTypographyWrapper $compactSpacing={compactSpacing}>
+      <Styled.HeroTypographyWrapper $compactSpacing={compactSpacing}>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
           <Typography.Headers.H1>{title}</Typography.Headers.H1>
         </motion.div>
@@ -84,18 +86,18 @@ export const Hero = ({
           </Typography.Headers.H5>
         </motion.div>
         {ctaLabel && onCtaClick && (
-          <HeroActions>
+          <Styled.HeroActions>
             <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
               <Button type="button" onClick={onCtaClick}>
                 {ctaLabel}
               </Button>
             </motion.div>
-          </HeroActions>
+          </Styled.HeroActions>
         )}
-      </HeroTypographyWrapper>
+      </Styled.HeroTypographyWrapper>
 
       {showScrollToExplore && (
-        <HeroButtonWrapper>
+        <Styled.HeroButtonWrapper>
           <motion.div
             variants={fadeInUp}
             initial="hidden"
@@ -103,104 +105,13 @@ export const Hero = ({
             custom={0.8}
             whileHover={{ y: -5 }}
           >
-            <HeroButton onClick={scrollToExplore} aria-label="Scroll to explore">
+            <Styled.HeroButton onClick={scrollToExplore} aria-label="Scroll to explore">
               <Typography.Buttons.Small color="inherit">scroll to explore</Typography.Buttons.Small>
-              <HeroButtonIcon src={ScrollDownIcon} alt="" aria-hidden="true" />
-            </HeroButton>
+              <Styled.HeroButtonIcon src={ScrollDownIcon} alt="" aria-hidden="true" />
+            </Styled.HeroButton>
           </motion.div>
-        </HeroButtonWrapper>
+        </Styled.HeroButtonWrapper>
       )}
-    </HeroSection>
+    </Styled.HeroSection>
   );
 };
-
-type HeroLayoutProps = {
-  $compactSpacing?: boolean;
-};
-
-const HeroSection = styled(motion.div)<HeroLayoutProps>`
-  width: 100%;
-  margin-top: ${({ theme, $compactSpacing }) => ($compactSpacing ? 0 : theme.spacing.xxl)};
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme, $compactSpacing }) => ($compactSpacing ? theme.spacing.lg : theme.spacing.xxxl)};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 100%;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    gap: ${({ theme }) => theme.spacing.lg};
-    margin-top: ${({ theme, $compactSpacing }) => ($compactSpacing ? 0 : theme.spacing.lg)};
-  }
-`;
-
-const HeroTypographyWrapper = styled.div<HeroLayoutProps>`
-  width: ${({ $compactSpacing }) => ($compactSpacing ? "100%" : "80%")};
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme, $compactSpacing }) => ($compactSpacing ? theme.spacing.lg : theme.spacing.xxl)};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 100%;
-  }
-`;
-
-const HeroActions = styled.div`
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing.lg};
-`;
-
-const HeroButtonWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const HeroButton = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.md};
-  gap: ${({ theme }) => theme.spacing.sm};
-  color: ${({ theme }) => theme.colors.gray};
-  border: none;
-  cursor: pointer;
-  transition: color 200ms linear;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.white};
-
-    & span {
-      color: ${({ theme }) => theme.colors.white};
-    }
-
-    & img {
-      animation-play-state: paused;
-    }
-  }
-`;
-
-const HeroButtonIcon = styled.img`
-  animation: bounce 500ms infinite linear;
-
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 26px;
-    height: 26px;
-  }
-`;

@@ -33,7 +33,11 @@ export const ControlsRow = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: ${({ theme }) => theme.spacing.md};
+  margin-top: ${({ theme }) => theme.spacing.lg};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin-top: ${({ theme }) => theme.spacing.sm};
+  }
 `;
 
 export const ControlButtonGroup = styled.div`

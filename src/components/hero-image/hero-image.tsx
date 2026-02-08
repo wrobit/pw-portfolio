@@ -1,54 +1,24 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import styled from "styled-components";
 
 import heroImage from "@assets/images/hero/hero-image.avif";
 import { fadeInUp, pageTransition } from "@utils/animations/variants";
+
+import * as Styled from "./hero-image.styles";
 
 export const HeroImage = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <ImageWrapper
+    <Styled.ImageWrapper
       ref={heroSectionRef}
       variants={pageTransition}
       initial="initial"
       animate="animate"
     >
       <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.5}>
-        <Image src={heroImage} alt="Hero Image" />
+        <Styled.Image src={heroImage} alt="Hero Image" />
       </motion.div>
-    </ImageWrapper>
+    </Styled.ImageWrapper>
   );
 };
-
-const ImageWrapper = styled(motion.div)`
-  width: 100%;
-  margin: ${({ theme }) => theme.spacing.xxl} 0;
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xxxl};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 100%;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin: ${({ theme }) => theme.spacing.lg} 0;
-  }
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: ${({ theme }) => theme.radius.lg};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    height: 350px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    height: 275px;
-  }
-`;
