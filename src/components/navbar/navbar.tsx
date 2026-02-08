@@ -6,6 +6,7 @@ import { Logo } from "@components/shared";
 import { routes } from "@utils/constants/routes.constants";
 
 import { menuItemVariants, menuVariants } from "./navbar.animations";
+import { SCROLL_LOCK_CLASS } from "./navbar.constants";
 import * as Styled from "./navbar.styles";
 
 export const MENU_ITEMS = [
@@ -26,6 +27,18 @@ export const Navbar = () => {
   useEffect(() => {
     onRouteChange();
   }, [location]);
+
+  useEffect(() => {
+    const { body, documentElement } = document;
+
+    body.classList.toggle(SCROLL_LOCK_CLASS, isHamburgerOpen);
+    documentElement.classList.toggle(SCROLL_LOCK_CLASS, isHamburgerOpen);
+
+    return () => {
+      body.classList.remove(SCROLL_LOCK_CLASS);
+      documentElement.classList.remove(SCROLL_LOCK_CLASS);
+    };
+  }, [isHamburgerOpen]);
 
   const renderNavbar = () => (
     <Styled.NavbarWrapper
