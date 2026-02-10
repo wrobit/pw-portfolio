@@ -84,12 +84,16 @@ export const Seo = ({
       <meta property="og:site_name" content={seoConfig.siteName} />
       <meta property="og:locale" content={seoConfig.locale} />
       <meta property="og:image" content={pageImage} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={pageTitle} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={seoConfig.twitterHandle} />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={pageImage} />
+      <meta name="twitter:image:alt" content={pageTitle} />
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
   );

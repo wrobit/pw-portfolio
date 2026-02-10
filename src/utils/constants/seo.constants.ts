@@ -1,5 +1,3 @@
-import heroImage from "@assets/images/hero/hero-image.avif";
-
 export const seoConfig = {
   siteName: "Wrobit - Piotr Wrobel",
   siteUrl: "https://www.piotrwrobel.eu",
@@ -14,7 +12,7 @@ export const seoConfig = {
   defaultTitle: "Wrobit - Piotr Wrobel | Software Engineer & UX/UI Designer",
   defaultDescription:
     "Software engineer and UX/UI designer based in Poland, focused on building thoughtful, high-performance web experiences and product interfaces.",
-  defaultImage: heroImage,
+  defaultImage: "/social-preview.png",
   locale: "en_US",
   twitterHandle: "@wrobit",
 };
