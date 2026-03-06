@@ -18,13 +18,13 @@ export const contactLinks: ContactLink[] = [
   {
     id: 1,
     name: "linkedin",
-    url: "https://www.linkedin.com/in/piotrwrobel-ajiiz",
+    url: "https://www.linkedin.com/in/piotrwrobel-wrobit",
     icon: () => createIcon(FaLinkedin),
   },
   {
     id: 2,
     name: "github",
-    url: "https://github.com/ajiiz",
+    url: "https://github.com/wrobit",
     icon: () => createIcon(FaGithub),
   },
   {
