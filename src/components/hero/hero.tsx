@@ -78,7 +78,7 @@ export const Hero = ({
     >
       <Styled.HeroTypographyWrapper $compactSpacing={compactSpacing}>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.2}>
-          <Typography.Headers.H1>{title}</Typography.Headers.H1>
+          <Styled.HeroTitle>{title}</Styled.HeroTitle>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.4}>
           <Typography.Headers.H5 as="p" color={hexToRgba(theme.colors.white, 0.85)}>

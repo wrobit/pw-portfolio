@@ -34,10 +34,70 @@
   font-display: optional;
 }
 
+@font-face {
+  font-family: "CormorantInfantLight";
+  src: url("/fonts/CormorantInfant-Light.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantLightItalic";
+  src: url("/fonts/CormorantInfant-LightItalic.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantRegular";
+  src: url("/fonts/CormorantInfant-Regular.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantItalic";
+  src: url("/fonts/CormorantInfant-Italic.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantMedium";
+  src: url("/fonts/CormorantInfant-Medium.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantMediumItalic";
+  src: url("/fonts/CormorantInfant-MediumItalic.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantSemiBold";
+  src: url("/fonts/CormorantInfant-SemiBold.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantSemiBoldItalic";
+  src: url("/fonts/CormorantInfant-SemiBoldItalic.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantBold";
+  src: url("/fonts/CormorantInfant-Bold.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "CormorantInfantBoldItalic";
+  src: url("/fonts/CormorantInfant-BoldItalic.ttf") format("truetype");
+  font-display: optional;
+}
+
 :root {
   font-family: "DMSansRegular", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.75);
   background-color: #080808;
   font-size: 16px;
   font-synthesis: none;

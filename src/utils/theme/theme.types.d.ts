@@ -7,6 +7,8 @@ declare module "styled-components" {
       white: string;
       green: string;
       gray: string;
+      purple: string;
+      orange: string;
     };
     font: {
       regular: string;
@@ -14,6 +16,16 @@ declare module "styled-components" {
       bold: string;
       italic: string;
       boldItalic: string;
+      lightSecondary: string;
+      lightItalicSecondary: string;
+      regularSecondary: string;
+      italicSecondary: string;
+      mediumSecondary: string;
+      mediumItalicSecondary: string;
+      semiBoldSecondary: string;
+      semiBoldItalicSecondary: string;
+      boldSecondary: string;
+      boldItalicSecondary: string;
     };
     fontSize: {
       h1: string;
@@ -40,6 +52,7 @@ declare module "styled-components" {
       xxxl: string;
       xxxxl: string;
       xxxxxl: string;
+      xxxxxxl: string;
     };
     radius: {
       sm: string;

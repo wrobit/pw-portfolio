@@ -6,6 +6,8 @@ const defaultTheme: DefaultTheme = {
     white: "#FFFFFF",
     green: "#5F7C5F",
     gray: "#808080",
+    purple: "#3D348B",
+    orange: "#F35B04",
   },
   font: {
     regular: "DMSansRegular",
@@ -13,6 +15,16 @@ const defaultTheme: DefaultTheme = {
     bold: "DMSansBold",
     italic: "DMSansItalic",
     boldItalic: "DMSansBoldItalic",
+    lightSecondary: "CormorantInfantLight",
+    lightItalicSecondary: "CormorantInfantLightItalic",
+    regularSecondary: "CormorantInfantRegular",
+    italicSecondary: "CormorantInfantItalic",
+    mediumSecondary: "CormorantInfantMedium",
+    mediumItalicSecondary: "CormorantInfantMediumItalic",
+    semiBoldSecondary: "CormorantInfantSemiBold",
+    semiBoldItalicSecondary: "CormorantInfantSemiBoldItalic",
+    boldSecondary: "CormorantInfantBold",
+    boldItalicSecondary: "CormorantInfantBoldItalic",
   },
   fontSize: {
     h1: "56px",
@@ -39,6 +51,7 @@ const defaultTheme: DefaultTheme = {
     xxxl: "64px",
     xxxxl: "80px",
     xxxxxl: "192px",
+    xxxxxxl: "256px",
   },
   radius: {
     sm: "4px",
