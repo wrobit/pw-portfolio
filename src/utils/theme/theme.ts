@@ -35,6 +35,7 @@ const defaultTheme: DefaultTheme = {
     h6: "16px",
     body: "14px",
     small: "12px",
+    logo: "148px",
   },
   breakpoints: {
     mobile: "500px",

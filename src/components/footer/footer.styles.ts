@@ -27,13 +27,14 @@ const Footer = styled(motion.footer)`
 `;
 
 const FooterNavigation = styled.div`
-  padding-top: ${({ theme }) => theme.spacing.xxl};
+  padding-top: ${({ theme }) => theme.spacing.xxxxl};
   display: flex;
   flex-direction: row;
-  gap: ${({ theme }) => theme.spacing.xxxxl};
+  justify-content: space-between;
+  /* gap: ${({ theme }) => theme.spacing.xxxxl}; */
   border-top: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.1)};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
     padding-top: ${({ theme }) => theme.spacing.xl};
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.xxl};
@@ -45,17 +46,18 @@ const FooterNavigation = styled.div`
   }
 `;
 
+const FooterLogo = styled(Typography.Headers.Logo)`
+  color: ${({ theme }) => theme.colors.orange};
+`;
+
 const FooterNavigationLinksContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: ${({ theme }) => theme.spacing.xxxxxl};
+  gap: ${({ theme }) => theme.spacing.xxxxl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
     gap: ${({ theme }) => theme.spacing.xxl};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     justify-content: space-between;
   }
 `;
@@ -92,4 +94,5 @@ export {
   FooterNavigationLinks,
   FooterNavigationHeaderText,
   FooterNavigationLink,
+  FooterLogo,
 };

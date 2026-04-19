@@ -4,6 +4,7 @@ import { H3 } from "@components/shared/typography/headers/h3/h3";
 import { H4 } from "@components/shared/typography/headers/h4/h4";
 import { H5 } from "@components/shared/typography/headers/h5/h5";
 import { H6 } from "@components/shared/typography/headers/h6/h6";
+import { Logo } from "@components/shared/typography/headers/logo/logo";
 import { TypographyProps } from "@components/shared/typography/typography.types";
 
 export const Headers = ({ children }: TypographyProps) => {
@@ -16,3 +17,4 @@ Headers.H3 = H3;
 Headers.H4 = H4;
 Headers.H5 = H5;
 Headers.H6 = H6;
+Headers.Logo = Logo;

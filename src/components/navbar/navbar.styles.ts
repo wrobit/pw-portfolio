@@ -51,15 +51,16 @@ const Link = styled(RouterLink)<{ $isActive?: boolean }>`
   font-size: 16px;
   margin: 0 16px;
   position: relative;
-  text-decoration: none;
   transition: color 100ms linear;
+  color: ${({ theme, $isActive }) =>
+    $isActive ? theme.colors.orange : theme.colors.white} !important;
 
   &:active {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.4)};
+    color: ${({ theme }) => theme.colors.orange} !important;
   }
 
   &:hover {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)} !important;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
