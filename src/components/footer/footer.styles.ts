@@ -9,7 +9,7 @@ const Footer = styled(motion.footer)`
   width: 100%;
   min-height: 100px;
   padding: ${({ theme }) =>
-    `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
+    `${theme.spacing.xxxl} ${theme.spacing.xxxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxxl}`};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,6 +67,7 @@ const FooterNavigationLinks = styled(motion.div)`
 `;
 
 const FooterNavigationHeaderText = styled(Typography.Default)`
+  color: ${({ theme }) => theme.colors.orange};
   font-family: ${({ theme }) => theme.font.bold};
   font-size: ${({ theme }) => theme.fontSize.h6};
 
@@ -76,6 +77,9 @@ const FooterNavigationHeaderText = styled(Typography.Default)`
 `;
 
 const FooterNavigationLink = styled(Link)`
+  font-family: ${({ theme }) => theme.font.regular};
+  font-size: ${({ theme }) => theme.fontSize.body};
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSize.small};
   }

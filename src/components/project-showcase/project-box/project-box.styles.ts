@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Typography } from "@components/shared";
 
 const ProjectBoxContainer = styled(motion.div)<{ $isExpanded: boolean }>`
-  height: 500px;
+  height: 375px;
   grid-column: ${({ $isExpanded }) => ($isExpanded ? "span 2" : "span 1")};
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ const ProjectBoxContainer = styled(motion.div)<{ $isExpanded: boolean }>`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 300px;
+    height: 225px;
     gap: ${({ theme }) => theme.spacing.md};
   }
 `;
@@ -30,7 +30,7 @@ const ProjectBoxContainerContent = styled(motion.div)`
 
 const ProjectBoxImageWrapper = styled(RouterLink)`
   width: 100%;
-  height: 454px;
+  height: 340px;
   border-radius: ${({ theme }) => theme.radius.xl};
   overflow: hidden;
   position: relative;
@@ -39,7 +39,7 @@ const ProjectBoxImageWrapper = styled(RouterLink)`
   background: ${({ theme }) => theme.colors.black};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    height: 260px;
+    height: 225px;
   }
 `;
 
@@ -59,11 +59,13 @@ const ProjectBoxLink = styled(RouterLink)`
   cursor: none;
   display: block;
   margin-top: auto;
+  font-family: ${({ theme }) => theme.font.regular};
+  font-size: ${({ theme }) => theme.fontSize.body};
 `;
 
 const ProjectBoxTitle = styled(Typography.Headers.H6)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 14px;
+    font-size: 12px;
   }
 `;
 

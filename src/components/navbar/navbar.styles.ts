@@ -25,7 +25,7 @@ const Wrapper = styled.div<WrapperProps>`
 const NavbarWrapper = styled(motion.div)`
   width: 100%;
   height: ${({ theme }) => theme.sizes.navbar.height};
-  padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
+  padding: 0 ${({ theme }) => theme.spacing.xxxxxxl};
   display: flex;
   align-items: center;
   justify-content: space-between;

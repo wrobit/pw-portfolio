@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import leavesImage from "@assets/leaves.avif";
 import { Typography } from "@components/shared";
 import { useScrollAnimation } from "@utils/animations/hooks";
 import { fadeInUp, hoverScale, pageTransition } from "@utils/animations/variants";
@@ -43,16 +42,6 @@ export const AboutMe = () => {
           </Styled.AboutMeButton>
         </motion.div>
       </Styled.AboutMeHeader>
-      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.4}>
-        <Styled.AboutMeImage
-          src={leavesImage}
-          alt="Decorative leaves"
-          loading="lazy"
-          initial={{ scale: 0.95 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        />
-      </motion.div>
     </Styled.AboutMeSection>
   );
 };

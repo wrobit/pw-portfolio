@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PageTemplateWrapper = styled.div`
   width: 100%;
-  padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
+  padding: ${({ theme }) => `0 ${theme.spacing.xxxxxxl}`};
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.xl};

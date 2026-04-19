@@ -10,7 +10,7 @@ import { ProjectBox } from "./project-box/project-box";
 import * as Styled from "./project-showcase.styles";
 import { Project } from "./project-showcase.types";
 
-const PROJECTS_TO_SHOW_ON_HOME_PAGE = 9;
+const PROJECTS_TO_SHOW_ON_HOME_PAGE = 7;
 
 export const ProjectShowcase = () => {
   const location = useLocation();
@@ -57,8 +57,10 @@ export const ProjectShowcase = () => {
     <Styled.ProjectShowcaseWrapper $isWorkPage={isWorkPage}>
       {commercialProjects.length > 0 &&
         renderProjectSection(
-          "Client Builds",
-          "Production projects delivered for companies and growing teams.",
+          // "Client Builds",
+          // "Production projects delivered for companies and growing teams.",
+          "",
+          "",
           commercialProjects,
           0
         )}

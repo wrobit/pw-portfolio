@@ -17,10 +17,10 @@ export const Footer = () => {
     <Styled.Footer ref={ref} variants={footerVariants} initial="hidden" animate={controls}>
       <Styled.FooterNavigation>
         <motion.div variants={footerItemVariants}>
-          <Typography.Headers.H5 as="p">
+          <Typography.Headers.H6 as="p" color={theme.colors.gray}>
             From pixel-perfect designs to intuitive user experiences. Let's collaborate and create
             something remarkable together.
-          </Typography.Headers.H5>
+          </Typography.Headers.H6>
         </motion.div>
         <Styled.FooterNavigationLinksContainer>
           {data.map((item) => (

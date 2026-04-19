@@ -12,7 +12,7 @@ import * as Styled from "./navbar.styles";
 export const MENU_ITEMS = [
   { path: routes.work, label: "Work", index: 1 },
   { path: routes.about, label: "About", index: 2 },
-  { path: routes.pricing, label: "Pricing", index: 3 },
+  // { path: routes.pricing, label: "Pricing", index: 3 },
   { path: routes.contact, label: "Contact", index: 4 },
 ];
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const H2 = styled.h2`
   color: ${({ theme, color }) => color || theme.colors.white};
   font-family: ${({ theme }) => theme.font.medium};
-  font-size: 56px;
+  font-size: 50px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     font-size: 36px;

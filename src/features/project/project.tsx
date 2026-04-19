@@ -111,7 +111,12 @@ export const Project = () => {
       <Styled.ProjectBreadcrumb variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
         <Breadcrumb items={breadcrumbItems as BreadcrumbItem[]} />
       </Styled.ProjectBreadcrumb>
-      <Hero title={project?.title} description={project?.description} showScrollToExplore={false} />
+      <Hero
+        title={project?.title}
+        description={project?.description}
+        showScrollToExplore={false}
+        compactSpacing
+      />
       <Styled.ProjectInfoSection
         ref={ref}
         variants={pageTransition}
