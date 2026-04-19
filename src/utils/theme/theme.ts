@@ -34,7 +34,7 @@ const defaultTheme: DefaultTheme = {
     h5: "20px",
     h6: "16px",
     body: "14px",
-    small: "12px",
+    small: "10px",
     logo: "148px",
   },
   breakpoints: {
