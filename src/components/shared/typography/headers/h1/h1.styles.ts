@@ -12,8 +12,8 @@ const H1 = styled.h1`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 38px;
+    line-height: 38px;
   }
 `;
 

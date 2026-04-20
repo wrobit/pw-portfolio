@@ -22,7 +22,7 @@ const Footer = styled(motion.footer)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     padding: ${({ theme }) =>
-      `${theme.spacing.xxxl} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl}`};
+      `${theme.spacing.xxxl} ${theme.spacing.lg} ${theme.spacing.xl} ${theme.spacing.lg}`};
   }
 `;
 
@@ -31,7 +31,6 @@ const FooterNavigation = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* gap: ${({ theme }) => theme.spacing.xxxxl}; */
   border-top: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.1)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {

@@ -7,8 +7,8 @@ const Logo = styled.h1`
   line-height: ${({ theme }) => theme.fontSize.logo};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 114px;
+    line-height: 114px;
   }
 `;
 

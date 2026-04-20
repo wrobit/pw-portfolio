@@ -35,7 +35,7 @@ const NavbarWrapper = styled(motion.div)`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 0 ${({ theme }) => theme.spacing.xl};
+    padding: 0 ${({ theme }) => theme.spacing.lg};
   }
 `;
 
