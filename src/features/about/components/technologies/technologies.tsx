@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import leavesImage from "@assets/leaves.avif";
+// import leavesImage from "@assets/leaves.avif";
 import { Typography } from "@components/shared";
 import {
   timelineItemVariants,
@@ -60,7 +60,7 @@ export const Technologies = () => {
           </TechnologiesStyled.ListRow>
         ))}
       </Styled.List>
-      <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.8}>
+      {/* <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.8}>
         <Styled.FooterImage
           src={leavesImage}
           alt="Decorative leaves"
@@ -69,7 +69,7 @@ export const Technologies = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         />
-      </motion.div>
+      </motion.div> */}
     </Styled.Section>
   );
 };

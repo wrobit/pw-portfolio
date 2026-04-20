@@ -6,8 +6,6 @@ import { Seo } from "@components/seo/seo";
 import { routes } from "@utils/constants/routes.constants";
 import { PageTemplateWrapper } from "@utils/template/template.styles";
 
-import { AboutMe } from "./components/about-me/about-me";
-
 export const Home = () => {
   const navigate = useNavigate();
 
@@ -19,13 +17,14 @@ export const Home = () => {
       />
       <Hero
         title="Software Engineer, Designer, Runner"
-        description="Software developer based in Poland. Mostly interested in web development and UI/UX design. Person that always seek to create everything from his own ideas. Looking for new opportunities and ideas."
-        ctaLabel="Connect with me"
+        description="Software engineer based in Poland. I build web products with full-stack development from concept to launch. I think carefully about interfaces, and I run long distances. The two are more related than they sound."
+        ctaLabel="Get in touch"
+        additionalActionLabel="About me"
+        onAdditionalActionClick={() => navigate(routes.about)}
         onCtaClick={() => navigate(routes.contact)}
         showScrollToExplore={false}
       />
       <ProjectShowcase />
-      <AboutMe />
     </PageTemplateWrapper>
   );
 };

@@ -14,6 +14,8 @@ type HeroProps = {
   description: string;
   ctaLabel?: string;
   onCtaClick?: () => void;
+  additionalActionLabel?: string;
+  onAdditionalActionClick?: () => void;
   showScrollToExplore?: boolean;
   compactSpacing?: boolean;
 };
@@ -23,6 +25,8 @@ export const Hero = ({
   description,
   ctaLabel,
   onCtaClick,
+  additionalActionLabel,
+  onAdditionalActionClick,
   showScrollToExplore = true,
   compactSpacing = false,
 }: HeroProps) => {
@@ -86,12 +90,15 @@ export const Hero = ({
           </Typography.Headers.H5>
         </motion.div>
         {ctaLabel && onCtaClick && (
-          <Styled.HeroActions>
-            <motion.div variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
-              <Button type="button" onClick={onCtaClick}>
-                {ctaLabel}
+          <Styled.HeroActions variants={fadeInUp} initial="hidden" animate="visible" custom={0.6}>
+            {additionalActionLabel && onAdditionalActionClick && (
+              <Button type="button" variant="secondary" onClick={onAdditionalActionClick}>
+                {additionalActionLabel}
               </Button>
-            </motion.div>
+            )}
+            <Button type="button" onClick={onCtaClick}>
+              {ctaLabel}
+            </Button>
           </Styled.HeroActions>
         )}
       </Styled.HeroTypographyWrapper>

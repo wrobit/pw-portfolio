@@ -1,42 +1,25 @@
-import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAws, FaCube, FaNode } from "react-icons/fa6";
 import { RiNextjsLine } from "react-icons/ri";
 import {
-  SiBun,
-  SiClickup,
+  SiClaude,
   SiCloudflare,
   SiCypress,
   SiDocker,
   SiExpo,
-  SiExpress,
-  SiGit,
   SiGithubactions,
-  SiJavascript,
-  SiJest,
+  SiFastapi,
   SiNestjs,
-  SiPnpm,
-  SiPrisma,
+  SiOpenai,
+  SiPytorch,
+  SiPython,
   SiReact,
-  SiRedux,
-  SiRemix,
   SiSentry,
-  SiShadcnui,
-  SiSlack,
-  SiStorybook,
-  SiStyledcomponents,
-  SiTailwindcss,
+  SiTestinglibrary,
   SiTypescript,
-  SiUpstash,
-  SiVercel,
   SiVite,
   SiVitest,
 } from "react-icons/si";
-import {
-  TbBrandReactNative,
-  TbBrandFigma,
-  TbBrandFramer,
-  TbBrandFramerMotion,
-} from "react-icons/tb";
+import { TbBrandReactNative, TbBrandFigma, TbBrandFramer } from "react-icons/tb";
 
 interface TechnologiesData {
   title: string;
@@ -54,23 +37,21 @@ const createIcon = (IconComponent: any, size: number = DEFAULT_ICON_SIZE): JSX.E
 export const data: TechnologiesData[] = [
   {
     title: "General",
-    description:
-      "Building everything with TypeScript and React, but being JavaScript engineer at the end of the day.",
+    description: "Type-safe by default, Python when needed.",
     technologies: [
       {
         name: "TypeScript",
         icon: () => createIcon(SiTypescript, DEFAULT_ICON_SIZE),
       },
       {
-        name: "JavaScript",
-        icon: () => createIcon(SiJavascript, DEFAULT_ICON_SIZE),
+        name: "Python",
+        icon: () => createIcon(SiPython, DEFAULT_ICON_SIZE),
       },
     ],
   },
   {
     title: "Front-end",
-    description:
-      "Using full-stack libraries and frameworks to produce fast and SEO-friendly applications.",
+    description: "Building smooth interfaces across web and mobile.",
     technologies: [
       {
         name: "React",
@@ -93,47 +74,6 @@ export const data: TechnologiesData[] = [
         icon: () => createIcon(SiVite, DEFAULT_ICON_SIZE),
       },
       {
-        name: "Remix",
-        icon: () => createIcon(SiRemix, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Redux",
-        icon: () => createIcon(SiRedux, DEFAULT_ICON_SIZE),
-      },
-    ],
-  },
-  {
-    title: "Styling & UI Libraries",
-    description:
-      "The styles are always aligned with the design system and the UI library and selected based on the project's needs.",
-    technologies: [
-      {
-        name: "Styled Components",
-        icon: () => createIcon(SiStyledcomponents, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Tailwind CSS",
-        icon: () => createIcon(SiTailwindcss, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Storybook",
-        icon: () => createIcon(SiStorybook, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Shadcn UI",
-        icon: () => createIcon(SiShadcnui, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Framer Motion",
-        icon: () => createIcon(TbBrandFramerMotion, DEFAULT_ICON_SIZE),
-      },
-    ],
-  },
-  {
-    title: "Design",
-    description: "Designing the UI and the UX of the application according to the client's needs.",
-    technologies: [
-      {
         name: "Framer",
         icon: () => createIcon(TbBrandFramer, DEFAULT_ICON_SIZE),
       },
@@ -145,8 +85,7 @@ export const data: TechnologiesData[] = [
   },
   {
     title: "Back-end",
-    description:
-      "Using the best practices and tools to ensure scalable and fast back-end architectures.",
+    description: "Focused on reliable APIs and clear architecture.",
     technologies: [
       {
         name: "Node.js",
@@ -157,30 +96,18 @@ export const data: TechnologiesData[] = [
         icon: () => createIcon(SiNestjs, DEFAULT_ICON_SIZE),
       },
       {
-        name: "Express",
-        icon: () => createIcon(SiExpress, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Prisma",
-        icon: () => createIcon(SiPrisma, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Neondb",
-        icon: () => createIcon(BiLogoPostgresql, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Upstash",
-        icon: () => createIcon(SiUpstash, DEFAULT_ICON_SIZE),
+        name: "FastAPI",
+        icon: () => createIcon(SiFastapi, DEFAULT_ICON_SIZE),
       },
     ],
   },
   {
     title: "Testing",
-    description: "Testing the application to ensure the best code quality.",
+    description: "Shipping with confidence through practical test coverage.",
     technologies: [
       {
-        name: "Jest",
-        icon: () => createIcon(SiJest, DEFAULT_ICON_SIZE),
+        name: "RTL",
+        icon: () => createIcon(SiTestinglibrary, DEFAULT_ICON_SIZE),
       },
       {
         name: "Vitest",
@@ -193,26 +120,8 @@ export const data: TechnologiesData[] = [
     ],
   },
   {
-    title: "CI/CD",
-    description: "Automating the build and deployment process.",
-    technologies: [
-      {
-        name: "GitHub Actions",
-        icon: () => createIcon(SiGithubactions, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Docker",
-        icon: () => createIcon(SiDocker, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Sentry",
-        icon: () => createIcon(SiSentry, DEFAULT_ICON_SIZE),
-      },
-    ],
-  },
-  {
     title: "Cloud",
-    description: "Managing the cloud infrastructure and services.",
+    description: "Deploying and monitoring apps in modern cloud stacks.",
     technologies: [
       {
         name: "AWS",
@@ -223,38 +132,52 @@ export const data: TechnologiesData[] = [
         icon: () => createIcon(SiCloudflare, DEFAULT_ICON_SIZE),
       },
       {
-        name: "Vercel",
-        icon: () => createIcon(SiVercel, DEFAULT_ICON_SIZE),
+        name: "Docker",
+        icon: () => createIcon(SiDocker, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "Sentry",
+        icon: () => createIcon(SiSentry, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "GitHub Actions",
+        icon: () => createIcon(SiGithubactions, DEFAULT_ICON_SIZE),
       },
     ],
   },
   {
-    title: "Tools",
-    description: "Modern tools to make the development process faster and more efficient.",
+    title: "AI",
+    description: "Using AI tools to iterate faster and ship better.",
     technologies: [
-      {
-        name: "git",
-        icon: () => createIcon(SiGit, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "bun",
-        icon: () => createIcon(SiBun, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "pnpm",
-        icon: () => createIcon(SiPnpm, DEFAULT_ICON_SIZE),
-      },
       {
         name: "Cursor",
         icon: () => createIcon(FaCube, DEFAULT_ICON_SIZE),
       },
       {
-        name: "Slack",
-        icon: () => createIcon(SiSlack, DEFAULT_ICON_SIZE),
+        name: "OpenCode",
+        icon: () => createIcon(SiOpenai, DEFAULT_ICON_SIZE),
       },
       {
-        name: "ClickUp",
-        icon: () => createIcon(SiClickup, DEFAULT_ICON_SIZE),
+        name: "Claude",
+        icon: () => createIcon(SiClaude, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "Codex",
+        icon: () => createIcon(SiOpenai, DEFAULT_ICON_SIZE),
+      },
+    ],
+  },
+  {
+    title: "Learning",
+    description: "Currently exploring ML and Python ecosystem tools.",
+    technologies: [
+      {
+        name: "PyTorch",
+        icon: () => createIcon(SiPytorch, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "FastAPI",
+        icon: () => createIcon(SiFastapi, DEFAULT_ICON_SIZE),
       },
     ],
   },

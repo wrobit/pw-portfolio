@@ -19,16 +19,12 @@ const ImageWrapper = styled(motion.div)`
 
 const Image = styled.img`
   width: 100%;
-  height: 450px;
-  object-fit: cover;
+  height: 225px;
+  object-fit: contain;
   border-radius: ${({ theme }) => theme.radius.lg};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    height: 350px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    height: 275px;
+    height: 200px;
   }
 `;
 

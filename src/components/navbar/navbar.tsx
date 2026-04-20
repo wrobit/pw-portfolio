@@ -13,7 +13,7 @@ export const MENU_ITEMS = [
   { path: routes.work, label: "Work", index: 1 },
   { path: routes.about, label: "About", index: 2 },
   // { path: routes.pricing, label: "Pricing", index: 3 },
-  { path: routes.contact, label: "Contact", index: 4 },
+  { path: routes.contact, label: "Contact", index: 3 },
 ];
 
 export const Navbar = () => {
@@ -86,7 +86,9 @@ export const Navbar = () => {
                     to={item.path}
                     $isActive={location.pathname === item.path}
                   >
-                    <Styled.HamburgerMenuLinkIndex>{`${item.index} `}</Styled.HamburgerMenuLinkIndex>
+                    <Styled.HamburgerMenuLinkIndex
+                      $isActive={location.pathname === item.path}
+                    >{`${item.index} `}</Styled.HamburgerMenuLinkIndex>
                     {item.label}
                   </Styled.HamburgerMenuLink>
                 </motion.div>

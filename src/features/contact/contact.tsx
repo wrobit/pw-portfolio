@@ -48,7 +48,7 @@ export const Contact = () => {
         >
           <Typography.Headers.H1>Contact me</Typography.Headers.H1>
           <Typography.Headers.H5 as="p">
-            Connect with me and let's deploy our ideas together. Communicating is the key.
+            Got an idea or project in mind? Let’s talk.
           </Typography.Headers.H5>
         </Styled.ContactContentWrapper>
         <Styled.ContactContentWrapper
@@ -95,7 +95,7 @@ export const Contact = () => {
           custom={0.8}
         >
           <Typography.Headers.H6 as="p">
-            From Poland with love, coding at home
+            Built by wrobit · One phase at a time.
           </Typography.Headers.H6>
           <Typography.Headers.H6 as="p"></Typography.Headers.H6>
         </Styled.ContactContentWrapper>

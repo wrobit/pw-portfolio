@@ -5,4 +5,5 @@ export type ButtonProps = {
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
   size?: "small" | "large";
+  variant?: "primary" | "secondary";
 } & PropsWithChildren;

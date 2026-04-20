@@ -47,7 +47,7 @@ const HeroTitle = styled(Typography.Headers.H1)`
   color: ${({ theme }) => theme.colors.orange};
 `;
 
-const HeroActions = styled.div`
+const HeroActions = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.lg};
