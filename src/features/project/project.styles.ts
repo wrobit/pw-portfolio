@@ -48,18 +48,7 @@ const ProjectInfoSection = styled(motion.div)`
 const ProjectInfoGrid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 0.9fr 1fr 1.4fr 1fr;
-  gap: ${({ theme }) => theme.spacing.xxl};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: ${({ theme }) => theme.spacing.xl};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    grid-template-columns: 1fr;
-    gap: ${({ theme }) => theme.spacing.lg};
-  }
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 `;
 
 const ProjectInfoItem = styled(motion.div)`
@@ -67,10 +56,12 @@ const ProjectInfoItem = styled(motion.div)`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.sm};
   min-width: 0;
+  border-radius: ${({ theme }) => theme.radius.sm};
+  background: ${({ theme }) => theme.colors.black}66;
 `;
 
 const ProjectInfoLabel = styled(Typography.Headers.H6)`
-  color: ${({ theme }) => theme.colors.gray};
+  color: ${({ theme }) => theme.colors.orange} !important;
   font-family: ${({ theme }) => theme.font.medium};
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -79,12 +70,6 @@ const ProjectInfoLabel = styled(Typography.Headers.H6)`
 const ProjectInfoValue = styled(Typography.Headers.H6)`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font.regular};
-`;
-
-const ProjectInfoList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.sm};
 `;
 
 const ProjectBreadcrumb = styled(motion.div)`
@@ -145,7 +130,7 @@ const ProjectActivitiesItem = styled(motion.li)`
   grid-template-columns: auto 1fr;
   gap: ${({ theme }) => theme.spacing.md};
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
-  border-radius: ${({ theme }) => theme.radius.md};
+  border-radius: ${({ theme }) => theme.radius.sm};
   border: 1px solid ${({ theme }) => theme.colors.gray}33;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -154,12 +139,12 @@ const ProjectActivitiesItem = styled(motion.li)`
 `;
 
 const ProjectActivitiesIndex = styled(Typography.Headers.H6)`
-  color: ${({ theme }) => theme.colors.gray};
-  font-family: ${({ theme }) => theme.font.medium};
+  color: ${({ theme }) => theme.colors.orange};
+  font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const ProjectActivitiesText = styled(Typography.Headers.H5)`
-  color: ${({ theme }) => theme.colors.gray};
+const ProjectActivitiesText = styled(Typography.Headers.H6)`
+  color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
@@ -182,7 +167,6 @@ export {
   ProjectInfoGrid,
   ProjectInfoItem,
   ProjectInfoLabel,
-  ProjectInfoList,
   ProjectInfoSection,
   ProjectInfoValue,
   Section,

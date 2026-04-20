@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PageTemplateWrapper = styled.div`
   width: 100%;
-  padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
+  padding: ${({ theme }) => `0 ${theme.spacing.xxxxxxl}`};
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.xl};
@@ -12,6 +12,6 @@ export const PageTemplateWrapper = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 0 ${({ theme }) => theme.spacing.xl};
+    padding: 0 ${({ theme }) => theme.spacing.lg};
   }
 `;

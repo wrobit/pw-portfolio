@@ -10,7 +10,7 @@ import { ProjectBox } from "./project-box/project-box";
 import * as Styled from "./project-showcase.styles";
 import { Project } from "./project-showcase.types";
 
-const PROJECTS_TO_SHOW_ON_HOME_PAGE = 9;
+const PROJECTS_TO_SHOW_ON_HOME_PAGE = 7;
 
 export const ProjectShowcase = () => {
   const location = useLocation();
@@ -55,24 +55,20 @@ export const ProjectShowcase = () => {
 
   return (
     <Styled.ProjectShowcaseWrapper $isWorkPage={isWorkPage}>
-      {commercialProjects.length > 0 &&
-        renderProjectSection(
-          "Client Builds",
-          "Production projects delivered for companies and growing teams.",
-          commercialProjects,
-          0
-        )}
+      {commercialProjects.length > 0 && renderProjectSection("", "", commercialProjects, 0)}
       {nonCommercialProjects.length > 0 &&
         renderProjectSection(
-          "Independent Builds",
-          "Self-initiated products, experiments, and engineering explorations.",
+          // "Independent Builds",
+          // "Self-initiated products, experiments, and engineering explorations.",
+          "",
+          "",
           nonCommercialProjects,
           commercialProjects.length
         )}
       {!isWorkPage && (
         <AnimatedLink
-          label="More work"
-          delay={projects.length * 0.175}
+          label="MORE WORK"
+          delay={projects.length * 0.15}
           align="center"
           onClick={() => navigate(routes.work)}
           as="button"

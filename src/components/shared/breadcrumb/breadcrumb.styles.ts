@@ -29,7 +29,7 @@ const BreadcrumbLink = styled.button`
 `;
 
 const BreadcrumbText = styled(Typography.Headers.H6)<{ $isActive?: boolean }>`
-  color: ${({ theme, $isActive }) => ($isActive ? theme.colors.white : theme.colors.gray)};
+  color: ${({ theme, $isActive }) => ($isActive ? theme.colors.orange : theme.colors.gray)};
   font-family: ${({ theme }) => theme.font.regular};
 `;
 

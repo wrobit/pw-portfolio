@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
@@ -111,7 +110,12 @@ export const Project = () => {
       <Styled.ProjectBreadcrumb variants={fadeInUp} initial="hidden" animate="visible" custom={0.1}>
         <Breadcrumb items={breadcrumbItems as BreadcrumbItem[]} />
       </Styled.ProjectBreadcrumb>
-      <Hero title={project?.title} description={project?.description} showScrollToExplore={false} />
+      <Hero
+        title={project?.title}
+        description={project?.description}
+        showScrollToExplore={false}
+        compactSpacing
+      />
       <Styled.ProjectInfoSection
         ref={ref}
         variants={pageTransition}
@@ -143,24 +147,50 @@ export const Project = () => {
             animate={controls}
             custom={0.6}
           >
-            <Styled.ProjectInfoLabel>Technologies</Styled.ProjectInfoLabel>
-            <Styled.ProjectInfoList>
-              {project?.technologies.map((technology: string) => (
-                <Styled.ProjectInfoValue key={technology}>{technology}</Styled.ProjectInfoValue>
-              ))}
-            </Styled.ProjectInfoList>
-          </Styled.ProjectInfoItem>
-          <Styled.ProjectInfoItem
-            variants={fadeInUp}
-            initial="hidden"
-            animate={controls}
-            custom={0.8}
-          >
             <Styled.ProjectInfoLabel>Date</Styled.ProjectInfoLabel>
             <Styled.ProjectInfoValue>{dateRange}</Styled.ProjectInfoValue>
           </Styled.ProjectInfoItem>
         </Styled.ProjectInfoGrid>
+        <Styled.ProjectInfoItem
+          variants={fadeInUp}
+          initial="hidden"
+          animate={controls}
+          custom={0.8}
+        >
+          <Styled.ProjectInfoLabel>Technologies</Styled.ProjectInfoLabel>
+          <Styled.ProjectInfoValue>{project?.technologies.join(", ")}</Styled.ProjectInfoValue>
+        </Styled.ProjectInfoItem>
       </Styled.ProjectInfoSection>
+      {project?.activities && project?.activities.length > 0 && (
+        <Styled.ProjectMediaSection
+          ref={activitiesRef}
+          variants={pageTransition}
+          initial="initial"
+          animate={isActivitiesInView ? "animate" : "initial"}
+        >
+          <Styled.ProjectActivitiesList
+            variants={fadeInUp}
+            initial="hidden"
+            animate={activitiesControls}
+            custom={0.9}
+          >
+            {project?.activities.map((activity: string, index: number) => (
+              <Styled.ProjectActivitiesItem
+                key={`${activity}-${index}`}
+                variants={fadeInUp}
+                initial="hidden"
+                animate={activitiesControls}
+                custom={1 + index * 0.1}
+              >
+                <Styled.ProjectActivitiesIndex>
+                  {String(index + 1).padStart(2, "0")}
+                </Styled.ProjectActivitiesIndex>
+                <Styled.ProjectActivitiesText>{activity}</Styled.ProjectActivitiesText>
+              </Styled.ProjectActivitiesItem>
+            ))}
+          </Styled.ProjectActivitiesList>
+        </Styled.ProjectMediaSection>
+      )}
       {(project?.liveLink || project?.repositoryLink) && (
         <Styled.ProjectLinksWrapper>
           <AnimatedLink
@@ -203,44 +233,6 @@ export const Project = () => {
           />
         </Styled.ProjectImageWrapper>
       </Styled.ProjectMediaSection>
-      {project?.activities && project?.activities.length > 0 && (
-        <Styled.ProjectMediaSection
-          ref={activitiesRef}
-          variants={pageTransition}
-          initial="initial"
-          animate={isActivitiesInView ? "animate" : "initial"}
-        >
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            animate={activitiesControls}
-            custom={0.2}
-          >
-            <Styled.ProjectSectionTitle>Activities</Styled.ProjectSectionTitle>
-          </motion.div>
-          <Styled.ProjectActivitiesList
-            variants={fadeInUp}
-            initial="hidden"
-            animate={activitiesControls}
-            custom={0.3}
-          >
-            {project?.activities.map((activity: string, index: number) => (
-              <Styled.ProjectActivitiesItem
-                key={`${activity}-${index}`}
-                variants={fadeInUp}
-                initial="hidden"
-                animate={activitiesControls}
-                custom={0.4 + index * 0.1}
-              >
-                <Styled.ProjectActivitiesIndex>
-                  {String(index + 1).padStart(2, "0")}
-                </Styled.ProjectActivitiesIndex>
-                <Styled.ProjectActivitiesText>{activity}</Styled.ProjectActivitiesText>
-              </Styled.ProjectActivitiesItem>
-            ))}
-          </Styled.ProjectActivitiesList>
-        </Styled.ProjectMediaSection>
-      )}
       {(previousProject || nextProject) && (
         <Styled.ProjectNavigation
           ref={navigationRef}

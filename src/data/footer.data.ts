@@ -14,10 +14,6 @@ export const data = [
         href: routes.work,
       },
       {
-        label: "pricing",
-        href: routes.pricing,
-      },
-      {
         label: "about",
         href: routes.about,
       },

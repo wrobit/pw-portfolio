@@ -9,7 +9,7 @@ const Footer = styled(motion.footer)`
   width: 100%;
   min-height: 100px;
   padding: ${({ theme }) =>
-    `${theme.spacing.xxxl} ${theme.spacing.xxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxl}`};
+    `${theme.spacing.xxxl} ${theme.spacing.xxxxxxl} ${theme.spacing.xl} ${theme.spacing.xxxxxxl}`};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,18 +22,18 @@ const Footer = styled(motion.footer)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     padding: ${({ theme }) =>
-      `${theme.spacing.xxxl} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl}`};
+      `${theme.spacing.xxxl} ${theme.spacing.lg} ${theme.spacing.xl} ${theme.spacing.lg}`};
   }
 `;
 
 const FooterNavigation = styled.div`
-  padding-top: ${({ theme }) => theme.spacing.xxl};
+  padding-top: ${({ theme }) => theme.spacing.xxxxl};
   display: flex;
   flex-direction: row;
-  gap: ${({ theme }) => theme.spacing.xxxxl};
+  justify-content: space-between;
   border-top: 1px solid ${({ theme }) => hexToRgba(theme.colors.white, 0.1)};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
     padding-top: ${({ theme }) => theme.spacing.xl};
     flex-direction: column;
     gap: ${({ theme }) => theme.spacing.xxl};
@@ -45,17 +45,18 @@ const FooterNavigation = styled.div`
   }
 `;
 
+const FooterLogo = styled(Typography.Headers.Logo)`
+  color: ${({ theme }) => theme.colors.orange};
+`;
+
 const FooterNavigationLinksContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: ${({ theme }) => theme.spacing.xxxxxl};
+  gap: ${({ theme }) => theme.spacing.xxxxl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
     gap: ${({ theme }) => theme.spacing.xxl};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     justify-content: space-between;
   }
 `;
@@ -67,6 +68,7 @@ const FooterNavigationLinks = styled(motion.div)`
 `;
 
 const FooterNavigationHeaderText = styled(Typography.Default)`
+  color: ${({ theme }) => theme.colors.orange};
   font-family: ${({ theme }) => theme.font.bold};
   font-size: ${({ theme }) => theme.fontSize.h6};
 
@@ -76,6 +78,9 @@ const FooterNavigationHeaderText = styled(Typography.Default)`
 `;
 
 const FooterNavigationLink = styled(Link)`
+  font-family: ${({ theme }) => theme.font.regular};
+  font-size: ${({ theme }) => theme.fontSize.body};
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.fontSize.small};
   }
@@ -88,4 +93,5 @@ export {
   FooterNavigationLinks,
   FooterNavigationHeaderText,
   FooterNavigationLink,
+  FooterLogo,
 };

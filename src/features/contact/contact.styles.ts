@@ -60,7 +60,7 @@ const ContactEmailBadge = styled.span`
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.sm};
-  padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.md}`};
+  padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.sm}`};
   border-radius: ${({ theme }) => theme.radius.lg};
   background: ${({ theme }) => hexToRgba(theme.colors.gray, 0.14)};
   color: ${({ theme }) => theme.colors.gray};

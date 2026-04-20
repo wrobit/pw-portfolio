@@ -25,7 +25,7 @@ const Wrapper = styled.div<WrapperProps>`
 const NavbarWrapper = styled(motion.div)`
   width: 100%;
   height: ${({ theme }) => theme.sizes.navbar.height};
-  padding: 0 ${({ theme }) => theme.spacing.xxxxxl};
+  padding: 0 ${({ theme }) => theme.spacing.xxxxxxl};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +35,7 @@ const NavbarWrapper = styled(motion.div)`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 0 ${({ theme }) => theme.spacing.xl};
+    padding: 0 ${({ theme }) => theme.spacing.lg};
   }
 `;
 
@@ -51,15 +51,16 @@ const Link = styled(RouterLink)<{ $isActive?: boolean }>`
   font-size: 16px;
   margin: 0 16px;
   position: relative;
-  text-decoration: none;
   transition: color 100ms linear;
+  color: ${({ theme, $isActive }) =>
+    $isActive ? theme.colors.orange : theme.colors.white} !important;
 
   &:active {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.4)};
+    color: ${({ theme }) => theme.colors.orange} !important;
   }
 
   &:hover {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)} !important;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -133,17 +134,19 @@ const HamburgerMenuWrapper = styled.div`
   gap: ${({ theme }) => theme.spacing.lg};
 `;
 
-const HamburgerMenuLinkIndex = styled.span`
+const HamburgerMenuLinkIndex = styled.span<{ $isActive?: boolean }>`
   font-family: ${({ theme }) => theme.font.regular};
   font-size: 16px;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme, $isActive }) =>
+    $isActive ? theme.colors.orange : theme.colors.white} !important;
 `;
 
 const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
   margin: 16px 0;
   font-family: ${({ theme }) => theme.font.regular};
   font-size: ${({ theme }) => theme.fontSize.h2};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme, $isActive }) =>
+    $isActive ? theme.colors.orange : theme.colors.white} !important;
   text-align: center;
   transition: all 100ms linear;
   position: relative;
@@ -156,7 +159,7 @@ const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
     top: 50%;
     width: 100%;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.orange};
     transform: ${({ $isActive }) => ($isActive ? "scaleX(1)" : "scaleX(0)")};
     transform-origin: center;
     transition: transform 200ms ease-out;
@@ -168,11 +171,11 @@ const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
   }
 
   &:active {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.6)};
+    color: ${({ theme }) => theme.colors.orange};
   }
 
   &:hover {
-    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.8)};
+    color: ${({ theme }) => theme.colors.orange};
   }
 `;
 

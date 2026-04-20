@@ -5,9 +5,9 @@ import { ButtonProps } from "@components/shared/button/button.types";
 import { Typography } from "@components/shared/typography/typography";
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ size = "small", children, ...props }, ref) => {
+  ({ size = "small", children, variant = "primary", ...props }, ref) => {
     return (
-      <Styled.Button ref={ref} {...props}>
+      <Styled.Button ref={ref} $variant={variant} {...props}>
         {size === "small" ? (
           <Typography.Buttons.Small color="inherit">{children}</Typography.Buttons.Small>
         ) : (

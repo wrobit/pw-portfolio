@@ -34,10 +34,22 @@
   font-display: optional;
 }
 
+@font-face {
+  font-family: "DMSerifDisplayRegular";
+  src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "DMSerifDisplayItalic";
+  src: url("/fonts/DMSerifDisplay-Italic.ttf") format("truetype");
+  font-display: optional;
+}
+
 :root {
   font-family: "DMSansRegular", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.75);
   background-color: #080808;
   font-size: 16px;
   font-synthesis: none;

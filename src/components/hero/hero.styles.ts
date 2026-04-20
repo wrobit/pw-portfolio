@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
+import { Typography } from "@components/shared";
+
 type HeroLayoutProps = {
   $compactSpacing?: boolean;
 };
@@ -27,23 +29,25 @@ const HeroSection = styled(motion.div)<HeroLayoutProps>`
 `;
 
 const HeroTypographyWrapper = styled.div<HeroLayoutProps>`
-  width: ${({ $compactSpacing }) => ($compactSpacing ? "100%" : "80%")};
+  width: ${({ $compactSpacing }) => ($compactSpacing ? "100%" : "100%")};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme, $compactSpacing }) => ($compactSpacing ? theme.spacing.lg : theme.spacing.xxl)};
+  gap: ${({ theme, $compactSpacing }) => ($compactSpacing ? theme.spacing.lg : theme.spacing.xl)};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 100%;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    /* gap: ${({ theme, $compactSpacing }) =>
-      $compactSpacing ? theme.spacing.md : theme.spacing.lg}; */
     gap: ${({ theme }) => theme.spacing.lg};
   }
 `;
 
-const HeroActions = styled.div`
+const HeroTitle = styled(Typography.Headers.H1)`
+  color: ${({ theme }) => theme.colors.orange};
+`;
+
+const HeroActions = styled(motion.div)`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacing.lg};
@@ -120,4 +124,5 @@ export {
   HeroButtonWrapper,
   HeroSection,
   HeroTypographyWrapper,
+  HeroTitle,
 };
