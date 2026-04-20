@@ -55,26 +55,20 @@ export const ProjectShowcase = () => {
 
   return (
     <Styled.ProjectShowcaseWrapper $isWorkPage={isWorkPage}>
-      {commercialProjects.length > 0 &&
-        renderProjectSection(
-          // "Client Builds",
-          // "Production projects delivered for companies and growing teams.",
-          "",
-          "",
-          commercialProjects,
-          0
-        )}
+      {commercialProjects.length > 0 && renderProjectSection("", "", commercialProjects, 0)}
       {nonCommercialProjects.length > 0 &&
         renderProjectSection(
-          "Independent Builds",
-          "Self-initiated products, experiments, and engineering explorations.",
+          // "Independent Builds",
+          // "Self-initiated products, experiments, and engineering explorations.",
+          "",
+          "",
           nonCommercialProjects,
           commercialProjects.length
         )}
       {!isWorkPage && (
         <AnimatedLink
-          label="More work"
-          delay={projects.length * 0.175}
+          label="MORE WORK"
+          delay={projects.length * 0.15}
           align="center"
           onClick={() => navigate(routes.work)}
           as="button"

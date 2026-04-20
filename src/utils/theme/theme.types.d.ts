@@ -16,16 +16,8 @@ declare module "styled-components" {
       bold: string;
       italic: string;
       boldItalic: string;
-      lightSecondary: string;
-      lightItalicSecondary: string;
       regularSecondary: string;
       italicSecondary: string;
-      mediumSecondary: string;
-      mediumItalicSecondary: string;
-      semiBoldSecondary: string;
-      semiBoldItalicSecondary: string;
-      boldSecondary: string;
-      boldItalicSecondary: string;
     };
     fontSize: {
       h1: string;

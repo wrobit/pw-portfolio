@@ -22,7 +22,6 @@ export const Home = () => {
         additionalActionLabel="About me"
         onAdditionalActionClick={() => navigate(routes.about)}
         onCtaClick={() => navigate(routes.contact)}
-        showScrollToExplore={false}
       />
       <ProjectShowcase />
     </PageTemplateWrapper>

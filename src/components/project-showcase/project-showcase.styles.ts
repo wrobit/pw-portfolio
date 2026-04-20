@@ -19,7 +19,7 @@ const ProjectShowcaseWrapper = styled.div<{ $isWorkPage?: boolean }>`
   flex-direction: column;
   gap: ${({ theme, $isWorkPage }) => ($isWorkPage ? theme.spacing.xxxl : theme.spacing.xl)};
   margin-top: ${({ theme, $isWorkPage }) => ($isWorkPage ? theme.spacing.xxl : 0)};
-  margin-bottom: ${({ theme }) => theme.spacing.xxl};
+  margin-bottom: ${({ theme }) => theme.spacing.xl};
 `;
 
 const ProjectShowcaseSection = styled.div`

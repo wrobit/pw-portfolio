@@ -23,11 +23,11 @@ const animatedLinkRootStyles = css<AnimatedLinkRootProps>`
   padding: ${({ theme, $size }) =>
     $size === "big" ? `${theme.spacing.lg} 0` : `${theme.spacing.md} 0`};
   border-bottom: 1px solid
-    ${({ theme, $disabled }) => hexToRgba(theme.colors.white, $disabled ? 0.2 : 0.3)};
+    ${({ theme, $disabled }) => hexToRgba(theme.colors.orange, $disabled ? 0.2 : 0.3)};
   background: transparent;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "none")};
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.orange};
   opacity: ${({ $disabled }) => ($disabled ? 0.4 : 0.8)};
   position: relative;
   pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
@@ -41,7 +41,7 @@ const animatedLinkRootStyles = css<AnimatedLinkRootProps>`
     width: 100%;
     height: 1px;
     background-color: ${({ theme, $disabled }) =>
-      hexToRgba(theme.colors.white, $disabled ? 0.2 : 1)};
+      hexToRgba(theme.colors.orange, $disabled ? 0.2 : 1)};
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;
@@ -98,6 +98,7 @@ const ArrowIcon = styled.img<ArrowIconProps>`
   height: 20px;
   display: block;
   transform: ${({ $direction }) => ($direction === "left" ? "rotate(180deg)" : "none")};
+  color: ${({ theme }) => theme.colors.orange};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 16px;

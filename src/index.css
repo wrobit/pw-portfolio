@@ -35,62 +35,14 @@
 }
 
 @font-face {
-  font-family: "CormorantInfantLight";
-  src: url("/fonts/CormorantInfant-Light.ttf") format("truetype");
+  font-family: "DMSerifDisplayRegular";
+  src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
   font-display: optional;
 }
 
 @font-face {
-  font-family: "CormorantInfantLightItalic";
-  src: url("/fonts/CormorantInfant-LightItalic.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantRegular";
-  src: url("/fonts/CormorantInfant-Regular.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantItalic";
-  src: url("/fonts/CormorantInfant-Italic.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantMedium";
-  src: url("/fonts/CormorantInfant-Medium.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantMediumItalic";
-  src: url("/fonts/CormorantInfant-MediumItalic.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantSemiBold";
-  src: url("/fonts/CormorantInfant-SemiBold.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantSemiBoldItalic";
-  src: url("/fonts/CormorantInfant-SemiBoldItalic.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantBold";
-  src: url("/fonts/CormorantInfant-Bold.ttf") format("truetype");
-  font-display: optional;
-}
-
-@font-face {
-  font-family: "CormorantInfantBoldItalic";
-  src: url("/fonts/CormorantInfant-BoldItalic.ttf") format("truetype");
+  font-family: "DMSerifDisplayItalic";
+  src: url("/fonts/DMSerifDisplay-Italic.ttf") format("truetype");
   font-display: optional;
 }
 
