@@ -60,12 +60,12 @@ const ListRow = styled(motion.div)`
   }
 `;
 
-const ListItem = styled(Typography.Headers.H4)`
+const ListItem = styled(Typography.Headers.H5)`
   width: 100%;
   font-family: ${({ theme }) => theme.font.regular};
 `;
 
-const ListItemHeader = styled(Typography.Headers.H4)`
+const ListItemHeader = styled(Typography.Headers.H5)`
   width: 100%;
 `;
 

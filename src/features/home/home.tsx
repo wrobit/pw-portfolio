@@ -16,7 +16,7 @@ export const Home = () => {
         path={routes.home}
       />
       <Hero
-        title="Software Engineer, Designer, Runner"
+        title="Engineer, Maker, Runner"
         description="Software engineer based in Poland. I build web products with full-stack development from concept to launch. I think carefully about interfaces, and I run long distances. The two are more related than they sound."
         ctaLabel="Get in touch"
         additionalActionLabel="About me"
