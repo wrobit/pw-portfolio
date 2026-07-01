@@ -17,7 +17,7 @@ export const Home = () => {
       />
       <Hero
         title="Engineer, Maker, Runner"
-        description="Software engineer based in Poland. I build web products with full-stack development from concept to launch. I think carefully about interfaces, and I run long distances. The two are more related than they sound."
+        description="Software engineer based in Poland. I build web and mobile products from idea to launch, with a focus on reliable interfaces, data-heavy workflows and performance. I also run long distances, which has taught me more about building software than expected."
         ctaLabel="Get in touch"
         additionalActionLabel="About me"
         onAdditionalActionClick={() => navigate(routes.about)}
