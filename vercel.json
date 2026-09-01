@@ -9,7 +9,7 @@
       "dest": "/index.html"
     },
     {
-      "src": "^/(about|work|pricing|contact|404)/?$",
+      "src": "^/(about|work|pricing|privacy-policy|contact|404)/?$",
       "dest": "/index.html"
     },
     {

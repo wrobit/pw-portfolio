@@ -9,7 +9,7 @@ import {
 import { ThemeProvider } from "styled-components";
 
 import { About } from "@features/about/about";
-import { Contact, Error, Home, Pricing, Project, Work } from "@features/index";
+import { Contact, Error, Home, Pricing, PrivacyPolicy, Project, Work } from "@features/index";
 import { Root } from "@pages/root/root";
 import { animatedCursorOptions, reactLenisOptions } from "@utils/animations";
 import { defaultTheme } from "@utils/theme";
@@ -21,6 +21,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="work" element={<Work />} />
         <Route path="pricing" element={<Pricing />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
         <Route path="project/:projectId" element={<Project />} />
