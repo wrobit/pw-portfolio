@@ -23,21 +23,21 @@ export const PrivacyPolicy = () => {
 
       <Breadcrumb items={breadcrumbItems} />
       <Hero
-        title="Polityka prywatności"
-        description="Najważniejsze informacje o tym, jakie dane przetwarzam, po co to robię i jakie prawa Ci przysługują."
+        title="Privacy policy"
+        description="The essential information about what data I process, why I process it, and what rights you have."
         showScrollToExplore={false}
         compactSpacing
       />
 
       <Styled.Content>
-        <Styled.Updated>Ostatnia aktualizacja: 1 września 2026 r.</Styled.Updated>
+        <Styled.Updated>Last updated: September 1, 2026</Styled.Updated>
 
         <Styled.Section>
-          <Styled.Heading>1. Administrator danych</Styled.Heading>
+          <Styled.Heading>1. Data controller</Styled.Heading>
           <Styled.Paragraph>
-            Administratorem Twoich danych osobowych jest Wrobit - Piotr Wrobel, ul. Stanisława
-            Moniuszki 15/11A, 41-902 Bytom, NIP 6263066755 (dalej: „Wrobit”). W sprawach dotyczących
-            prywatności możesz napisać na adres{" "}
+            The controller of your personal data is Wrobit - Piotr Wrobel, Stanisława Moniuszki 15,
+            41-902 Bytom, Poland, tax identification number (NIP) 6263066755 (referred to as
+            “Wrobit”). For privacy-related matters, contact me at{" "}
             <Styled.Link href="mailto:piotrwrobel.ajiiz@gmail.com">
               piotrwrobel.ajiiz@gmail.com
             </Styled.Link>
@@ -46,143 +46,133 @@ export const PrivacyPolicy = () => {
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>2. Jakie dane przetwarzam i dlaczego</Styled.Heading>
+          <Styled.Heading>2. What data I process and why</Styled.Heading>
           <Styled.TableWrapper>
             <Styled.Table>
               <thead>
                 <tr>
-                  <th>Zakres danych</th>
-                  <th>Cel</th>
-                  <th>Podstawa</th>
+                  <th>Data</th>
+                  <th>Purpose</th>
+                  <th>Legal basis</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Adres IP i podstawowe dane techniczne wizyty</td>
-                  <td>Działanie, bezpieczeństwo i diagnostyka strony</td>
-                  <td>Uzasadniony interes Wrobit (art. 6 ust. 1 lit. f RODO)</td>
+                  <td>IP address and basic technical visit data</td>
+                  <td>Website operation, security, and diagnostics</td>
+                  <td>Wrobit’s legitimate interest (Article 6(1)(f) GDPR)</td>
                 </tr>
                 <tr>
+                  <td>Analytics data, such as visited pages, traffic source, and device type</td>
+                  <td>Measuring website usage with Google Analytics 4</td>
+                  <td>Your consent (Article 6(1)(a) GDPR)</td>
+                </tr>
+                <tr>
+                  <td>Your name, email address, phone number, and message</td>
                   <td>
-                    Dane analityczne, np. odwiedzone podstrony, źródło wizyty i rodzaj urządzenia
+                    Responding to an enquiry, arranging an introductory call, or preparing an offer
+                    or agreement
                   </td>
-                  <td>Pomiar korzystania ze strony w Google Analytics 4</td>
-                  <td>Twoja zgoda (art. 6 ust. 1 lit. a RODO)</td>
-                </tr>
-                <tr>
-                  <td>Imię, nazwisko, e-mail, numer telefonu i treść wiadomości</td>
-                  <td>Odpowiedź na zapytanie, rozmowa wstępna, przygotowanie oferty lub umowy</td>
                   <td>
-                    Działania na Twoje żądanie przed zawarciem umowy (art. 6 ust. 1 lit. b RODO)
+                    Taking steps at your request before entering into a contract (Article 6(1)(b)
+                    GDPR)
                   </td>
                 </tr>
                 <tr>
-                  <td>Wybrana korespondencja dotycząca współpracy</td>
-                  <td>Ustalenie, dochodzenie lub obrona przed roszczeniami</td>
-                  <td>Uzasadniony interes Wrobit (art. 6 ust. 1 lit. f RODO)</td>
+                  <td>Selected correspondence concerning our cooperation</td>
+                  <td>Establishing, pursuing, or defending legal claims</td>
+                  <td>Wrobit’s legitimate interest (Article 6(1)(f) GDPR)</td>
                 </tr>
               </tbody>
             </Styled.Table>
           </Styled.TableWrapper>
           <Styled.Paragraph>
-            Podanie danych w zapytaniu jest dobrowolne, ale bez danych kontaktowych nie będę mógł
-            odpowiedzieć. Nie wykorzystuję danych z zapytań do newslettera ani niezwiązanych z nimi
-            kampanii marketingowych.
+            Providing data in an enquiry is voluntary, but I cannot respond without your contact
+            details. I do not use enquiry data for newsletters or unrelated marketing campaigns.
           </Styled.Paragraph>
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>3. Formularze reklamowe i kontakt</Styled.Heading>
+          <Styled.Heading>3. Advertising forms and contact</Styled.Heading>
           <Styled.Paragraph>
-            Jeżeli wyślesz formularz kontaktowy w reklamie Meta (Facebook lub Instagram), otrzymam
-            dane wpisane w formularzu oraz informację o kampanii, z której pochodzi zapytanie. Dane
-            wykorzystam wyłącznie do odpowiedzi, kontaktu wybranym przez Ciebie kanałem i omówienia
-            możliwej współpracy. Meta przetwarza również dane jako niezależny administrator na
-            zasadach opisanych w swojej{" "}
+            If you submit a contact form in a Meta ad on Facebook or Instagram, I receive the data
+            entered in the form and information about the campaign that generated the enquiry. I use
+            this data only to respond, contact you through your chosen channel, and discuss possible
+            cooperation. Meta also processes data as an independent controller under its{" "}
             <Styled.Link
               href="https://www.facebook.com/privacy/policy/"
               target="_blank"
               rel="noreferrer"
             >
-              polityce prywatności
+              privacy policy
             </Styled.Link>
             .
           </Styled.Paragraph>
           <Styled.Paragraph>
-            Kontakt e-mailowy lub telefoniczny związany z zapytaniem następuje na Twoje żądanie i,
-            gdy jest to wymagane, na podstawie zgody udzielonej w formularzu zgodnie z art. 398
-            Prawa komunikacji elektronicznej. Zgodę możesz wycofać w dowolnym momencie.
+            Email or telephone contact relating to your enquiry takes place at your request and,
+            where required, on the basis of consent provided in the form under Article 398 of the
+            Polish Electronic Communications Law. You can withdraw your consent at any time.
           </Styled.Paragraph>
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>4. Pliki cookie i Google Analytics</Styled.Heading>
+          <Styled.Heading>4. Cookies and Google Analytics</Styled.Heading>
           <Styled.Paragraph>
-            Strona zapisuje niezbędny plik cookie <code>pw-cookie-consent</code>, który pamięta Twój
-            wybór przez 180 dni. Google Analytics 4 uruchamia się dopiero po zaakceptowaniu
-            analitycznych plików cookie. Może wtedy zapisać pliki <code>_ga</code> i{" "}
-            <code>_ga_*</code> na okres do 180 dni.
+            The website stores the essential <code>pw-cookie-consent</code> cookie, which remembers
+            your choice for 180 days. Google Analytics 4 starts only after you accept analytics
+            cookies. It may then store the <code>_ga</code> and <code>_ga_*</code> cookies for up to
+            180 days.
           </Styled.Paragraph>
           <Styled.Paragraph>
-            Możesz odrzucić analitykę bez utraty dostępu do strony. Swój wybór możesz później
-            zmienić przez przycisk „Cookie settings” w stopce. Wycofanie zgody nie wpływa na
-            zgodność z prawem przetwarzania dokonanego przed jej wycofaniem.
+            You can reject analytics without losing access to the website. You can change your
+            choice later using “Cookie settings” in the footer. Withdrawing consent does not affect
+            the lawfulness of processing carried out before the withdrawal.
           </Styled.Paragraph>
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>5. Komu dane mogą być przekazywane</Styled.Heading>
+          <Styled.Heading>5. Who may process the data</Styled.Heading>
           <Styled.Paragraph>
-            Dane mogą być przetwarzane przez dostawców potrzebnych do obsługi:
+            The following providers may process data where necessary to provide their services:
           </Styled.Paragraph>
           <Styled.List>
-            <li>Vercel Inc. - hosting strony i logi techniczne,</li>
-            <li>Google Ireland Limited - Google Analytics 4 i obsługa poczty,</li>
-            <li>
-              Meta Platforms Ireland Limited - formularz kontaktowy w reklamie, jeżeli z niego
-              korzystasz,
-            </li>
-            <li>
-              Apple Distribution International Limited - kalendarz używany do umawiania rozmów.
-            </li>
+            <li>Vercel Inc. - website hosting and technical logs,</li>
+            <li>Google Ireland Limited - Google Analytics 4 and email services,</li>
+            <li>Meta Platforms Ireland Limited - advertising contact forms, if you use one,</li>
+            <li>Apple Distribution International Limited - calendar used to arrange calls.</li>
           </Styled.List>
           <Styled.Paragraph>
-            Nie sprzedaję Twoich danych. Dostawcy mogą przetwarzać dane poza Europejskim Obszarem
-            Gospodarczym. W takim przypadku przekazanie odbywa się na podstawie decyzji Komisji
-            Europejskiej stwierdzającej odpowiedni poziom ochrony albo odpowiednich zabezpieczeń,
-            takich jak standardowe klauzule umowne. Informacje o zastosowanych zabezpieczeniach
-            możesz uzyskać, pisząc na adres podany w punkcie 1.
+            I do not sell your data. Providers may process data outside the European Economic Area.
+            In such cases, transfers rely on a European Commission adequacy decision or appropriate
+            safeguards, such as standard contractual clauses. You can request information about the
+            safeguards using the contact details in section 1.
           </Styled.Paragraph>
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>6. Jak długo przechowuję dane</Styled.Heading>
+          <Styled.Heading>6. How long I retain the data</Styled.Heading>
           <Styled.List>
-            <li>dane z zapytań - do 12 miesięcy od ostatniego istotnego kontaktu,</li>
+            <li>enquiry data - up to 12 months after the last meaningful contact,</li>
+            <li>contract and billing data - for the period required by tax and accounting laws,</li>
+            <li>data needed for legal claims - until the applicable limitation period expires,</li>
+            <li>user-level and event data in Google Analytics 4 - up to 14 months,</li>
             <li>
-              dane związane z umową i rozliczeniami - przez okres wymagany prawem podatkowym i
-              rachunkowym,
-            </li>
-            <li>dane potrzebne do obsługi roszczeń - do upływu właściwego okresu przedawnienia,</li>
-            <li>dane użytkownika i zdarzeń w Google Analytics 4 - maksymalnie 14 miesięcy,</li>
-            <li>
-              logi techniczne - przez okres wynikający z konfiguracji hostingu, nie dłużej niż jest
-              to potrzebne do bezpieczeństwa i diagnostyki.
+              technical logs - for the period set in the hosting configuration and no longer than
+              necessary for security and diagnostics.
             </li>
           </Styled.List>
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>7. Twoje prawa</Styled.Heading>
+          <Styled.Heading>7. Your rights</Styled.Heading>
           <Styled.Paragraph>
-            Masz prawo żądać dostępu do danych, ich sprostowania, usunięcia lub ograniczenia
-            przetwarzania, a w odpowiednich przypadkach także przeniesienia danych. Możesz
-            sprzeciwić się przetwarzaniu opartemu na uzasadnionym interesie oraz wycofać udzieloną
-            zgodę.
+            You may request access to, correction, deletion, or restriction of your data and, where
+            applicable, data portability. You may object to processing based on a legitimate
+            interest and withdraw any consent you have provided.
           </Styled.Paragraph>
           <Styled.Paragraph>
-            Możesz również złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych. Więcej
-            informacji znajdziesz na stronie{" "}
+            You may also lodge a complaint with the President of the Polish Personal Data Protection
+            Office. More information is available at{" "}
             <Styled.Link href="https://uodo.gov.pl" target="_blank" rel="noreferrer">
               uodo.gov.pl
             </Styled.Link>
@@ -191,12 +181,11 @@ export const PrivacyPolicy = () => {
         </Styled.Section>
 
         <Styled.Section>
-          <Styled.Heading>8. Zautomatyzowane decyzje i zmiany polityki</Styled.Heading>
+          <Styled.Heading>8. Automated decisions and policy changes</Styled.Heading>
           <Styled.Paragraph>
-            Wrobit nie podejmuje wobec Ciebie decyzji wywołujących skutki prawne wyłącznie w sposób
-            zautomatyzowany. Polityka może zostać zaktualizowana, jeżeli zmieni się sposób
-            przetwarzania danych lub wykorzystywane usługi. Aktualna wersja zawsze będzie dostępna
-            na tej stronie.
+            Wrobit does not make decisions about you that produce legal effects solely through
+            automated processing. This policy may be updated if the way data is processed or the
+            services used change. The current version will always be available on this page.
           </Styled.Paragraph>
         </Styled.Section>
       </Styled.Content>
