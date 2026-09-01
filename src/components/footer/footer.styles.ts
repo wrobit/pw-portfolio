@@ -86,6 +86,48 @@ const FooterNavigationLink = styled(Link)`
   }
 `;
 
+const FooterBottom = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: ${({ theme }) => theme.spacing.lg};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+`;
+
+const FooterLegal = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.lg};
+  font-family: ${({ theme }) => theme.font.regular};
+  font-size: ${({ theme }) => theme.fontSize.body};
+`;
+
+const FooterLegalLink = styled(Link)`
+  text-decoration: underline;
+  text-underline-offset: 3px;
+`;
+
+const FooterLegalButton = styled.button`
+  padding: 0;
+  background: none;
+  color: ${({ theme }) => theme.colors.white};
+  border: 0;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 100ms linear;
+
+  &:hover,
+  &:focus-visible {
+    color: ${({ theme }) => hexToRgba(theme.colors.white, 0.8)};
+  }
+`;
+
 export {
   Footer,
   FooterNavigation,
@@ -93,5 +135,9 @@ export {
   FooterNavigationLinks,
   FooterNavigationHeaderText,
   FooterNavigationLink,
+  FooterBottom,
+  FooterLegal,
+  FooterLegalButton,
+  FooterLegalLink,
   FooterLogo,
 };

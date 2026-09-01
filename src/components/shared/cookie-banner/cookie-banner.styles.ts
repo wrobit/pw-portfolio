@@ -58,6 +58,17 @@ const BannerActions = styled.div`
   }
 `;
 
+const BannerLink = styled.a`
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover,
+  &:focus-visible {
+    color: ${({ theme }) => theme.colors.orange};
+  }
+`;
+
 const BannerButton = styled.button`
   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
   background-color: ${({ theme }) => theme.colors.white};
@@ -77,4 +88,4 @@ const BannerButton = styled.button`
   }
 `;
 
-export { Banner, BannerActions, BannerButton, BannerContent, BannerWrapper };
+export { Banner, BannerActions, BannerButton, BannerContent, BannerLink, BannerWrapper };

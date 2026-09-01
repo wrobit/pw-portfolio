@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 
 import { Typography } from "@components/shared/typography/typography";
+import { routes } from "@utils/constants/routes.constants";
 import { CookieConsentStatus } from "@utils/cookies/consent";
 
 import * as Styled from "./cookie-banner.styles";
@@ -28,7 +29,8 @@ export const CookieBanner = ({ status, onAccept, onReject }: CookieBannerProps) 
               <Typography.Headers.H6 as="p">Cookies & Analytics</Typography.Headers.H6>
               <Typography.Default>
                 Cookies are used to measure usage and improve this website experience. You can
-                accept or reject analytics cookies.
+                accept or reject analytics cookies. Read the{" "}
+                <Styled.BannerLink href={routes.privacyPolicy}>privacy policy</Styled.BannerLink>.
               </Typography.Default>
             </Styled.BannerContent>
             <Styled.BannerActions>

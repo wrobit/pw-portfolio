@@ -4,11 +4,16 @@ import { useTheme } from "styled-components";
 import { Typography } from "@components/shared";
 import { data } from "@data/footer.data";
 import { useScrollAnimation } from "@utils/animations/hooks";
+import { routes } from "@utils/constants/routes.constants";
 
 import { footerItemVariants, footerVariants } from "./footer.animations";
 import * as Styled from "./footer.styles";
 
-export const Footer = () => {
+type FooterProps = {
+  onManageCookies: () => void;
+};
+
+export const Footer = ({ onManageCookies }: FooterProps) => {
   const theme = useTheme();
   const dateYear = new Date().getFullYear() + "";
   const { ref, controls } = useScrollAnimation();
@@ -34,13 +39,21 @@ export const Footer = () => {
           ))}
         </Styled.FooterNavigationLinksContainer>
       </Styled.FooterNavigation>
-      <motion.div variants={footerItemVariants}>
+      <Styled.FooterBottom variants={footerItemVariants}>
         <Typography.Headers.H6 as="p" color={theme.colors.white}>
           Copyright &copy; {`${dateYear}`}
           <Typography.Default color={theme.colors.orange}> Wrobel Piotr</Typography.Default>. All
           rights reserved.
         </Typography.Headers.H6>
-      </motion.div>
+        <Styled.FooterLegal aria-label="Legal">
+          <Styled.FooterLegalLink href={routes.privacyPolicy}>
+            Privacy policy
+          </Styled.FooterLegalLink>
+          <Styled.FooterLegalButton type="button" onClick={onManageCookies}>
+            Cookie settings
+          </Styled.FooterLegalButton>
+        </Styled.FooterLegal>
+      </Styled.FooterBottom>
     </Styled.Footer>
   );
 };

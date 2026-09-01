@@ -15,7 +15,7 @@ const buildCookieOptions = () => ({
 });
 
 export const useCookieConsent = () => {
-  const [cookies, setCookie] = useCookies([COOKIE_CONSENT_KEY]);
+  const [cookies, setCookie, removeCookie] = useCookies([COOKIE_CONSENT_KEY]);
 
   const status = useMemo<CookieConsentStatus>(() => {
     const value = cookies[COOKIE_CONSENT_KEY];
@@ -36,6 +36,10 @@ export const useCookieConsent = () => {
 
   const accept = useCallback(() => updateConsent("accepted"), [updateConsent]);
   const reject = useCallback(() => updateConsent("rejected"), [updateConsent]);
+  const reset = useCallback(
+    () => removeCookie(COOKIE_CONSENT_KEY, { path: "/", sameSite: "lax" }),
+    [removeCookie]
+  );
 
-  return { status, accept, reject };
+  return { status, accept, reject, reset };
 };

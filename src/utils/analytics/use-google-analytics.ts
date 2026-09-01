@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { CookieConsentStatus } from "@utils/cookies/consent";
+import { COOKIE_MAX_AGE_DAYS, CookieConsentStatus } from "@utils/cookies/consent";
 
 import { clearAnalyticsCookies, disableAnalytics, enableAnalytics } from "./google-analytics";
 
@@ -47,7 +47,12 @@ export const useGoogleAnalytics = (status: CookieConsentStatus) => {
       }
 
       analyticsRef.current = ReactGA;
-      ReactGA.initialize(analyticsId, { gaOptions: { anonymizeIp: true } });
+      ReactGA.initialize(analyticsId, {
+        gaOptions: {
+          anonymizeIp: true,
+          cookieExpires: COOKIE_MAX_AGE_DAYS * 24 * 60 * 60,
+        },
+      });
       isInitializedRef.current = true;
       setIsReady(true);
     };

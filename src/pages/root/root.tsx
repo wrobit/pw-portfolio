@@ -9,7 +9,7 @@ import { useCookieConsent } from "@utils/cookies/use-cookie-consent";
 import * as Styled from "./root.styles";
 
 export const Root = () => {
-  const { status, accept, reject } = useCookieConsent();
+  const { status, accept, reject, reset } = useCookieConsent();
   useGoogleAnalytics(status);
 
   return (
@@ -18,7 +18,7 @@ export const Root = () => {
       <Navbar />
       <Styled.PageWrapper>
         <Outlet />
-        <Footer />
+        <Footer onManageCookies={reset} />
       </Styled.PageWrapper>
       <CookieBanner status={status} onAccept={accept} onReject={reject} />
     </>
