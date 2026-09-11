@@ -59,8 +59,8 @@ export const Contact = () => {
         >
           <Styled.ContactEmailRow>
             <Typography.Headers.H4 as="p">
-              <StyledLink href="mailto: piotrwrobel.ajiiz@gmail.com" target="_blank">
-                piotrwrobel.ajiiz@gmail.com
+              <StyledLink href="mailto:wrobit.io@gmail.com" target="_blank">
+                wrobit.io@gmail.com
               </StyledLink>
             </Typography.Headers.H4>
             <Styled.ContactEmailBadge>

@@ -3,7 +3,7 @@ export const seoConfig = {
   siteUrl: "https://www.piotrwrobel.eu",
   personName: "Piotr Wrobel",
   personJobTitle: "Software Engineer, Designer, Runner",
-  personEmail: "piotrwrobel.ajiiz@gmail.com",
+  personEmail: "wrobit.io@gmail.com",
   sameAs: [
     "https://www.linkedin.com/in/piotrwrobel-ajiiz",
     "https://github.com/ajiiz",
