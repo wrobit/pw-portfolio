@@ -26,7 +26,7 @@ export const createPlanMailtoHref = ({ category, planSlug }: PricingAnalyticsPay
     ].join("\n")
   );
 
-  return `mailto:piotrwrobel.ajiiz@gmail.com?subject=${subject}&body=${body}`;
+  return `mailto:wrobit.io@gmail.com?subject=${subject}&body=${body}`;
 };
 
 export const trackPricingCtaClick = ({ category, planSlug }: PricingAnalyticsPayload) => {

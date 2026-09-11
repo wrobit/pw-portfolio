@@ -38,8 +38,8 @@ export const PrivacyPolicy = () => {
             The controller of your personal data is Wrobit - Piotr Wrobel, Stanisława Moniuszki 15,
             41-902 Bytom, Poland, tax identification number (NIP) 6263066755 (referred to as
             “Wrobit”). For privacy-related matters, contact me at{" "}
-            <Styled.Link href="mailto:piotrwrobel.ajiiz@gmail.com">
-              piotrwrobel.ajiiz@gmail.com
+            <Styled.Link href="mailto:wrobit.io@gmail.com">
+              wrobit.io@gmail.com
             </Styled.Link>
             .
           </Styled.Paragraph>

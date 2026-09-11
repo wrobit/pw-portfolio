@@ -17,6 +17,6 @@ export const PROFILE_DATA = {
   },
   EMAIL: {
     label: "email",
-    href: "mailto:piotrwrobel.ajiiz@gmail.com",
+    href: "mailto:wrobit.io@gmail.com",
   },
 } as const;

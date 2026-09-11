@@ -66,6 +66,6 @@ VITE_BASE_URL=/
 Copyright (c) wrobit | Piotr Wrobel. All rights reserved.
 
 ## Contact
-Contact me via e-mail: piotrwrobel.ajiiz@gmail.com
+Contact me via e-mail: wrobit.io@gmail.com
 
 *Built by wrobit · one phase at a time.*
