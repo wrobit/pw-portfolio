@@ -9,7 +9,7 @@ export const seoConfig = {
     "https://github.com/ajiiz",
     "https://linktr.ee/wrobit",
   ],
-  defaultTitle: "Wrobit - Piotr Wrobel | Software Engineer, Designer, Runner",
+  defaultTitle: "Wrobit - Piotr Wrobel | Software Engineer",
   defaultDescription:
     "Software engineer and UX/UI designer based in Poland, focused on building thoughtful, high-performance web experiences and product interfaces.",
   defaultImage: "/social-preview.png",
