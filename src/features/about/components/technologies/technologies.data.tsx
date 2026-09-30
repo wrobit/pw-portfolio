@@ -161,7 +161,24 @@ export const data: TechnologiesData[] = [
         icon: () => createIcon(SiOpenai, DEFAULT_ICON_SIZE),
       },
       {
-        name: "Github Copilot",
+        name: "Pi",
+        icon: () => (
+          <svg
+            width={DEFAULT_ICON_SIZE}
+            height={DEFAULT_ICON_SIZE}
+            viewBox="165.29 165.29 469.43 469.43"
+            fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M165.29 165.29H517.36V400H400V282.65H165.29Z" />
+            <path d="M165.29 282.65H282.65V400H400V517.36H282.65V634.72H165.29Z" />
+            <path d="M517.36 400H634.72V634.72H517.36Z" />
+          </svg>
+        ),
+      },
+      {
+        name: "GitHub Copilot",
         icon: () => createIcon(SiGithubcopilot, DEFAULT_ICON_SIZE),
       },
     ],
