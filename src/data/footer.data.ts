@@ -24,8 +24,12 @@ export const data = [
     ],
   },
   {
-    header: "socials",
+    header: "contact",
     links: [
+      {
+        label: PROFILE_DATA.EMAIL.label,
+        href: PROFILE_DATA.EMAIL.href,
+      },
       {
         label: PROFILE_DATA.GITHUB.label,
         href: PROFILE_DATA.GITHUB.href,
@@ -33,19 +37,6 @@ export const data = [
       {
         label: PROFILE_DATA.LINKEDIN.label,
         href: PROFILE_DATA.LINKEDIN.href,
-      },
-      {
-        label: PROFILE_DATA.LINKTREE.label,
-        href: PROFILE_DATA.LINKTREE.href,
-      },
-    ],
-  },
-  {
-    header: "contact",
-    links: [
-      {
-        label: PROFILE_DATA.EMAIL.label,
-        href: PROFILE_DATA.EMAIL.href,
       },
     ],
   },

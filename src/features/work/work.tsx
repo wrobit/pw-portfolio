@@ -24,7 +24,7 @@ export const Work = () => {
       </motion.div>
       <Hero
         title="Work"
-        description="Check out my latest commercial and personal projects and see how I've managed to bring visions to life."
+        description="Client work, personal projects, and things I built to learn."
         showScrollToExplore={false}
         compactSpacing
       />

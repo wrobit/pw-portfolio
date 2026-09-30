@@ -60,7 +60,7 @@ export const PricingCard = ({ plan, animationDelay }: PricingCardProps) => {
 
       <Styled.CardFooter>
         <Button type="button" onClick={onPlanCtaClick}>
-          Get this plan
+          Ask about this plan
         </Button>
       </Styled.CardFooter>
     </Styled.PricingCard>

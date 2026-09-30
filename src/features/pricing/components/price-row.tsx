@@ -21,7 +21,7 @@ export const PriceRow = ({
     <Styled.PriceRow role="group" aria-label={ariaLabel}>
       <Styled.PriceRowSection>
         <Styled.PriceRowHeading>
-          <Styled.PriceValue as="p">Build price (starting from)</Styled.PriceValue>
+          <Styled.PriceValue as="p">Build from</Styled.PriceValue>
         </Styled.PriceRowHeading>
         <Styled.PriceMeta as="p">
           {formatPln(buildNetValue)} + VAT or {formatUsd(buildUsdValue)}
@@ -30,8 +30,8 @@ export const PriceRow = ({
 
       <Styled.PriceRowSection>
         <Styled.PriceRowHeading>
-          <Styled.PriceValue as="p">Maintenance (if no handover)</Styled.PriceValue>
-          <Styled.PriceRowCaption as="p">Monthly</Styled.PriceRowCaption>
+          <Styled.PriceValue as="p">Maintenance</Styled.PriceValue>
+          <Styled.PriceRowCaption as="p">Monthly, unless handed over to you</Styled.PriceRowCaption>
         </Styled.PriceRowHeading>
         <Styled.PriceMeta as="p">
           {formatPln(maintenanceNetValue)} + VAT or {formatUsd(maintenanceUsdValue)}

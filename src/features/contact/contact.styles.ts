@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-import { hexToRgba } from "@utils/helpers/colors.helper";
-
 const ContactBreadcrumb = styled(motion.div)`
   width: 100%;
 `;
@@ -54,23 +52,6 @@ const ContactEmailRow = styled.div`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.md};
   flex-wrap: wrap;
-`;
-
-const ContactEmailBadge = styled.span`
-  display: inline-flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.spacing.sm};
-  padding: ${({ theme }) => `${theme.spacing.sm} ${theme.spacing.sm}`};
-  border-radius: ${({ theme }) => theme.radius.lg};
-  background: ${({ theme }) => hexToRgba(theme.colors.gray, 0.14)};
-  color: ${({ theme }) => theme.colors.gray};
-  font-size: ${({ theme }) => theme.fontSize.small};
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: none;
-  }
 `;
 
 const ContactLinkItem = styled(motion.div)`
@@ -128,7 +109,6 @@ export {
   ContactContentWrapper,
   ContactLinksWrapper,
   ContactEmailRow,
-  ContactEmailBadge,
   ContactLinkItem,
   ContactLinkIcon,
 };

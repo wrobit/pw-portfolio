@@ -29,11 +29,7 @@ export const Technologies = () => {
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={0.4}>
           <Typography.Headers.H5 as="p">
-            As a developer, I use the latest and most advanced technologies to provide the best
-            solutions for my clients. Modern technologies I work with, allows me to create
-            innovative and cutting-edge solutions that are tailored to my clients' needs. I am
-            always eager to explore new technologies and tools, and I believe it's always a great
-            opportunity to learn new ways of developing applications.
+            The tools I use and what I'm learning.
           </Typography.Headers.H5>
         </motion.div>
       </Styled.TypographyWrapper>

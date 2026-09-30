@@ -1,5 +1,6 @@
-import { createElement } from "react";
-import { FaGithub, FaLink, FaLinkedin } from "react-icons/fa6";
+import { ComponentType, createElement } from "react";
+import { IconBaseProps, IconType } from "react-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 type ContactLink = {
   id: number;
@@ -10,9 +11,8 @@ type ContactLink = {
 
 const DEFAULT_ICON_SIZE = 16;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const createIcon = (IconComponent: any) =>
-  createElement(IconComponent, { size: DEFAULT_ICON_SIZE }) as JSX.Element;
+const createIcon = (IconComponent: IconType) =>
+  createElement(IconComponent as ComponentType<IconBaseProps>, { size: DEFAULT_ICON_SIZE });
 
 export const contactLinks: ContactLink[] = [
   {
@@ -26,11 +26,5 @@ export const contactLinks: ContactLink[] = [
     name: "github",
     url: "https://github.com/wrobit",
     icon: () => createIcon(FaGithub),
-  },
-  {
-    id: 3,
-    name: "linktree",
-    url: "https://linktr.ee/wrobit",
-    icon: () => createIcon(FaLink),
   },
 ];

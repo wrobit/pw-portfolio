@@ -24,7 +24,7 @@ export const PrivacyPolicy = () => {
       <Breadcrumb items={breadcrumbItems} />
       <Hero
         title="Privacy policy"
-        description="The essential information about what data I process, why I process it, and what rights you have."
+        description="What data I collect, why, and your rights."
         showScrollToExplore={false}
         compactSpacing
       />

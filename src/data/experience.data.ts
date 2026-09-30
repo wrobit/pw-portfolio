@@ -5,7 +5,7 @@ export const data = [
     date: "2025 - Present",
     url: "https://www.quadrantive.com/",
     description:
-      "CTO at Quadrantive. I lead the technical side of Quadrantive, a growth-focused digital company building websites, marketing systems, and product infrastructure for a broad range of businesses. Within Quadrantive, I help power Remedio, a specialized vertical for medical facilities, clinics, and private practices. My work covers performance-focused websites, online registration flows, patient acquisition infrastructure, analytics, content workflows, and marketing technology. I'm also developing Medlisto as a healthcare product currently in progress.",
+      "I lead the technical work at Quadrantive: websites, marketing tools, and product infrastructure. Through Remedio, we help clinics with marketing and recruiting medical specialists. I build their websites and set up analytics.",
   },
   {
     title: "React Developer",

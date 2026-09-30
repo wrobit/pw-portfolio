@@ -10,6 +10,7 @@ export type Project = {
   descriptionImage: string;
   backgroundImage: string;
   description: string;
+  summary: string;
   activities?: string[];
   liveLink?: string;
   repositoryLink?: string;

@@ -1,14 +1,14 @@
-import { FaAws, FaCube, FaNode } from "react-icons/fa6";
+import { ComponentType } from "react";
+import { IconBaseProps, IconType } from "react-icons";
+import { FaAws, FaNode } from "react-icons/fa6";
 import { RiNextjsLine } from "react-icons/ri";
 import {
-  SiClaude,
   SiCloudflare,
   SiCypress,
   SiDocker,
   SiExpo,
   SiGithubactions,
   SiFastapi,
-  SiNestjs,
   SiOpenai,
   SiPytorch,
   SiPython,
@@ -18,6 +18,8 @@ import {
   SiTypescript,
   SiVite,
   SiVitest,
+  SiGithubcopilot,
+  SiPytest,
 } from "react-icons/si";
 import { TbBrandReactNative, TbBrandFigma, TbBrandFramer } from "react-icons/tb";
 
@@ -29,15 +31,15 @@ interface TechnologiesData {
 
 const DEFAULT_ICON_SIZE = 16;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const createIcon = (IconComponent: any, size: number = DEFAULT_ICON_SIZE): JSX.Element => {
-  return (<IconComponent size={size} />) as JSX.Element;
+const createIcon = (IconComponent: IconType, size: number = DEFAULT_ICON_SIZE): JSX.Element => {
+  const Icon = IconComponent as ComponentType<IconBaseProps>;
+  return <Icon size={size} />;
 };
 
 export const data: TechnologiesData[] = [
   {
     title: "General",
-    description: "Type-safe by default, Python when needed.",
+    description: "Mostly TypeScript, sometimes Python.",
     technologies: [
       {
         name: "TypeScript",
@@ -51,14 +53,14 @@ export const data: TechnologiesData[] = [
   },
   {
     title: "Front-end",
-    description: "Building smooth interfaces across web and mobile.",
+    description: "Websites, web apps, and mobile apps.",
     technologies: [
       {
         name: "React",
         icon: () => createIcon(SiReact, DEFAULT_ICON_SIZE),
       },
       {
-        name: "Native",
+        name: "React Native",
         icon: () => createIcon(TbBrandReactNative, DEFAULT_ICON_SIZE),
       },
       {
@@ -85,15 +87,11 @@ export const data: TechnologiesData[] = [
   },
   {
     title: "Back-end",
-    description: "Focused on reliable APIs and clear architecture.",
+    description: "APIs and server-side code.",
     technologies: [
       {
         name: "Node.js",
         icon: () => createIcon(FaNode, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "NestJS",
-        icon: () => createIcon(SiNestjs, DEFAULT_ICON_SIZE),
       },
       {
         name: "FastAPI",
@@ -103,15 +101,20 @@ export const data: TechnologiesData[] = [
   },
   {
     title: "Testing",
-    description: "Shipping with confidence through practical test coverage.",
+    description: "Component and end-to-end tests.",
     technologies: [
       {
         name: "RTL",
         icon: () => createIcon(SiTestinglibrary, DEFAULT_ICON_SIZE),
       },
+
       {
         name: "Vitest",
         icon: () => createIcon(SiVitest, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "Pytest",
+        icon: () => createIcon(SiPytest, DEFAULT_ICON_SIZE),
       },
       {
         name: "Cypress",
@@ -121,7 +124,7 @@ export const data: TechnologiesData[] = [
   },
   {
     title: "Cloud",
-    description: "Deploying and monitoring apps in modern cloud stacks.",
+    description: "Deployments and monitoring.",
     technologies: [
       {
         name: "AWS",
@@ -147,37 +150,33 @@ export const data: TechnologiesData[] = [
   },
   {
     title: "AI",
-    description: "Using AI tools to iterate faster and ship better.",
+    description: "I have explored various AI tools, but now I keep my setup minimal and focused.",
     technologies: [
-      {
-        name: "Cursor",
-        icon: () => createIcon(FaCube, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "OpenCode",
-        icon: () => createIcon(SiOpenai, DEFAULT_ICON_SIZE),
-      },
-      {
-        name: "Claude",
-        icon: () => createIcon(SiClaude, DEFAULT_ICON_SIZE),
-      },
       {
         name: "Codex",
         icon: () => createIcon(SiOpenai, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "Codex CLI",
+        icon: () => createIcon(SiOpenai, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "Github Copilot",
+        icon: () => createIcon(SiGithubcopilot, DEFAULT_ICON_SIZE),
       },
     ],
   },
   {
     title: "Learning",
-    description: "Currently exploring ML and Python ecosystem tools.",
+    description: "Machine learning and Python tools.",
     technologies: [
-      {
-        name: "PyTorch",
-        icon: () => createIcon(SiPytorch, DEFAULT_ICON_SIZE),
-      },
       {
         name: "FastAPI",
         icon: () => createIcon(SiFastapi, DEFAULT_ICON_SIZE),
+      },
+      {
+        name: "PyTorch",
+        icon: () => createIcon(SiPytorch, DEFAULT_ICON_SIZE),
       },
     ],
   },

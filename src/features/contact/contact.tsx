@@ -1,5 +1,3 @@
-import { FiArrowLeft } from "react-icons/fi";
-
 import { Seo } from "@components/seo/seo";
 import { Breadcrumb, Link as StyledLink, Typography } from "@components/shared";
 import { BreadcrumbItem } from "@components/shared/breadcrumb/breadcrumb.types";
@@ -63,10 +61,6 @@ export const Contact = () => {
                 wrobit.io@gmail.com
               </StyledLink>
             </Typography.Headers.H4>
-            <Styled.ContactEmailBadge>
-              {FiArrowLeft({ "aria-hidden": true })}
-              Click to email
-            </Styled.ContactEmailBadge>
           </Styled.ContactEmailRow>
           <Styled.ContactLinksWrapper>
             {contactLinks?.map(({ id, name, url, icon }, index) => (

@@ -26,11 +26,10 @@ export const Error = () => {
       <Styled.ErrorContainer>
         <Styled.ErrorContentWrapper>
           <Styled.ErrorTitle>
-            Oops. It looks like the page you're trying to reach{" "}
-            <Typography.Default color={theme.colors.gray}>doesn't exist&nbsp;</Typography.Default>
-            or has been moved.
+            This page{" "}
+            <Typography.Default color={theme.colors.gray}>doesn't exist.</Typography.Default>
           </Styled.ErrorTitle>
-          <Button onClick={handleRouteChange}>Go to Home</Button>
+          <Button onClick={handleRouteChange}>Back to home</Button>
         </Styled.ErrorContentWrapper>
       </Styled.ErrorContainer>
     </PageTemplateWrapper>

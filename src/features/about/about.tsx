@@ -34,7 +34,7 @@ export const About = () => {
 
       <Hero
         title="About me"
-        description="My name is Piotr Wrobel. I'm a fullstack developer with expertise in frontend, backend, and mobile development. I'm passionate about building scalable web and mobile applications, leading technical teams, and bridging the gap between design and engineering. I help individuals and businesses achieve their goals by delivering high-quality digital products that solve real problems."
+        description="My name is Piter. I'm a software engineer with experience in frontend, backend, and mobile development. I enjoy building scalable design systems and software architectures. My goal is to deliver high-quality products that solve real-world problems."
         showScrollToExplore={false}
         compactSpacing
       />

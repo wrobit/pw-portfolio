@@ -27,7 +27,7 @@ export const Pricing = () => {
       </motion.div>
       <Hero
         title="Pricing"
-        description="If you are considering a website or web application built end-to-end by me, the packages below provide clear starting pricing. I am also available for B2B collaboration, and scope can be tailored based on complexity, integrations, and delivery goals. For custom requirements, contact me for a dedicated quote."
+        description="Starting prices for websites and web apps. The final price depends on what you need. For a custom project or B2B work, get in touch."
         showScrollToExplore={false}
         compactSpacing
       />

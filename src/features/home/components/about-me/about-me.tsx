@@ -26,9 +26,7 @@ export const AboutMe = () => {
       <Styled.AboutMeHeader>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1}>
           <Typography.Headers.H5 as="p">
-            I'm a developer that is dedicated to every project I undertake. I closely work with
-            every team and client to understand needs and deliver the best solutions. Creating a
-            product that exceeds my client's expectations is what I seek to.
+            I work with teams and clients to figure out what they need, then build it.
           </Typography.Headers.H5>
         </motion.div>
         <motion.div variants={fadeInUp} initial="hidden" animate={controls} custom={1.2}>

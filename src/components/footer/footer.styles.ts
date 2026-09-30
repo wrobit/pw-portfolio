@@ -56,8 +56,8 @@ const FooterNavigationLinksContainer = styled.div`
   gap: ${({ theme }) => theme.spacing.xxxxl};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.largeDesktop}) {
-    gap: ${({ theme }) => theme.spacing.xxl};
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: ${({ theme }) => theme.spacing.xl};
   }
 `;
 

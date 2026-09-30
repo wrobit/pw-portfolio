@@ -112,7 +112,7 @@ export const Project = () => {
       </Styled.ProjectBreadcrumb>
       <Hero
         title={project?.title}
-        description={project?.description}
+        description={project?.summary}
         showScrollToExplore={false}
         compactSpacing
       />

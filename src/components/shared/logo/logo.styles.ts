@@ -6,10 +6,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   transition: transform 100ms ease-in-out;
-
-  &:hover {
-    transform: scale(1.02);
-  }
 `;
 
 const LogoContent = styled.div`

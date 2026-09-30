@@ -27,6 +27,7 @@ import { Project } from "@components/project-showcase/project-showcase.types";
 export const projects: Project[] = [
   {
     id: 1,
+    summary: "Web and mobile apps for transport and warehouse teams.",
     title: "Limur",
     backgroundImage: gradientGreenLight,
     image: mockupLimur,
@@ -50,10 +51,10 @@ export const projects: Project[] = [
       "AG-Grid",
     ],
     activities: [
-      "Built logistics and TMS interfaces with React, TypeScript and AG Grid.",
-      "Implemented Google Maps clustering for large fleet views.",
-      "Maintained a shared Storybook UI library used across products.",
-      "Improved data-fetching performance with caching and API optimizations.",
+      "Built transport management screens with React and AG Grid.",
+      "Grouped fleet markers on Google Maps.",
+      "Maintained a shared UI library in Storybook.",
+      "Added caching and improved API requests.",
     ],
     dateFrom: "2023",
     dateTo: "Present",
@@ -61,6 +62,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    summary: "A website for Remedio, an agency that works with clinics and medical practices.",
     title: "Remedio",
     backgroundImage: gradientPurple,
     image: mockupReMedio,
@@ -72,8 +74,8 @@ export const projects: Project[] = [
     role: "Developer & Designer",
     technologies: ["Framer", "Figma"],
     activities: [
-      "Designed and shipped new Framer sections for the marketing site.",
-      "Improved UX and content structure for patient-focused pages.",
+      "Designed and built website sections in Framer.",
+      "Updated page layouts and content.",
     ],
     dateFrom: "2025",
     dateTo: "Present",
@@ -81,6 +83,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    summary: "A website for a clinic offering obesity treatment and online consultations.",
     title: "Focus Medicine",
     backgroundImage: gradientGreen,
     image: mockupFocusMedicine,
@@ -101,9 +104,9 @@ export const projects: Project[] = [
       "Analytics",
     ],
     activities: [
-      "Built and maintained the Framer website for clinic marketing.",
-      "Delivered new sections and UX updates focused on conversion.",
-      "Custom forms with Medfile API Integration.",
+      "Built and maintained the site in Framer.",
+      "Added sections and updated page layouts.",
+      "Connected custom forms to the Medfile API.",
     ],
     dateFrom: "2026",
     dateTo: "Present",
@@ -111,6 +114,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    summary: "The studio's company website, built with Gatsby and animated scrolling.",
     title: "DreamStorm Studios Website",
     image: mockupDreamstorm,
     descriptionImage: mockupDreamstorm,
@@ -125,14 +129,15 @@ export const projects: Project[] = [
     dateFrom: "2021",
     dateTo: "2022",
     activities: [
-      "Built new frontend sections and reusable components.",
-      "Maintained the website with regular fixes and performance updates.",
-      "Implemented backend integrations for marketing workflows.",
+      "Built page sections and reusable components.",
+      "Fixed bugs and improved performance.",
+      "Connected marketing services, including Mailchimp.",
     ],
     commercial: true,
   },
   {
     id: 5,
+    summary: "Freelance work on the Ludus AI web app, payments, and subscriptions.",
     title: "Ludus AI",
     backgroundImage: gradientOrange,
     image: mockupLudusAi,
@@ -159,14 +164,15 @@ export const projects: Project[] = [
     dateFrom: "2025",
     dateTo: "Present",
     activities: [
-      "Built full-stack features in React/Remix based on Figma designs.",
-      "Implemented Stripe subscriptions with webhook-based backend flows.",
-      "Resolved production issues with Sentry and Cloudflare monitoring.",
+      "Built React and Remix features from Figma designs.",
+      "Added Stripe subscriptions and payment webhooks.",
+      "Tracked down production bugs with Sentry and Cloudflare.",
     ],
     commercial: true,
   },
   {
     id: 6,
+    summary: "An online event builder with 3D galleries, live streams, video calls, and chat.",
     client: "The Labz",
     title: "The Labz",
     description:
@@ -192,9 +198,9 @@ export const projects: Project[] = [
     ],
     role: "Fullstack Developer",
     activities: [
-      "Contributed to a Next.js event platform for creating online experiences.",
-      "Built frontend features and backend endpoints with TypeScript and Prisma.",
-      "Worked on AWS infrastructure, CI/CD flows and SQL maintenance.",
+      "Built event-builder features in Next.js.",
+      "Added API endpoints with TypeScript and Prisma.",
+      "Worked on AWS deployments and database maintenance.",
     ],
     dateFrom: "2021",
     dateTo: "2023",
@@ -202,6 +208,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
+    summary: "Web development for Aloki, a nature-themed blockchain game.",
     title: "Aloki",
     image: mockupAloki,
     descriptionImage: mockupAloki,
@@ -223,8 +230,8 @@ export const projects: Project[] = [
       "Figma",
     ],
     activities: [
-      "Developed frontend features for the Aloki web platform.",
-      "Contributed to releases for blockchain and gaming-focused modules.",
+      "Built frontend features for the web platform.",
+      "Helped release gaming and blockchain features.",
     ],
     dateFrom: "2021",
     dateTo: "2021",
@@ -232,6 +239,7 @@ export const projects: Project[] = [
   },
   {
     id: 8,
+    summary: "An earlier version of my portfolio.",
     title: "Ex-portfolio",
     backgroundImage: gradientGray,
     image: mockupExPortfolio,
@@ -243,8 +251,8 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "Next.js", "Typescript", "styled-components", "Figma"],
     activities: [
-      "Designed and built a minimalist personal portfolio.",
-      "Implemented responsive pages and polished UI interactions.",
+      "Designed and built the site with Next.js.",
+      "Added responsive layouts and interactions.",
     ],
     dateFrom: "2021",
     dateTo: "2021",
@@ -252,6 +260,7 @@ export const projects: Project[] = [
   },
   {
     id: 9,
+    summary: "An exam scheduling app I built for my engineering thesis.",
     title: "Listic",
     backgroundImage: gradientGrayish,
     image: mockupListic,
@@ -276,9 +285,9 @@ export const projects: Project[] = [
       "React Testing Library",
     ],
     activities: [
-      "Built a full-stack exam session organizer as an engineering thesis.",
-      "Implemented auth, scheduling features and API routes with Next.js.",
-      "Managed PostgreSQL data layer with Prisma and tested key flows.",
+      "Built sign-in, scheduling, and API routes with Next.js.",
+      "Stored exam data in PostgreSQL with Prisma.",
+      "Tested the main user flows.",
     ],
     dateFrom: "2021",
     dateTo: "2021",
@@ -286,6 +295,7 @@ export const projects: Project[] = [
   },
   {
     id: 10,
+    summary: "A Pomodoro timer with custom durations, break reminders, and light and dark themes.",
     title: "Pomodoro Timer",
     backgroundImage: gradientOrange,
     image: mockupPomodoroTimer,
@@ -298,9 +308,9 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["Next.js", "React", "Typescript", "Tailwind CSS", "shadcn/ui", "next-themes"],
     activities: [
-      "Built a minimalist Pomodoro app with custom and preset timers.",
-      "Implemented animated progress, theme switching and completion feedback.",
-      "Designed responsive UI with shadcn/ui and Tailwind CSS.",
+      "Added preset and custom timers.",
+      "Built progress animations, theme switching, and completion alerts.",
+      "Built the UI with shadcn/ui and Tailwind CSS.",
     ],
     dateFrom: "2026",
     dateTo: "2026",
@@ -308,6 +318,7 @@ export const projects: Project[] = [
   },
   {
     id: 11,
+    summary: "My old portfolio and blog, built with React and Express.",
     title: "Portfolio blog",
     backgroundImage: gradientGray,
     image: mockupPortfolioBlog,
@@ -319,9 +330,9 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "Redux", "Express", "MongoDB", "Mongoose"],
     activities: [
-      "Built a full-stack portfolio blog with React and Express.",
-      "Implemented CRUD APIs and MongoDB data models.",
-      "Managed frontend state with Redux and shipped to Netlify.",
+      "Built APIs for blog posts with Express and MongoDB.",
+      "Managed app state with Redux.",
+      "Deployed the frontend to Netlify.",
     ],
     dateFrom: "2021",
     dateTo: "2021",
@@ -329,6 +340,8 @@ export const projects: Project[] = [
   },
   {
     id: 12,
+    summary:
+      "A group learning project: an online music shop with a cart, orders, and an admin panel.",
     title: "Music Shop",
     backgroundImage: gradientPurple,
     image: mockupPrivate,
@@ -359,10 +372,9 @@ export const projects: Project[] = [
       "GitLab CI/CD",
     ],
     activities: [
-      "Built a collaborative full-stack music shop with Next.js and TypeScript.",
-      "Implemented auth, cart, orders and admin management features.",
-      "Managed PostgreSQL with Prisma and covered key flows with Cypress.",
-      "Containerized the app and deployed on AWS with GitLab CI/CD.",
+      "Built sign-in, cart, orders, and admin features with Next.js.",
+      "Used PostgreSQL and Prisma, with Cypress tests.",
+      "Deployed to AWS with Docker and GitLab CI/CD.",
     ],
     dateFrom: "2022",
     dateTo: "2023",
@@ -370,6 +382,7 @@ export const projects: Project[] = [
   },
   {
     id: 13,
+    summary: "A plant discovery app using an external API.",
     title: "Plantspot",
     backgroundImage: gradientGreenish,
     image: mockupPlantspot,
@@ -381,8 +394,8 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "Next.js", "Typescript", "styled-components", "Figma"],
     activities: [
-      "Built a plant discovery app integrated with an external API.",
-      "Designed and shipped responsive pages with Next.js and TypeScript.",
+      "Connected plant data from an external API.",
+      "Built responsive pages with Next.js and TypeScript.",
     ],
     dateFrom: "January 2021",
     dateTo: "December 2021",
@@ -390,6 +403,7 @@ export const projects: Project[] = [
   },
   {
     id: 14,
+    summary: "A website for my grandmother's crochet work.",
     title: "Niteczki-Daneczki",
     backgroundImage: gradientPinkish,
     image: mockupNiteczkiDaneczki,
@@ -401,8 +415,8 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "React Hooks", "SCSS"],
     activities: [
-      "Built a portfolio site showcasing handmade crocheting projects.",
-      "Created responsive React views with custom SCSS styling.",
+      "Built a gallery of her crochet projects.",
+      "Made the site responsive with React and SCSS.",
     ],
     dateFrom: "2021",
     dateTo: "2021",
@@ -411,6 +425,8 @@ export const projects: Project[] = [
 
   {
     id: 15,
+    summary:
+      "A Counter-Strike case-opening simulator that runs in the terminal and tracks drops, costs, and returns.",
     title: "CS Case Opening Simulator",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -423,9 +439,8 @@ export const projects: Project[] = [
     role: "Python Developer",
     technologies: ["Python", "Rich", "Statistics", "Probability", "Makefile"],
     activities: [
-      "Built a terminal case-opening simulator in Python.",
-      "Implemented probability logic, ROI stats and drop-rate analytics.",
-      "Designed a modular codebase with Rich-powered CLI visuals.",
+      "Built the simulator in Python with Rich.",
+      "Calculated drop probabilities and returns.",
     ],
     dateFrom: "2025",
     dateTo: "2025",
@@ -433,6 +448,7 @@ export const projects: Project[] = [
   },
   {
     id: 16,
+    summary: "A joke site for CS2 players who call cheats. No cheats, just memes and rickrolls.",
     title: "CS2 Cheats - Troll Website",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -445,9 +461,9 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["HTML5", "CSS3", "JavaScript", "HTML5 Audio API"],
     activities: [
-      "Built a satirical CS2 troll website with vanilla JavaScript.",
-      "Added meme-style interactions, audio effects and fake cheat actions.",
-      "Optimized and deployed the static site to a custom domain.",
+      "Built it with plain JavaScript.",
+      "Added sound effects, animations, and fake cheat buttons.",
+      "Published it on a custom domain.",
     ],
     dateFrom: "2025",
     dateTo: "2025",
@@ -455,6 +471,7 @@ export const projects: Project[] = [
   },
   {
     id: 17,
+    summary: "A city weather lookup app I built while learning React and APIs.",
     title: "Weather App",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -467,8 +484,8 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "React Hooks", "OpenWeather API", "JavaScript", "CSS"],
     activities: [
-      "Built a React weather app with city-based search.",
-      "Integrated OpenWeather API and shipped a responsive UI.",
+      "Added city search with the OpenWeather API.",
+      "Built a responsive interface in React.",
     ],
     dateFrom: "2020",
     dateTo: "2020",
@@ -476,6 +493,7 @@ export const projects: Project[] = [
   },
   {
     id: 18,
+    summary: "A weekly planner that saves your schedule in the browser.",
     title: "Schedule Maker App",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -488,8 +506,8 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "JavaScript", "CSS", "Local Storage"],
     activities: [
-      "Built a weekly scheduling app for personal planning.",
-      "Implemented local storage persistence and simple task management flows.",
+      "Built task editing and weekly scheduling in React.",
+      "Saved schedules in local storage.",
     ],
     dateFrom: "2020",
     dateTo: "2020",
@@ -497,6 +515,7 @@ export const projects: Project[] = [
   },
   {
     id: 19,
+    summary: "A furniture homepage built from a Frontend Mentor challenge.",
     title: "Room Homepage",
     backgroundImage: gradientGray,
     image: mockupPrivate,
@@ -509,9 +528,8 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     technologies: ["React", "React Hooks", "SCSS", "JavaScript"],
     activities: [
-      "Implemented a Frontend Mentor furniture homepage challenge.",
-      "Built interactive slider behavior and responsive SCSS layouts.",
-      "Focused on pixel-accurate UI and reusable React components.",
+      "Recreated the design in React and SCSS.",
+      "Added an image slider and responsive layouts.",
     ],
     dateFrom: "2020",
     dateTo: "2020",
