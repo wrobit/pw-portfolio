@@ -53,10 +53,10 @@ const Link = styled(RouterLink)<{ $isActive?: boolean }>`
   position: relative;
   transition: color 100ms linear;
   color: ${({ theme, $isActive }) =>
-    $isActive ? theme.colors.orange : theme.colors.white} !important;
+    $isActive ? theme.colors.purple : theme.colors.white} !important;
 
   &:active {
-    color: ${({ theme }) => theme.colors.orange} !important;
+    color: ${({ theme }) => theme.colors.purple} !important;
   }
 
   &:hover {
@@ -138,7 +138,7 @@ const HamburgerMenuLinkIndex = styled.span<{ $isActive?: boolean }>`
   font-family: ${({ theme }) => theme.font.regular};
   font-size: 16px;
   color: ${({ theme, $isActive }) =>
-    $isActive ? theme.colors.orange : theme.colors.white} !important;
+    $isActive ? theme.colors.purple : theme.colors.white} !important;
 `;
 
 const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
@@ -146,7 +146,7 @@ const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
   font-family: ${({ theme }) => theme.font.regular};
   font-size: ${({ theme }) => theme.fontSize.h2};
   color: ${({ theme, $isActive }) =>
-    $isActive ? theme.colors.orange : theme.colors.white} !important;
+    $isActive ? theme.colors.purple : theme.colors.white} !important;
   text-align: center;
   transition: all 100ms linear;
   position: relative;
@@ -159,7 +159,7 @@ const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
     top: 50%;
     width: 100%;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.orange};
+    background-color: ${({ theme }) => theme.colors.purple};
     transform: ${({ $isActive }) => ($isActive ? "scaleX(1)" : "scaleX(0)")};
     transform-origin: center;
     transition: transform 200ms ease-out;
@@ -171,11 +171,11 @@ const HamburgerMenuLink = styled(RouterLink)<{ $isActive?: boolean }>`
   }
 
   &:active {
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ theme }) => theme.colors.purple};
   }
 
   &:hover {
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ theme }) => theme.colors.purple};
   }
 `;
 

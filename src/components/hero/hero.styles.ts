@@ -44,7 +44,7 @@ const HeroTypographyWrapper = styled.div<HeroLayoutProps>`
 `;
 
 const HeroTitle = styled(Typography.Headers.H1)`
-  color: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.purple};
 `;
 
 const HeroActions = styled(motion.div)`

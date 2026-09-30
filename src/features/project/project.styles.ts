@@ -61,7 +61,7 @@ const ProjectInfoItem = styled(motion.div)`
 `;
 
 const ProjectInfoLabel = styled(Typography.Headers.H6)`
-  color: ${({ theme }) => theme.colors.orange} !important;
+  color: ${({ theme }) => theme.colors.purple} !important;
   font-family: ${({ theme }) => theme.font.medium};
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -139,7 +139,7 @@ const ProjectActivitiesItem = styled(motion.li)`
 `;
 
 const ProjectActivitiesIndex = styled(Typography.Headers.H6)`
-  color: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.purple};
   font-family: ${({ theme }) => theme.font.regular};
 `;
 

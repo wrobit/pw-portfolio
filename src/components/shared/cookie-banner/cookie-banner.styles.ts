@@ -65,7 +65,7 @@ const BannerLink = styled.a`
 
   &:hover,
   &:focus-visible {
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ theme }) => theme.colors.purple};
   }
 `;
 

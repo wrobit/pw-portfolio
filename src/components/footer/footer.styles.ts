@@ -46,7 +46,7 @@ const FooterNavigation = styled.div`
 `;
 
 const FooterLogo = styled(Typography.Headers.Logo)`
-  color: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.purple};
 `;
 
 const FooterNavigationLinksContainer = styled.div`
@@ -68,7 +68,7 @@ const FooterNavigationLinks = styled(motion.div)`
 `;
 
 const FooterNavigationHeaderText = styled(Typography.Default)`
-  color: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.purple};
   font-family: ${({ theme }) => theme.font.bold};
   font-size: ${({ theme }) => theme.fontSize.h6};
 

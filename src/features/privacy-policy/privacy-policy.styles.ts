@@ -47,7 +47,7 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-  color: ${({ theme }) => theme.colors.orange};
+  color: ${({ theme }) => theme.colors.purple};
   text-decoration: underline;
   text-underline-offset: 3px;
 
@@ -76,7 +76,7 @@ export const Table = styled.table`
   }
 
   th {
-    color: ${({ theme }) => theme.colors.orange};
+    color: ${({ theme }) => theme.colors.purple};
     font-family: ${({ theme }) => theme.font.bold};
   }
 `;

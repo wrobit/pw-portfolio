@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const H1 = styled.h1`
-  color: ${({ theme, color }) => color || theme.colors.orange};
+  color: ${({ theme, color }) => color || theme.colors.purple};
   font-family: ${({ theme }) => theme.font.medium};
   font-size: 88px;
   line-height: 88px;

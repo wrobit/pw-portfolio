@@ -42,7 +42,7 @@ export const Footer = ({ onManageCookies }: FooterProps) => {
       <Styled.FooterBottom variants={footerItemVariants}>
         <Typography.Headers.H6 as="p" color={theme.colors.white}>
           Copyright &copy; {`${dateYear}`}
-          <Typography.Default color={theme.colors.orange}> Wrobel Piotr</Typography.Default>. All
+          <Typography.Default color={theme.colors.purple}> Wrobel Piotr</Typography.Default>. All
           rights reserved.
         </Typography.Headers.H6>
         <Styled.FooterLegal aria-label="Legal">
